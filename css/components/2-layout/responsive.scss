@@ -48,4 +48,5 @@
 @media (max-width: 480px) {
   @include index-480;
   @include components-480;
+  @include header-480;
 }

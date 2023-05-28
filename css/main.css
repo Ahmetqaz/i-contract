@@ -1346,6 +1346,15 @@ svg {
   width: 1.75em;
   height: 1.75em;
 }
+.sidebar .dropdown {
+  display: none;
+}
+.sidebar .dropdown__button {
+  padding: 0.5em 1em;
+}
+.sidebar .dropdown__content {
+  padding: 0.5em 1em;
+}
 
 .info {
   padding-left: 326px;
@@ -1656,6 +1665,9 @@ svg {
   .header {
     padding: 20px 0;
   }
+  .header .dropdown {
+    display: none;
+  }
 
   .sidebar {
     position: fixed;
@@ -1667,8 +1679,8 @@ svg {
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
     z-index: 0;
-    -webkit-transform: translate(100%);
-            transform: translate(100%);
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
     opacity: 0;
     pointer-events: none;
     z-index: 9;
@@ -1698,8 +1710,8 @@ svg {
     background: #fff;
     -webkit-box-shadow: 0px 4px 24px -1px rgba(30, 31, 36, 0.2);
             box-shadow: 0px 4px 24px -1px rgba(30, 31, 36, 0.2);
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
     opacity: 0;
     -webkit-transition: 0.15s ease-in-out 0s;
     transition: 0.15s ease-in-out 0s;
@@ -1727,6 +1739,9 @@ svg {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1;
+  }
+  .sidebar .dropdown {
+    display: block;
   }
 
   .burger {
@@ -1855,6 +1870,11 @@ svg {
   .header__inner-box {
     gap: 15px;
   }
+
+  .sidebar {
+    top: 100px;
+    height: calc(100% - 60px);
+  }
 }
 @media (max-width: 650px) {
   .infoContent__image .ratioImage {
@@ -1923,5 +1943,20 @@ svg {
 
   .input {
     font-size: 12px;
+  }
+
+  .header__inner-logo {
+    width: 120px;
+  }
+  .header .autoContainer {
+    padding: 0 15px;
+  }
+
+  .sidebar {
+    top: 90px;
+    height: calc(100% - 60px);
+  }
+  .sidebar__inner {
+    padding: 30px 15px;
   }
 }
