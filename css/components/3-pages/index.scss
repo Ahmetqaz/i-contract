@@ -37,8 +37,12 @@
   &Link {
     color: $primary;
     font-size: inherit;
+    @include transition;
     &.active {
       text-decoration: underline;
+    }
+    &:hover{
+      opacity: .7;
     }
   }
   &Content {
@@ -52,7 +56,6 @@
       width: 100%;
       max-width: 700px;
       flex-wrap: wrap;
-
       .input {
         width: calc(62% - 6px);
       }
@@ -102,11 +105,16 @@
           display: flex;
           align-items: center;
           flex-direction: row;
-          gap: 6px;
           .input {
-            width: 257px;
+            width: 100%;
+            align-items: center;
+            gap: 6px;
             input {
               width: 100%;
+            }
+            label {
+              font-size: 1em;
+              color: $primary;
             }
           }
         }
@@ -144,6 +152,8 @@
   .dropdown {
     width: calc(38% - 6px);
     font-size: 13px;
+    position: relative;
+    z-index: 2;
     &__button {
       background: $primary;
       padding: 1.1em 2em 0.9em 2.6em;
@@ -179,4 +189,244 @@
   .autoContainer {
     padding: 0 15px;
   }
+}
+@mixin index-1900 {
+  .info {
+    &Content {
+      &__currency {
+        flex-direction: column;
+        gap: 20px 0;
+        &-item {
+          width: 100%;
+          justify-content: space-between;
+          gap: 20px 10px;
+          .input {
+            font-size: 23px;
+            justify-content: space-between;
+            &--checkBox {
+              margin-top: 0;
+            }
+            input {
+              width: calc(100% - 200px);
+              padding: 0.7em 1.2em 0.6em 1.2em;
+              font-size: 1em;
+            }
+          }
+          &._lg {
+            width: 100%;
+            .input {
+              input {
+                font-size: 1em;
+                width: calc(100% - 200px);
+                padding: 0.7em 3em 0.6em 1.2em;
+              }
+              .currency {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin index-1700 {
+ 
+  .info {
+    padding-left: 300px;
+  }
+}
+@mixin index-1660 {
+  .info {
+    padding-left: 0;
+    &Form {
+      padding: 12px 20px;
+    }
+  }
+}
+@mixin index-1500 {
+
+}
+@mixin index-1440 {
+  .info {
+    &Form {
+      &__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        h2 {
+          padding: 9px 0;
+        }
+      }
+    }
+    &Content {
+      &__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+       .input{
+        width: 100%;
+       }
+      }
+      &__currency{
+        &-item{
+          .input{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .dropdown{
+      width: 100%;
+    }
+  }
+}
+@mixin index-1180 {
+ 
+  .info {
+    &Form {
+      &__header{
+      }
+      &__body{
+        gap: 12px;
+      }
+    }
+    &Content {
+      &__currency{
+        &-item{
+          .input{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin index-1100 {
+}
+@mixin index-1025{
+ .info{
+    &__inner{
+      &-links{
+              font-size: 14px;
+            }
+      &-row{
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+    &Content{
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    &__header{
+      max-width: unset;
+    }
+    }
+    &Form{
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+}
+@mixin index-880{
+  .info{
+    &__inner{
+      &-links{
+        flex-wrap: wrap;
+        gap: 20px 10px;
+        justify-content: flex-start;
+      }
+    }
+    &Link{
+      width:calc(33.3% - 10px);
+    }
+  }
+}
+@mixin index-650{
+  .info{
+    &Content{
+
+      &__image{
+        .ratioImage{
+          width: 80%;
+        }
+      }
+      &__currency{
+        padding: 15px;
+        .input{
+          font-size: 16px;
+        }
+      }
+    }
+  
+  }
+}
+@mixin index-580{
+  .info{
+    &__inner{
+      gap: 25px;
+      &-links{
+
+      }
+    }
+    &Link{
+      width:calc(50% - 10px);
+    }
+    &Content{
+      &__image{
+        .ratioImage{
+          width: 85%;
+        }
+      }
+      &__currency{
+        .input{
+          font-size: 14px;
+        }
+      }
+    }
+  
+  }
+}
+@mixin index-480{
+  .info{
+    &__inner{
+      gap: 25px;
+      flex-direction: column;
+    }
+    &Link{
+      width: 100%;
+    }
+    &Content{
+      &__image{
+        .ratioImage{
+          width: 90%;
+        }
+        h4{
+          width: 100%;
+          text-align: center;
+        }
+      }
+      &__currency{
+       &-item{
+        .input{
+          font-size: 12px;
+          input{
+            width: calc(100% - 100px);
+          }
+        }
+        &._lg{
+          .input{
+            input{
+              width: calc(100% - 100px);
+            }
+          }
+        }
+       }
+      }
+    }
+  
+  }
+
 }

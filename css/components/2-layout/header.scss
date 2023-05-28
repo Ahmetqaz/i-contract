@@ -99,7 +99,7 @@
 }
 .burger {
   cursor: pointer;
-  display: block;
+  display: none;
   position: relative;
   font-size: 10px;
   width: 2.6em;
@@ -107,7 +107,6 @@
   color: $white;
   background: transparent;
   transition: 0.2s ease;
-
   span,
   &::after,
   &::before {
@@ -115,7 +114,7 @@
     left: 50%;
     width: 100%;
     height: 0.32em;
-    background-color: currentColor;
+    background-color: $black-2;
     border-radius: 0.4em;
     transition: all 0.3s ease;
   }
@@ -216,6 +215,89 @@
   }
 }
 
+@mixin header-1700 {
+  .sidebar {
+    &__inner {
+      padding: 15px 40px 15px 20px;
+      width: 300px;
+    }
+  }
+}
+@mixin header-1660 {
+  .header {
+    padding: 20px 0;
+  }
+  .sidebar {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 93px);
+    background: rgba($black, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+    transform: translate(100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    padding: 0;
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+      min-width: 280px;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      background: $white;
+      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
+      transform: translate(-100% , 0);
+      opacity: 0;
+      transition: 0.15s ease-in-out 0s;
+      padding: 40px 20px;
+      overflow: auto;
+      @include hideScroll;
+      &-link{
+        width: 100%;
+      }
+    }
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
+      .sidebar {
+        &__inner {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .burger {
+    display: block;
+  }
+}
+@mixin header-1100{
+  .header{
+    padding: 15px 0;
+    &__inner{
+      &-logo{
+        width: 180px;
+      }
+    }
+    .autoContainer{
+      padding:0 20px;
+    }
+  }
+  .sidebar{
+    top: 108px;
+    height: calc(100% - 78px);
+  }
+}
 @mixin header-1025 {
   .header {
     padding: 25px 0;
@@ -234,80 +316,15 @@
       }
     }
   }
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($black, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 0;
-    transform: translate(100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
-
-    &__inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 35%;
-      min-width: 280px;
-      height: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      background: $white;
-      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
-      padding: 50px 25px;
-      transform: translate(-100%);
-      opacity: 0;
-      transition: 0.15s ease-in-out 0s;
-
-      &-group {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 25px 0;
-        gap: 8px;
-        color: $black;
-        border-top: 1px solid $white;
-        width: 100%;
-
-        &:first-child {
-          border: 0;
-        }
+}
+@mixin header-880{
+  .header{
+    &__inner{
+      &-logo{
+        width: 150px;
       }
-      &-link {
-        color: $black;
-
-        &:after {
-          left: 0;
-          top: 50%;
-          width: 2px;
-          height: 80%;
-          transform: translateY(-50%);
-        }
-
-        &:hover {
-          &:after {
-            width: 2px;
-            height: 100%;
-          }
-        }
-      }
-    }
-    a &.active {
-      pointer-events: all;
-      transform: translate(0);
-      opacity: 1;
-      transition: opacity 0.3s ease-in-out;
-
-      .nav__inner {
-        opacity: 1;
-        transition: 0.3s ease-in-out 0.05s;
-        transform: translate(0);
+      &-box{
+        gap: 15px;
       }
     }
   }

@@ -94,6 +94,9 @@
                 </div>
               </div>
             </div>
+            <div class="burger" id="menuBtn">
+              <span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +104,7 @@
     <!-- #header end -->
     <!-- wrapper start-->
     <div class="wrapper">
-      <div class="sidebar">
+      <div class="sidebar" id="menu">
         <div class="sidebar__inner">
           <a href="#" class="sidebar__inner-link active">
             <span class="ico">
@@ -341,14 +344,15 @@
                 </div>
                 <div class="infoContent__currency">
                   <div class="infoContent__currency-item _lg">
-                    <h2>
-                      Kaufpreis
-                    </h2>
+                  
                     <div class="input input--currency">
-                      <input type="text" placeholder="XXXXXX" id="cur-1">
-                      <label class="currency" for="cur-1">
-                        Euro
+                      <label for="cur-1">
+                        Kaufpreis
                       </label>
+                      <input type="text" placeholder="XXXXXX" id="cur-1">
+                      <span class="currency" for="cur-1">
+                        Euro
+                      </span>
                     </div>
                   </div>
                   <div class="infoContent__currency-item">
@@ -465,7 +469,7 @@
     </div>
     <!-- wrapper end-->
   </div>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
