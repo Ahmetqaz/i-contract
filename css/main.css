@@ -1905,6 +1905,10 @@ svg {
     font-size: 13px;
   }
 
+  .wrapper {
+    padding: 90px 0 40px;
+  }
+
   h2 {
     font-size: 18px;
   }

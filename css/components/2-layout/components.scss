@@ -593,10 +593,14 @@
   .input{
     font-size: 15px;
   }
+
 }
 @mixin components-580{
   .input{
     font-size: 13px;
+  }
+  .wrapper {
+    padding: 90px 0 40px;
   }
 }
 @mixin components-480{
