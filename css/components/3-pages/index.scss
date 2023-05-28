@@ -1,0 +1,182 @@
+.info {
+  padding-left: 326px;
+  max-width: 1856px;
+  width: 100%;
+  margin-right: auto;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    &-tabs {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      padding: 1px;
+      gap: 2px;
+      background: $blue-4;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    &-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      background: $white;
+      padding: 1.5em 1.8em;
+      width: 100%;
+    }
+    &-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  }
+  &Link {
+    color: $primary;
+    font-size: inherit;
+    &.active {
+      text-decoration: underline;
+    }
+  }
+  &Content {
+    width: calc(52% - 5px);
+    background: $white;
+    padding: 12px;
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 700px;
+      flex-wrap: wrap;
+
+      .input {
+        width: calc(62% - 6px);
+      }
+      h4 {
+        color: $primary;
+        padding: 6px 20px 6px;
+      }
+    }
+    &__image {
+      width: 100%;
+      position: relative;
+      .ratioImage {
+        width: 69%;
+        margin: 0 auto;
+        padding-bottom: 52.3%;
+      }
+      h4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__currency {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 33px 16px;
+      border-radius: 5px;
+      border: 3px solid $white-4;
+      gap: 40px;
+      &-item {
+        width: calc(42% - 15px);
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        .input {
+          input {
+            width: 160px;
+          }
+          &--checkBox {
+            margin-top: 20px;
+          }
+        }
+        &._lg {
+          width: calc(58% - 15px);
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 6px;
+          .input {
+            width: 257px;
+            input {
+              width: 100%;
+            }
+          }
+        }
+        h2 {
+          color: $primary;
+          width: 32%;
+        }
+      }
+    }
+  }
+  &Form {
+    width: calc(48% - 5px);
+    background: $white;
+    padding: 18px 44px;
+    &__header {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 35px;
+      h2 {
+        color: $primary;
+        opacity: 0.5;
+      }
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      h2 {
+        margin-bottom: 10px;
+        color: $primary;
+      }
+    }
+  }
+  .dropdown {
+    width: calc(38% - 6px);
+    font-size: 13px;
+    &__button {
+      background: $primary;
+      padding: 1.1em 2em 0.9em 2.6em;
+      border-radius: 5px;
+      @include transition;
+      p {
+        color: $white;
+        font-weight: 700;
+      }
+      .ico {
+        width: 1em;
+        height: 1em;
+      }
+    }
+    &__content {
+      padding: 1.1em 2em 0.9em 2.6em;
+      background: $primary;
+      border: unset;
+      border-radius: 0 0 5px 5px;
+      p {
+        color: $white;
+        font-weight: 700;
+      }
+    }
+    &:hover {
+      .dropdown {
+        &__button {
+          border-radius: 5px 5px 0 0;
+        }
+      }
+    }
+  }
+  .autoContainer {
+    padding: 0 15px;
+  }
+}
