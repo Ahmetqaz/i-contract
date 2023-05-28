@@ -8,6 +8,9 @@
   max-width: 1980px;
   margin: 0 auto;
   padding: 0 30px;
+  &._sm {
+    padding: 0 15px;
+  }
 }
 .input {
   display: flex;
@@ -33,7 +36,7 @@
   &--text {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     label {
       font-size: 1em;
       font-weight: bold;
@@ -185,6 +188,29 @@
         @include transition;
       }
     }
+  }
+  &--textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    textarea {
+      min-height: 120px;
+      border-radius: 5px;
+      background: $white-3;
+      padding: 1em 1.5em;
+      resize: none;
+      &:focus {
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+    label {
+      font-size: 1em;
+      font-weight: 700;
+    }
+  }
+  &._sm{
+    font-size: 15px;
   }
 }
 .button {
@@ -589,22 +615,21 @@
     padding: 120px 0 40px;
   }
 }
-@mixin components-1180{
-  .input{
+@mixin components-1180 {
+  .input {
     font-size: 15px;
   }
-
 }
-@mixin components-580{
-  .input{
+@mixin components-580 {
+  .input {
     font-size: 13px;
   }
   .wrapper {
     padding: 90px 0 40px;
   }
 }
-@mixin components-480{
-  .input{
+@mixin components-480 {
+  .input {
     font-size: 12px;
   }
 }

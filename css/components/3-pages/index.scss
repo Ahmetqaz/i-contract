@@ -1,5 +1,4 @@
-.info {
-  padding-left: 326px;
+.contact {
   max-width: 1856px;
   width: 100%;
   margin-right: auto;
@@ -8,41 +7,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 36px;
-    &-tabs {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      padding: 1px;
-      gap: 2px;
-      background: $blue-4;
-      border-radius: 4px;
-      margin-bottom: 20px;
-    }
-    &-links {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 16px;
-      background: $white;
-      padding: 1.5em 1.8em;
-      width: 100%;
-    }
     &-row {
       width: 100%;
       display: flex;
       justify-content: space-between;
       gap: 10px;
-    }
-  }
-  &Link {
-    color: $primary;
-    font-size: inherit;
-    @include transition;
-    &.active {
-      text-decoration: underline;
-    }
-    &:hover{
-      opacity: .7;
     }
   }
   &Content {
@@ -186,12 +155,174 @@
       }
     }
   }
-  .autoContainer {
-    padding: 0 15px;
+}
+.condition {
+  width: 100%;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .button {
+        width: 340px;
+        padding: 0.95em 1.5em;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  &Box {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 1em;
+    background: $white;
+    padding: 2.3em 2.3em 2.3em;
+    &__image {
+      width: 3em;
+      height: 3em;
+      border-radius: 5px;
+      background-color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .ico {
+        width: 2.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-right: 10px;
+      h4 {
+        color: $orange;
+      }
+      p {
+        font-size: 0.7em;
+        color: $blue-5;
+      }
+    }
+  }
+  &Body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    background: $white;
+    padding: 14px 30px 25px;
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      width: 100%;
+      &-item {
+        width: calc(33% - 15px);
+        max-width: 386px;
+        &._lg {
+          max-width: unset;
+          width: 100%;
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      h4 {
+        color: $black !important;
+      }
+      .button {
+        justify-content: flex-start;
+      }
+    }
+    h4 {
+      color: $orange;
+    }
+  }
+  h2 {
+    color: $primary;
+    padding: 12px 30px;
   }
 }
+.info {
+  width: 100%;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &-row {
+      background: $white;
+      padding: 18px 32px 25px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+    }
+  }
+  h2 {
+    color: $primary;
+  }
+  &Column{
+    width: calc(50% - 10px);
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap:15px ;
+  }
+}
+.sideSpace {
+  padding-left: 326px;
+}
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  &__row {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    gap: 2px;
+    background: $blue-4;
+    border-radius: 4px;
+    &._links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      background: $white;
+      padding: 1.5em 1.8em;
+      width: 100%;
+    }
+  }
+  &Link {
+    color: $primary;
+    font-size: inherit;
+    @include transition;
+    &.active {
+      text-decoration: underline;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
 @mixin index-1900 {
-  .info {
+  .contact {
     &Content {
       &__currency {
         flex-direction: column;
@@ -231,24 +362,26 @@
   }
 }
 @mixin index-1700 {
- 
-  .info {
+  .contact {
+  }
+  .sideSpace {
     padding-left: 300px;
   }
 }
 @mixin index-1660 {
-  .info {
-    padding-left: 0;
+  .contact {
     &Form {
       padding: 12px 20px;
     }
   }
+  .sideSpace {
+    padding-left: 0;
+  }
 }
 @mixin index-1500 {
-
 }
 @mixin index-1440 {
-  .info {
+  .contact {
     &Form {
       &__header {
         flex-direction: column;
@@ -264,37 +397,36 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
-       .input{
-        width: 100%;
-       }
+        .input {
+          width: 100%;
+        }
       }
-      &__currency{
-        &-item{
-          .input{
+      &__currency {
+        &-item {
+          .input {
             font-size: 20px;
           }
         }
       }
     }
-    .dropdown{
+    .dropdown {
       width: 100%;
     }
   }
 }
 @mixin index-1180 {
- 
-  .info {
+  .contact {
     &Form {
-      &__header{
+      &__header {
       }
-      &__body{
+      &__body {
         gap: 12px;
       }
     }
     &Content {
-      &__currency{
-        &-item{
-          .input{
+      &__currency {
+        &-item {
+          .input {
             font-size: 18px;
           }
         }
@@ -304,129 +436,137 @@
 }
 @mixin index-1100 {
 }
-@mixin index-1025{
- .info{
-    &__inner{
-      &-links{
-              font-size: 14px;
-            }
-      &-row{
+@mixin index-1025 {
+  .contact {
+    &__inner {
+      &-row {
         flex-direction: column;
         gap: 30px;
       }
     }
-    &Content{
+    &Content {
       width: 100%;
       max-width: 800px;
       margin: 0 auto;
-    &__header{
-      max-width: unset;
+      &__header {
+        max-width: unset;
+      }
     }
-    }
-    &Form{
+    &Form {
       width: 100%;
       max-width: 800px;
       margin: 0 auto;
     }
   }
+  .tabs {
+    &__row {
+      &._links {
+        font-size: 14px;
+      }
+    }
+  }
 }
-@mixin index-880{
-  .info{
-    &__inner{
-      &-links{
+@mixin index-880 {
+  .contact {
+    &__inner {
+    }
+  }
+  .tabs {
+    &__row {
+      &._links {
         flex-wrap: wrap;
         gap: 20px 10px;
         justify-content: flex-start;
       }
     }
-    &Link{
-      width:calc(33.3% - 10px);
+    &Link {
+      width: calc(33.3% - 10px);
     }
   }
 }
-@mixin index-650{
-  .info{
-    &Content{
 
-      &__image{
-        .ratioImage{
+@mixin index-650 {
+  .contact {
+    &Content {
+      &__image {
+        .ratioImage {
           width: 80%;
         }
       }
-      &__currency{
+      &__currency {
         padding: 15px;
-        .input{
+        .input {
           font-size: 16px;
         }
       }
     }
-  
   }
 }
-@mixin index-580{
-  .info{
-    &__inner{
+@mixin index-580 {
+  .contact {
+    &__inner {
       gap: 25px;
-      &-links{
+    }
 
-      }
-    }
-    &Link{
-      width:calc(50% - 10px);
-    }
-    &Content{
-      &__image{
-        .ratioImage{
+    &Content {
+      &__image {
+        .ratioImage {
           width: 85%;
         }
       }
-      &__currency{
-        .input{
+      &__currency {
+        .input {
           font-size: 14px;
         }
       }
     }
-  
+  }
+  .tabs {
+    gap: 30px;
+    &Link {
+      width: calc(50% - 10px);
+    }
   }
 }
-@mixin index-480{
-  .info{
-    &__inner{
+@mixin index-480 {
+  .contact {
+    &__inner {
       gap: 25px;
       flex-direction: column;
     }
-    &Link{
-      width: 100%;
-    }
-    &Content{
-      &__image{
-        .ratioImage{
+
+    &Content {
+      &__image {
+        .ratioImage {
           width: 90%;
         }
-        h4{
+        h4 {
           width: 100%;
           text-align: center;
         }
       }
-      &__currency{
-       &-item{
-        .input{
-          font-size: 12px;
-          input{
-            width: calc(100% - 100px);
-          }
-        }
-        &._lg{
-          .input{
-            input{
+      &__currency {
+        &-item {
+          .input {
+            font-size: 12px;
+            input {
               width: calc(100% - 100px);
             }
           }
+          &._lg {
+            .input {
+              input {
+                width: calc(100% - 100px);
+              }
+            }
+          }
         }
-       }
       }
     }
-  
   }
-
+  .tabs {
+    &Link {
+      width: 100%;
+    }
+  }
 }
