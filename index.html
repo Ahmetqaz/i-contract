@@ -296,11 +296,11 @@
           </div>
         </div>
       </div>
-      <div class="contact sideSpace">
-        <div class="autoContainer _sm">
-          <div class="contact__inner">
-            <div class="tabs">
-              <div class="tabs__row">
+      <div class="wrapper__body sideSpace">
+        <div class="tabs">
+          <div class="autoContainer _sm">
+            <div class="tabs__inner">
+              <div class="tabs__inner-row">
                 <button class="button button--primary">
                   Vertragsdaten
                 </button>
@@ -308,7 +308,7 @@
                   Vorschau
                 </button>
               </div>
-              <div class="tabs__row _links">
+              <div class="tabs__inner-row _links">
                 <a href="#" class="tabsLink active">
                   Kontaktdaten
                 </a>
@@ -326,183 +326,455 @@
                 </a>
               </div>
             </div>
-            <div class="contact__inner-row">
-              <div class="contactContent">
-                <div class="contactContent__header">
-                  <div class="input input--search">
-                    <input type="text" placeholder="Suche">
-                    <span class="ico">
-                      <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                        <path id="color"
-                          d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
-                          fill="#7e84a3" />
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="dropdown">
-                    <div class="dropdown__button">
-                      <p>
-                        Weitere Funktionen
-                      </p>
+          </div>
+        </div>
+        <section class="contact">
+          <div class="autoContainer _sm">
+            <div class="contact__inner">
+              <div class="contact__inner-row">
+                <div class="contactContent">
+                  <div class="contactContent__header">
+                    <div class="input input--search">
+                      <input type="text" placeholder="Suche">
                       <span class="ico">
-                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="10.008" height="7.391"
-                          viewBox="0 0 10.008 7.391">
-                          <g id="control_down_" data-name="control down " transform="translate(0 0)">
-                            <path id="Dreieck_545_Kopie_2" data-name="Dreieck 545 Kopie 2"
-                              d="M1215.328,1885.949a1,1,0,0,1-1.656,0l-4-5.389a1,1,0,0,1,.828-1.562h8a1,1,0,0,1,.828,1.562Z"
-                              transform="translate(-1209.496 -1878.999)" fill="#fff" />
-                          </g>
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                          <path id="color"
+                            d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
+                            fill="#7e84a3" />
                         </svg>
                       </span>
                     </div>
-                    <div class="dropdown__content">
-                      <div class="dropdown__content-box">
+                    <div class="dropdown">
+                      <div class="dropdown__button">
                         <p>
                           Weitere Funktionen
                         </p>
+                        <span class="ico">
+                          <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="10.008" height="7.391"
+                            viewBox="0 0 10.008 7.391">
+                            <g id="control_down_" data-name="control down " transform="translate(0 0)">
+                              <path id="Dreieck_545_Kopie_2" data-name="Dreieck 545 Kopie 2"
+                                d="M1215.328,1885.949a1,1,0,0,1-1.656,0l-4-5.389a1,1,0,0,1,.828-1.562h8a1,1,0,0,1,.828,1.562Z"
+                                transform="translate(-1209.496 -1878.999)" fill="#fff" />
+                            </g>
+                          </svg>
+                        </span>
                       </div>
-                      <div class="dropdown__content-box">
+                      <div class="dropdown__content">
+                        <div class="dropdown__content-box">
+                          <p>
+                            Weitere Funktionen
+                          </p>
+                        </div>
+                        <div class="dropdown__content-box">
+                          <p>
+                            Weitere Funktionen
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <h4>
+                      Bitte fügen Sie die Url von dem Inserat ein
+                    </h4>
+                  </div>
+                  <div class="contactContent__image">
+                    <div class="ratioImage ratioImage--contain">
+                      <img src="./images/car.png" alt="">
+                    </div>
+                    <h4>
+                      NUR PLATZHALTER FÜR BILD
+                    </h4>
+                  </div>
+                  <div class="contactContent__currency">
+                    <div class="contactContent__currency-item _lg">
+
+                      <div class="input input--currency">
+                        <label for="cur-1">
+                          Kaufpreis
+                        </label>
+                        <input type="text" placeholder="XXXXXX" id="cur-1">
+                        <span class="currency" for="cur-1">
+                          Euro
+                        </span>
+                      </div>
+                    </div>
+                    <div class="contactContent__currency-item">
+                      <div class="input input--currencySm">
+                        <label for="cur-2">
+                          Nettobetrag
+                        </label>
+                        <input type="text" placeholder="XXX" id="cur-2">
+                      </div>
+                      <div class="input input--currencySm">
+                        <label for="cur-3">
+                          19% MwSt.
+                        </label>
+                        <input type="text" placeholder="XXX" id="cur-3">
+                      </div>
+                      <div class="input input--checkBox">
+                        <input type="checkbox" id="check">
+                        <label for="check">
+                          MwSt. hinzufügen
+                          <span class="checkBox">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="contactForm">
+                  <div class="contactForm__header">
+                    <h2>
+                      Verkäufer
+                    </h2>
+                    <div class="dropdown">
+                      <div class="dropdown__button">
                         <p>
-                          Weitere Funktionen
+                          Daten ansehen
                         </p>
+                        <span class="ico">
+                          <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="10.008" height="7.391"
+                            viewBox="0 0 10.008 7.391">
+                            <g id="control_down_" data-name="control down " transform="translate(0 0)">
+                              <path id="Dreieck_545_Kopie_2" data-name="Dreieck 545 Kopie 2"
+                                d="M1215.328,1885.949a1,1,0,0,1-1.656,0l-4-5.389a1,1,0,0,1,.828-1.562h8a1,1,0,0,1,.828,1.562Z"
+                                transform="translate(-1209.496 -1878.999)" fill="#fff" />
+                            </g>
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="dropdown__content">
+                        <div class="dropdown__content-box">
+                          <p>
+                            Daten ansehen
+                          </p>
+                        </div>
+                        <div class="dropdown__content-box">
+                          <p>
+                            Daten ansehen
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <h4>
-                    Bitte fügen Sie die Url von dem Inserat ein
-                  </h4>
-                </div>
-                <div class="contactContent__image">
-                  <div class="ratioImage ratioImage--contain">
-                    <img src="./images/car.png" alt="">
-                  </div>
-                  <h4>
-                    NUR PLATZHALTER FÜR BILD
-                  </h4>
-                </div>
-                <div class="contactContent__currency">
-                  <div class="contactContent__currency-item _lg">
-                  
-                    <div class="input input--currency">
-                      <label for="cur-1">
-                        Kaufpreis
+                  <div class="contactForm__body">
+                    <h2>
+                      Käufer
+                    </h2>
+                    <div class="input input--text">
+                      <label for="text-1">
+                        Name/Firma
                       </label>
-                      <input type="text" placeholder="XXXXXX" id="cur-1">
-                      <span class="currency" for="cur-1">
-                        Euro
-                      </span>
+                      <input type="text" id="text-1">
                     </div>
-                  </div>
-                  <div class="contactContent__currency-item">
-                    <div class="input input--currencySm">
-                      <label for="cur-2">
-                        Nettobetrag
+                    <div class="input input--text">
+                      <label for="text-2">
+                        Straße, Hausnummer
                       </label>
-                      <input type="text" placeholder="XXX" id="cur-2">
+                      <input type="text" id="text-2">
                     </div>
-                    <div class="input input--currencySm">
-                      <label for="cur-3">
-                        19% MwSt.
-                      </label>
-                      <input type="text" placeholder="XXX" id="cur-3">
-                    </div>
-                    <div class="input input--checkBox">
-                      <input type="checkbox" id="check">
-                      <label for="check">
-                        MwSt. hinzufügen
-                        <span class="checkBox">
+                    <div class="input input--text">
+                      <label for="text-3">
+                        PLZ, Ort
+                        <span>
+                          *
                         </span>
                       </label>
+                      <input type="text" id="text-3">
+                    </div>
+                    <div class="input input--text">
+                      <label for="text-4">
+                        Telefonnummer
+                      </label>
+                      <input type="text" id="text-4">
+                    </div>
+                    <div class="input input--text">
+                      <label for="text-5">
+                        E-Mail
+                        <span>
+                          *
+                        </span>
+                      </label>
+                      <input type="text" id="text-5">
+                    </div>
+                    <div class="input input--text">
+                      <label for="text-6">
+                        Steuernummer
+                      </label>
+                      <input type="text" id="text-6">
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
-              <form class="contactForm">
-                <div class="contactForm__header">
-                  <h2>
-                    Verkäufer
-                  </h2>
-                  <div class="dropdown">
-                    <div class="dropdown__button">
-                      <p>
-                        Daten ansehen
-                      </p>
-                      <span class="ico">
-                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="10.008" height="7.391"
-                          viewBox="0 0 10.008 7.391">
-                          <g id="control_down_" data-name="control down " transform="translate(0 0)">
-                            <path id="Dreieck_545_Kopie_2" data-name="Dreieck 545 Kopie 2"
-                              d="M1215.328,1885.949a1,1,0,0,1-1.656,0l-4-5.389a1,1,0,0,1,.828-1.562h8a1,1,0,0,1,.828,1.562Z"
-                              transform="translate(-1209.496 -1878.999)" fill="#fff" />
-                          </g>
-                        </svg>
-                      </span>
-                    </div>
-                    <div class="dropdown__content">
-                      <div class="dropdown__content-box">
-                        <p>
-                          Daten ansehen
-                        </p>
-                      </div>
-                      <div class="dropdown__content-box">
-                        <p>
-                          Daten ansehen
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+        </section>
+        <section class="info">
+          <div class="autoContainer _sm">
+            <div class="info__inner">
+              <div class="info__inner-row">
+                <h2>
+                  Fahrzeugdaten
+                </h2>
+                <div class="input input--text _sm">
+                  <label for="text-1">
+                    Hersteller/Typ
+                  </label>
+                  <input type="text" id="text-1">
                 </div>
-                <div class="contactForm__body">
-                  <h2>
-                    Käufer
-                  </h2>
-                  <div class="input input--text">
-                    <label for="text-1">
-                      Name/Firma
-                    </label>
-                    <input type="text" id="text-1">
-                  </div>
-                  <div class="input input--text">
+                <div class="infoColumn">
+                  <div class="input input--text _sm">
                     <label for="text-2">
-                      Straße, Hausnummer
+                      Erstzulassung
                     </label>
                     <input type="text" id="text-2">
                   </div>
-                  <div class="input input--text">
+                  <div class="input input--text _sm">
                     <label for="text-3">
-                      PLZ, Ort
-                       <span>
-                        *
-                      </span>
+                      Anzahl der Fahrzeughalter
                     </label>
                     <input type="text" id="text-3">
                   </div>
-                  <div class="input input--text">
+                  <div class="input input--text _sm">
                     <label for="text-4">
-                      Telefonnummer
+                      PS/KW
                     </label>
                     <input type="text" id="text-4">
                   </div>
-                  <div class="input input--text">
+                  <div class="input input--text _sm">
                     <label for="text-5">
-                      E-Mail
-                       <span>
-                        *
-                      </span>
+                      Getriebeart
                     </label>
                     <input type="text" id="text-5">
                   </div>
-                  <div class="input input--text">
+                  <div class="input input--text _sm">
                     <label for="text-6">
-                      Steuernummer
+                      Schadstoffklasse
                     </label>
                     <input type="text" id="text-6">
                   </div>
+                  <div class="input input--text _sm">
+                    <label for="text-7">
+                      Klima
+                    </label>
+                    <input type="text" id="text-7">
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-8">
+                      Fahrzeugtyp
+                    </label>
+                    <input type="text" id="text-8">
+                  </div>
+                  <div class="dropdown__wrapper">
+                    <h4>
+                      EU-Import
+                    </h4>
+                    <div class="dropdown dropdown--primary">
+                      <div class="dropdown__button">
+                        <p>
+                          Bitte auswählen
+                        </p>
+                        <span class="ico">
+                          <svg id="Icons_-_chevron-down" data-name="Icons - chevron-down"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_399" data-name="Path 399" fill="none" />
+                            <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="2" />
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="dropdown__content">
+                        <div class="dropdown__content-item">
+                          <p>
+                            Bitte auswählen
+                          </p>
+                        </div>
+                        <div class="dropdown__content-item">
+                          <p>
+                            Bitte auswählen
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-20">
+                      Fahrzeugtyp
+                    </label>
+                    <input type="text" id="text-20">
+                  </div>
                 </div>
-              </form>
+                <div class="infoColumn">
+                  <div class="input input--text _sm">
+                    <label for="text-10">
+                      KFZ-Gesamtfahrleistung
+                    </label>
+                    <input type="text" id="text-10">
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-11">
+                      Farbe
+                    </label>
+                    <input type="text" id="text-11">
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-12">
+                      Hubraum
+                    </label>
+                    <input type="text" id="text-12">
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-13">
+                      Kraftstoffart
+                    </label>
+                    <input type="text" id="text-13">
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-14">
+                      Scheckheftgepflegt
+                    </label>
+                    <input type="text" id="text-14">
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-15">
+                      TÜV/AU
+                    </label>
+                    <input type="text" id="text-15">
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="text-16">
+                      Anzahl der Türen
+                    </label>
+                    <input type="text" id="text-16">
+                  </div>
+                  <div class="dropdown__wrapper">
+                    <h4>
+                      Gewerblich genutzt ab EZ
+                    </h4>
+                    <div class="dropdown dropdown--primary">
+                      <div class="dropdown__button">
+                        <p>
+                          Bitte auswählen
+                        </p>
+                        <span class="ico">
+                          <svg id="Icons_-_chevron-down" data-name="Icons - chevron-down"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_399" data-name="Path 399" fill="none" />
+                            <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="2" />
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="dropdown__content">
+                        <div class="dropdown__content-item">
+                          <p>
+                            Bitte auswählen
+                          </p>
+                        </div>
+                        <div class="dropdown__content-item">
+                          <p>
+                            Bitte auswählen
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input input--file">
+                    <label for="file">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="23.223" height="20.877"
+                          viewBox="0 0 23.223 20.877">
+                          <path id="icon"
+                            d="M9.528,19.242l-.02-.223V12.326H2.1A2.006,2.006,0,0,1,0,10.438,1.974,1.974,0,0,1,1.817,8.566l.251-.018h7.44V1.888A2.007,2.007,0,0,1,11.612,0,2.049,2.049,0,0,1,13.7,1.633l.018.226v6.69H21.12a2.006,2.006,0,0,1,2.1,1.89,1.975,1.975,0,0,1-1.816,1.873l-.252.015H13.715v6.661a2.006,2.006,0,0,1-2.1,1.89A2.048,2.048,0,0,1,9.528,19.242Z" />
+                        </svg>
+                      </span>
+                      <p>
+                        Eigenschaften hinzufügen
+                      </p>
+                    </label>
+                    <input type="file" id="file">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="condition">
+          <div class="autoContainer _sm">
+            <div class="condition__inner">
+              <div class="condition__inner-content">
+                <h2>
+                  Fahrzeugzustand
+                </h2>
+                <div class="conditionBox">
+                  <div class="conditionBox__image">
+                    <span class="ico">
+                      <img src="./images/condition.png" alt="">
+                    </span>
+                  </div>
+                  <div class="conditionBox__info">
+                    <h4>
+                      Fahrzeugskizze
+                    </h4>
+                    <p>
+                      Schauen Sie sich die Fahrzeugskizze erneut an oder überarbeiten Sie diese hier.
+                    </p>
+                  </div>
+                  <button class="button button--primary">
+                    anzeigen
+                  </button>
+                </div>
+                <div class="conditionBody">
+                  <h4>
+                    Ausgewählte Schäden
+                  </h4>
+                  <div class="conditionBody__row">
+                    <div class="conditionBody__row-item">
+                      <div class="input input--textarea">
+                        <label for="text-1">
+                          Motor, Getriebe, Kupplung(editierbar)
+                        </label>
+                        <textarea id="text-1"></textarea>
+                      </div>
+                    </div>
+                    <div class="conditionBody__row-item">
+                      <div class="input input--textarea">
+                        <label for="text-2">
+                          Motor, Getriebe, Kupplung(editierbar)
+                        </label>
+                        <textarea id="text-2"></textarea>
+                      </div>
+                    </div>
+                    <div class="conditionBody__row-item">
+                      <div class="input input--textarea">
+                        <label for="text-3">
+                          Motor, Getriebe, Kupplung(editierbar)
+                        </label>
+                        <textarea id="text-3"></textarea>
+                      </div>
+                    </div>
+                    <div class="conditionBody__row-item _lg">
+                      <div class="input input--textarea">
+                        <label for="text-4">
+                          Motor, Getriebe, Kupplung(editierbar)
+                        </label>
+                        <textarea id="text-5"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="conditionBody__info">
+                    <h4>
+                      Uneingeschränkt Fahrbereit
+                    </h4>
+                    <burtton class="button button--primary">
+                      Bitte auswählen
+                    </burtton>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <!-- wrapper end-->

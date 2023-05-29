@@ -36,6 +36,11 @@
   @include index-880;
   @include components-880;
   @include header-880;
+  @include typography-880;
+
+}
+@media (max-width: 750px) {
+  @include index-750;
 }
 @media (max-width: 650px) {
   @include index-650;

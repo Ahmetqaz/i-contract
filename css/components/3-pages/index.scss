@@ -274,12 +274,54 @@
   h2 {
     color: $primary;
   }
-  &Column{
+  &Column {
     width: calc(50% - 10px);
     max-width: 620px;
     display: flex;
     flex-direction: column;
-    gap:15px ;
+    gap: 15px;
+  }
+  .dropdown {
+    max-width: 340px;
+    &__button {
+      padding: 1em;
+      .ico {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      &:hover {
+        p {
+          opacity: 0.7;
+        }
+      }
+    }
+    &__content {
+      padding: 1em;
+      &-item {
+        cursor: pointer;
+        p {
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    p {
+      font-weight: 400;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h4 {
+        font-size: 15px;
+      }
+    }
+  }
+  .input {
+    &--file {
+      max-width: 340px;
+    }
   }
 }
 .sideSpace {
@@ -287,27 +329,30 @@
 }
 .tabs {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  &__row {
-    margin-left: auto;
+  &__inner {
     display: flex;
-    align-items: center;
-    padding: 1px;
-    gap: 2px;
-    background: $blue-4;
-    border-radius: 4px;
-    &._links {
+    flex-direction: column;
+    gap: 48px;
+    &-row {
+      margin-left: auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      font-size: 16px;
-      background: $white;
-      padding: 1.5em 1.8em;
-      width: 100%;
+      padding: 1px;
+      gap: 2px;
+      background: $blue-4;
+      border-radius: 4px;
+      &._links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        background: $white;
+        padding: 1.5em 1.8em;
+        width: 100%;
+      }
     }
   }
+ 
   &Link {
     color: $primary;
     font-size: inherit;
@@ -319,6 +364,23 @@
       opacity: 0.7;
     }
   }
+}
+.wrapper {
+  max-width: 1980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 130px 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  &__body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1845px;
+  }
+}
+section{
+  padding: 35px 0;
 }
 
 @mixin index-1900 {
@@ -413,6 +475,9 @@
       width: 100%;
     }
   }
+  .wrapper {
+    padding: 120px 0 40px;
+  }
 }
 @mixin index-1180 {
   .contact {
@@ -446,24 +511,43 @@
     }
     &Content {
       width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
       &__header {
         max-width: unset;
       }
     }
     &Form {
       width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
+    }
+  }
+  .condition {
+    &__inner {
+      &-content {
+        .button {
+          width: 300px;
+        }
+      }
+    }
+    &Body {
+      &__row {
+        gap: 24px 10px;
+        &-item {
+          width: calc(33% - 5px);
+        }
+      }
+    }
+    .input {
+      font-size: 14px;
     }
   }
   .tabs {
-    &__row {
-      &._links {
-        font-size: 14px;
+    &__inner{
+      &-row {
+        &._links {
+          font-size: 14px;
+        }
       }
     }
+   
   }
 }
 @mixin index-880 {
@@ -471,20 +555,76 @@
     &__inner {
     }
   }
+  .condition {
+    &__inner {
+      &-content {
+        .button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+    &Box {
+      padding: 20px 15px;
+      flex-wrap: wrap;
+      &__info {
+        width: calc(100% - 70px);
+      }
+    }
+    &Body {
+      &__info {
+        width: 100%;
+      }
+      &__row {
+        gap: 24px 10px;
+        &-item {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+    .input {
+      font-size: 14px;
+    }
+  }
   .tabs {
-    &__row {
-      &._links {
-        flex-wrap: wrap;
-        gap: 20px 10px;
-        justify-content: flex-start;
+    &__inner{
+      &-row {
+        &._links {
+          flex-wrap: wrap;
+          gap: 20px 10px;
+          justify-content: flex-start;
+        }
       }
     }
     &Link {
       width: calc(33.3% - 10px);
     }
   }
+  .input {
+    .dropdown {
+      &__wrapper {
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
-
+@mixin index-750 {
+  .info {
+    &__inner {
+      &-row {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+    &Column {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+}
 @mixin index-650 {
   .contact {
     &Content {
@@ -500,6 +640,9 @@
         }
       }
     }
+  }
+  section{
+    padding: 20px 0;
   }
 }
 @mixin index-580 {
@@ -522,10 +665,15 @@
     }
   }
   .tabs {
-    gap: 30px;
+    &__inner {
+      gap: 30px;
+    }
     &Link {
       width: calc(50% - 10px);
     }
+  }
+  .wrapper {
+    padding: 90px 0 40px;
   }
 }
 @mixin index-480 {
@@ -567,6 +715,53 @@
   .tabs {
     &Link {
       width: 100%;
+    }
+  }
+  .condition {
+    &__inner {
+      &-content {
+      }
+    }
+    &Box {
+      padding: 20px 15px;
+      flex-wrap: wrap;
+      &__info {
+        width: calc(100% - 70px);
+      }
+    }
+    &Body {
+      padding: 20px 15px;
+      &__row {
+        gap: 24px 10px;
+        &-item {
+          width: 100%;
+          max-width: unset;
+        }
+      }
+    }
+    .input {
+      font-size: 14px;
+    }
+  }
+  .info {
+    &__inner {
+      &-row {
+        padding: 20px 15px;
+      }
+    }
+    &Column {
+      width: 100%;
+      max-width: unset;
+    }
+    .dropdown {
+      width: 100%;
+      max-width: unset;
+    }
+    .input {
+      &--file {
+        width: 100%;
+        max-width: unset;
+      }
     }
   }
 }
