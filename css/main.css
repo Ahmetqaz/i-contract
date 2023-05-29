@@ -1980,6 +1980,157 @@ section {
   padding: 35px 0;
 }
 
+.data__inner {
+  padding: 15px 34px 25px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 45px;
+}
+.data__inner-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+.data__inner-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+.data__inner-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-bottom: 120px;
+}
+.data__inner-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.data .dropdown {
+  width: 100%;
+}
+.data .dropdown__button {
+  padding: 1.1em 0.9em;
+}
+.data .dropdown__button .ico {
+  width: 1.5em;
+  height: 1.5em;
+}
+.data .dropdown__button:hover p {
+  opacity: 0.7;
+}
+.data .dropdown__content {
+  padding: 1.1em 0.9em;
+}
+.data .dropdown__content-item {
+  cursor: pointer;
+}
+.data .dropdown__content-item:hover p {
+  opacity: 0.7;
+}
+.data .dropdown__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  max-width: 340px;
+  width: calc(50% - 35px);
+}
+.data .dropdown._up {
+  z-index: 4;
+}
+.data ul {
+  font-size: 16px;
+  background: #f5f6fa;
+  border-radius: 5px;
+  padding: 40px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.data ul li {
+  font-size: 1em;
+  font-weight: 400;
+  position: relative;
+  padding-left: 12px;
+}
+.data ul li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #1e1f24;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border-radius: 50%;
+}
+.data h2 {
+  color: #185f76;
+  margin-bottom: 25px;
+}
+.data .input--textarea {
+  gap: 14px;
+}
+.data .button {
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+  background: #e96d24;
+  border-radius: 100px;
+  padding: 1em;
+  color: #fff;
+  font-weight: 400;
+  width: 100%;
+  max-width: 392px;
+}
+.data .button .ico {
+  width: 1.1em;
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.data .button .ico svg.fill {
+  fill: #fff;
+}
+.data .button:hover {
+  background: #185f76;
+}
+
 @media (max-width: 1900px) {
   .contactContent__currency {
     -webkit-box-orient: vertical;
@@ -2176,6 +2327,13 @@ section {
     font-size: 18px;
   }
 
+  .data__inner-body {
+    margin-bottom: 80px;
+  }
+  .data .button {
+    font-size: 23px;
+  }
+
   h2 {
     font-size: 20px;
   }
@@ -2278,6 +2436,25 @@ section {
     font-size: 14px;
   }
 
+  .data__inner {
+    gap: 35px;
+  }
+  .data__inner-box {
+    gap: 30px;
+  }
+  .data__inner-body {
+    margin-bottom: 80px;
+  }
+  .data ul {
+    font-size: 14px;
+  }
+  .data .button {
+    font-size: 20px;
+  }
+  .data .dropdown__wrapper {
+    width: calc(50% - 15px);
+  }
+
   .input--file {
     font-size: 14px;
   }
@@ -2349,6 +2526,25 @@ section {
 
   .wrapper {
     padding: 90px 0 40px;
+  }
+
+  .data__inner {
+    gap: 35px;
+  }
+  .data__inner-box {
+    gap: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .data__inner-body {
+    margin-bottom: 50px;
+  }
+  .data .button {
+    font-size: 18px;
+  }
+  .data .dropdown__wrapper {
+    width: 100%;
+    max-width: unset;
   }
 
   .input {
@@ -2428,6 +2624,20 @@ section {
   .info .input--file {
     width: 100%;
     max-width: unset;
+  }
+
+  .data__inner {
+    padding: 20px 15px;
+  }
+  .data__inner-body {
+    margin-bottom: 30px;
+  }
+  .data ul {
+    gap: 10px;
+    padding: 30px 10px;
+  }
+  .data .button {
+    font-size: 16px;
   }
 
   .input {

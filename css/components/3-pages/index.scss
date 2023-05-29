@@ -352,7 +352,7 @@
       }
     }
   }
- 
+
   &Link {
     color: $primary;
     font-size: inherit;
@@ -372,15 +372,141 @@
   padding: 130px 30px 50px;
   display: flex;
   justify-content: space-between;
-  &__body{
+  &__body {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 1845px;
   }
 }
-section{
+section {
   padding: 35px 0;
+}
+.data {
+  &__inner {
+    padding: 15px 34px 25px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    &-box {
+      display: flex;
+      gap: 60px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 120px;
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .dropdown {
+    width: 100%;
+    &__button {
+      padding: 1.1em 0.9em;
+      .ico {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      &:hover {
+        p {
+          opacity: 0.7;
+        }
+      }
+    }
+    &__content {
+      padding: 1.1em 0.9em;
+      &-item {
+        cursor: pointer;
+        &:hover {
+          p {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 340px;
+      width: calc(50% - 35px);
+    }
+    &._up {
+      z-index: 4;
+    }
+  }
+  ul {
+    font-size: 16px;
+    background: $white-3;
+    border-radius: 5px;
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    li {
+      font-size: 1em;
+      font-weight: 400;
+      position: relative;
+      padding-left: 12px;
+      &::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: $black;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+  h2 {
+    color: $primary;
+    margin-bottom: 25px;
+  }
+  .input {
+    &--textarea {
+      gap: 14px;
+    }
+  }
+  .button {
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    background: $orange;
+    border-radius: 100px;
+    padding: 1em;
+    color: $white;
+    font-weight: 400;
+    width: 100%;
+    max-width: 392px;
+    .ico {
+      width: 1.1em;
+      position: absolute;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      svg {
+        &.fill {
+          fill: $white;
+        }
+      }
+    }
+    &:hover {
+      background: $primary;
+    }
+  }
 }
 
 @mixin index-1900 {
@@ -498,6 +624,16 @@ section{
       }
     }
   }
+  .data {
+    &__inner {
+      &-body {
+        margin-bottom: 80px;
+      }
+    }
+    .button {
+      font-size: 23px;
+    }
+  }
 }
 @mixin index-1100 {
 }
@@ -540,14 +676,13 @@ section{
     }
   }
   .tabs {
-    &__inner{
+    &__inner {
       &-row {
         &._links {
           font-size: 14px;
         }
       }
     }
-   
   }
 }
 @mixin index-880 {
@@ -588,7 +723,7 @@ section{
     }
   }
   .tabs {
-    &__inner{
+    &__inner {
       &-row {
         &._links {
           flex-wrap: wrap;
@@ -607,6 +742,28 @@ section{
         h4 {
           font-size: 14px;
         }
+      }
+    }
+  }
+  .data {
+    &__inner {
+      gap: 35px;
+      &-box {
+        gap: 30px;
+      }
+      &-body {
+        margin-bottom: 80px;
+      }
+    }
+    ul {
+      font-size: 14px;
+    }
+    .button {
+      font-size: 20px;
+    }
+    .dropdown {
+      &__wrapper {
+        width: calc(50% - 15px);
       }
     }
   }
@@ -641,7 +798,7 @@ section{
       }
     }
   }
-  section{
+  section {
     padding: 20px 0;
   }
 }
@@ -674,6 +831,27 @@ section{
   }
   .wrapper {
     padding: 90px 0 40px;
+  }
+  .data {
+    &__inner {
+      gap: 35px;
+      &-box {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      &-body {
+        margin-bottom: 50px;
+      }
+    }
+    .button {
+      font-size: 18px;
+    }
+    .dropdown {
+      &__wrapper {
+        width: 100%;
+        max-width: unset;
+      }
+    }
   }
 }
 @mixin index-480 {
@@ -718,10 +896,6 @@ section{
     }
   }
   .condition {
-    &__inner {
-      &-content {
-      }
-    }
     &Box {
       padding: 20px 15px;
       flex-wrap: wrap;
@@ -762,6 +936,21 @@ section{
         width: 100%;
         max-width: unset;
       }
+    }
+  }
+  .data{
+    &__inner{
+      padding: 20px 15px;
+      &-body{
+        margin-bottom: 30px;
+      }
+    }
+    ul{
+      gap: 10px;
+      padding: 30px 10px;
+    }
+    .button{
+      font-size: 16px;
     }
   }
 }
