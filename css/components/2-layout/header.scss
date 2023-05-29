@@ -103,7 +103,7 @@
   position: relative;
   font-size: 10px;
   width: 2.6em;
-  height: 2em;
+  height: 1.9em;
   color: $white;
   background: transparent;
   transition: 0.2s ease;
@@ -212,6 +212,20 @@
   .ico {
     width: 1.75em;
     height: 1.75em;
+  }
+  .notification{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2em .6em;
+    border-radius: 10px;
+    background: $red;
+    color: $white;
+    font-size: .85em;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .dropdown {
     display: none;
@@ -365,6 +379,13 @@
     height: calc(100% - 60px);
     &__inner{
       padding: 30px 15px;
+    }
+  }
+  .burger{
+    width: 2.2em;
+    height: 1.6em;
+    &::before,&::after,span{
+      height: 2px;
     }
   }
 }

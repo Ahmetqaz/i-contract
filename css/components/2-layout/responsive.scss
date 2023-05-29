@@ -19,6 +19,9 @@
   @include index-1440;
   @include components-1440;
 }
+@media (max-width: 1300px) {
+  @include index-1300;
+}
 @media (max-width: 1180px) {
   @include index-1180;
   @include typography-1180;
@@ -54,4 +57,7 @@
   @include index-480;
   @include components-480;
   @include header-480;
+}
+@media (max-width: 390px) {
+  @include index-390;
 }
