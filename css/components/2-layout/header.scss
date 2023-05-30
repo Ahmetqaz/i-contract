@@ -166,7 +166,7 @@
     display: flex;
     flex-direction: column;
     width: 326px;
-    padding: 15px 60px 15px 20px;
+    padding: 15px 15px 15px 20px;
     &-link {
       padding: 1.3em 1.45em;
       color: $black-2;
@@ -213,15 +213,15 @@
     width: 1.75em;
     height: 1.75em;
   }
-  .notification{
+  .notification {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: .2em .6em;
+    padding: 0.2em 0.6em;
     border-radius: 10px;
     background: $red;
     color: $white;
-    font-size: .85em;
+    font-size: 0.85em;
     position: absolute;
     right: 10px;
     top: 50%;
@@ -247,68 +247,64 @@
   }
 }
 @mixin header-1660 {
-  .header {
-    padding: 20px 0;
-    .dropdown {
-      display: none;
-    }
-  }
   .sidebar {
-    position: fixed;
-    top: 120px;
     left: 0;
-    width: 100%;
-    height: calc(100% - 93px);
-    background: rgba($black, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 0;
-    transform: translate(-100%);
-
-    opacity: 0;
-    pointer-events: none;
-    z-index: 9;
-    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    top: 180px;
     padding: 0;
+    background: unset;
+    z-index: 5;
     &__inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 25%;
-      min-width: 280px;
-      height: 100%;
-      flex-direction: column;
+      padding: 0;
+      width: auto;
       align-items: flex-start;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      background: $white;
-      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
-      transform: translate(-100%);
-      opacity: 0;
-      transition: 0.15s ease-in-out 0s;
-      padding: 40px 20px;
-      overflow: auto;
-      @include hideScroll;
       &-link {
-        width: 100%;
-      }
-    }
-    &.active {
-      transform: translateX(0);
-      opacity: 1;
-      pointer-events: all;
-      .sidebar {
-        &__inner {
-          transform: translateX(0);
-          opacity: 1;
+        @include transition;
+        gap: 0;
+        padding: 1.1em 1.25em;
+        .text {
+          opacity: 0;
+          width: 0;
+          pointer-events: none;
+        }
+        .notification {
+          opacity: 0;
+          width: 0;
+          pointer-events: none;
+          position: unset;
+          display: none;
+          transform: unset;
+        }
+        span {
+          @include transition;
+        }
+        &:hover {
+          background: $white;
+          gap: 10px;
+          box-shadow: 0 1px 4px rgba($black, 0.2);
+          .ico {
+            svg {
+              stroke: $primary;
+            }
+          }
+          .text {
+            opacity: 1;
+            width: auto;
+            pointer-events: all;
+            position: unset;
+          }
+          .notification {
+            opacity: 1;
+            width: auto;
+            pointer-events: all;
+            padding: 0.2em 0.6em;
+            display: flex;
+          }
         }
       }
     }
-    .dropdown {
-      display: block;
-    }
   }
-  .burger {
-    display: block;
+  .header {
+    padding: 20px 0;
   }
 }
 @mixin header-1100 {
@@ -324,8 +320,9 @@
     }
   }
   .sidebar {
-    top: 108px;
-    height: calc(100% - 78px);
+    top: 130px;
+    // top: 108px;
+    // height: calc(100% - 78px);
   }
 }
 @mixin header-1025 {
@@ -357,35 +354,210 @@
         gap: 15px;
       }
     }
+    padding: 20px 0;
+    .dropdown {
+      display: none;
+    }
   }
-  .sidebar{
-    top: 100px;
-    height: calc(100% - 60px);
+  .sidebar {
+    position: fixed;
+    padding-top: 0;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 78px);
+    background: rgba($black, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+    transform: translate(-100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    padding: 0;
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+      min-width: 280px;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      background: $white;
+      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
+      transform: translate(-100%);
+      opacity: 0;
+      transition: 0.15s ease-in-out 0s;
+      padding: 40px 20px;
+      overflow: auto;
+      @include hideScroll;
+      &-link {
+        width: 100%;
+        gap: 15px;
+      }
+    }
+    .text {
+      opacity: 1;
+      width: auto;
+      pointer-events: all;
+    }
+    .notification {
+      opacity: 1;
+      width: auto;
+      pointer-events: all;
+      position: absolute;
+      display: block;
+      transform: translateY(-50%);
+    }
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
+      .sidebar {
+        &__inner {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+    .dropdown {
+      display: block;
+      &__content {
+        position: unset;
+        padding: 0;
+      }
+      &:hover {
+        .dropdown {
+          &__content {
+            padding: 0.5em 1em;
+          }
+        }
+      }
+    }
+  }
+  .burger {
+    display: block;
+    margin-left: 10px;
   }
 }
 @mixin header-480 {
-  .header{
-    &__inner{
-      &-logo{
+  .header {
+    &__inner {
+      &-logo {
         width: 120px;
       }
     }
-    .autoContainer{
+    .autoContainer {
       padding: 0 15px;
     }
   }
-  .sidebar{
+  .sidebar {
     top: 90px;
     height: calc(100% - 60px);
-    &__inner{
+    &__inner {
       padding: 30px 15px;
     }
   }
-  .burger{
+  .burger {
     width: 2.2em;
     height: 1.6em;
-    &::before,&::after,span{
+    &::before,
+    &::after,
+    span {
       height: 2px;
     }
+  }
+}
+// Height
+@mixin headerHeigth-800 {
+  .header {
+    &__inner {
+      &-logo {
+        width: 150px;
+      }
+      &-box {
+        gap: 15px;
+      }
+    }
+    padding: 20px 0;
+    .dropdown {
+      display: none;
+    }
+  }
+  .sidebar {
+    position: fixed;
+    padding-top: 0;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: rgba($black, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+    transform: translate(-100%);
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    padding: 0;
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25%;
+      min-width: 280px;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      background: $white;
+      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
+      transform: translate(-100%);
+      opacity: 0;
+      transition: 0.15s ease-in-out 0s;
+      padding: 40px 20px;
+      overflow: auto;
+      @include hideScroll;
+      &-link {
+        width: 100%;
+        gap: 15px;
+      }
+    }
+    .text {
+      opacity: 1;
+      width: auto;
+      pointer-events: all;
+    }
+    .notification {
+      opacity: 1;
+      width: auto;
+      pointer-events: all;
+      position: absolute;
+      display: block;
+      transform: translateY(-50%);
+    }
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
+      .sidebar {
+        &__inner {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+    .dropdown {
+      display: block;
+    }
+  }
+  .burger {
+    display: block;
+    margin-left: 10px;
   }
 }

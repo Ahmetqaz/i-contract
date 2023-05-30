@@ -61,3 +61,9 @@
 @media (max-width: 390px) {
   @include index-390;
 }
+@media (max-height: 800px) {
+  @include indexHeigth-800;
+  @include headerHeigth-800;
+}
+
+
