@@ -1402,3 +1402,11 @@ section {
   }
 }
 
+
+@mixin indexHeight-880{
+  .popUp{
+    &__checkBoxes{
+      height: calc(100vh - 40px);
+    }
+  }
+  }
