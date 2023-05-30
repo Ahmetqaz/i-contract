@@ -36,16 +36,41 @@
     &__image {
       width: 100%;
       position: relative;
+      margin-bottom: 30px;
       .ratioImage {
         width: 69%;
         margin: 0 auto;
-        padding-bottom: 52.3%;
+        padding-bottom: 45%;
+      }
+      
+      h2{
+        color: $primary;
+        font-size: 30px;
+      }
+      h3{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $gray;
+        font-size: 22px;
       }
       h4 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        color: $primary;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+     
+      .ico{
+        width: 25px;
+        svg{
+          fill: $gray;
+        }
+      }
+      &-info{
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
       }
     }
     &__currency {
@@ -342,9 +367,7 @@
       display: flex;
       align-items: center;
       padding: 1px;
-      gap: 2px;
-      background: $blue-4;
-      border-radius: 4px;
+      gap: 15px;
       &._links {
         display: flex;
         align-items: center;
@@ -353,6 +376,9 @@
         background: $white;
         padding: 1.5em 1.8em;
         width: 100%;
+      }
+      .button{
+        border-color: $blue-4;
       }
     }
   }
@@ -373,7 +399,7 @@
   max-width: 1980px;
   width: 100%;
   margin: 0 auto;
-  padding: 130px 30px 50px 0;
+  padding: 130px 0 50px 0;
   display: flex;
   justify-content: space-between;
   &__body {
@@ -728,6 +754,19 @@ section {
 }
 @mixin index-1660 {
   .contact {
+    &Content{
+      &__image{
+        h2{
+          font-size: 27px;
+        }
+        h3{
+          font-size: 20px;
+        }
+        h4 {
+          font-size: 18px;
+        }
+      }
+    }
     &Form {
       padding: 12px 20px;
     }
@@ -832,12 +871,16 @@ section {
     }
   }
   .tabs {
+    top: 22px;
     &__inner {
       gap: 35px;
     }
   }
 }
 @mixin index-1100 {
+  .tabs{
+    top: 8px;
+  }
 }
 @mixin index-1025 {
   .contact {
@@ -1038,6 +1081,15 @@ section {
         .ratioImage {
           width: 80%;
         }
+        h2{
+          font-size: 25px;
+        }
+        h3{
+          font-size: 18px;
+        }
+        h4 {
+          font-size: 16px;
+        }
       }
       &__currency {
         padding: 15px;
@@ -1190,15 +1242,25 @@ section {
       gap: 25px;
       flex-direction: column;
     }
-
     &Content {
       &__image {
         .ratioImage {
           width: 90%;
         }
+      &-info{
+        padding: 15px 0;
+      }
+        h2{
+          font-size: 22px;
+        }
+        h3{
+          font-size: 16px;
+        }
         h4 {
-          width: 100%;
-          text-align: center;
+          font-size: 14px;
+        }
+        .ico{
+          width: 20px;
         }
       }
       &__currency {
@@ -1339,13 +1401,4 @@ section {
     }
   }
 }
-@mixin indexHeigth-800 {
-  .popUp {
-    &__checkBoxes {
-      height: calc(100vh - 40px);
-    }
-  }
-  .tabs {
-    top: -4px;
-  }
-}
+

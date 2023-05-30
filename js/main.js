@@ -13,11 +13,6 @@ menuBtn.onclick = function () {
   menuBtn.classList.toggle("active");
   body.classList.toggle("active");
 };
-window.onclick = function (event) {
-  if (event.target == menu) {
-    closeMenu();
-  }
-};
 
 const header = document.getElementById("header");
 if (header)
@@ -28,50 +23,6 @@ if (header)
       header.classList.remove("sticky");
     }
   });
-
-///
-///
-/// slick slider
-
-///
-///
-/// tabEvents
-// const toggleBody = (isClosed) => {
-//   if (isClosed) {
-//     document.body.classList.add("active");
-//     if (menu) closeMenu();
-//   } else {
-//     document.body.classList.remove("active");
-//   }
-// };
-// document.querySelectorAll(`[data-event="tabEvent"]`).forEach((eventBtn) => {
-//   const tab = document.querySelector(eventBtn.getAttribute("data-tab"));
-//   if (tab) {
-//     eventBtn.onclick = (e) => {
-//       e.preventDefault();
-//       tab.classList.toggle("active");
-//       toggleBody(tab.classList.contains("active"));
-//     };
-//     tab.onclick = (e) => {
-//       if (e.target === e.currentTarget) {
-//         tab.classList.toggle("active");
-//         toggleBody(tab.classList.contains("active"));
-//       }
-//     };
-//   }
-// });
-// document.querySelectorAll(`[data-toggle]`).forEach((toggleBtn) => {
-//   console.log("btn ->");
-//   toggleBtn.onclick = () =>
-//     toggleBtn.classList.toggle(toggleBtn.getAttribute("data-toggle"));
-// });
-///
-///
-///
-///WOW JS
-// new WOW().init({
-//   boxClass: "wow",
-// });
 
 const popUpBtn = document.getElementById("popUpBtn");
 const popUp = document.getElementById("popUp");
@@ -85,46 +36,44 @@ popupClose.addEventListener("click", () => {
   body.classList.toggle("active");
 });
 
-
-
 let testJSON =
   '[ "Abstandswarner","Blendfreies Fernlicht","Adaptives Kurvenlicht","Abstandswarner","Blendfreies Fernlicht", "Adaptives Kurvenlicht", "Abstandswarner","Blendfreies Fernlicht", "Adaptives Kurvenlicht","Abstandswarner", "Blendfreies Fernlicht","Adaptives Kurvenlicht", "Abstandswarner", "Blendfreies Fernlicht", "Adaptives Kurvenlicht","Abstandswarner","Blendfreies Fernlicht"," Adaptives Kurvenlicht","Abstandswarner","Blendfreies Fernlicht"," Adaptives Kurvenlicht","Abstandswarner","Blendfreies Fernlicht"," Adaptives Kurvenlicht"]';
-  let array = [
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-    "Abstandswarner",
-    "Blendfreies Fernlicht",
-    "Adaptives Kurvenlicht",
-  ];
+let array = [
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+  "Abstandswarner",
+  "Blendfreies Fernlicht",
+  "Adaptives Kurvenlicht",
+];
 
-const checkBoxes = document.querySelector(".popUp__checkBoxes-row")
+const checkBoxes = document.querySelector(".popUp__checkBoxes-row");
 const createCheckboxes = (data) => {
   checkBoxes.innerHTML = "";
   const array = typeof data === "string" ? JSON.parse(data) : data;
-    array.forEach((element, index) => {
-      let input = document.createElement("div");
-      input.classList.add("input");
-      input.classList.add("input--checkBox");
-      input.innerHTML = `
+  array.forEach((element, index) => {
+    let input = document.createElement("div");
+    input.classList.add("input");
+    input.classList.add("input--checkBox");
+    input.innerHTML = `
       <input  id="${index}"  type="checkbox">
       <label for="${index}">
       <span class="checkBox">
@@ -132,12 +81,10 @@ const createCheckboxes = (data) => {
       ${element}
         </label>
    `;
-      checkBoxes.appendChild(input);
-    });
+    checkBoxes.appendChild(input);
+  });
 };
-createCheckboxes(array)
-
-
+createCheckboxes(array);
 
 const tabsLink = document.querySelectorAll(".tabsLink");
 const sections = document.querySelectorAll(".anchor");
@@ -153,4 +100,29 @@ tabsLink.forEach((e) => {
 
 window.onscroll = function () {
   changeLinkState();
+};
+
+const siebarLinks = document.querySelectorAll(".sidebar__inner-link");
+const sidebar = document.querySelector(".sidebar__inner");
+siebarLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (menu.classList.contains("active")) {
+      menu.classList.remove("active");
+      menuBtn.classList.remove("active");
+      body.classList.remove("active");
+    } else {
+      menu.classList.add("active");
+      body.classList.add("active")
+    }
+  });
+});
+const sidebarClose = () => {
+  menu.classList.remove("active");
+};
+
+window.onclick = function (event) {
+  if (event.target == menu) {
+    sidebarClose();
+    closeMenu();
+  }
 };

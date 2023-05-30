@@ -158,6 +158,7 @@
 .sidebar {
   position: fixed;
   height: 100%;
+  left: 0;
   background: $white;
   font-size: 14px;
   padding-top: 20px;
@@ -250,13 +251,15 @@
 @mixin header-1660 {
   .sidebar {
     left: 0;
-    top: 180px;
     padding: 0;
     background: unset;
+    top: 120px;
+    height: calc(100% - 80px);
     &__inner {
-      padding: 0;
+      padding: 50px 0;
       width: auto;
       align-items: flex-start;
+      height: 100%;
       &-link {
         @include transition;
         gap: 0;
@@ -267,37 +270,63 @@
           pointer-events: none;
         }
         .notification {
-          opacity: 0;
-          width: 0;
-          pointer-events: none;
-          position: unset;
-          display: none;
-          transform: unset;
+          right: unset;
+          left: 30px;
+          top: 18px;
         }
         span {
           @include transition;
         }
-        &:hover {
-          background: $white;
-          gap: 10px;
-          box-shadow: 0 1px 4px rgba($black, 0.2);
-          .ico {
-            svg {
-              stroke: $primary;
+        // &:hover {
+        //   background: $white;
+        //   gap: 10px;
+        //   box-shadow: 0 1px 4px rgba($black, 0.2);
+        //   .ico {
+        //     svg {
+        //       stroke: $primary;
+        //     }
+        //   }
+        //   .text {
+        //     opacity: 1;
+        //     width: auto;
+        //     pointer-events: all;
+        //     position: unset;
+        //   }
+        // }
+      }
+      background: $white;
+    }
+    &.active {
+      width: 100%;
+      height: calc(100% - 80px);
+      .sidebar {
+        &__inner {
+          width: 260px;
+          align-items: unset;
+          padding: 50px 20px 50px 0;
+          &-link {
+            gap: 25px;
+            padding: 1.1em 1.25em;
+            .text {
+              opacity: 1;
+              width: auto;
+              pointer-events: all;
             }
-          }
-          .text {
-            opacity: 1;
-            width: auto;
-            pointer-events: all;
-            position: unset;
-          }
-          .notification {
-            opacity: 1;
-            width: auto;
-            pointer-events: all;
-            padding: 0.2em 0.6em;
-            display: flex;
+            &._notification {
+              gap: 25px;
+            }
+            &:hover {
+              background: rgba($black, 0.1);
+              box-shadow: unset;
+              .text {
+                opacity: 1;
+                width: auto;
+                pointer-events: all;
+              }
+              &._notification {
+                gap: 25px;
+              }
+            }
           }
         }
       }
@@ -320,9 +349,12 @@
     }
   }
   .sidebar {
-    top: 130px;
-    // top: 108px;
-    // height: calc(100% - 78px);
+    top: 105px;
+    height: calc(100% - 70px);
+    &.active {
+      top: 105px;
+      height: calc(100% - 70px);
+    }
   }
 }
 @mixin header-1025 {
@@ -391,13 +423,13 @@
       transform: translate(-100%);
       opacity: 0;
       transition: 0.15s ease-in-out 0s;
-      padding: 40px 20px;
+      padding: 40px 20px 60px;
       overflow: auto;
       @include hideScroll;
       &-link {
         width: 100%;
         gap: 15px;
-        &:hover{
+        &:hover {
           gap: 15px;
         }
       }
@@ -419,6 +451,8 @@
       transform: translateX(0);
       opacity: 1;
       pointer-events: all;
+      height: calc(100% - 78px);
+      top: 110px;
       .sidebar {
         &__inner {
           transform: translateX(0);
@@ -428,9 +462,11 @@
     }
     .dropdown {
       display: block;
+      width: calc(100% - 20px);
+      margin: 0 0 0 auto;
       &__content {
         position: unset;
-        padding: 0;
+        padding: 0 1em;
       }
       &:hover {
         .dropdown {
@@ -451,7 +487,7 @@
     padding: 15px 0 !important;
     &__inner {
       &-logo {
-        width: 120px;
+        width: 120px !important;
       }
     }
     .autoContainer {
@@ -464,6 +500,10 @@
     &__inner {
       padding: 30px 15px;
     }
+    &.active {
+      top: 90px !important;
+      height: calc(100% - 60px);
+    }
   }
   .burger {
     width: 2.2em;
@@ -473,98 +513,5 @@
     span {
       height: 2px;
     }
-  }
-}
-// Height
-@mixin headerHeigth-800 {
-  .header {
-    &__inner {
-      &-logo {
-        width: 150px;
-      }
-      &-box {
-        gap: 15px;
-      }
-    }
-    padding: 20px 0;
-    .dropdown {
-      display: none;
-    }
-  }
-  .sidebar {
-    position: fixed;
-    padding-top: 0;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 60px);
-    background: rgba($black, 0.4);
-    backdrop-filter: blur(4px);
-    z-index: 0;
-    transform: translate(-100%);
-
-    opacity: 0;
-    pointer-events: none;
-    z-index: 9;
-    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
-    padding: 0;
-    &__inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 25%;
-      min-width: 280px;
-      height: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      background: $white;
-      box-shadow: 0px 4px 24px -1px rgba($black, 0.2);
-      transform: translate(-100%);
-      opacity: 0;
-      transition: 0.15s ease-in-out 0s;
-      padding: 40px 20px;
-      overflow: auto;
-      @include hideScroll;
-      &-link {
-        width: 100%;
-        gap: 15px;
-        &:hover{
-          gap: 15px;
-        }
-      }
-    }
-    .text {
-      opacity: 1;
-      width: auto;
-      pointer-events: all;
-    }
-    .notification {
-      opacity: 1;
-      width: auto;
-      pointer-events: all;
-      position: absolute;
-      display: block;
-      transform: translateY(-50%);
-    }
-    &.active {
-      transform: translateX(0);
-      opacity: 1;
-      pointer-events: all;
-      .sidebar {
-        &__inner {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-    }
-    .dropdown {
-      display: block;
-    }
-  }
-  .burger {
-    display: block;
-    margin-left: 10px;
   }
 }
