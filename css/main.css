@@ -1432,6 +1432,7 @@ svg {
   font-size: 14px;
   padding-top: 20px;
   margin-top: -30px;
+  z-index: 8;
 }
 .sidebar__inner {
   display: -webkit-box;
@@ -2430,7 +2431,6 @@ section {
     top: 180px;
     padding: 0;
     background: unset;
-    z-index: 5;
   }
   .sidebar__inner {
     padding: 0;
@@ -2812,6 +2812,9 @@ section {
     width: 100%;
     gap: 15px;
   }
+  .sidebar__inner-link:hover {
+    gap: 15px;
+  }
   .sidebar .text {
     opacity: 1;
     width: auto;
@@ -3112,6 +3115,9 @@ section {
     font-size: 12px;
   }
 
+  .header {
+    padding: 15px 0 !important;
+  }
   .header__inner-logo {
     width: 120px;
   }
@@ -3120,7 +3126,7 @@ section {
   }
 
   .sidebar {
-    top: 90px;
+    top: 90px !important;
     height: calc(100% - 60px);
   }
   .sidebar__inner {
@@ -3252,6 +3258,9 @@ section {
   }
   .sidebar__inner-link {
     width: 100%;
+    gap: 15px;
+  }
+  .sidebar__inner-link:hover {
     gap: 15px;
   }
   .sidebar .text {
