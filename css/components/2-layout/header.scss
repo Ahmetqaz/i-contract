@@ -260,15 +260,16 @@
       width: auto;
       align-items: flex-start;
       height: 100%;
+      transition: 0.3s ease-in-out;
       &-link {
         gap: 0;
         padding: 1.1em 1.25em;
         transition: 0.3s ease-in-out;
         .text {
-          opacity: 0;
           width: 0;
+          opacity: 0;
           pointer-events: none;
-          transition: 0.3s ease-in-out;
+          transition: opacity .05s ease, width .3s ease;
         }
         .notification {
           right: unset;
@@ -276,7 +277,7 @@
           top: 18px;
         }
         span {
-          @include transition;
+          // @include transition;
         }
         // &:hover {
         //   background: $white;
@@ -312,6 +313,7 @@
               opacity: 1;
               width: auto;
               pointer-events: all;
+              display: block;
             }
             &._notification {
               gap: 25px;

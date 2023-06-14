@@ -3033,6 +3033,8 @@ section {
         -ms-flex-align: start;
             align-items: flex-start;
     height: 100%;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     background: #fff;
   }
   .sidebar__inner-link {
@@ -3042,21 +3044,16 @@ section {
     transition: 0.3s ease-in-out;
   }
   .sidebar__inner-link .text {
-    opacity: 0;
     width: 0;
+    opacity: 0;
     pointer-events: none;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
+    -webkit-transition: opacity 0.05s ease, width 0.3s ease;
+    transition: opacity 0.05s ease, width 0.3s ease;
   }
   .sidebar__inner-link .notification {
     right: unset;
     left: 30px;
     top: 18px;
-  }
-  .sidebar__inner-link span {
-    -webkit-transition: all 0.2s ease-in-out 0s;
-    transition: all 0.2s ease-in-out 0s;
-    -moz-transition: all 0.2s ease-in-out 0s;
   }
   .sidebar.active {
     width: 100%;
@@ -3077,6 +3074,7 @@ section {
     opacity: 1;
     width: auto;
     pointer-events: all;
+    display: block;
   }
   .sidebar.active .sidebar__inner-link._notification {
     gap: 25px;
