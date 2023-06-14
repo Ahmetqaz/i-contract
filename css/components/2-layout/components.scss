@@ -150,6 +150,7 @@
       width: 100%;
       height: 100%;
       opacity: 0;
+      cursor: pointer;
       &:checked + label {
         .checkBox {
           border-color: $primary;
@@ -333,18 +334,22 @@
     }
   }
   &__box {
-    display: flex;
-    border: 1px solid $white-4;
-    border-radius: 4px;
-    flex-wrap: wrap;
-    gap: 40px 10px;
     height: 278px;
     overflow: auto;
-    .input {
-      width: calc(33.3% - 10px);
-      label {
-        font-weight: 400;
-        color: $black;
+    border: 1px solid $white-4;
+    border-radius: 4px;
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px 10px;
+      min-width: 815px;
+      padding: 20px 10px 20px 20px;
+      .input {
+        width: calc(33.3% - 10px);
+        label {
+          font-weight: 400;
+          color: $black;
+        }
       }
     }
   }
@@ -379,11 +384,11 @@
   }
   &--secondary {
     font-size: 16px;
-    border-radius:100px ;
+    border-radius: 100px;
     color: $white;
     background: $orange;
     font-weight: 700;
-    padding: .8em 3.4em;
+    padding: 0.8em 3.4em;
   }
   &--ico {
     width: 1.75em;
@@ -415,13 +420,13 @@
     color: $primary;
     padding: 0;
     font-weight: 500;
-    .icon{
+    .icon {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 16px;
       height: 16px;
-      svg{
+      svg {
         width: 100%;
         height: 100%;
       }
@@ -454,7 +459,7 @@
     cursor: default;
     opacity: 0.5 !important;
   }
-  &__wrapper{
+  &__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -881,7 +886,7 @@
     }
   }
   &__box {
-    width: calc(100% - 60px);
+    width: calc(100% - 55px);
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -899,6 +904,7 @@
     display: flex;
     gap: 10px;
     align-items: flex-start;
+    justify-content: space-between;
     width: calc(100% - 260px);
   }
   .button {
@@ -908,16 +914,48 @@
   }
   &._lg {
     align-items: center;
+    .setting {
+      &__box {
+        gap: 15px;
+      }
+    }
   }
 }
 @mixin components-1440 {
   .wrapper {
     padding: 120px 0 40px;
   }
+  .setting {
+    .button {
+      &--primary {
+        width: 220px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+@mixin components-1300 {
+  .setting {
+    &._lg {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 30px;
+      .setting {
+        &__body {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 @mixin components-1180 {
   .input {
     font-size: 15px;
+  }
+}
+@mixin components-1025 {
+  .setting {
   }
 }
 @mixin components-880 {
@@ -930,6 +968,25 @@
     }
   }
 }
+@mixin components-650 {
+  .setting {
+    font-size: 14px;
+  }
+  .input {
+    &__box {
+      &-wrapper {
+        gap: 30px 10px;
+        padding: 15px 10px 15px 15px;
+        min-width: 770px;
+        .input {
+          label {
+            gap: 12px;
+          }
+        }
+      }
+    }
+  }
+}
 @mixin components-580 {
   .input {
     font-size: 13px;
@@ -938,5 +995,10 @@
 @mixin components-480 {
   .input {
     font-size: 12px;
+    &__box{
+      &-wrapper{
+        min-width: 670px;
+      }
+    }
   }
 }

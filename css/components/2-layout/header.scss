@@ -261,13 +261,14 @@
       align-items: flex-start;
       height: 100%;
       &-link {
-        @include transition;
         gap: 0;
         padding: 1.1em 1.25em;
+        transition: 0.3s ease-in-out;
         .text {
           opacity: 0;
           width: 0;
           pointer-events: none;
+          transition: 0.3s ease-in-out;
         }
         .notification {
           right: unset;

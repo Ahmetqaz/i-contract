@@ -28,7 +28,8 @@ input::-webkit-inner-spin-button {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 /* Track */
@@ -38,7 +39,7 @@ input::-webkit-inner-spin-button {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba($color: #000, $alpha: 0.2);
+  background: $primary;
   border-radius: 10px;
 }
 
