@@ -136,6 +136,19 @@
           }
         }
       }
+      .button {
+        &--ico {
+          svg {
+            fill: $red;
+            @include transition;
+          }
+          &:hover {
+            svg {
+              fill: $orange;
+            }
+          }
+        }
+      }
     }
     &-setting {
       background: $white;
@@ -155,8 +168,20 @@
         margin-bottom: 40px;
       }
       .input {
-        &__box {
-          &-wrapper {
+        .checkBox {
+          &::after {
+            border-color: $white;
+          }
+        }
+        input {
+          &:checked + label {
+            .checkBox {
+              border-color: $orange;
+              background: $orange;
+              &:after {
+                opacity: 1;
+              }
+            }
           }
         }
       }
@@ -360,14 +385,14 @@
 
 @mixin compare-480 {
   .features {
-    &__inner{
-      &-filetr{
+    &__inner {
+      &-filetr {
         gap: 30px;
       }
-      &-basket{
+      &-basket {
         gap: 30px;
       }
-      &-wrapper{
+      &-wrapper {
         padding: 20px 0;
       }
     }
@@ -376,9 +401,9 @@
         margin-top: 30px;
       }
     }
-    .basket{
-    font-size: 15px;
-    padding: 10px 14px;
+    .basket {
+      font-size: 15px;
+      padding: 10px 14px;
     }
   }
 }

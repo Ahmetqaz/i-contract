@@ -2838,6 +2838,15 @@ section {
   font-weight: 400;
   gap: 10px;
 }
+.features__inner-box .button--ico svg {
+  fill: #f0142f;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.features__inner-box .button--ico:hover svg {
+  fill: #e96d24;
+}
 .features__inner-setting {
   background: #fff;
   padding: 18px 15px;
@@ -2857,6 +2866,16 @@ section {
 }
 .features__inner-checkBoxes .caption {
   margin-bottom: 40px;
+}
+.features__inner-checkBoxes .input .checkBox::after {
+  border-color: #fff;
+}
+.features__inner-checkBoxes .input input:checked + label .checkBox {
+  border-color: #e96d24;
+  background: #e96d24;
+}
+.features__inner-checkBoxes .input input:checked + label .checkBox:after {
+  opacity: 1;
 }
 .features__inner-checkBoxes .button {
   margin-left: auto;

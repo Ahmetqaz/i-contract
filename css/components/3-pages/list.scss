@@ -1,0 +1,210 @@
+.list {
+  padding: 70px 0;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &-row {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+  &Item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px;
+    border: 1px solid $gray;
+    &__image {
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: calc(100% - 330px);
+      &-info {
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h2 {
+          font-size: 1em;
+          padding-right: 50px;
+        }
+        h6 {
+          font-size: 0.7em;
+          color: $orange;
+          span {
+            color: $green;
+          }
+        }
+        p {
+          font-size: 0.8em;
+          line-height: 1.4;
+          font-weight: 400;
+          color: $gray;
+        }
+      }
+      &-box {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .input {
+    textarea {
+      border-color: $gray;
+      &:focus {
+        border-color: $primary;
+      }
+    }
+  }
+  .button {
+    font-size: 18px;
+    &--primary {
+      border-radius: 5px;
+      padding: 0.3em 1em;
+      display: flex;
+      gap: 5px;
+      font-weight: 700;
+    }
+    &--secondary {
+      border-radius: 5px;
+      padding: 0.5em 1em;
+      display: flex;
+      gap: 5px;
+      font-weight: 700;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &--ico {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      svg {
+        fill: $red;
+        @include transition;
+      }
+      &:hover {
+        svg {
+          fill: $orange;
+        }
+      }
+    }
+    .ico {
+      width: 1.3em;
+      height: 1.3em;
+      svg {
+        stroke: $white;
+        &.fill {
+          fill: $white;
+          stroke: transparent;
+        }
+      }
+    }
+  }
+  .state {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    &__box {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      &-shape {
+        width: 27px;
+        height: 12px;
+        border-radius: 4px;
+        background: $white-5;
+        &:nth-child(1) {
+          background: $red;
+        }
+      }
+      &._medium {
+        .state {
+          &__box {
+            &-shape {
+              &:nth-child(1) {
+                background: $orange;
+              }
+              &:nth-child(2) {
+                background: $orange;
+              }
+              &:nth-child(3) {
+                background: $orange;
+              }
+            }
+          }
+        }
+      }
+      &._full {
+        .state {
+          &__box {
+            &-shape {
+              background: $green-2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1025px) {
+  .list {
+    &Item {
+      &__image {
+        width: 250px;
+      }
+      &__body {
+        width: calc(100% - 270px);
+        &-info {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .autoContainer {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 760px) {
+  .list {
+    &__inner {
+      &-row {
+        overflow: auto;
+      }
+    }
+    &Item {
+      min-width: 620px;
+      &__image {
+        width: 200px;
+      }
+      &__body {
+        width: calc(100% - 220px);
+        &-info {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  .autoContainer {
+    padding: 0 15px;
+  }
+}
