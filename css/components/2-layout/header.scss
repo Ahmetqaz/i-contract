@@ -168,7 +168,7 @@
     display: flex;
     flex-direction: column;
     width: 326px;
-    padding: 15px 15px 15px 20px;
+    padding: 15px 15px 15px 0;
     &-link {
       padding: 1.3em 1.45em;
       color: $black-2;
@@ -243,7 +243,7 @@
 @mixin header-1700 {
   .sidebar {
     &__inner {
-      padding: 15px 40px 15px 20px;
+      padding: 15px 40px 15px 0;
       width: 300px;
     }
   }

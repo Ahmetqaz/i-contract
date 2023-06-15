@@ -1723,7 +1723,7 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 326px;
-  padding: 15px 15px 15px 20px;
+  padding: 15px 15px 15px 0;
 }
 .sidebar__inner-link {
   padding: 1.3em 1.45em;
@@ -3012,7 +3012,7 @@ section {
   }
 
   .sidebar__inner {
-    padding: 15px 40px 15px 20px;
+    padding: 15px 40px 15px 0;
     width: 300px;
   }
 }
