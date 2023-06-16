@@ -214,6 +214,15 @@
       font-weight: 700;
     }
   }
+  &--border {
+    input,
+    textarea {
+      border-color: rgba($gray, 0.5);
+      &:focus {
+        border-color: $primary;
+      }
+    }
+  }
   &--file {
     position: relative;
     border: 1px dashed $primary;
@@ -356,26 +365,28 @@
 }
 .button {
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid transparent;
   position: relative;
   font-family: $font-primary;
+  border-radius: 5px;
   color: $black;
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
   transition: all 0.3s ease;
   padding: 0.7em 0.9em;
+
+  //display
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+
   &--primary {
-    font-size: 13px;
-    background: $primary;
-    border-radius: 4px;
     color: $white;
+    background: $primary;
     &:hover {
       opacity: 0.8;
-      background: mix($primary, $white, 90%);
     }
     &._bg {
       background: $white;
@@ -383,12 +394,16 @@
     }
   }
   &--secondary {
-    font-size: 16px;
-    border-radius: 100px;
     color: $white;
+    font-size: 16px;
     background: $orange;
-    font-weight: 700;
     padding: 0.8em 3.4em;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &--rounded {
+    border-radius: 100px;
   }
   &--ico {
     width: 1.75em;
@@ -463,6 +478,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  svg,
+  img {
+    width: 1.3em;
+    height: 1.3em;
+    object-fit: contain;
   }
 }
 .ratioImage {
@@ -911,7 +932,6 @@
     width: 240px;
     font-size: 16px;
     font-weight: 700;
-   
   }
   &._lg {
     align-items: center;
@@ -919,6 +939,34 @@
       &__box {
         gap: 15px;
       }
+    }
+  }
+}
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 0.3em;
+
+  &-shape {
+    width: 1.7em;
+    height: 0.8em;
+    border-radius: 0.35em;
+    background: $white-5;
+  }
+  &--danger {
+    ._filled {
+      background: $red;
+    }
+  }
+  &--warning {
+    ._filled {
+      background: $orange;
+    }
+  }
+  &--success {
+    ._filled {
+      background: $green-2;
     }
   }
 }
@@ -996,8 +1044,8 @@
 @mixin components-480 {
   .input {
     font-size: 12px;
-    &__box{
-      &-wrapper{
+    &__box {
+      &-wrapper {
         min-width: 670px;
       }
     }

@@ -523,6 +523,14 @@ svg {
   font-size: 1em;
   font-weight: 700;
 }
+.input--border input,
+.input--border textarea {
+  border-color: rgba(112, 112, 112, 0.5);
+}
+.input--border input:focus,
+.input--border textarea:focus {
+  border-color: #185f76;
+}
 .input--file {
   position: relative;
   border: 1px dashed #185f76;
@@ -681,6 +689,17 @@ svg {
 
 .button {
   cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  font-family: "Tahoma", sans-serif;
+  border-radius: 5px;
+  color: #1e1f24;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0.7em 0.9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,38 +709,30 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid transparent;
-  position: relative;
-  font-family: "Tahoma", sans-serif;
-  color: #1e1f24;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  padding: 0.7em 0.9em;
+  gap: 0.5em;
 }
 .button--primary {
-  font-size: 13px;
-  background: #185f76;
-  border-radius: 4px;
   color: #fff;
+  background: #185f76;
 }
 .button--primary:hover {
   opacity: 0.8;
-  background: #2f6f84;
 }
 .button--primary._bg {
   background: #fff;
   color: #1e1f24;
 }
 .button--secondary {
-  font-size: 16px;
-  border-radius: 100px;
   color: #fff;
+  font-size: 16px;
   background: #e96d24;
-  font-weight: 700;
   padding: 0.8em 3.4em;
+}
+.button--secondary:hover {
+  opacity: 0.8;
+}
+.button--rounded {
+  border-radius: 100px;
 }
 .button--ico {
   width: 1.75em;
@@ -811,6 +822,13 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.button svg,
+.button img {
+  width: 1.3em;
+  height: 1.3em;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .ratioImage {
@@ -1353,10 +1371,34 @@ svg {
   gap: 15px;
 }
 
-.list {
-  padding: 70px 0;
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  gap: 0.3em;
 }
-.list__inner {
+.rating-shape {
+  width: 1.7em;
+  height: 0.8em;
+  border-radius: 0.35em;
+  background: #D1D4DE;
+}
+.rating--danger ._filled {
+  background: #f0142f;
+}
+.rating--warning ._filled {
+  background: #e96d24;
+}
+.rating--success ._filled {
+  background: #008a00;
+}
+
+.carList {
+  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1366,7 +1408,7 @@ svg {
           flex-direction: column;
   gap: 30px;
 }
-.list__inner-row {
+.carList__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1376,7 +1418,7 @@ svg {
           flex-direction: column;
   gap: 25px;
 }
-.listItem {
+.carList__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1385,9 +1427,9 @@ svg {
           justify-content: space-between;
   position: relative;
   padding: 15px;
-  border: 1px solid #707070;
+  border: 1px solid rgba(112, 112, 112, 0.5);
 }
-.listItem__image {
+.carList__item-image {
   width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1399,13 +1441,13 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.listItem__image img {
+.carList__item-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.listItem__body {
+.carList__item-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1416,7 +1458,7 @@ svg {
   gap: 25px;
   width: calc(100% - 330px);
 }
-.listItem__body-info {
+.carList__item-body-info {
   font-size: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1427,24 +1469,24 @@ svg {
           flex-direction: column;
   gap: 5px;
 }
-.listItem__body-info h2 {
+.carList__item-body-info h2 {
   font-size: 1em;
   padding-right: 50px;
 }
-.listItem__body-info h6 {
+.carList__item-body-info h6 {
   font-size: 0.7em;
   color: #e96d24;
 }
-.listItem__body-info h6 span {
+.carList__item-body-info h6 span {
   color: #3cb63c;
 }
-.listItem__body-info p {
+.carList__item-body-info p {
   font-size: 0.8em;
   line-height: 1.4;
   font-weight: 400;
   color: #707070;
 }
-.listItem__body-box {
+.carList__item-body-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1453,62 +1495,7 @@ svg {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.list .input textarea {
-  border-color: #707070;
-}
-.list .input textarea:focus {
-  border-color: #185f76;
-}
-.list .button {
-  font-size: 18px;
-}
-.list .button--primary {
-  border-radius: 5px;
-  padding: 0.3em 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 5px;
-  font-weight: 700;
-}
-.list .button--secondary {
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 5px;
-  font-weight: 700;
-}
-.list .button--secondary:hover {
-  opacity: 0.8;
-}
-.list .button--ico {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-.list .button--ico svg {
-  fill: #f0142f;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-}
-.list .button--ico:hover svg {
-  fill: #e96d24;
-}
-.list .button .ico {
-  width: 1.3em;
-  height: 1.3em;
-}
-.list .button .ico svg {
-  stroke: #fff;
-}
-.list .button .ico svg.fill {
-  fill: #fff;
-  stroke: transparent;
-}
-.list .state {
+.carList__item-body-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1519,35 +1506,22 @@ svg {
   gap: 10px;
   margin-bottom: 10px;
 }
-.list .state__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 7px;
+.carList__item-delete {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0 !important;
+  color: #f0142f;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
-.list .state__box-shape {
-  width: 27px;
-  height: 12px;
-  border-radius: 4px;
-  background: #D1D4DE;
+.carList__item-delete:hover {
+  color: #e96d24;
 }
-.list .state__box-shape:nth-child(1) {
-  background: #f0142f;
-}
-.list .state__box._medium .state__box-shape:nth-child(1) {
-  background: #e96d24;
-}
-.list .state__box._medium .state__box-shape:nth-child(2) {
-  background: #e96d24;
-}
-.list .state__box._medium .state__box-shape:nth-child(3) {
-  background: #e96d24;
-}
-.list .state__box._full .state__box-shape {
-  background: #008a00;
+.carList .button {
+  font-size: 18px;
+  padding: 0.5em 1em;
 }
 
 @media (max-width: 1025px) {
@@ -1560,7 +1534,6 @@ svg {
   .listItem__body-info {
     font-size: 22px;
   }
-
   .autoContainer {
     padding: 0 20px;
   }
@@ -1581,12 +1554,10 @@ svg {
   .listItem__body-info {
     font-size: 20px;
   }
-
   ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
   }
-
   .autoContainer {
     padding: 0 15px;
   }

@@ -670,6 +670,14 @@ svg {
   font-size: 1em;
   font-weight: 700;
 }
+.input--border input,
+.input--border textarea {
+  border-color: rgba(112, 112, 112, 0.5);
+}
+.input--border input:focus,
+.input--border textarea:focus {
+  border-color: #185f76;
+}
 .input--file {
   position: relative;
   border: 1px dashed #185f76;
@@ -828,6 +836,17 @@ svg {
 
 .button {
   cursor: pointer;
+  border: 1px solid transparent;
+  position: relative;
+  font-family: "Tahoma", sans-serif;
+  border-radius: 5px;
+  color: #1e1f24;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0.7em 0.9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -837,38 +856,30 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid transparent;
-  position: relative;
-  font-family: "Tahoma", sans-serif;
-  color: #1e1f24;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  padding: 0.7em 0.9em;
+  gap: 0.5em;
 }
 .button--primary {
-  font-size: 13px;
-  background: #185f76;
-  border-radius: 4px;
   color: #fff;
+  background: #185f76;
 }
 .button--primary:hover {
   opacity: 0.8;
-  background: #2f6f84;
 }
 .button--primary._bg {
   background: #fff;
   color: #1e1f24;
 }
 .button--secondary {
-  font-size: 16px;
-  border-radius: 100px;
   color: #fff;
+  font-size: 16px;
   background: #e96d24;
-  font-weight: 700;
   padding: 0.8em 3.4em;
+}
+.button--secondary:hover {
+  opacity: 0.8;
+}
+.button--rounded {
+  border-radius: 100px;
 }
 .button--ico {
   width: 1.75em;
@@ -958,6 +969,13 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.button svg,
+.button img {
+  width: 1.3em;
+  height: 1.3em;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .ratioImage {
@@ -1498,6 +1516,32 @@ svg {
 }
 .setting._lg .setting__box {
   gap: 15px;
+}
+
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  gap: 0.3em;
+}
+.rating-shape {
+  width: 1.7em;
+  height: 0.8em;
+  border-radius: 0.35em;
+  background: #D1D4DE;
+}
+.rating--danger ._filled {
+  background: #f0142f;
+}
+.rating--warning ._filled {
+  background: #e96d24;
+}
+.rating--success ._filled {
+  background: #008a00;
 }
 
 .footer {
@@ -3006,11 +3050,9 @@ section {
   .sideSpace {
     padding-left: 300px;
   }
-
   .detailsChecks__row {
     padding: 20px 16px 20px 20px;
   }
-
   .sidebar__inner {
     padding: 15px 40px 15px 0;
     width: 300px;
@@ -3029,15 +3071,12 @@ section {
   .contactForm {
     padding: 12px 20px;
   }
-
   .sideSpace {
     padding-left: 60px;
   }
-
   .tabs {
     top: 8px;
   }
-
   .sidebar {
     left: 0;
     padding: 0;
@@ -3111,11 +3150,9 @@ section {
   .sidebar.active .sidebar__inner-link:hover._notification {
     gap: 25px;
   }
-
   .header {
     padding: 20px 0;
   }
-
   h2 {
     font-size: 23px;
   }
@@ -3130,7 +3167,6 @@ section {
     width: 5px;
     height: 5px;
   }
-
   .contactForm__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3163,20 +3199,16 @@ section {
   .contact .dropdown {
     width: 100%;
   }
-
   .sideSpace {
     padding-left: 60px;
   }
-
   .wrapper {
     padding: 120px 0 40px;
   }
-
   .setting .button--primary {
     width: 220px;
     font-size: 15px;
   }
-
   .help__inner-info {
     width: calc(100% - 250px);
   }
@@ -3184,7 +3216,6 @@ section {
     width: 240px;
     font-size: 15px;
   }
-
   .features__inner-filter {
     gap: 80px;
   }
@@ -3198,7 +3229,6 @@ section {
     width: 4px;
     height: 4px;
   }
-
   .details__inner-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3212,14 +3242,12 @@ section {
   .detailsRadio {
     width: 100%;
   }
-
   .features__inner-wrapper {
     padding: 25px 15px;
   }
   .features__inner-filter {
     gap: 60px;
   }
-
   .setting._lg {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3242,36 +3270,30 @@ section {
     width: 3px;
     height: 3px;
   }
-
   .contactForm__body {
     gap: 12px;
   }
   .contactContent__currency-item .input {
     font-size: 18px;
   }
-
   .data__inner-body {
     margin-bottom: 80px;
   }
   .data .button {
     font-size: 23px;
   }
-
   .tabs {
     top: 22px;
   }
   .tabs__inner {
     gap: 35px;
   }
-
   h2 {
     font-size: 20px;
   }
-
   .input {
     font-size: 15px;
   }
-
   .help__inner-info {
     width: calc(100% - 230px);
   }
@@ -3283,7 +3305,6 @@ section {
     width: 220px;
     font-size: 14px;
   }
-
   .features__inner-filter {
     gap: 50px;
   }
@@ -3297,11 +3318,9 @@ section {
     width: 2px;
     height: 2px;
   }
-
   .tabs {
     top: 8px;
   }
-
   .header {
     padding: 15px 0;
   }
@@ -3311,7 +3330,6 @@ section {
   .header .autoContainer {
     padding: 0 20px;
   }
-
   .sidebar {
     top: 78px;
     height: calc(100% - 78px);
@@ -3338,7 +3356,6 @@ section {
   .contactForm {
     width: 100%;
   }
-
   .condition__inner-content .button {
     width: 300px;
   }
@@ -3351,11 +3368,9 @@ section {
   .condition .input {
     font-size: 14px;
   }
-
   .tabs__inner-row._links {
     font-size: 14px;
   }
-
   .detailsChecks .input {
     font-size: 15px;
   }
@@ -3372,7 +3387,6 @@ section {
   .popUp__checkBoxes-row .input {
     width: calc(50% - 10px);
   }
-
   .features__inner-body {
     padding-left: 0;
   }
@@ -3383,7 +3397,6 @@ section {
             flex-direction: column;
     gap: 10px;
   }
-
   .help__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3396,7 +3409,6 @@ section {
     right: 10px;
     top: 0;
   }
-
   .column--lg {
     width: 100%;
   }
@@ -3430,7 +3442,6 @@ section {
   .condition .input {
     font-size: 14px;
   }
-
   .tabs__inner-row._links {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3442,11 +3453,9 @@ section {
   .tabsLink {
     width: calc(33.3% - 10px);
   }
-
   .input .dropdown__wrapper h4 {
     font-size: 14px;
   }
-
   .data__inner {
     gap: 35px;
   }
@@ -3465,7 +3474,6 @@ section {
   .data .dropdown__wrapper {
     width: calc(50% - 15px);
   }
-
   .detailsChecks__row {
     gap: 50px 10px;
   }
@@ -3479,14 +3487,12 @@ section {
   .sideSpace {
     padding-left: 0;
   }
-
   .input--file {
     font-size: 14px;
   }
   .input._sm {
     font-size: 14px;
   }
-
   .header {
     padding: 20px 0;
   }
@@ -3499,7 +3505,6 @@ section {
   .header .dropdown {
     display: none;
   }
-
   .sidebar {
     position: fixed;
     padding-top: 0;
@@ -3549,13 +3554,10 @@ section {
     transition: 0.15s ease-in-out 0s;
     padding: 40px 20px 60px;
     overflow: auto;
-    scrollbar-width: none;
-    /* Firefox 64 */
-    -ms-overflow-style: none;
-    /* Internet Explorer 11 */
+    scrollbar-width: none; /* Firefox 64 */
+    -ms-overflow-style: none; /* Internet Explorer 11 */
   }
-  .sidebar__inner::-webkit-scrollbar {
-    /** WebKit */
+  .sidebar__inner::-webkit-scrollbar { /** WebKit */
     display: none;
   }
   .sidebar__inner-link {
@@ -3604,12 +3606,10 @@ section {
   .sidebar .dropdown:hover .dropdown__content {
     padding: 0.5em 1em;
   }
-
   .burger {
     display: block;
     margin-left: 10px;
   }
-
   h4 {
     font-size: 14px;
   }
@@ -3646,11 +3646,9 @@ section {
   .contactContent__currency .input {
     font-size: 16px;
   }
-
   section {
     padding: 20px 0;
   }
-
   .detailsChecks__row {
     gap: 40px 10px;
   }
@@ -3660,7 +3658,6 @@ section {
   .detailsRadio .input {
     font-size: 13px;
   }
-
   .popUp__checkBoxes {
     padding: 20px 15px;
     border-radius: 10px;
@@ -3679,7 +3676,6 @@ section {
     right: 15px;
     top: 15px;
   }
-
   .help__inner-info {
     width: 100%;
   }
@@ -3692,16 +3688,13 @@ section {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-
   .features__inner-body .input--checkText {
     width: 100%;
     max-width: unset;
   }
-
   .setting {
     font-size: 14px;
   }
-
   .input__box-wrapper {
     gap: 30px 10px;
     padding: 15px 10px 15px 15px;
@@ -3716,7 +3709,6 @@ section {
     width: 1px;
     height: 1px;
   }
-
   .contact__inner {
     gap: 25px;
   }
@@ -3726,7 +3718,6 @@ section {
   .contactContent__currency .input {
     font-size: 14px;
   }
-
   .tabs {
     position: unset;
   }
@@ -3736,11 +3727,9 @@ section {
   .tabsLink {
     width: calc(50% - 10px);
   }
-
   .wrapper {
     padding: 90px 0 40px;
   }
-
   .data__inner {
     gap: 35px;
   }
@@ -3759,7 +3748,6 @@ section {
     width: 100%;
     max-width: unset;
   }
-
   .details__inner {
     padding: 15px 15px 20px;
   }
@@ -3783,7 +3771,6 @@ section {
   .detailsRadio .input {
     font-size: 12px;
   }
-
   .popUp {
     padding: 20px 15px;
   }
@@ -3803,11 +3790,9 @@ section {
   .input {
     font-size: 13px;
   }
-
   h2 {
     font-size: 18px;
   }
-
   h4 {
     font-size: 12px;
   }
@@ -3847,14 +3832,12 @@ section {
   .contactContent__currency-item._lg .input input {
     width: calc(100% - 100px);
   }
-
   .tabs {
     top: 5px;
   }
   .tabsLink {
     width: 100%;
   }
-
   .conditionBox {
     padding: 20px 15px;
     -ms-flex-wrap: wrap;
@@ -3876,7 +3859,6 @@ section {
   .condition .input {
     font-size: 14px;
   }
-
   .info__inner-row {
     padding: 20px 15px;
   }
@@ -3892,7 +3874,6 @@ section {
     width: 100%;
     max-width: unset;
   }
-
   .data__inner {
     padding: 20px 15px;
   }
@@ -3906,7 +3887,6 @@ section {
   .data .button {
     font-size: 16px;
   }
-
   .detailsChecks__row::-webkit-scrollbar {
     width: 3px;
   }
@@ -3920,14 +3900,12 @@ section {
   .detailsRadio .input {
     font-size: 12px;
   }
-
   .input {
     font-size: 12px;
   }
   .input__box-wrapper {
     min-width: 670px;
   }
-
   .header {
     padding: 15px 0 !important;
   }
@@ -3937,7 +3915,6 @@ section {
   .header .autoContainer {
     padding: 0 15px;
   }
-
   .sidebar {
     top: 61px !important;
     height: calc(100% - 61px);
@@ -3949,7 +3926,6 @@ section {
     top: 61px !important;
     height: calc(100% - 61px);
   }
-
   .burger {
     width: 2.2em;
     height: 1.6em;
@@ -3958,7 +3934,6 @@ section {
 .burger span {
     height: 2px;
   }
-
   .features__inner-filetr {
     gap: 30px;
   }
