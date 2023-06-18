@@ -143,29 +143,8 @@ svg {
   pointer-events: none;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100%;
-  position: relative;
-}
-
-.autoContainer {
-  max-width: 1920px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-.autoContainer._sm {
-  padding: 0 15px;
-}
-
 .input {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -654,6 +633,32 @@ svg {
 .input._sm {
   font-size: 15px;
 }
+.input--button-left input,
+.input--button-left textarea {
+  padding-left: 4em;
+}
+.input--button-left ._btnLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  font-size: inherit;
+  padding: 0.5em 1em;
+  width: unset;
+}
+.input--button-right input,
+.input--button-right textarea {
+  padding-right: 4em;
+}
+.input--button-right ._btnRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  font-size: inherit;
+  padding: 0.5em 1em;
+  width: unset;
+}
 .input__wrapper-body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -829,6 +834,47 @@ svg {
   height: 1.3em;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.buttonText {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.2em;
+  gap: 0.3em;
+  color: #1e1f24;
+  font-family: "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.buttonText--secondary {
+  color: #e96d24;
+}
+.buttonText--secondary:hover {
+  opacity: 0.6;
+}
+.buttonText--secondary:active {
+  opacity: 0.4;
+}
+.buttonText--primary {
+  color: #185f76;
+}
+.buttonText--primary:hover {
+  opacity: 0.6;
+}
+.buttonText--primary:active {
+  opacity: 0.4;
 }
 
 .ratioImage {
@@ -1397,6 +1443,240 @@ svg {
   background: #008a00;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+.autoContainer {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.autoContainer._sm {
+  padding: 0 15px;
+}
+
+.popUp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 12px 18px 28px;
+  background-color: rgba(30, 31, 36, 0.3);
+  z-index: 14;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  overflow: auto;
+  padding: 20px;
+}
+.popUp.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.popUp__inner {
+  position: relative;
+  -webkit-box-shadow: 0 5px 15px rgba(30, 31, 36, 0.1);
+          box-shadow: 0 5px 15px rgba(30, 31, 36, 0.1);
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  margin: auto;
+  font-size: 20px;
+  padding: 1em 1.5em;
+  -webkit-box-shadow: 0 5px 20px 5px rgba(24, 95, 118, 0.2), 0 15px 30px 10px rgba(30, 31, 36, 0.1);
+          box-shadow: 0 5px 20px 5px rgba(24, 95, 118, 0.2), 0 15px 30px 10px rgba(30, 31, 36, 0.1);
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+.popUp__inner-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.8em;
+  right: 0.8em;
+  width: 1.25em;
+  height: 1.25em;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+.popUp__inner-close::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #1e1f24;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+.popUp__inner-close:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #1e1f24;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+.popUp__inner-close:hover {
+  opacity: 0.6;
+}
+.popUp__inner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+.popUp__inner-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.popUp__inner-content p._muted {
+  color: rgba(30, 31, 36, 0.7);
+  line-height: 1.3;
+}
+.popUp__inner-content-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.75em;
+  margin-top: 0.5em;
+}
+.popUp__checkBoxes {
+  width: 80%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(30, 31, 36, 0.1);
+          box-shadow: 0 5px 15px rgba(30, 31, 36, 0.1);
+  background: #fff;
+  position: relative;
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 1920px;
+  max-height: 845px;
+}
+.popUp__checkBoxes-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 65px 15px;
+  border-radius: 5px;
+  border: 1px solid #e6e9f4;
+  padding: 26px 16px 26px 36px;
+  overflow: auto;
+}
+.popUp__checkBoxes-row::-webkit-scrollbar {
+  width: 5px;
+  display: block;
+  border-radius: 2.5px;
+}
+.popUp__checkBoxes-row::-webkit-scrollbar-track {
+  background: #D3D9DE;
+}
+.popUp__checkBoxes-row::-webkit-scrollbar-thumb {
+  background: #384455;
+  border-radius: 2.5px;
+}
+.popUp__checkBoxes-row .input {
+  width: calc(33.3% - 10px);
+}
+.popUp__checkBoxes-row .input label {
+  overflow: hidden;
+}
+.popUp__checkBoxes-row .input label:hover {
+  color: #185f76;
+}
+.popUp__checkBoxes-row .input label:hover span {
+  border-color: #185f76;
+}
+.popUp__checkBoxes-row .input label span {
+  min-width: 1.6em;
+}
+.popUp .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 25px;
+  height: 25px;
+}
+.popUp .close::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #1e1f24;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+.popUp .close:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #1e1f24;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+.popUp--confirm .popUp__inner {
+  max-width: 550px;
+}
+
 .carList {
   padding: 20px 0;
   display: -webkit-box;
@@ -1408,7 +1688,10 @@ svg {
           flex-direction: column;
   gap: 30px;
 }
-.carList__row {
+.carList__box .input {
+  font-size: 20px;
+}
+.carList__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1426,11 +1709,12 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  padding: 15px;
+  padding: 0.65em;
   border: 1px solid rgba(112, 112, 112, 0.5);
+  font-size: 24px;
 }
 .carList__item-image {
-  width: 300px;
+  width: 12.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1455,11 +1739,10 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 25px;
-  width: calc(100% - 330px);
+  gap: 1em;
+  width: calc(100% - 14em);
 }
 .carList__item-body-info {
-  font-size: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1467,11 +1750,11 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5px;
+  gap: 0.45em;
 }
 .carList__item-body-info h2 {
   font-size: 1em;
-  padding-right: 50px;
+  padding-right: 2.6em;
 }
 .carList__item-body-info h6 {
   font-size: 0.7em;
@@ -1490,7 +1773,7 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 15px;
+  gap: 0.65em;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -1503,62 +1786,85 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 0.4em;
+  margin-bottom: 0.4em;
 }
-.carList__item-delete {
+.carList__item .button {
+  font-size: 18px;
+  padding: 0.65em 1.2em;
+}
+.carList__item-delete.button {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 0 !important;
+  top: 0.65em;
+  right: 0.65em;
+  padding: 0;
   color: #f0142f;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
+  font-size: 1em;
 }
-.carList__item-delete:hover {
+.carList__item-delete.button:hover {
   color: #e96d24;
 }
-.carList .button {
-  font-size: 18px;
-  padding: 0.5em 1em;
-}
 
-@media (max-width: 1025px) {
-  .listItem__image {
-    width: 250px;
-  }
-  .listItem__body {
-    width: calc(100% - 270px);
-  }
-  .listItem__body-info {
+@media (max-width: 1160px) {
+  .carList__item {
     font-size: 22px;
   }
-  .autoContainer {
-    padding: 0 20px;
-  }
 }
-@media (max-width: 760px) {
-  .list__inner-row {
-    overflow: auto;
+@media (max-width: 1024px) {
+  .carList {
+    gap: 25px;
   }
-  .listItem {
-    min-width: 620px;
+  .carList__items {
+    gap: 20px;
   }
-  .listItem__image {
-    width: 200px;
-  }
-  .listItem__body {
-    width: calc(100% - 220px);
-  }
-  .listItem__body-info {
+  .carList__item {
     font-size: 20px;
   }
-  ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+}
+@media (max-width: 880px) {
+  .carList {
+    gap: 20px;
   }
-  .autoContainer {
-    padding: 0 15px;
+  .carList__items {
+    gap: 15px;
+  }
+  .carList__item {
+    font-size: 18px;
+  }
+  .carList__item .button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .carList__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .carList__item-image {
+    width: 100%;
+  }
+  .carList__item-body {
+    width: 100%;
+  }
+  .carList__item-body h2 {
+    padding: 0;
+  }
+  .carList__item-body-box {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .carList__item-delete.button {
+    position: unset;
+    background: #e6e9f4;
+    font-size: 16px;
+    padding: 0.65em 1.2em;
+    height: unset;
   }
 }

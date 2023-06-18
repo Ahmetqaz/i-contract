@@ -12,32 +12,23 @@
   @include typography-1660;
 }
 @media (max-width: 1500px) {
-  @include index-1500;
+  @include layouts-1500;
 }
 
 @media (max-width: 1440px) {
-  ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
   @include index-1440;
   @include components-1440;
   @include compare-1440;
-
 }
 @media (max-width: 1300px) {
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
   @include index-1300;
   @include compare-1300;
   @include components-1300;
 }
 @media (max-width: 1180px) {
   ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
+    width: 5px;
+    height: 5px;
   }
   @include index-1180;
   @include typography-1180;
@@ -45,54 +36,45 @@
   @include compare-1180;
 }
 @media (max-width: 1100px) {
-  ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-  }
   @include index-1100;
   @include header-1100;
 }
 @media (max-width: 1025px) {
-  @include index-1025;
-  @include compare-1025;
   @include components-1025;
+  @include compare-1025;
+  @include index-1025;
+  @include layouts-1025;
 }
 @media (max-width: 880px) {
-  @include index-880;
+  @include typography-880;
   @include components-880;
   @include header-880;
-  @include typography-880;
-
+  @include index-880;
 }
 @media (max-width: 750px) {
   @include index-750;
 }
 @media (max-width: 650px) {
+  @include layouts-650;
+  @include components-650;
   @include index-650;
   @include compare-650;
-  @include components-650;
 }
 @media (max-width: 580px) {
-  ::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
-  }
-  @include index-580;
-  @include components-580;
   @include typography-580;
+  @include components-580;
+  @include layouts-580;
+  @include index-580;
 }
 @media (max-width: 480px) {
-  @include index-480;
   @include components-480;
   @include header-480;
   @include compare-480;
+  @include index-480;
 }
 @media (max-width: 390px) {
   @include index-390;
 }
 @media (max-height: 880px) {
-  @include indexHeight-880;
+  @include layouts-height-880;
 }
-
-
-

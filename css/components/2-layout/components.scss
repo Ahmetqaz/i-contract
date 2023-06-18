@@ -1,19 +1,5 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  position: relative;
-}
-.autoContainer {
-  max-width: 1920px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 30px;
-  &._sm {
-    padding: 0 15px;
-  }
-}
 .input {
+  position: relative;
   display: flex;
   width: 100%;
   font-size: 16px;
@@ -335,6 +321,36 @@
   &._sm {
     font-size: 15px;
   }
+  &--button-left {
+    input,
+    textarea {
+      padding-left: 4em;
+    }
+    ._btnLeft {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      font-size: inherit;
+      padding: 0.5em 1em;
+      width: unset;
+    }
+  }
+  &--button-right {
+    input,
+    textarea {
+      padding-right: 4em;
+    }
+    ._btnRight {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      font-size: inherit;
+      padding: 0.5em 1em;
+      width: unset;
+    }
+  }
   &__wrapper {
     &-body {
       display: flex;
@@ -447,6 +463,7 @@
       }
     }
   }
+
   .notification {
     position: absolute;
     top: -2px;
@@ -484,6 +501,43 @@
     width: 1.3em;
     height: 1.3em;
     object-fit: contain;
+  }
+}
+.buttonText {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2em;
+  gap: 0.3em;
+
+  color: $black;
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  transition: all 0.3s ease;
+
+  &--secondary {
+    color: $orange;
+
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.4;
+    }
+  }
+  &--primary {
+    color: $primary;
+
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.4;
+    }
   }
 }
 .ratioImage {

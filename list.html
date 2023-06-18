@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/list-main.css" />
+    <link rel="stylesheet" href="css/list-main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -14,258 +18,92 @@
       <div class="autoContainer">
         <div class="carList">
           <div class="carList__box">
-            <div class="input input--textarea input--border">
-              <textarea placeholder="Write somethings"></textarea>
+            <div
+              class="input input--border input--button-left input--button-right"
+            >
+              <button class="button button--ico _btnLeft" id="copyBtn">
+                <i class="fa-solid fa-link"></i>
+              </button>
+              <input
+                type="text"
+                placeholder="https://example.com/"
+                id="searchInput"
+              />
+              <button
+                class="buttonText buttonText--primary _btnRight"
+                id="clearBtn"
+              >
+                clear
+              </button>
             </div>
           </div>
-          <div class="carList__row">
-            <div class="carList__item">
-              <div class="carList__item-image">
-                <img src="./images/car.png" alt="" />
-              </div>
-              <div class="carList__item-body">
-                <div class="carList__item-body-info">
-                  <h2>
-                    Mercedes-Benz B 200 AMG Line Navu Kamera PTS Spur Klima
-                  </h2>
-                  <div class="carList__item-body-group">
-                    <h6>
-                      Preis: 10.000 E
-                      <span>&rarr;Handler-Ek: 10.000 E</span>
-                    </h6>
-                    <div class="rating rating--danger">
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape"></div>
-                      <div class="rating-shape"></div>
-                      <div class="rating-shape"></div>
-                      <div class="rating-shape"></div>
-                    </div>
-                  </div>
-                  <p>
-                    Ez 03/2022, 16,160 km, 120 kW (163 Ps)
-                    <br />
-                    Benzin, Schaltgetrible
-                  </p>
-                </div>
-                <div class="carList__item-body-box">
-                  <button class="carList__item-delete button button--ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="23.984"
-                      height="24"
-                      viewBox="0 0 23.984 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M17.28,24H6.685A3.6,3.6,0,0,1,3.09,20.612L2.21,5.64H1.2a1.2,1.2,0,1,1,0-2.4H6.8L7.6.821A1.2,1.2,0,0,1,8.742,0h6.481a1.2,1.2,0,0,1,1.14.821l.806,2.419h5.616a1.2,1.2,0,1,1,0,2.4H21.755l-.88,14.972A3.6,3.6,0,0,1,17.28,24ZM4.614,5.64,5.487,20.47a1.2,1.2,0,0,0,1.2,1.13h10.6a1.2,1.2,0,0,0,1.2-1.13L19.351,5.64ZM9.607,2.4l-.28.84h5.311l-.28-.84Zm5.077,16.2-.076,0a1.2,1.2,0,0,1-1.123-1.272l.54-8.64a1.2,1.2,0,0,1,1.2-1.126l.076,0A1.2,1.2,0,0,1,16.42,8.834l-.54,8.64A1.2,1.2,0,0,1,14.684,18.6Zm-5.4,0a1.2,1.2,0,0,1-1.2-1.126l-.54-8.64A1.2,1.2,0,0,1,8.667,7.562l.076,0a1.2,1.2,0,0,1,1.2,1.126l.54,8.64A1.2,1.2,0,0,1,9.357,18.6Z"
-                      />
-                    </svg>
-                  </button>
-                  <button class="button button--secondary">
-                    <svg
-                      width="800px"
-                      height="800px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15 15L21 21"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                        stroke-width="2"
-                      />
-                    </svg>
-                    <span class="text"> Suchen </span>
-                  </button>
-                  <button class="button button--primary">
-                    <svg
-                      class="fill"
-                      fill="currentColor"
-                      width="20px"
-                      height="20px"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z"
-                      />
-                    </svg>
-                    <span class="text"> Anrufen </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carList__item">
-              <div class="carList__item-image">
-                <img src="./images/car.png" alt="" />
-              </div>
-              <div class="carList__item-body">
-                <div class="carList__item-body-info">
-                  <h2>
-                    Mercedes-Benz B 200 AMG Line Navu Kamera PTS Spur Klima
-                  </h2>
-                  <div class="carList__item-body-group">
-                    <h6>
-                      Preis: 10.000 E
-                      <span>&rarr;Handler-Ek: 10.000 E</span>
-                    </h6>
-                    <div class="rating rating--warning">
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape"></div>
-                      <div class="rating-shape"></div>
-                    </div>
-                  </div>
-                  <p>
-                    Ez 03/2022, 16,160 km, 120 kW (163 Ps)
-                    <br />
-                    Benzin, Schaltgetrible
-                  </p>
-                </div>
-                <div class="carList__item-body-box">
-                  <button class="carList__item-delete button button--ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="23.984"
-                      height="24"
-                      viewBox="0 0 23.984 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M17.28,24H6.685A3.6,3.6,0,0,1,3.09,20.612L2.21,5.64H1.2a1.2,1.2,0,1,1,0-2.4H6.8L7.6.821A1.2,1.2,0,0,1,8.742,0h6.481a1.2,1.2,0,0,1,1.14.821l.806,2.419h5.616a1.2,1.2,0,1,1,0,2.4H21.755l-.88,14.972A3.6,3.6,0,0,1,17.28,24ZM4.614,5.64,5.487,20.47a1.2,1.2,0,0,0,1.2,1.13h10.6a1.2,1.2,0,0,0,1.2-1.13L19.351,5.64ZM9.607,2.4l-.28.84h5.311l-.28-.84Zm5.077,16.2-.076,0a1.2,1.2,0,0,1-1.123-1.272l.54-8.64a1.2,1.2,0,0,1,1.2-1.126l.076,0A1.2,1.2,0,0,1,16.42,8.834l-.54,8.64A1.2,1.2,0,0,1,14.684,18.6Zm-5.4,0a1.2,1.2,0,0,1-1.2-1.126l-.54-8.64A1.2,1.2,0,0,1,8.667,7.562l.076,0a1.2,1.2,0,0,1,1.2,1.126l.54,8.64A1.2,1.2,0,0,1,9.357,18.6Z"
-                      />
-                    </svg>
-                  </button>
-                  <button class="button button--secondary">
-                    <svg
-                      width="800px"
-                      height="800px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15 15L21 21"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                        stroke-width="2"
-                      />
-                    </svg>
-                    <span class="text"> Suchen </span>
-                  </button>
-                  <button class="button button--primary">
-                    <svg
-                      class="fill"
-                      fill="currentColor"
-                      width="20px"
-                      height="20px"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z"
-                      />
-                    </svg>
-                    <span class="text"> Anrufen </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="carList__item">
-              <div class="carList__item-image">
-                <img src="./images/car.png" alt="" />
-              </div>
-              <div class="carList__item-body">
-                <div class="carList__item-body-info">
-                  <h2>
-                    Mercedes-Benz B 200 AMG Line Navu Kamera PTS Spur Klima
-                  </h2>
-                  <div class="carList__item-body-group">
-                    <h6>
-                      Preis: 10.000 E
-                      <span>&rarr;Handler-Ek: 10.000 E</span>
-                    </h6>
-                    <div class="rating rating--success">
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape _filled"></div>
-                      <div class="rating-shape _filled"></div>
-                    </div>
-                  </div>
-                  <p>
-                    Ez 03/2022, 16,160 km, 120 kW (163 Ps)
-                    <br />
-                    Benzin, Schaltgetrible
-                  </p>
-                </div>
-                <div class="carList__item-body-box">
-                  <button class="carList__item-delete button button--ico">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="23.984"
-                      height="24"
-                      viewBox="0 0 23.984 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M17.28,24H6.685A3.6,3.6,0,0,1,3.09,20.612L2.21,5.64H1.2a1.2,1.2,0,1,1,0-2.4H6.8L7.6.821A1.2,1.2,0,0,1,8.742,0h6.481a1.2,1.2,0,0,1,1.14.821l.806,2.419h5.616a1.2,1.2,0,1,1,0,2.4H21.755l-.88,14.972A3.6,3.6,0,0,1,17.28,24ZM4.614,5.64,5.487,20.47a1.2,1.2,0,0,0,1.2,1.13h10.6a1.2,1.2,0,0,0,1.2-1.13L19.351,5.64ZM9.607,2.4l-.28.84h5.311l-.28-.84Zm5.077,16.2-.076,0a1.2,1.2,0,0,1-1.123-1.272l.54-8.64a1.2,1.2,0,0,1,1.2-1.126l.076,0A1.2,1.2,0,0,1,16.42,8.834l-.54,8.64A1.2,1.2,0,0,1,14.684,18.6Zm-5.4,0a1.2,1.2,0,0,1-1.2-1.126l-.54-8.64A1.2,1.2,0,0,1,8.667,7.562l.076,0a1.2,1.2,0,0,1,1.2,1.126l.54,8.64A1.2,1.2,0,0,1,9.357,18.6Z"
-                      />
-                    </svg>
-                  </button>
-                  <button class="button button--secondary">
-                    <svg
-                      width="800px"
-                      height="800px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15 15L21 21"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
-                        stroke-width="2"
-                      />
-                    </svg>
-                    <span class="text"> Suchen </span>
-                  </button>
-                  <button class="button button--primary">
-                    <svg
-                      class="fill"
-                      fill="currentColor"
-                      width="20px"
-                      height="20px"
-                      viewBox="0 0 32 32"
-                    >
-                      <path
-                        d="M11.748 5.773S11.418 5 10.914 5c-.496 0-.754.229-.926.387S6.938 7.91 6.938 7.91s-.837.731-.773 2.106c.054 1.375.323 3.332 1.719 6.058 1.386 2.72 4.855 6.876 7.047 8.337 0 0 2.031 1.558 3.921 2.191.549.173 1.647.398 1.903.398.26 0 .719 0 1.246-.385.536-.389 3.543-2.807 3.543-2.807s.736-.665-.119-1.438c-.859-.773-3.467-2.492-4.025-2.944-.559-.459-1.355-.257-1.699.054-.343.313-.956.828-1.031.893-.112.086-.419.365-.763.226-.438-.173-2.234-1.148-3.899-3.426-1.655-2.276-1.837-3.02-2.084-3.824a.56.56 0 0 1 .225-.657c.248-.172 1.161-.933 1.161-.933s.591-.583.344-1.27-1.906-4.716-1.906-4.716z"
-                      />
-                    </svg>
-                    <span class="text"> Anrufen </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="carList__items" id="carList"></div>
         </div>
       </div>
     </section>
     <!-- List end -->
+    <div class="popUp popUp--confirm" id="confirm">
+      <div class="popUp__inner">
+        <div
+          class="popUp__inner-close"
+          data-event="close-modal"
+          data-modal="#confirm"
+        ></div>
+        <div class="popUp__inner-content">
+          <h3>Ausstattung</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+            porro aperiam doloribus nam sequi voluptatum numquam! Consequatur
+            esse nulla sed.
+          </p>
+          <div class="popUp__inner-content-footer">
+            <button
+              class="buttonText buttonText--secondary"
+              data-event="close-modal"
+              data-modal="#confirm"
+            >
+              Cancel
+            </button>
+            <button
+              class="button button--secondary button--rounded"
+              id="confirm-btn"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popUp" id="search">
+      <div class="popUp__inner">
+        <div
+          class="popUp__inner-close"
+          data-event="close-modal"
+          data-modal="#search"
+        ></div>
+        <div class="popUp__inner-content">
+          <h3>Ausstattung</h3>
+          <p class="_muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit.
+          </p>
+          <div class="input input--text">
+            <input type="text" placeholder="text here" />
+          </div>
+          <div class="input input--text">
+            <input type="text" placeholder="text here" />
+          </div>
+          <div class="popUp__inner-content-footer">
+            <button class="buttonText buttonText--secondary">Primary</button>
+            <button class="button button--secondary button--rounded">
+              Secondary
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+<script src="js/carList.js"></script>
+<script src="js/list-main.js"></script>
