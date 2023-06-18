@@ -1769,6 +1769,10 @@ svg {
   font-weight: 400;
   color: #707070;
 }
+.carList__item-body-info p._muted {
+  color: rgba(112, 112, 112, 0.8);
+  font-size: 0.7em;
+}
 .carList__item-body-box {
   display: -webkit-box;
   display: -ms-flexbox;

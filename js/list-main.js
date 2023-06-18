@@ -88,9 +88,9 @@ const initCarList = (initData) => {
 
 //Test
 const jsonString =
-  '[{"id": 101,"img": "./images/car.png","nameLong": "Mercedes-Benz B 200 AMG Line Navu Kamera PTS Spur Klima","price": 10000,"price2": 10000,"rating": 2,"info": "Ez 03/2022, 16,160 km, 120 kW (163 Ps)\\n Benzin, Schaltgetrible"}]';
+  '[{"id": 101,"img": "./images/car.png","nameLong": "Mercedes-Benz B 200 AMG Line Navu Kamera PTS Spur Klima","price": 10000,"price2": 10000,"rating": 2,"info": "Ez 03/2022, 16,160 km, 120 kW (163 Ps)\\n Benzin, Schaltgetrible", "dateTime" : "18.05.2023 18:45:45", "user": "Bekim" }]';
 const newCarJson =
-  '{"id": 106,"img": "./images/car.png","nameLong": "Prepended: Audi A3 Sportback","price": 15000,"price2": 15000,"rating": 4,"info": "Ez 04/2022, 14,500 km, 110 kW (150 PS) \\n Benzin, Schaltgetrible"}';
+  '{"id": 106,"img": "./images/car.png","nameLong": "Prepended: Audi A3 Sportback","price": 15000,"price2": 15000,"rating": 4,"info": "Ez 04/2022, 14,500 km, 110 kW (150 PS) \\n Benzin, Schaltgetrible", "dateTime" : "18.05.2023 18:45:45", "user": "Bekim" }';
 
 const carList = initCarList(jsonString);
 carList.prependListItem(newCarJson);

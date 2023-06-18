@@ -57,6 +57,11 @@
           line-height: 1.4;
           font-weight: 400;
           color: $gray;
+
+          &._muted {
+            color: rgba($gray, 0.8);
+            font-size: 0.7em;
+          }
         }
       }
       &-box {

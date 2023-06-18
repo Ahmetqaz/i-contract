@@ -43,6 +43,11 @@ function CarList({ data, wrapper, onDelete, onSearch, onCall }) {
     para.innerText = data.info;
     itemBodyInfo.append(para);
 
+    const paraMuted = document.createElement("p");
+    paraMuted.className = "_muted";
+    paraMuted.innerText = `${data.dateTime}, ${data.user}`;
+    itemBodyInfo.append(paraMuted);
+
     //add buttons
     const itemFooter = document.createElement("div");
     itemFooter.className = "carList__item-body-box";
