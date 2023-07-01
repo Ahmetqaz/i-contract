@@ -165,10 +165,12 @@
   padding-top: 20px;
   z-index: 8;
   &__inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 326px;
-    padding: 15px 15px 15px 0;
+    padding: 5em 0 2em 0;
+
     &-link {
       padding: 1.3em 1.45em;
       color: $black-2;
@@ -210,6 +212,34 @@
         }
       }
     }
+    &-switch {
+      cursor: pointer;
+      position: absolute;
+      top: 1.5em;
+      left: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      background: $primary;
+      padding: 0.5em;
+      border-radius: 1em;
+      transform: translateX(-70%);
+      transition: 0.3s ease-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      .custIcon {
+        transition: 0.2s ease;
+      }
+      &.active {
+        .custIcon {
+          transform: rotateY(180deg);
+        }
+      }
+    }
   }
   .ico {
     width: 1.75em;
@@ -243,7 +273,6 @@
 @mixin header-1700 {
   .sidebar {
     &__inner {
-      padding: 15px 40px 15px 0;
       width: 300px;
     }
   }
@@ -256,7 +285,6 @@
     top: 93px;
     height: calc(100% - 93px);
     &__inner {
-      padding: 50px 0;
       width: auto;
       align-items: flex-start;
       height: 100%;
@@ -269,7 +297,7 @@
           width: 0;
           opacity: 0;
           pointer-events: none;
-          transition: opacity .05s ease, width .3s ease;
+          transition: 0.15s ease;
         }
         .notification {
           right: unset;
@@ -300,12 +328,10 @@
     }
     &.active {
       width: 100%;
-      height: calc(100% - 80px);
       .sidebar {
         &__inner {
           width: 260px;
           align-items: unset;
-          padding: 50px 20px 50px 0;
           &-link {
             gap: 25px;
             padding: 1.1em 1.25em;
@@ -314,6 +340,7 @@
               width: auto;
               pointer-events: all;
               display: block;
+              transition: opacity 0.15s ease 0.1s, width 0.3s ease;
             }
             &._notification {
               gap: 25px;

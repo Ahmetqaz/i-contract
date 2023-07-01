@@ -179,6 +179,24 @@
         @include transition;
       }
     }
+    &._orange {
+      .checkBox {
+        &::after {
+          border-color: $white;
+        }
+      }
+      input {
+        &:checked + label {
+          .checkBox {
+            border-color: $orange;
+            background: $orange;
+            &:after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
   }
   &--textarea {
     display: flex;
@@ -463,7 +481,9 @@
       }
     }
   }
-
+  &._shadow {
+    box-shadow: 0 4px 15px rgba($primary, 0.2);
+  }
   .notification {
     position: absolute;
     top: -2px;
@@ -1021,6 +1041,98 @@
   &--success {
     ._filled {
       background: $green-2;
+    }
+  }
+}
+.doubleRange {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  width: 100%;
+  &__range {
+    position: relative;
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    height: 1.5em;
+    z-index: 0;
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: translateY(-50%);
+      z-index: -2;
+      background: rgba($primary, 0.4);
+    }
+
+    input {
+      position: absolute;
+      -webkit-appearance: none;
+      background: rgba(0, 0, 0, 0.1);
+      outline: none;
+      font-size: inherit;
+      top: 50%;
+      left: 0;
+      height: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: -1;
+      pointer-events: none;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        cursor: pointer;
+        background: $primary;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        pointer-events: all;
+        transition: 0.2s ease;
+      }
+      &::-moz-range-thumb {
+        cursor: pointer;
+        background: $primary;
+        border: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        pointer-events: all;
+        transition: 0.2s ease;
+      }
+      &:hover::-webkit-slider-thumb {
+        z-index: 1;
+        opacity: 0.8;
+      }
+      &:hover::-moz-range-thumb {
+        z-index: 1;
+        opacity: 0.8;
+      }
+    }
+  }
+  &__inputs {
+    display: flex;
+    justify-content: space-between;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 0.5em);
+      max-width: 195px;
+      gap: 3px;
+      label {
+        color: $blue-light;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .input {
+        input {
+          border-color: $blue-light;
+          padding: 0.5em;
+        }
+      }
     }
   }
 }

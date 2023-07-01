@@ -167,26 +167,14 @@
       .caption {
         margin-bottom: 40px;
       }
-      .input {
-        .checkBox {
-          &::after {
-            border-color: $white;
-          }
-        }
-        input {
-          &:checked + label {
-            .checkBox {
-              border-color: $orange;
-              background: $orange;
-              &:after {
-                opacity: 1;
-              }
-            }
-          }
-        }
-      }
       .button {
         margin-left: auto;
+      }
+      &-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1em;
+        margin-top: 1em;
       }
     }
     &-basket {

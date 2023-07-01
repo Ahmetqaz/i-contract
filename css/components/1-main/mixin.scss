@@ -1,36 +1,49 @@
-
-@mixin noSelect{
+@mixin noSelect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-@mixin hideScroll{
+@mixin customScroll($width: 5px) {
+  &::-webkit-scrollbar {
+    width: $width;
+    display: block;
+    border-radius: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background: $blue-7;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $blue-6;
+    border-radius: $width;
+  }
+}
+@mixin hideScroll {
   scrollbar-width: none; /* Firefox 64 */
   -ms-overflow-style: none; /* Internet Explorer 11 */
-  &::-webkit-scrollbar { /** WebKit */
+  &::-webkit-scrollbar {
+    /** WebKit */
     display: none;
   }
 }
 
-@mixin ellipsis($line : 3){
+@mixin ellipsis($line: 3) {
   display: -webkit-box;
   -webkit-line-clamp: $line;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@mixin ellipsisLine($line : 3){
+@mixin ellipsisLine($line: 3) {
   -webkit-line-clamp: $line;
 }
 
-
 @mixin contentAbsolute {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
 }

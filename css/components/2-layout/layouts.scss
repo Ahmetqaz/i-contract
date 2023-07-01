@@ -35,6 +35,11 @@
     opacity: 1;
     pointer-events: all;
   }
+  &._wide & {
+    &__inner {
+      max-width: 1200px;
+    }
+  }
   &__inner {
     position: relative;
     box-shadow: 0 5px 15px rgba($black, 0.1);
@@ -58,34 +63,26 @@
       position: absolute;
       top: 0.8em;
       right: 0.8em;
-      width: 1.25em;
-      height: 1.25em;
+      width: 2em;
+      height: 2em;
       transition: 0.2s ease-out;
-      
-      &::before {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: $black;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-      &:after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background: $black;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
+      border-radius: 40%;
+      border: 1px solid rgba($black, 0.1);
+
+      //display
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
         opacity: 0.6;
       }
+    }
+    &-title {
+      font-size: 1.5rem;
+      color: $primary;
+      font-weight: 700;
+      line-height: 1.2;
     }
     &-content {
       display: flex;
@@ -107,6 +104,39 @@
         gap: 0.75em;
         margin-top: 0.5em;
       }
+    }
+    &-checkboxes {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px 15px;
+      border-radius: 5px;
+      border: 1px solid $white-4;
+      padding: 20px;
+      max-height: 70vh;
+      overflow: auto;
+      @include customScroll;
+      .input {
+        width: calc(33.3% - 10px);
+        label {
+          overflow: hidden;
+          &:hover {
+            color: $primary;
+            span {
+              border-color: $primary;
+            }
+          }
+          span {
+            min-width: 1.6em;
+          }
+        }
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1em;
+      margin-top: auto;
     }
   }
   &__checkBoxes {
@@ -138,18 +168,7 @@
       border: 1px solid $white-4;
       padding: 26px 16px 26px 36px;
       overflow: auto;
-      &::-webkit-scrollbar {
-        width: 5px;
-        display: block;
-        border-radius: 2.5px;
-      }
-      &::-webkit-scrollbar-track {
-        background: $blue-7;
-      }
-      &::-webkit-scrollbar-thumb {
-        background: $blue-6;
-        border-radius: 2.5px;
-      }
+      @include customScroll;
       .input {
         width: calc(33.3% - 10px);
         label {
@@ -165,6 +184,11 @@
           }
         }
       }
+    }
+    &-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1em;
     }
   }
   .close {
@@ -198,6 +222,81 @@
   &--confirm & {
     &__inner {
       max-width: 550px;
+    }
+  }
+}
+.filterBox {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: calc(50% - 0.6em);
+  }
+  &__list {
+    position: relative;
+    border-radius: 0.5em;
+    border: 1px solid $black-5;
+    overflow-y: auto;
+    max-height: 450px;
+    z-index: 0;
+    padding-bottom: 2em;
+    padding-right: 2em;
+    @include customScroll(3px);
+
+    &-title {
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      font-size: 16px;
+      background: $white;
+      z-index: 1;
+      padding: 0.5em;
+
+      strong {
+        color: $primary;
+        font-weight: 700;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      justify-content: space-between;
+      padding: 0.5em 0.75em;
+
+      .input--checkBox {
+        width: 1em;
+      }
+      .doubleRange {
+        width: calc(100% - 3em);
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.4em;
+
+    .button {
+      gap: 1em;
+      svg {
+        width: 1em;
+        height: 1em;
+      }
+    }
+    &._end {
+      justify-content: flex-end;
+      gap: 1em;
     }
   }
 }
