@@ -355,7 +355,7 @@
 .tabs {
   width: 100%;
   position: sticky;
-  top: 23px;
+  top: 18px;
   border-bottom: 2px solid #f7f7f7;
   z-index: 7;
   &__inner {
@@ -655,7 +655,7 @@ section {
     padding-left: 60px;
   }
   .tabs {
-    top: 8px;
+    top: 5px;
   }
 }
 
@@ -743,7 +743,7 @@ section {
     }
   }
   .tabs {
-    top: 22px;
+    top: 18px;
     &__inner {
       gap: 35px;
     }
@@ -751,7 +751,7 @@ section {
 }
 @mixin index-1100 {
   .tabs {
-    top: 8px;
+    top: 4px;
   }
 }
 @mixin index-1025 {
