@@ -124,27 +124,22 @@
         }
       }
     }
-    &-box {
+    &-list {
       display: flex;
-      align-items: center;
-      .input {
-        &--checkBox {
-          label {
-            color: $black-4;
-            font-weight: 400;
-            gap: 10px;
-          }
-        }
-      }
-      .button {
-        &--ico {
-          svg {
-            fill: $red;
-            @include transition;
-          }
-          &:hover {
-            svg {
-              fill: $orange;
+      flex-direction: column;
+      gap: 20px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        .input {
+          &--checkBox {
+            label {
+              color: $black-4;
+              font-weight: 400;
+              gap: 10px;
             }
           }
         }

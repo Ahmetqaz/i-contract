@@ -560,6 +560,7 @@ svg {
 }
 .input--checkBox {
   position: relative;
+  z-index: 0;
 }
 .input--checkBox input {
   position: absolute;
@@ -569,6 +570,7 @@ svg {
   height: 100%;
   opacity: 0;
   cursor: pointer;
+  z-index: 1;
 }
 .input--checkBox input:checked + label .checkBox {
   border-color: #185f76;
@@ -901,21 +903,27 @@ svg {
   height: 1.75em;
   padding: unset;
   border: unset;
+  color: #185f76;
 }
 .button--ico .ico {
   width: 100%;
   height: 100%;
+  color: inherit;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .button--ico .ico svg {
-  width: inherit;
-  height: inherit;
-  stroke: #7e84a3;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
+  width: 100%;
+  height: 100%;
 }
-.button--ico:hover .ico svg {
-  stroke: #185f76;
+.button--ico:hover {
+  color: #7e84a3;
+}
+.button--ico._danger {
+  color: #f0142f;
+}
+.button--ico._danger:hover {
+  color: #e96d24;
 }
 .button--icoText {
   display: -webkit-box;
@@ -2430,7 +2438,7 @@ svg {
   padding: 0.5em 0.75em;
 }
 .filterBox__list-item .input--checkBox {
-  width: 1em;
+  width: 1.6em;
 }
 .filterBox__list-item .doubleRange {
   width: calc(100% - 3em);
@@ -3349,27 +3357,29 @@ section {
   font-size: 16px;
   padding: 0.9em;
 }
-.features__inner-box {
+.features__inner-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.features__inner-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.5rem;
 }
-.features__inner-box .input--checkBox label {
+.features__inner-list li .input--checkBox label {
   color: #000000;
   font-weight: 400;
   gap: 10px;
-}
-.features__inner-box .button--ico svg {
-  fill: #f0142f;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-}
-.features__inner-box .button--ico:hover svg {
-  fill: #e96d24;
 }
 .features__inner-setting {
   background: #fff;

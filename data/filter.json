@@ -1,155 +1,150 @@
 {
-	"filters": {
-		"Inland": {
-			"active": false,
-			"car_mileage": [
-				{
-					"von": "50000",
-					"active": true,
-					"bis": "80000"
-				},
-				{
-					"von": "80000",
-					"active": true,
-					"bis": "100000"
-				},
-				{
-					"von": "100000",
-					"active": true,
-					"bis": "150000"
-				},
-				{
-					"von": "150000",
-					"active": true,
-					"bis": "200000"
-				},
-				{
-					"von": "0",
-					"active": true,
-					"bis": "0"
-				}
-			],
-			"first_registration": [
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "12",
-					"active": true
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				}
-			]
-		},
-		"Export": {
-			"active": false,
-			"car_mileage": [
-				{
-					"von": "50000",
-					"active": true,
-					"bis": "80000"
-				},
-				{
-					"von": "80000",
-					"active": true,
-					"bis": "120000"
-				},
-				{
-					"von": "120000",
-					"active": true,
-					"bis": "150000"
-				},
-				{
-					"von": "150000",
-					"active": true,
-					"bis": "200000"
-				}
-			],
-			"first_registration": [
-				{
-					"compare_with_year": "-1",
-					"first_reg_month": "4",
-					"active": true
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "12",
-					"active": false
-				}
-			]
-		},
-		"Neuer Filter 0": {
-			"active": true,
-			"car_mileage": [
-				{
-					"von": "0",
-					"active": true,
-					"bis": "0"
-				},
-				{
-					"von": "0",
-					"active": true,
-					"bis": "0"
-				},
-				{
-					"von": "0",
-					"active": true,
-					"bis": "0"
-				},
-				{
-					"von": "0",
-					"active": false,
-					"bis": "0"
-				},
-				{
-					"von": "0",
-					"active": false,
-					"bis": "0"
-				}
-			],
-			"first_registration": [
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				},
-				{
-					"compare_with_year": "0",
-					"first_reg_month": "0",
-					"active": false
-				}
-			]
-		},
-		"Neuer Filter 1": {
-			"active": false,
-			"car_mileage": [],
-			"first_registration": []
-		}
-	}
+  "filters": {
+    "Inland": {
+      "active": false,
+      "car_mileage": [
+        {
+          "von": "50000",
+          "active": true,
+          "bis": "80000"
+        },
+        {
+          "von": "80000",
+          "active": true,
+          "bis": "100000"
+        },
+        {
+          "von": "100000",
+          "active": true,
+          "bis": "150000"
+        },
+        {
+          "von": "150000",
+          "active": true,
+          "bis": "200000"
+        },
+        {
+          "von": "0",
+          "active": true,
+          "bis": "0"
+        }
+      ],
+      "first_registration": [
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "12",
+          "active": true
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        }
+      ]
+    },
+    "Export": {
+      "active": false,
+      "car_mileage": [
+        {
+          "von": "50000",
+          "active": true,
+          "bis": "80000"
+        },
+        {
+          "von": "80000",
+          "active": true,
+          "bis": "120000"
+        },
+        {
+          "von": "120000",
+          "active": true,
+          "bis": "150000"
+        },
+        {
+          "von": "150000",
+          "active": true,
+          "bis": "200000"
+        }
+      ],
+      "first_registration": [
+        {
+          "compare_with_year": "-1",
+          "first_reg_month": "4",
+          "active": true
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "12",
+          "active": false
+        }
+      ]
+    },
+    "Neuer Filter 0": {
+      "active": true,
+      "car_mileage": [
+        {
+          "von": "0",
+          "active": true,
+          "bis": "0"
+        },
+        {
+          "von": "0",
+          "active": true,
+          "bis": "0"
+        },
+        {
+          "von": "0",
+          "active": true,
+          "bis": "0"
+        },
+        {
+          "von": "0",
+          "active": false,
+          "bis": "0"
+        },
+        {
+          "von": "0",
+          "active": false,
+          "bis": "0"
+        }
+      ],
+      "first_registration": [
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        },
+        {
+          "compare_with_year": "0",
+          "first_reg_month": "0",
+          "active": false
+        }
+      ]
+    }
+  }
 }

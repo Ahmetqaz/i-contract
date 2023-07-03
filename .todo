@@ -1,0 +1,4 @@
+car_mileage
+from 10000 to 300000 default  /// should editable values in js
+first_registration
+from -1 to 2 default  /// should editable values in js

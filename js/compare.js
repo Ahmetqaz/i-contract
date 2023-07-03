@@ -96,10 +96,25 @@ function CarAllEquipmentsUI(data) {
   this.getData = () => this.data;
   this.initList(data);
 }
+function FilterListUI(data) {
+  this.data = data;
+  this.filtersList = document.querySelector("#filtersList");
+
+  this.createLists = (data = this.data) => {
+    const filters = Object.keys(data);
+    console.log("filters", filters);
+    this.filtersList.innerHTML = "";
+  };
+  this.initAll = (data = this.data) => {
+    this.createLists(data);
+  };
+  this.initAll();
+}
 
 let techList = null;
 let equipmentList = null;
 let equipmentAllList = null;
+let filterListUI = null;
 
 const fetchTechData = async ({ url, onSuccess }) => {
   const response = await fetch(url);
@@ -125,6 +140,7 @@ const fetchEquipmentData = async ({ url, onSuccess }) => {
 const fetchAll = async () => {
   let techData;
   let equipmentData;
+  let filterData;
   let equipmentAllData;
 
   await fetchTechData({
@@ -139,10 +155,14 @@ const fetchAll = async () => {
     url: "./data/car_features.json",
     onSuccess: (data) => (equipmentData = data.car_features),
   });
-
+  await fetchTechData({
+    url: "./data/filter.json",
+    onSuccess: (data) => (filterData = data.filters),
+  });
   techList = new TechListUI(techData);
   equipmentList = new CarEquipmentUI(equipmentData);
   equipmentAllList = new CarAllEquipmentsUI(equipmentAllData);
+  filterListUI = new FilterListUI(filterData);
 };
 fetchAll();
 

@@ -129,6 +129,7 @@
   }
   &--checkBox {
     position: relative;
+    z-index: 0;
     input {
       position: absolute;
       top: 0;
@@ -137,6 +138,8 @@
       height: 100%;
       opacity: 0;
       cursor: pointer;
+      z-index: 1;
+
       &:checked + label {
         .checkBox {
           border-color: $primary;
@@ -444,21 +447,24 @@
     height: 1.75em;
     padding: unset;
     border: unset;
+    color: $primary;
     .ico {
       width: 100%;
       height: 100%;
+      color: inherit;
+      transition: 0.2s ease;
       svg {
-        width: inherit;
-        height: inherit;
-        stroke: $blue;
-        @include transition;
+        width: 100%;
+        height: 100%;
       }
     }
     &:hover {
-      .ico {
-        svg {
-          stroke: $primary;
-        }
+      color: $blue;
+    }
+    &._danger {
+      color: $red;
+      &:hover {
+        color: $orange;
       }
     }
   }
