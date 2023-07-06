@@ -1,0 +1,392 @@
+.help {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    &-body {
+      display: flex;
+      gap: 10px;
+    }
+    &-info {
+      font-size: 13px;
+      padding: 0.4em 0.7em 1em;
+      border-radius: 5px;
+      border: 1px solid $white-4;
+      background: $white;
+      box-shadow: 0 1px 4px rgba($black, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: calc(100% - 272px);
+      p {
+        font-size: 0.62em;
+        color: $blue-10;
+        font-weight: 400;
+      }
+      a {
+        font-size: 1em;
+        color: $black-4;
+        font-weight: 400;
+      }
+    }
+  }
+  h2 {
+    color: $primary;
+  }
+  .button {
+    font-size: 16px;
+    font-weight: 700;
+    width: 260px;
+  }
+  margin-bottom: 10px;
+}
+.features {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    &-content {
+      background: $white;
+      padding: 18px 15px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba($black, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &-body {
+      padding-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      .input {
+        &--checkBox {
+          padding-top: 5px;
+        }
+        &--checkText {
+          width: calc(50% - 10px);
+          max-width: 455px;
+        }
+      }
+    }
+    &-filter {
+      background: $white;
+      padding: 18px 15px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba($black, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+    }
+    &-wrapper {
+      padding: 30px 25px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      &::before {
+        content: "";
+        width: calc(100% - 50px);
+        height: 1px;
+        background: $white-4;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+      .button {
+        &--primary {
+          margin-top: 15px;
+          width: 266px;
+          font-weight: 700;
+          font-size: 16px;
+          padding: 0.9em;
+          margin-top: 15px;
+          width: 266px;
+          font-weight: 700;
+          font-size: 16px;
+          padding: 0.9em;
+        }
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        .input {
+          &--checkBox {
+            label {
+              color: $black-4;
+              font-weight: 400;
+              gap: 10px;
+            }
+          }
+        }
+      }
+    }
+    &-setting {
+      background: $white;
+      padding: 18px 15px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba($black, 0.1);
+    }
+    &-checkBoxes {
+      background: $white;
+      padding: 18px 15px 25px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba($black, 0.1);
+      &-wrapper {
+        max-width: 900px;
+      }
+      .caption {
+        margin-bottom: 40px;
+      }
+      .button {
+        margin-left: auto;
+      }
+      &-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1em;
+        margin-top: 1em;
+      }
+    }
+    &-basket {
+      background: $white;
+      padding: 18px 15px 25px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba($black, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      height: 100%;
+    }
+  }
+  .basket {
+    font-size: 16px;
+    padding: 15px 18px;
+    border: 1px solid $gray;
+    border-radius: 6px;
+    background: $black-5;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &__box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      p {
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.2;
+      }
+      &-image {
+        width: 1.4em;
+        height: 1.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    h4 {
+      font-weight: 700;
+      color: $black-4;
+      text-align: right;
+    }
+  }
+  .button {
+    &--secondary {
+      margin-top: 40px;
+    }
+  }
+}
+.column {
+  &--lg {
+    width: calc(63% - 5px);
+  }
+  &--sm {
+    width: calc(37% - 5px);
+  }
+}
+
+@mixin compare-1440 {
+  .help {
+    &__inner {
+      &-info {
+        width: calc(100% - 250px);
+      }
+    }
+    .button {
+      width: 240px;
+      font-size: 15px;
+    }
+  }
+  .features {
+    &__inner {
+      &-filter {
+        gap: 80px;
+      }
+      &-wrapper {
+        .button {
+          &--primary {
+            width: 240px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin compare-1300 {
+  .features {
+    &__inner {
+      &-wrapper {
+        padding: 25px 15px;
+      }
+      &-filter {
+        gap: 60px;
+      }
+    }
+  }
+}
+@mixin compare-1180 {
+  .help {
+    &__inner {
+      &-info {
+        width: calc(100% - 230px);
+        a {
+          font-size: 0.9em;
+          overflow: hidden;
+        }
+      }
+    }
+    .button {
+      width: 220px;
+      font-size: 14px;
+    }
+  }
+  .features {
+    &__inner {
+      &-filter {
+        gap: 50px;
+      }
+      &-wrapper {
+        .button {
+          &--primary {
+            width: 220px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin compare-1025 {
+  .features {
+    &__inner {
+      &-body {
+        padding-left: 0;
+      }
+      &-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+  .help {
+    &__inner {
+      flex-direction: column;
+      position: relative;
+      & > .caption {
+        position: absolute;
+        right: 10px;
+        top: 0;
+      }
+    }
+  }
+  .column {
+    &--lg {
+      width: 100%;
+    }
+    &--sm {
+      width: 100%;
+    }
+  }
+}
+@mixin compare-650 {
+  .help {
+    &__inner {
+      &-info {
+        width: 100%;
+      }
+      &-body {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+  .features {
+    &__inner {
+      &-body {
+        .input {
+          &--checkText {
+            width: 100%;
+            max-width: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin compare-480 {
+  .features {
+    &__inner {
+      &-filetr {
+        gap: 30px;
+      }
+      &-basket {
+        gap: 30px;
+      }
+      &-wrapper {
+        padding: 20px 0;
+      }
+    }
+    .button {
+      &--secondary {
+        margin-top: 30px;
+      }
+    }
+    .basket {
+      font-size: 15px;
+      padding: 10px 14px;
+    }
+  }
+}

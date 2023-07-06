@@ -1,0 +1,70 @@
+{
+	"tech_data": [
+		{
+			"name": "Marke und Modell",
+			"active": true,
+			"key": "contract-vehicle-brand-value"
+		},
+		{
+			"name": "Erstzulassung",
+			"active": true,
+			"key": "contract-vehicle-first-registration-value"
+		},
+		{
+			"name": "Kategorie",
+			"active": true,
+			"key": "contract-vehicle-vehicle-type-value"
+		},
+		{
+			"name": "Kraftstoffart",
+			"active": true,
+			"key": "contract-vehicle-fuel-type-value"
+		},
+		{
+			"name": "Klima",
+			"active": true,
+			"key": "contract-vehicle-climate-control-value"
+		},
+		{
+			"name": "Getriebe",
+			"active": true,
+			"key": "contract-vehicle-gear-type-value"
+		},
+		{
+			"name": "Farbe",
+			"active": true,
+			"key": "contract-vehicle-color-value"
+		},
+		{
+			"name": "Anzahl Türen",
+			"active": true,
+			"key": "contract-vehicle-number-of-doors-value"
+		},
+		{
+			"name": "Hubraum",
+			"active": true,
+			"key": "contract-vehicle-cubic-capacity-value"
+		},
+		{
+			"name": "Kilometerstand",
+			"active": true,
+			"key": "contract-vehicle-total-mileage-value"
+		},
+		{
+			"name": "Leistung",
+			"active": true,
+			"key": "contract-vehicle-performance-value"
+		},
+		{
+			"name": "Abweichung PS (+-)",
+			"active": true,
+			"value": 10,
+			"key": "contract-vehicle-performance-value-delta"
+		},
+		{
+			"name": "Schadstoffklasse",
+			"active": true,
+			"key": "contract-vehicle-emission-class-value"
+		}
+	]
+}
