@@ -966,6 +966,45 @@ svg {
   width: 100%;
   height: 100%;
 }
+.button--icoBg {
+  padding: 0.5em;
+  width: 4.08em;
+  height: 3.14em;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  color: #185f76;
+}
+.button--icoBg .ico {
+  width: auto;
+  height: 1.28em;
+}
+.button--icoBg .ico svg {
+  fill: currentColor;
+  stroke: unset;
+}
+.button--icoBg:hover {
+  background: #ebebeb;
+}
+.button--icoBg._sm {
+  width: 2.5em;
+  height: 2.5em;
+}
+.button--icoBg._sm .ico {
+  height: 1em;
+}
+.button--dropdown {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 0.75em 0.5em 0.75em 0.9em;
+  background: #fff;
+  border-radius: 5px;
+  gap: 10px;
+  border-color: #ebebeb;
+}
+.button--dropdown .ico {
+  width: 6px;
+}
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
           box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
@@ -2004,6 +2043,167 @@ svg {
 }
 .sidebar .dropdown__content {
   padding: 0.5em 1em;
+}
+
+.list {
+  padding: 34px 0;
+}
+.list__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+}
+.list__inner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.list__inner-header h2 {
+  color: #185f76;
+  width: calc(30% - 10px);
+}
+.list__inner-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 6px;
+  width: calc(70% - 10px);
+}
+.list__inner-box .input--search {
+  max-width: 440px;
+}
+.list__inner-box .input--search input {
+  padding: 0.75em 2em 0.75em 1em;
+}
+.list__inner-box .input--search input::-webkit-input-placeholder {
+  color: #888fa7;
+}
+.list__inner-box .input--search input::-moz-placeholder {
+  color: #888fa7;
+}
+.list__inner-box .input--search input:-ms-input-placeholder {
+  color: #888fa7;
+}
+.list__inner-box .input--search input::-ms-input-placeholder {
+  color: #888fa7;
+}
+.list__inner-box .input--search input::placeholder {
+  color: #888fa7;
+}
+.list__inner-box .input--search .ico {
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  left: unset;
+  right: 15px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.list__inner-box .input--search .ico svg {
+  stroke: transparent;
+  fill: #185f76;
+}
+.list__inner-box .input--search .ico:hover {
+  opacity: 0.7;
+}
+.list__inner-table {
+  height: calc(100vh - 132px);
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  font-size: 16px;
+  padding: 0.93em 1.25em;
+  border-radius: 1em;
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
+          box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
+}
+.table thead {
+  position: sticky;
+  top: -1px;
+  z-index: 3;
+  background: #fff;
+}
+.table thead::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  background: rgba(24, 95, 118, 0.12);
+  pointer-events: none;
+}
+.table tbody tr {
+  position: relative;
+}
+.table tbody tr:first-child:after {
+  height: calc(100% - 0.5em);
+}
+.table tbody tr:first-child td {
+  padding: 1.25em 0.875em 1.125em 0.875em;
+}
+.table tbody tr::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px 8px 0px 0px;
+  background: rgba(245, 246, 250, 0.5);
+  pointer-events: none;
+  display: none;
+}
+.table tbody tr:nth-child(odd)::after {
+  display: block;
+}
+.table th {
+  padding: 1.125em;
+  font-weight: 700;
+  color: #185f76;
+  font-size: 1em;
+  text-align: left;
+}
+.table td {
+  padding: 0.875em 1.125em;
+  position: relative;
+  z-index: 2;
+  font-size: 1em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+}
+.table .title {
+  padding: 1.125em;
+  font-weight: 700;
+  color: #185f76;
+  font-size: 1em;
+  text-align: left;
+  display: none;
+}
+.table__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
 }
 
 .main {

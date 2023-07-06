@@ -819,6 +819,45 @@ svg {
   width: 100%;
   height: 100%;
 }
+.button--icoBg {
+  padding: 0.5em;
+  width: 4.08em;
+  height: 3.14em;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  color: #185f76;
+}
+.button--icoBg .ico {
+  width: auto;
+  height: 1.28em;
+}
+.button--icoBg .ico svg {
+  fill: currentColor;
+  stroke: unset;
+}
+.button--icoBg:hover {
+  background: #ebebeb;
+}
+.button--icoBg._sm {
+  width: 2.5em;
+  height: 2.5em;
+}
+.button--icoBg._sm .ico {
+  height: 1em;
+}
+.button--dropdown {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 0.75em 0.5em 0.75em 0.9em;
+  background: #fff;
+  border-radius: 5px;
+  gap: 10px;
+  border-color: #ebebeb;
+}
+.button--dropdown .ico {
+  width: 6px;
+}
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
           box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
