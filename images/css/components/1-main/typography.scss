@@ -1,0 +1,79 @@
+// Font family
+@font-face {
+  font-family: "Tahoma";
+  src: url("./Tahoma.eot");
+  src: url("./Tahoma.eot?#iefix") format("embedded-opentype"),
+    url("./Tahoma.woff2") format("woff2"), url("./Tahoma.woff") format("woff"),
+    url("./Tahoma.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: url("./Tahoma-Bold.eot");
+  src: url("./Tahoma-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./Tahoma-Bold.woff2") format("woff2"),
+    url("./Tahoma-Bold.woff") format("woff"),
+    url("./Tahoma-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Typography */
+h1 {
+  font-size: 52px;
+}
+h2 {
+  font-size: 25px;
+}
+h3 {
+  font-size: 22px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 12px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.8em;
+}
+@mixin typography-1660 {
+  h2 {
+    font-size: 23px;
+  }
+}
+
+@mixin typography-1180{
+  h2 {
+    font-size: 20px;
+  }
+}
+@mixin typography-880{
+h4{
+  font-size: 14px;
+}}
+@mixin typography-580{
+  h2 {
+    font-size: 18px;
+  }
+h4{
+  font-size: 12px;
+}
+}
