@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <h1 className="hello"></h1>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -640,17 +641,22 @@
                         </div>
                       </div>
                       <div class="contactContent__currency-item">
-                        <div class="input input--currencySm">
-                          <label for="cur-2"> Nettobetrag </label>
-                          <input type="text" placeholder="XXX" id="cur-2" />
-                        </div>
-                        <div class="input input--currencySm">
-                          <label for="cur-3"> 19% MwSt. </label>
-                          <input type="text" placeholder="XXX" id="cur-3" />
+                        <div
+                          class="contactContent__currency-item-wrapper"
+                          id="tabContent"
+                        >
+                          <div class="input input--currencySm">
+                            <label for="cur-2"> Nettobetrag </label>
+                            <input type="text" placeholder="XXX" id="cur-2" />
+                          </div>
+                          <div class="input input--currencySm">
+                            <label for="cur-3"> 19% MwSt. </label>
+                            <input type="text" placeholder="XXX" id="cur-3" />
+                          </div>
                         </div>
                         <div class="input input--checkBox">
-                          <input type="checkbox" id="check" />
-                          <label for="check">
+                          <input type="checkbox" id="tabBtn" />
+                          <label for="tabBtn">
                             MwSt. hinzufügen
                             <span class="checkBox"> </span>
                           </label>
@@ -1368,7 +1374,7 @@ Alles in Ordnung</textarea
                   <div class="dropdown__wrapper">
                     <h4>Zugelassen</h4>
                     <div class="input input--date">
-                      <input type="date">
+                      <input type="date" />
                     </div>
                   </div>
                 </div>

@@ -2563,6 +2563,26 @@ svg {
   font-size: 1em;
   color: #185f76;
 }
+.contactContent__currency-item-wrapper {
+  gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.contactContent__currency-item-wrapper.active {
+  opacity: 1;
+  max-height: 500px;
+  pointer-events: all;
+}
 .contactContent__currency-item h2 {
   color: #185f76;
   width: 32%;

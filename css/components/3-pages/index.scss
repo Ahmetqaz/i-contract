@@ -112,6 +112,20 @@
             }
           }
         }
+        &-wrapper {
+          gap: 5px;
+          display: flex;
+          flex-direction: column;
+          opacity: 0;
+          pointer-events: none;
+          max-height: 0;
+          transition: 0.3s ease-in-out;
+          &.active {
+            opacity: 1;
+            max-height: 500px;
+            pointer-events: all;
+          }
+        }
         h2 {
           color: $primary;
           width: 32%;
@@ -950,18 +964,18 @@ section {
       width: 100%;
       max-width: unset;
     }
-    .dropdown{
+    .dropdown {
       max-width: unset;
     }
-    .input{
-      &--file{
+    .input {
+      &--file {
         max-width: unset;
       }
     }
   }
-  .data{
-    .dropdown{
-      &__wrapper{
+  .data {
+    .dropdown {
+      &__wrapper {
         width: 100%;
       }
     }

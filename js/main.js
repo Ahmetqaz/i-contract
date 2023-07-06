@@ -127,3 +127,14 @@ window.onclick = function (event) {
     closeMenu();
   }
 };
+const tabBtn = document.getElementById("tabBtn");
+if (tabBtn) {
+  const tabContent = document.getElementById("tabContent");
+  tabBtn.addEventListener("change", () => {
+    if (tabBtn.checked === true) {
+      tabContent.classList.add("active");
+    } else {
+      tabContent.classList.remove("active");
+    }
+  });
+}
