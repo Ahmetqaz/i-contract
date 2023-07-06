@@ -229,11 +229,23 @@
       &.more {
         display: flex;
         justify-content: flex-end;
+        &.active {
+          .button {
+            .ico {
+              transform: rotate(180deg);
+            }
+          }
+        }
       }
       &.tabContent {
         opacity: 0;
         max-height: 0;
         padding: 0 1.1em !important;
+        &.active {
+          opacity: 1;
+          max-height: 500px;
+          padding: 1em 1.1em !important;
+        }
       }
     }
     .title {
