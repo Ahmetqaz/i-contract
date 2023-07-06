@@ -1,7 +1,6 @@
 @media (max-width: 1900px) {
   @include index-1900;
 }
-
 @media (max-width: 1700px) {
   @include index-1700;
   @include header-1700;
@@ -14,11 +13,11 @@
 @media (max-width: 1500px) {
   @include layouts-1500;
 }
-
 @media (max-width: 1440px) {
   @include index-1440;
   @include components-1440;
   @include compare-1440;
+  @include table-1440;
 }
 @media (max-width: 1300px) {
   @include index-1300;
@@ -44,6 +43,7 @@
   @include compare-1025;
   @include index-1025;
   @include layouts-1025;
+  @include table-1025;
 }
 @media (max-width: 880px) {
   @include typography-880;
@@ -53,6 +53,7 @@
 }
 @media (max-width: 750px) {
   @include index-750;
+  @include table-750;
 }
 @media (max-width: 650px) {
   @include layouts-650;
