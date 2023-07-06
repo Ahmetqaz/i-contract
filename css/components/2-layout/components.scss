@@ -399,6 +399,18 @@
       }
     }
   }
+  &--date {
+    // padding: ;
+    font-size: 13px;
+    input {
+      background: $primary;
+      color: $white;
+      padding: 1.267em 1.1em;
+      &::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+      }
+    }
+  }
 }
 .button {
   cursor: pointer;
@@ -1175,6 +1187,9 @@
 @mixin components-1180 {
   .input {
     font-size: 15px;
+    &--date {
+      font-size: 13px;
+    }
   }
 }
 @mixin components-1025 {

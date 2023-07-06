@@ -1,29 +1,3 @@
-var menu = document.getElementById("menu");
-var menuBtn = document.getElementById("menuBtn");
-var body = document.body;
-
-const closeMenu = () => {
-  menu.classList.remove("active");
-  menuBtn.classList.remove("active");
-  body.classList.remove("active");
-};
-
-menuBtn.onclick = function () {
-  menu.classList.toggle("active");
-  menuBtn.classList.toggle("active");
-  body.classList.toggle("active");
-};
-
-const header = document.getElementById("header");
-if (header)
-  window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 400) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  });
-
 const popUpBtn = document.getElementById("popUpBtn");
 const popUp = document.getElementById("popUp");
 const popupClose = document.getElementById("popupClose");
@@ -102,24 +76,51 @@ window.onscroll = function () {
   changeLinkState();
 };
 
+var menu = document.getElementById("menu");
+var menuBtn = document.getElementById("menuBtn");
+var body = document.body;
+
+const closeMenu = () => {
+  menu.classList.remove("active");
+  menuBtn.classList.remove("active");
+  body.classList.remove("active");
+  sidebarSwitch.classList.remove("active");
+};
+
+menuBtn.onclick = function () {
+  menu.classList.toggle("active");
+  menuBtn.classList.toggle("active");
+  body.classList.toggle("active");
+};
+
+const header = document.getElementById("header");
+if (header)
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 400) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
 const siebarLinks = document.querySelectorAll(".sidebar__inner-link");
+const sidebarSwitch = document.querySelector(".sidebar__inner-switch");
 const sidebar = document.querySelector(".sidebar__inner");
+sidebarSwitch.onclick = () => {
+  const isActive = sidebarSwitch.classList.contains("active");
+  menu.classList.toggle("active", !isActive);
+  body.classList.toggle("active", !isActive);
+  sidebarSwitch.classList.toggle("active", !isActive);
+};
 siebarLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (menu.classList.contains("active")) {
-      menu.classList.remove("active");
-      menuBtn.classList.remove("active");
-      body.classList.remove("active");
-    } else {
-      menu.classList.add("active");
-      body.classList.add("active")
+      closeMenu();
     }
   });
 });
 const sidebarClose = () => {
   menu.classList.remove("active");
 };
-
 window.onclick = function (event) {
   if (event.target == menu) {
     sidebarClose();

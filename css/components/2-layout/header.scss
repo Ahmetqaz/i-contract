@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+ 
     &-logo {
       width: 204px;
       display: flex;
@@ -37,64 +38,6 @@
     padding: 20px 0;
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
-  }
-}
-.nav {
-  flex-grow: 1;
-  &__inner {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    &-group {
-      display: flex;
-      align-items: center;
-    }
-    &-link {
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 8px 20px;
-      //font
-      color: $white;
-      font-family: $font-primary;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1;
-      transition: 0.3s ease-out;
-
-      &._sm {
-        padding: 5px 10px;
-      }
-      svg {
-        width: 1.5em;
-        height: 1.5em;
-        margin-right: 0.7em;
-      }
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -3px;
-        left: 50%;
-        height: 0;
-        width: 60%;
-        background: $primary;
-        opacity: 0;
-        transition: 0.3s ease-out;
-        transform: translateX(-50%);
-      }
-      &:hover {
-        color: $primary;
-
-        &:after {
-          opacity: 1;
-          height: 2px;
-          width: 80%;
-        }
-      }
-    }
   }
 }
 .burger {
@@ -169,7 +112,7 @@
     display: flex;
     flex-direction: column;
     width: 326px;
-    padding: 5em 0 2em 0;
+    padding: 2em 0 2em 0;
 
     &-link {
       padding: 1.3em 1.45em;
@@ -227,7 +170,7 @@
       border-radius: 1em;
       transform: translateX(-70%);
       transition: 0.3s ease-out;
-
+      display: none;
       &:hover {
         opacity: 0.8;
       }
@@ -289,6 +232,10 @@
       align-items: flex-start;
       height: 100%;
       transition: 0.3s ease-in-out;
+      padding: 5em 0 2em;
+      &-switch{
+        display: flex;
+      }
       &-link {
         gap: 0;
         padding: 1.1em 1.25em;
@@ -462,6 +409,9 @@
           gap: 15px;
         }
       }
+      &-switch{
+        display: none;
+      }
     }
     .text {
       opacity: 1;
@@ -491,8 +441,8 @@
     }
     .dropdown {
       display: block;
-      width: calc(100% - 20px);
-      margin: 0 0 0 auto;
+      width: calc(100% - 10px);
+      margin: 0 auto 0 0 ;
       &__content {
         position: unset;
         padding: 0 1em;

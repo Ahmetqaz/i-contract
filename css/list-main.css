@@ -703,6 +703,18 @@ svg {
   font-weight: 400;
   color: #1e1f24;
 }
+.input--date {
+  font-size: 13px;
+}
+.input--date input {
+  background: #185f76;
+  color: #fff;
+  padding: 1.267em 1.1em;
+}
+.input--date input::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
 
 .button {
   cursor: pointer;
@@ -2143,6 +2155,7 @@ svg {
   .autoContainer {
     padding: 0 20px;
   }
+
   .carList {
     gap: 25px;
   }
@@ -2174,6 +2187,7 @@ svg {
   .autoContainer {
     padding: 0 15px;
   }
+
   .carList__box .input {
     font-size: 16px;
   }

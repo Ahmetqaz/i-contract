@@ -265,11 +265,13 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      width: 100%;
       h4 {
         color: $black !important;
       }
-      .button {
-        justify-content: flex-start;
+      .dropdown {
+        width: calc(33% - 15px);
+        max-width: 386px;
       }
     }
     h4 {
@@ -355,7 +357,7 @@
 .tabs {
   width: 100%;
   position: sticky;
-  top: 23px;
+  top: 18px;
   border-bottom: 2px solid #f7f7f7;
   z-index: 7;
   &__inner {
@@ -456,7 +458,7 @@ section {
       flex-direction: column;
       gap: 10px;
       max-width: 340px;
-      width: calc(50% - 35px);
+      width: calc(33% - 35px);
     }
     &._up {
       z-index: 4;
@@ -574,7 +576,6 @@ section {
     }
   }
 }
-
 .anchor {
   position: relative;
   top: -120px;
@@ -655,10 +656,9 @@ section {
     padding-left: 60px;
   }
   .tabs {
-    top: 8px;
+    top: 5px;
   }
 }
-
 @mixin index-1440 {
   .contact {
     &Form {
@@ -743,7 +743,7 @@ section {
     }
   }
   .tabs {
-    top: 22px;
+    top: 18px;
     &__inner {
       gap: 35px;
     }
@@ -751,7 +751,19 @@ section {
 }
 @mixin index-1100 {
   .tabs {
-    top: 8px;
+    top: 4px;
+  }
+  .data {
+    &__inner {
+      &-box {
+        gap: 20px;
+      }
+    }
+    .dropdown {
+      &__wrapper {
+        width: calc(33.3% - 17px);
+      }
+    }
   }
 }
 @mixin index-1025 {
@@ -840,6 +852,10 @@ section {
     &Body {
       &__info {
         width: 100%;
+        .dropdown {
+          width: 100%;
+          max-width: unset;
+        }
       }
       &__row {
         gap: 24px 10px;
@@ -880,7 +896,8 @@ section {
     &__inner {
       gap: 35px;
       &-box {
-        gap: 30px;
+        gap: 15px;
+        flex-wrap: wrap;
       }
       &-body {
         margin-bottom: 80px;
@@ -894,7 +911,8 @@ section {
     }
     .dropdown {
       &__wrapper {
-        width: calc(50% - 15px);
+        width: calc(50% - 10px);
+        max-width: unset;
       }
     }
   }
@@ -931,6 +949,21 @@ section {
     &Column {
       width: 100%;
       max-width: unset;
+    }
+    .dropdown{
+      max-width: unset;
+    }
+    .input{
+      &--file{
+        max-width: unset;
+      }
+    }
+  }
+  .data{
+    .dropdown{
+      &__wrapper{
+        width: 100%;
+      }
     }
   }
 }
@@ -1221,5 +1254,3 @@ section {
     }
   }
 }
-
-
