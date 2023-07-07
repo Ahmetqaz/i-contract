@@ -3954,7 +3954,13 @@ section {
     width: 240px;
     font-size: 15px;
   }
+<<<<<<< HEAD
 
+=======
+  .list__inner-table {
+    font-size: 14px;
+  }
+>>>>>>> 5822c152f8158700768846b8f91944b72773d82b
   .list .autoContainer {
     padding: 0 20px;
   }
