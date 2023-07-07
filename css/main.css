@@ -968,7 +968,7 @@ svg {
 }
 .button--icoBg {
   padding: 0.5em;
-  width: 4.08em;
+  width: 3.5em;
   height: 3.14em;
   background: #fff;
   border: 1px solid #ebebeb;
@@ -983,7 +983,7 @@ svg {
   stroke: unset;
 }
 .button--icoBg:hover {
-  background: #ebebeb;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .button--icoBg._sm {
   width: 2.5em;
@@ -996,7 +996,7 @@ svg {
   font-size: 12px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.65);
-  padding: 0.75em 0.5em 0.75em 0.9em;
+  padding: 0.9em 0.5em 0.9em 0.9em;
   background: #fff;
   border-radius: 5px;
   gap: 10px;
@@ -2104,6 +2104,9 @@ svg {
 .list__inner-box .input--search input::placeholder {
   color: #888fa7;
 }
+.list__inner-box .input--search input:focus {
+  border-color: #185f76;
+}
 .list__inner-box .input--search .ico {
   cursor: pointer;
   width: 1em;
@@ -2123,22 +2126,29 @@ svg {
 }
 .list__inner-table {
   height: calc(100vh - 132px);
+  overflow: hidden;
+  background: #fff;
+  font-size: 16px;
+  padding: 0.4em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
+          box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
+}
+.list__inner-table-wrapper {
+  height: 100%;
   overflow: auto;
+  font-size: inherit;
 }
 
 .table {
   width: 100%;
-  font-size: 16px;
-  padding: 0.93em 1.25em;
-  border-radius: 1em;
-  background: #fff;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
-          box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
+  font-size: 1em;
+  padding: 1em;
 }
 .table thead {
   position: sticky;
   top: -1px;
-  z-index: 3;
+  z-index: 4;
   background: #fff;
 }
 .table thead::after {
@@ -2195,9 +2205,15 @@ svg {
   font-size: 1em;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.65);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .table td.more {
   display: none;
+}
+.table td.active {
+  z-index: 3;
 }
 .table .title {
   font-weight: 700;
@@ -2211,6 +2227,53 @@ svg {
   display: -ms-flexbox;
   display: flex;
   gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tableDropdown {
+  position: relative;
+}
+.tableDropdown__content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 0.5em;
+  border: 1px solid #ebebeb;
+  border-top: transparent;
+  border-radius: 0 0 5px 5px;
+  max-height: 0;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.tableDropdown.active .tableDropdown__content {
+  max-height: 500px;
+  opacity: 1;
+  pointer-events: all;
+  border-color: rgba(24, 95, 118, 0.5);
+}
+.tableDropdown.active .button--dropdown {
+  border-radius: 5px 5px 0 0;
+  border-color: rgba(24, 95, 118, 0.5);
+}
+.tableDropdown.active .button--dropdown .ico {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .main {
@@ -3894,12 +3957,11 @@ section {
     font-size: 15px;
   }
 
+  .list__inner-table {
+    font-size: 14px;
+  }
   .list .autoContainer {
     padding: 0 20px;
-  }
-
-  .table {
-    font-size: 14px;
   }
 }
 @media (max-width: 1300px) {
@@ -4393,6 +4455,10 @@ section {
   }
   .list__inner-table {
     height: calc(100vh - 135px);
+    background: unset;
+    border-radius: unset;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
   }
 
   .table {
@@ -4412,6 +4478,7 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 20px;
   }
   .table tbody tr:first-child:after {
     height: 100%;
@@ -4427,6 +4494,13 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background: #fff !important;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
+            box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
+  }
+  .table tr:after {
+    display: none !important;
   }
   .table td {
     display: -webkit-box;

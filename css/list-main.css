@@ -821,7 +821,7 @@ svg {
 }
 .button--icoBg {
   padding: 0.5em;
-  width: 4.08em;
+  width: 3.5em;
   height: 3.14em;
   background: #fff;
   border: 1px solid #ebebeb;
@@ -836,7 +836,7 @@ svg {
   stroke: unset;
 }
 .button--icoBg:hover {
-  background: #ebebeb;
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .button--icoBg._sm {
   width: 2.5em;
@@ -849,7 +849,7 @@ svg {
   font-size: 12px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.65);
-  padding: 0.75em 0.5em 0.75em 0.9em;
+  padding: 0.9em 0.5em 0.9em 0.9em;
   background: #fff;
   border-radius: 5px;
   gap: 10px;
