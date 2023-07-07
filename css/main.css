@@ -3944,22 +3944,12 @@ section {
     width: 240px;
     font-size: 15px;
   }
-<<<<<<< HEAD
-
   .list__inner-table {
     font-size: 14px;
   }
   .list .autoContainer {
     padding: 0 20px;
   }
-=======
-  .list .autoContainer {
-    padding: 0 20px;
-  }
-  .table {
-    font-size: 14px;
-  }
->>>>>>> 3a7e91d40a4541faa3eb0dfd1529f2be2b3b07f0
 }
 @media (max-width: 1300px) {
   .details__inner-row {
