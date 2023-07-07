@@ -535,7 +535,10 @@
     gap: 10px;
     border-color: $black-5;
     .ico {
-      width: 6px;
+      width: 8px;
+    }
+    &:hover {
+      border-color: rgba($black-4, 0.5);
     }
   }
   &._shadow {

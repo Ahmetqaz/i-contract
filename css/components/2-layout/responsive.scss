@@ -72,6 +72,7 @@
   @include header-480;
   @include compare-480;
   @include index-480;
+  @include table-480;
 }
 @media (max-width: 390px) {
   @include index-390;

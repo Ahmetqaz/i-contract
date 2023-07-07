@@ -856,7 +856,10 @@ svg {
   border-color: #ebebeb;
 }
 .button--dropdown .ico {
-  width: 6px;
+  width: 8px;
+}
+.button--dropdown:hover {
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
@@ -2194,6 +2197,7 @@ svg {
   .autoContainer {
     padding: 0 20px;
   }
+
   .carList {
     gap: 25px;
   }
@@ -2225,6 +2229,7 @@ svg {
   .autoContainer {
     padding: 0 15px;
   }
+
   .carList__box .input {
     font-size: 16px;
   }
