@@ -2132,7 +2132,7 @@ svg {
   overflow: hidden;
   background: #fff;
   font-size: 16px;
-  padding: 0.4em 0;
+  padding: 0.4em;
   border-radius: 1em;
   -webkit-box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
           box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
@@ -2146,7 +2146,7 @@ svg {
 .table {
   width: 100%;
   font-size: 1em;
-  padding: 1em 1.2em;
+  padding: 1em;
 }
 .table thead {
   position: sticky;
@@ -3954,13 +3954,7 @@ section {
     width: 240px;
     font-size: 15px;
   }
-<<<<<<< HEAD
 
-=======
-  .list__inner-table {
-    font-size: 14px;
-  }
->>>>>>> 5822c152f8158700768846b8f91944b72773d82b
   .list .autoContainer {
     padding: 0 20px;
   }
@@ -4433,7 +4427,7 @@ section {
     padding: 20px 0;
   }
   .list__inner {
-    gap: 10px;
+    gap: 15px;
   }
   .list__inner-header {
     -webkit-box-orient: vertical;
@@ -4455,11 +4449,12 @@ section {
     max-width: unset;
   }
   .list__inner-table {
-    height: calc(100vh - 135px);
+    height: calc(100vh - 140px);
     background: unset;
     border-radius: unset;
     -webkit-box-shadow: unset;
             box-shadow: unset;
+    padding: 0;
   }
 
   .table {

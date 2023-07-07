@@ -53,7 +53,7 @@
       overflow: hidden;
       background: $white;
       font-size: 16px;
-      padding: 0.4em 0;
+      padding: 0.4em ;
       border-radius: 1em;
       box-shadow: 0px 4px 10px 0px rgba(24, 95, 118, 0.1);
       &-wrapper {
@@ -67,7 +67,7 @@
 .table {
   width: 100%;
   font-size: 1em;
-  padding: 1em 1.2em;
+  padding: 1em ;
   thead {
     position: sticky;
     top: -1px;
@@ -228,7 +228,7 @@
   .list {
     padding: 20px 0;
     &__inner {
-      gap: 10px;
+      gap: 15px;
       &-header {
         flex-direction: column;
         gap: 20px;
@@ -244,10 +244,11 @@
         }
       }
       &-table {
-        height: calc(100vh - 135px);
+        height: calc(100vh - 140px);
         background: unset;
         border-radius: unset;
         box-shadow: unset;
+      padding: 0;
       }
     }
   }
