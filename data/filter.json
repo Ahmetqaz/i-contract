@@ -37,17 +37,17 @@
         },
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         },
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         },
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         }
       ]
@@ -121,27 +121,27 @@
       "first_registration": [
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         },
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         },
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         },
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         },
         {
           "compare_with_year": "0",
-          "first_reg_month": "0",
+          "first_reg_month": "1",
           "active": false
         }
       ]

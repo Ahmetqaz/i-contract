@@ -1,6 +1,8 @@
 const popUpBtn = document.getElementById("popUpBtn");
 const popUp = document.getElementById("popUp");
 const popupClose = document.getElementById("popupClose");
+
+
 popUpBtn.addEventListener("click", () => {
   popUp.classList.toggle("active");
   body.classList.toggle("active");

@@ -2333,6 +2333,9 @@ svg {
 .popUp._wide .popUp__inner {
   max-width: 1200px;
 }
+.popUp._sm .popUp__inner {
+  max-width: 600px;
+}
 .popUp__inner {
   position: relative;
   -webkit-box-shadow: 0 5px 15px rgba(30, 31, 36, 0.1);
@@ -2597,7 +2600,7 @@ svg {
   max-height: 450px;
   z-index: 0;
   padding-bottom: 2em;
-  padding-right: 2em;
+  padding-right: 1em;
 }
 .filterBox__list::-webkit-scrollbar {
   width: 3px;
@@ -2610,6 +2613,17 @@ svg {
 .filterBox__list::-webkit-scrollbar-thumb {
   background: #384455;
   border-radius: 3px;
+}
+.filterBox__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+  padding: 0 0.2em;
 }
 .filterBox__list-title {
   position: sticky;
@@ -2646,13 +2660,35 @@ svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5em 0.75em;
+  padding: 0.75em 0.75em;
+  background: rgba(24, 95, 118, 0.04);
+  border-radius: 1em;
 }
 .filterBox__list-item .input--checkBox {
   width: 1.6em;
 }
 .filterBox__list-item .doubleRange {
   width: calc(100% - 3em);
+}
+.filterBox__list-item-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5em;
+}
+.filterBox__list-item-group .button--ico {
+  font-size: 16px;
+  width: 1.6em;
+  height: 1.6em;
+  background: transparent;
+  border: 1px solid currentColor;
+}
+.filterBox__list-item-group .button--ico svg {
+  width: 0.8em;
 }
 .filterBox__buttons {
   display: -webkit-box;
