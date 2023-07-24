@@ -1288,35 +1288,39 @@
         </button>
       </div>
     </div>
-    <div class="popUp active _sm" id="confirmPopup">
+    <div class="popUp _sm" id="confirmPopup">
       <div class="popUp__inner">
         <div class="popUp__inner-title">
-          <h3>Do you want to save the Draft?</h3>
+          <h3>Create new filter</h3>
         </div>
         <div class="popUp__inner-content">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at
-            sunt repudiandae eligendi eius aspernatur, consectetur alias veniam
-            aliquid dolor facere, sint nesciunt repellendus impedit similique
-            rem beatae ducimus. Tempore.
+            sunt repudiandae eligendi.
           </p>
+          <div class="input input--text">
+            <input
+              type="text"
+              id="confirm-input"
+              placeholder="Type filter name"
+            />
+          </div>
         </div>
         <div class="popUp__inner-footer">
-          <button class="button button--text button--rounded" id="saveFilter">
-            Speichern
+          <button
+            class="button button--text button--rounded"
+            data-event="cancel-prompt"
+          >
+            Cancel
           </button>
           <button
             class="button button--secondary button--rounded _shadow"
-            id="saveFilter"
+            data-event="save-prompt"
           >
-            Speichern
+            Save
           </button>
         </div>
-        <button
-          class="popUp__inner-close"
-          data-event="togglePopup"
-          data-popup="#filterPopup"
-        >
+        <button class="popUp__inner-close">
           <span class="custIcon custIcon--cross"></span>
         </button>
       </div>

@@ -21,6 +21,68 @@ const EMPTY_FILTERS_DATA = {
   first_registration: [{ ...EMPTY_REGISTRATION_DATA }],
 };
 
+function ConfirmPopup(params) {
+  const default_params = {
+    title: "Confirm Popup",
+    cancelButtonText: "Cancel this",
+    saveButtonText: "Save",
+    showInput: false,
+    inputPlaceholder: "",
+  };
+
+  const popupElement = document.getElementById("confirmPopup");
+  const titleElement = popupElement.querySelector(".popUp__inner-title > h3");
+  const content = popupElement.querySelector(".popUp__inner-content");
+  const cancelButton = popupElement.querySelector(
+    `[data-event="cancel-prompt"]`
+  );
+  const saveButton = popupElement.querySelector(`[data-event="save-prompt"]`);
+  this.showPopup = () => {
+    document.body.classList.add("active");
+    popupElement.classList.add("active");
+  };
+  this.hidePopup = () => {
+    document.body.classList.remove("active");
+    popupElement.classList.remove("active");
+  };
+  this.fire = (params) => {
+    const {
+      title,
+      para,
+      showInput,
+      inputPlaceholder,
+      cancelButtonText,
+      saveButtonText,
+      onCancel,
+      onSave,
+    } = {
+      ...default_params,
+      ...params,
+    };
+    titleElement.innerText = title;
+    cancelButton.innerText = cancelButtonText;
+    saveButton.innerText = saveButtonText;
+
+    content.innerHTML = "";
+    if (para) content.innerHTML += `<p>${para}</p>`;
+    if (showInput)
+      content.innerHTML += `<div class="input input--text"><input type="text" id="confirm-input" placeholder="${inputPlaceholder}" /></div>`;
+
+    this.showPopup();
+
+    cancelButton.onclick = () => {
+      this.hidePopup();
+      if (onCancel) onCancel();
+    };
+    saveButton.onclick = () => {
+      const input = content.querySelector("#confirm-input");
+      this.hidePopup();
+      if (onSave) onSave(input ? input.value : null);
+    };
+  };
+}
+const confirmBox = new ConfirmPopup();
+
 function getSVGs() {
   const svgs = document.querySelectorAll(".js-hidden-svg > svg");
   this.svgsObj = {};
@@ -76,9 +138,18 @@ function TechListUI(data) {
   this.getData = () => this.data;
   this.initList(data);
 }
-function CarEquipmentUI(data) {
+function CarEquipmentUI({ equipmentAllData, equipmentData }) {
   this.wrapper = document.querySelector("#carEquipment");
-  this.data = data;
+  this.data = equipmentData;
+  this.settingsData = ((settingsData) => {
+    return [...settingsData]
+      .filter((item) => item.status)
+      .map((item) => item.name);
+  })(equipmentAllData);
+
+  this.checkState = (name) => {
+    return this.settingsData.indexOf(name) >= 0;
+  };
   this.createTechItem = (data) => {
     const wrapper = document.createElement("div");
     wrapper.className = "input input--checkBox _orange";
@@ -87,7 +158,7 @@ function CarEquipmentUI(data) {
       `<label for="${data.toLowerCase()}"><span class="checkBox"></span>${data}</label>`;
 
     const check = wrapper.querySelector(`input`);
-    check.checked = true;
+    check.checked = this.checkState(data);
 
     check.onchange = (e) => {
       //   data.active = e.target.checked;
@@ -103,7 +174,7 @@ function CarEquipmentUI(data) {
   };
 
   this.getData = () => this.data;
-  this.initList(data);
+  this.initList(this.data);
 }
 function CarAllEquipmentsUI(data) {
   this.wrapper = document.querySelector("#carAllEquipments");
@@ -146,15 +217,46 @@ function FilterPopupListUI() {
   this.popup = document.getElementById("filterPopup");
   this.saveFilterBtn = document.querySelector("#saveFilter");
 
+  this.generateKey = (title = "new") => {
+    return `${title}-${Date.now()}`;
+  };
   this.setData = (data) => {
-    console.log("setData \n", data);
+    if (!data.car_mileage || !data.first_registration) {
+      console.log("bad data type ", data);
+      return null;
+    }
+
+    let newData = {
+      ...data,
+      car_mileage: data.car_mileage.map((item, index) => ({
+        ...item,
+        tempkey: `${index}-${this.generateKey("mileage")}`,
+      })),
+      first_registration: data.first_registration.map((item, index) => ({
+        ...item,
+        tempkey: `${index}-${this.generateKey("registration")}`,
+      })),
+    };
+    this.data = newData;
+    return newData;
   };
   this.showPopup = () => {
     document.body.classList.add("active");
     this.popup.classList.add("active");
   };
-  this.createMileageItem = (data, id, onDelete) => {
-    console.log("createMileageItem >> data >> ", data);
+  this.hidePopup = () => {
+    document.body.classList.remove("active");
+    this.popup.classList.remove("active");
+  };
+  this.removeItem = ({ key, itemType, domElement }) => {
+    this.data[itemType] = this.data[itemType].filter(
+      (item) => item.tempkey !== key
+    );
+    domElement.remove();
+  };
+
+  this.createMileageItem = (data) => {
+    let tempKey = data.tempkey;
     let min = mileageMin;
     let max = mileageMax;
     const wrapper = document.createElement("li");
@@ -175,14 +277,14 @@ function FilterPopupListUI() {
 
     deleteBtn.append(svgsObj?.getSVG("bin") ?? "del");
     checkbox.innerHTML =
-      `<input type="checkbox" id="checkText-${id}" />` +
-      `<label for="checkText-${id}"><span class="checkBox"> </span></label>`;
+      `<input type="checkbox" id="checkText-${tempKey}" />` +
+      `<label for="checkText-${tempKey}"><span class="checkBox"> </span></label>`;
     doubleRangeSlider.innerHTML =
       `<input type="range" min="${min}" max="${max}" value="20"/>` +
       `<input type="range" min="${min}" max="${max}" value="20"/>`;
     doubleRangeInputs.innerHTML =
-      `<div class="doubleRange__inputs-group"><label for="from-${id}">Wenn Laufleistung</label><div class="input input--border"><input type="number"  min="${min}" max="${max}"  id="from-${id}"/></div></div>` +
-      `<div class="doubleRange__inputs-group"><label for="to-${id}">Vergleiche bis</label><div class="input input--border"><input type="number"  min="${min}" max="${max}"  id="to-${id}"/></div></div>`;
+      `<div class="doubleRange__inputs-group"><label for="from-${tempKey}">Wenn Laufleistung</label><div class="input input--border"><input type="number"  min="${min}" max="${max}"  id="from-${tempKey}"/></div></div>` +
+      `<div class="doubleRange__inputs-group"><label for="to-${tempKey}">Vergleiche bis</label><div class="input input--border"><input type="number"  min="${min}" max="${max}"  id="to-${tempKey}"/></div></div>`;
     doubleRange.append(doubleRangeSlider, doubleRangeInputs);
     wrapperGroup.append(checkbox, deleteBtn);
     wrapper.append(wrapperGroup, doubleRange);
@@ -200,7 +302,12 @@ function FilterPopupListUI() {
     check.addEventListener("change", () => {
       data.active = check.checked;
     });
-    if (onDelete) deleteBtn.onclick = () => onDelete(wrapper);
+    deleteBtn.onclick = () =>
+      this.removeItem({
+        key: tempKey,
+        itemType: "car_mileage",
+        domElement: wrapper,
+      });
 
     new RangeInput({
       min: data.von,
@@ -218,8 +325,8 @@ function FilterPopupListUI() {
     });
     return wrapper;
   };
-  this.createRegistrationItem = (data, id, onDelete) => {
-    console.log("createRegistrationItem >> data >> ", data);
+  this.createRegistrationItem = (data) => {
+    let tempKey = data.tempkey;
     const wrapper = document.createElement("li");
     const checkbox = document.createElement("div");
     const deleteBtn = document.createElement("button");
@@ -239,25 +346,19 @@ function FilterPopupListUI() {
     doubleRangeInputs.className = "doubleRange__inputs";
 
     checkbox.innerHTML =
-      `<input type="checkbox" id="checkText-${id}" />` +
-      `<label for="checkText-${id}"><span class="checkBox"> </span></label>`;
+      `<input type="checkbox" id="checkText-${tempKey}" />` +
+      `<label for="checkText-${tempKey}"><span class="checkBox"> </span></label>`;
     deleteBtn.append(svgsObj?.getSVG("bin") ?? "del");
 
-    console.log(
-      "%s, (%s, %s)",
-      data.first_reg_month,
-      registrationMonthMin,
-      registrationMonthMax
-    );
     doubleRangeSlider1.innerHTML = `<input type="range" min="${registrationMonthMin}" max="${registrationMonthMax}" />`;
     doubleRangeSlider2.innerHTML = `<input type="range" min="${registrationYearMin}" max="${registrationYearMax}" />`;
     doubleRangeInputs.innerHTML =
       `<div class="doubleRange__inputs-group">
-      <label for="month-input-${id}">Wenn Laufleistung</label>
+      <label for="month-input-${tempKey}">Wenn Laufleistung</label>
       <div class="input nput--border">
-      <input type="number"  min="${registrationMonthMin}" max="${registrationMonthMax}"  id="month-input-${id}"/>
+      <input type="number"  min="${registrationMonthMin}" max="${registrationMonthMax}"  id="month-input-${tempKey}"/>
       </div></div>` +
-      `<div class="doubleRange__inputs-group"><label for="year-input-${id}">Vergleiche bis</label><div class="input input--border"><input type="number"  min="${registrationYearMin}" max="${registrationYearMax}"  id="year-input-${id}"/></div></div>`;
+      `<div class="doubleRange__inputs-group"><label for="year-input-${tempKey}">Vergleiche bis</label><div class="input input--border"><input type="number"  min="${registrationYearMin}" max="${registrationYearMax}"  id="year-input-${tempKey}"/></div></div>`;
     doubleRangeSliders.append(doubleRangeSlider1, doubleRangeSlider2);
     doubleRange.append(doubleRangeSliders, doubleRangeInputs);
     wrapper.append(checkbox, doubleRange, deleteBtn);
@@ -275,7 +376,12 @@ function FilterPopupListUI() {
     check.addEventListener("change", () => {
       data.active = check.checked;
     });
-    if (onDelete) deleteBtn.onclick = () => onDelete(wrapper);
+    deleteBtn.onclick = () =>
+      this.removeItem({
+        key: tempKey,
+        itemType: "first_registration",
+        domElement: wrapper,
+      });
 
     const rangeMonthChange = (event) => {
       data.first_reg_month = numberInputs[0].value = parseInt(
@@ -315,99 +421,78 @@ function FilterPopupListUI() {
     isMileage,
   }) => {
     const addButton = actionsWrapper.querySelector('[data-event="add-one"]');
-    const deleteButton = actionsWrapper.querySelector(
+    const deleteAllButton = actionsWrapper.querySelector(
       '[data-event="delete-all"]'
     );
-    let index = data.length - 1;
-    let onDelete = (item) => {
-      delete data[index];
-      item.remove();
-      console.log("data after delete>> ", data);
-    };
-    console.log("addButton => ", addButton);
-    console.log("deleteButton => ", deleteButton);
+    let index = data.length;
+
     addButton.onclick = () => {
       if (isMileage) {
-        data.push({ ...EMPTY_MILEAGE_DATA });
-        wrapper.append(
-          this.createMileageItem(data[index], `new-item-${index + 1}`, onDelete)
-        );
+        data.push({
+          ...EMPTY_MILEAGE_DATA,
+          tempkey: `${index}-${this.generateKey("mileage")}`,
+        });
+        wrapper.append(this.createMileageItem(data[index]));
       } else {
-        data.push({ ...EMPTY_REGISTRATION_DATA });
-        wrapper.append(
-          this.createRegistrationItem(
-            data[index],
-            `new-item-${index + 1}`,
-            onDelete
-          )
-        );
+        data.push({
+          ...EMPTY_REGISTRATION_DATA,
+          tempkey: `${index}-${this.generateKey("registration")}`,
+        });
+        wrapper.append(this.createRegistrationItem(data[index]));
       }
     };
 
-    // data.foreac((element, index) => {
-    //   let onDelete = (item) => {
-    //     delete data.car_mileage[index];
-    //     item.remove();
-    //   };
-    //   let item = this.createMileageItem(element, `milieage-${index}`, onDelete);
-    //   this.mileageFilters.appendChild(item);
-    // });
+    deleteAllButton.onclick = () => {
+      wrapper.innerHTML = "";
+      if (isMileage) this.data.car_mileage = [];
+      else this.data.first_registration = [];
+    };
   };
-  this.initList = (data, isNew = false) => {
-    if (!data) {
-      console.log("data not provided ", data, isNew);
+  this.generateList = ({ wrapper, dataArray, createItem }) => {
+    wrapper.innerHTML = "";
+    dataArray.map((element) => {
+      let item = createItem(element);
+      wrapper.appendChild(item);
+    });
+  };
+  this.initList = ({ data, onSave }) => {
+    if (!data || !this.setData(data)) {
+      console.log("data not provided ", data);
       return;
     }
 
-    this.mileageFilters.innerHTML = "";
-    this.registrationFilters.innerHTML = "";
-    data.car_mileage.map((element, index) => {
-      let onDelete = (item) => {
-        delete data.car_mileage[index];
-        item.remove();
-      };
-      let item = this.createMileageItem(element, `milieage-${index}`, onDelete);
-      this.mileageFilters.appendChild(item);
+    this.generateList({
+      wrapper: this.mileageFilters,
+      dataArray: this.data.car_mileage,
+      createItem: this.createMileageItem,
     });
-    data.first_registration.map((element, index) => {
-      let onDelete = (item) => {
-        delete data.first_registration[index];
-        item.remove();
-      };
-      let item = this.createRegistrationItem(
-        element,
-        `registration-${index}`,
-        onDelete
-      );
-      this.registrationFilters.appendChild(item);
+    this.generateList({
+      wrapper: this.registrationFilters,
+      dataArray: this.data.first_registration,
+      createItem: this.createRegistrationItem,
     });
 
     this.setFilterListActions({
       wrapper: this.mileageFilters,
       actionsWrapper: this.mileageFiltersActions,
-      data: data.car_mileage,
+      data: this.data.car_mileage,
       isMileage: true,
     });
     this.setFilterListActions({
       wrapper: this.registrationFilters,
       actionsWrapper: this.registrationFiltersActions,
-      data: data.first_registration,
+      data: this.data.first_registration,
     });
 
-    this.mileageFilters.querySelector;
-    if (!isNew) {
-      this.saveFilterBtn.style.display = "none";
-      this.saveFilterBtn.onclick = null;
-    } else {
-      this.saveFilterBtn.style.display = "";
-      this.saveFilterBtn.onclick = () => {};
-    }
+    this.saveFilterBtn.onclick = () => {
+      onSave(this.data);
+      this.hidePopup();
+    };
   };
 }
 
 function FilterListUI(data) {
   this.data = data;
-  this.draft = null;
 
   this.settingsList = document.querySelector("#filtersList");
   this.addFilterBtn = document.getElementById("addFilter");
@@ -438,7 +523,12 @@ function FilterListUI(data) {
         delete data[filter];
       };
       buttonEdit.onclick = () => {
-        this.popupUI.initList(data[filter]);
+        this.popupUI.initList({
+          data: data[filter],
+          onSave: (newData) => {
+            data[filter] = newData;
+          },
+        });
         this.popupUI.showPopup();
       };
       this.settingsList.appendChild(li);
@@ -448,9 +538,24 @@ function FilterListUI(data) {
     this.createSettingsList(data);
 
     this.addFilterBtn.onclick = () => {
-      if (this.draft === null) this.draft = { ...EMPTY_FILTERS_DATA };
-      this.popupUI.initList(this.draft, true);
-      this.popupUI.showPopup();
+      confirmBox.fire({
+        para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at sunt repudiandae eligendi.",
+        showInput: true,
+        inputPlaceholder: "type here",
+        onSave: (value) => {
+          if (!value || value === "" || this.data[value]) return;
+
+          this.data[value] = { ...EMPTY_FILTERS_DATA };
+          this.createSettingsList(this.data);
+          this.popupUI.initList({
+            data: data[value],
+            onSave: (newData) => {
+              data[value] = newData;
+            },
+          });
+          this.popupUI.showPopup();
+        },
+      });
     };
   };
 
@@ -506,8 +611,11 @@ const fetchAll = async () => {
     onSuccess: (data) => (filterData = data.filters),
   });
   techList = new TechListUI(techData);
-  equipmentList = new CarEquipmentUI(equipmentData);
   equipmentAllList = new CarAllEquipmentsUI(equipmentAllData);
+  equipmentList = new CarEquipmentUI({
+    equipmentAllData,
+    equipmentData,
+  });
   filterListUI = new FilterListUI(filterData);
 };
 fetchAll();
