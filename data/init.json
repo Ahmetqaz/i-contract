@@ -1,0 +1,485 @@
+{
+	"compare_settings": {
+		"tech_data": [
+			{
+				"name": "Marke und Modell",
+				"active": true,
+				"key": "contract-vehicle-brand-value"
+			},
+			{
+				"name": "Erstzulassung",
+				"active": true,
+				"key": "contract-vehicle-first-registration-value"
+			},
+			{
+				"name": "Kategorie",
+				"active": true,
+				"key": "contract-vehicle-vehicle-type-value"
+			},
+			{
+				"name": "Kraftstoffart",
+				"active": true,
+				"key": "contract-vehicle-fuel-type-value"
+			},
+			{
+				"name": "Klima",
+				"active": true,
+				"key": "contract-vehicle-climate-control-value"
+			},
+			{
+				"name": "Getriebe",
+				"active": true,
+				"key": "contract-vehicle-gear-type-value"
+			},
+			{
+				"name": "Farbe",
+				"active": true,
+				"key": "contract-vehicle-color-value"
+			},
+			{
+				"name": "Anzahl Türen",
+				"active": false,
+				"key": "contract-vehicle-number-of-doors-value"
+			},
+			{
+				"name": "Hubraum",
+				"active": true,
+				"key": "contract-vehicle-cubic-capacity-value"
+			},
+			{
+				"name": "Kilometerstand",
+				"active": false,
+				"key": "contract-vehicle-total-mileage-value"
+			},
+			{
+				"name": "Leistung",
+				"active": true,
+				"key": "contract-vehicle-performance-value"
+			},
+			{
+				"name": "Abweichung PS (+-)",
+				"active": false,
+				"value": 10,
+				"key": "contract-vehicle-performance-value-delta"
+			},
+			{
+				"name": "Schadstoffklasse",
+				"active": true,
+				"key": "contract-vehicle-emission-class-value"
+			}
+		],
+		"car_features": [
+			{
+				"name": "Navigationssystem",
+				"status": true
+			},
+			{
+				"name": "Panorama-Dach",
+				"status": true
+			},
+			{
+				"name": "LED-Scheinwerfer",
+				"status": true
+			},
+			{
+				"name": "Xenonscheinwerfer",
+				"status": true
+			},
+			{
+				"name": "Bi-Xenon Scheinwerfer",
+				"status": true
+			},
+			{
+				"name": "Allradantrieb",
+				"status": true
+			},
+			{
+				"name": "Schiebedach",
+				"status": true
+			},
+			{
+				"name": "Alcantara",
+				"status": true
+			},
+			{
+				"name": "Teilleder",
+				"status": true
+			},
+			{
+				"name": "Vollleder",
+				"status": true
+			},
+			{
+				"name": "ABS",
+				"status": true
+			},
+			{
+				"name": "Abstandswarner",
+				"status": true
+			},
+			{
+				"name": "Adaptives Kurvenlicht",
+				"status": true
+			},
+			{
+				"name": "Alarmanlage",
+				"status": true
+			},
+			{
+				"name": "Allwetterreifen",
+				"status": true
+			},
+			{
+				"name": "Ambiente-Beleuchtung",
+				"status": true
+			},
+			{
+				"name": "Android Auto",
+				"status": true
+			},
+			{
+				"name": "Apple CarPlay",
+				"status": false
+			},
+			{
+				"name": "Armlehne",
+				"status": false
+			},
+			{
+				"name": "Beheizbare Frontscheibe",
+				"status": false
+			},
+			{
+				"name": "Beheizbares Lenkrad",
+				"status": false
+			},
+			{
+				"name": "Behindertengerecht",
+				"status": false
+			},
+			{
+				"name": "Berganfahrassistent",
+				"status": false
+			},
+			{
+				"name": "Blendfreies Fernlicht",
+				"status": false
+			},
+			{
+				"name": "Bluetooth",
+				"status": false
+			},
+			{
+				"name": "Bordcomputer",
+				"status": false
+			},
+			{
+				"name": "CD-Spieler",
+				"status": false
+			},
+			{
+				"name": "Dachreling",
+				"status": false
+			},
+			{
+				"name": "ESP",
+				"status": false
+			},
+			{
+				"name": "Elektr. Fensterheber",
+				"status": false
+			},
+			{
+				"name": "Elektr. Heckklappe",
+				"status": false
+			},
+			{
+				"name": "Elektr. Seitenspiegel",
+				"status": false
+			},
+			{
+				"name": "Elektr. Sitzeinstellung",
+				"status": false
+			},
+			{
+				"name": "Elektr. Sitzeinstellung, hinten",
+				"status": false
+			},
+			{
+				"name": "Elektr. Wegfahrsperre",
+				"status": false
+			},
+			{
+				"name": "Fernlichtassistent",
+				"status": false
+			},
+			{
+				"name": "Freisprecheinrichtung",
+				"status": false
+			},
+			{
+				"name": "Gepäckraumabtrennung",
+				"status": false
+			},
+			{
+				"name": "Geschwindigkeits- begrenzungsanlage",
+				"status": false
+			},
+			{
+				"name": "Head-Up Display",
+				"status": false
+			},
+			{
+				"name": "Induktionsladen für Smartphones",
+				"status": false
+			},
+			{
+				"name": "Innenspiegel autom. abblendend",
+				"status": false
+			},
+			{
+				"name": "Isofix",
+				"status": false
+			},
+			{
+				"name": "Isofix Beifahrersitz",
+				"status": false
+			},
+			{
+				"name": "Kurvenlicht",
+				"status": false
+			},
+			{
+				"name": "LED-Tagfahrlicht",
+				"status": false
+			},
+			{
+				"name": "Laserlicht",
+				"status": false
+			},
+			{
+				"name": "Lederlenkrad",
+				"status": false
+			},
+			{
+				"name": "Leichtmetallfelgen",
+				"status": false
+			},
+			{
+				"name": "Lichtsensor",
+				"status": false
+			},
+			{
+				"name": "Lordosenstütze",
+				"status": false
+			},
+			{
+				"name": "Luftfederung",
+				"status": false
+			},
+			{
+				"name": "Massagesitze",
+				"status": false
+			},
+			{
+				"name": "Multifunktionslenkrad",
+				"status": false
+			},
+			{
+				"name": "Musikstreaming integriert",
+				"status": false
+			},
+			{
+				"name": "Müdigkeitswarner",
+				"status": false
+			},
+			{
+				"name": "Nachtsicht-Assistent",
+				"status": false
+			},
+			{
+				"name": "Nebelscheinwerfer",
+				"status": false
+			},
+			{
+				"name": "Notbremsassistent",
+				"status": false
+			},
+			{
+				"name": "Notrad",
+				"status": false
+			},
+			{
+				"name": "Notrufsystem",
+				"status": false
+			},
+			{
+				"name": "Pannenkit",
+				"status": false
+			},
+			{
+				"name": "Radio DAB",
+				"status": false
+			},
+			{
+				"name": "Raucherpaket",
+				"status": false
+			},
+			{
+				"name": "Regensensor",
+				"status": false
+			},
+			{
+				"name": "Reifendruckkontrolle",
+				"status": false
+			},
+			{
+				"name": "Reserverad",
+				"status": false
+			},
+			{
+				"name": "Schaltwippen",
+				"status": false
+			},
+			{
+				"name": "Scheinwerferreinigung",
+				"status": false
+			},
+			{
+				"name": "Schlüssellose Zentralverriegelung",
+				"status": false
+			},
+			{
+				"name": "Servolenkung",
+				"status": false
+			},
+			{
+				"name": "Sitzbelüftung",
+				"status": false
+			},
+			{
+				"name": "Sitzheizung",
+				"status": false
+			},
+			{
+				"name": "Sitzheizung hinten",
+				"status": false
+			},
+			{
+				"name": "Skisack",
+				"status": false
+			},
+			{
+				"name": "Sommerreifen",
+				"status": false
+			},
+			{
+				"name": "Soundsystem",
+				"status": false
+			},
+			{
+				"name": "Sportfahrwerk",
+				"status": false
+			},
+			{
+				"name": "Sportpaket",
+				"status": false
+			},
+			{
+				"name": "Spurhalteassistent",
+				"status": false
+			},
+			{
+				"name": "Stahlfelgen",
+				"status": false
+			},
+			{
+				"name": "Start/Stopp-Automatik",
+				"status": false
+			},
+			{
+				"name": "Tagfahrlicht",
+				"status": false
+			},
+			{
+				"name": "Totwinkel-Assistent",
+				"status": false
+			},
+			{
+				"name": "Traktionskontrolle",
+				"status": false
+			},
+			{
+				"name": "Verkehrszeichenerkennung",
+				"status": false
+			},
+			{
+				"name": "Winterreifen",
+				"status": false
+			},
+			{
+				"name": "Zentralverriegelung",
+				"status": false
+			}
+		],
+		"filters": {
+			"Inland": {
+				"active": false,
+				"car_mileage": [
+					{
+						"von": "50000",
+						"active": true,
+						"bis": "80000"
+					},
+					{
+						"von": "80000",
+						"active": true,
+						"bis": "100000"
+					},
+					{
+						"von": "100000",
+						"active": true,
+						"bis": "150000"
+					},
+					{
+						"von": "150000",
+						"active": true,
+						"bis": "200000"
+					},
+					{
+						"von": "0",
+						"active": true,
+						"bis": "0"
+					}
+				],
+				"first_registration": [
+					{
+						"compare_with_year": "0",
+						"first_reg_month": "12",
+						"active": true
+					},
+					{
+						"compare_with_year": "0",
+						"first_reg_month": "0",
+						"active": false
+					},
+					{
+						"compare_with_year": "0",
+						"first_reg_month": "0",
+						"active": false
+					},
+					{
+						"compare_with_year": "0",
+						"first_reg_month": "0",
+						"active": false
+					}
+				]
+			},
+			"Export": {
+				"active": true,
+				"car_mileage": [],
+				"first_registration": []
+			}
+		}
+	}
+}

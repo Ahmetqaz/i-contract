@@ -858,7 +858,13 @@
                             </p>
                           </div>
                         </div>
-                        <button class="button button--primary">anpassen</button>
+                        <button
+                          class="button button--primary"
+                          data-event="togglePopup"
+                          data-popup="#techListPopup"
+                        >
+                          anpassen
+                        </button>
                       </div>
                     </div>
                     <div class="features__inner-checkBoxes">
@@ -1107,7 +1113,14 @@
                             </p>
                           </div>
                         </div>
-                        <button class="button button--primary">anpassen</button>
+
+                        <button
+                          class="button button--primary"
+                          data-event="togglePopup"
+                          data-popup="#carEquipmentAllPopup"
+                        >
+                          anpassen
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1171,13 +1184,26 @@
     <div class="popUp _wide" id="carEquipmentPopup">
       <div class="popUp__inner">
         <div class="popUp__inner-title">
-          <h3>Ausstattung</h3>
+          <h3>Aktuelle Ausstattungsmerkmale</h3>
+        </div>
+        <div class="popUp__inner-checkboxes" id="carEquipments"></div>
+        <div
+          class="close"
+          data-event="togglePopup"
+          data-popup="#carEquipmentPopup"
+        ></div>
+      </div>
+    </div>
+    <div class="popUp _wide" id="carEquipmentAllPopup">
+      <div class="popUp__inner">
+        <div class="popUp__inner-title">
+          <h3>Erweiterte Ausstattungsmerkmale anpassen</h3>
         </div>
         <div class="popUp__inner-checkboxes" id="carAllEquipments"></div>
         <div class="popUp__inner-footer">
           <button
             class="button button--secondary button--rounded _shadow"
-            id="updateCarEquipments"
+            id="updateCarAllEquipments"
           >
             Accept
           </button>
@@ -1185,7 +1211,28 @@
         <div
           class="close"
           data-event="togglePopup"
-          data-popup="#carEquipmentPopup"
+          data-popup="#carEquipmentAllPopup"
+        ></div>
+      </div>
+    </div>
+    <div class="popUp _wide" id="techListPopup">
+      <div class="popUp__inner">
+        <div class="popUp__inner-title">
+          <h3>Erweiterte technische Daten anpassen</h3>
+        </div>
+        <div class="popUp__inner-checkboxes" id="techListSettings"></div>
+        <div class="popUp__inner-footer">
+          <button
+            class="button button--secondary button--rounded _shadow"
+            id="updateTechListPopup"
+          >
+            Accept
+          </button>
+        </div>
+        <div
+          class="close"
+          data-event="togglePopup"
+          data-popup="#techListPopup"
         ></div>
       </div>
     </div>

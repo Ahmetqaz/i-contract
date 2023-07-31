@@ -1,0 +1,126 @@
+{
+	"filter": {
+		"car_mileage": [
+			{
+				"von": "50000",
+				"active": true,
+				"bis": "80000"
+			},
+			{
+				"von": "80000",
+				"active": true,
+				"bis": "100000"
+			},
+			{
+				"von": "100000",
+				"active": true,
+				"bis": "150000"
+			},
+			{
+				"von": "150000",
+				"active": true,
+				"bis": "200000"
+			},
+			{
+				"von": "0",
+				"active": true,
+				"bis": "0"
+			}
+		],
+		"first_registration": [
+			{
+				"compare_with_year": "0",
+				"first_reg_month": "12",
+				"active": true
+			},
+			{
+				"compare_with_year": "0",
+				"first_reg_month": "0",
+				"active": false
+			},
+			{
+				"compare_with_year": "0",
+				"first_reg_month": "0",
+				"active": false
+			},
+			{
+				"compare_with_year": "0",
+				"first_reg_month": "0",
+				"active": false
+			}
+		]
+	},
+	"tech_data": [
+		{
+			"active": true,
+			"value": "BMW X3",
+			"key": "contract-vehicle-brand-value"
+		},
+		{
+			"active": false,
+			"value": "01/2022",
+			"key": "contract-vehicle-first-registration-value"
+		},
+		{
+			"active": true,
+			"value": "SUV / Gel?ndewagen / Pickup",
+			"key": "contract-vehicle-vehicle-type-value"
+		},
+		{
+			"active": false,
+			"value": "Hybrid (Benzin/Elektro), Plug-in-Hybrid",
+			"key": "contract-vehicle-fuel-type-value"
+		},
+		{
+			"active": true,
+			"value": "",
+			"key": "contract-vehicle-climate-control-value"
+		},
+		{
+			"active": false,
+			"value": "Automatik",
+			"key": "contract-vehicle-gear-type-value"
+		},
+		{
+			"active": true,
+			"value": "Schwarz Metallic",
+			"key": "contract-vehicle-color-value"
+		},
+		{
+			"active": false,
+			"value": "4/5",
+			"key": "contract-vehicle-number-of-doors-value"
+		},
+		{
+			"active": true,
+			"value": "1.998?cm?",
+			"key": "contract-vehicle-cubic-capacity-value"
+		},
+		{
+			"active": false,
+			"value": "29.836?km",
+			"key": "contract-vehicle-total-mileage-value"
+		},
+		{
+			"active": true,
+			"value": "215?kW?(292?PS)",
+			"key": "contract-vehicle-performance-value"
+		},
+		{
+			"active": false,
+			"value": "",
+			"key": "contract-vehicle-performance-value-delta"
+		},
+		{
+			"active": true,
+			"value": "Euro6d",
+			"key": "contract-vehicle-emission-class-value"
+		}
+	],
+	"features": [
+		"Berganfahrassistent",
+		"Freisprecheinrichtung",
+		"Navigationssystem",
+		"Radio DAB"
+	]
+}

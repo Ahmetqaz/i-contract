@@ -1,9 +1,14 @@
-car_mileage
-from 10000 to 300000 default  /// should editable values in js
-first_registration
-from -1 to 2 default  /// should editable values in js
+sync data on delete add and Save
+
+loadConfiguration(init.json) if empty use default init.json from server data directory
+
+writeCarData(writeCurrentCarDataAfterURLEnter.json); -> compare with car_features in init.joson settings an mark selected values
+
+return Json like init.json with current data = onChangeSettings
+	* Add Filter
+	* Delte Filter
+	* New Filter
+	* Change CarFeatuer Settings by Buttom Button "Anpassen"
+	* Change techdata settigns by click on top button "Anpassen"
 
 
-delete button in each filter item
-
-compare page without sidebara and headr

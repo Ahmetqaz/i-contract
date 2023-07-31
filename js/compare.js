@@ -15,11 +15,45 @@ const EMPTY_REGISTRATION_DATA = {
   compare_with_year: registrationYearMin,
   active: true,
 };
+
 const EMPTY_FILTERS_DATA = {
-  active: true,
+  active: false,
   car_mileage: [{ ...EMPTY_MILEAGE_DATA }],
   first_registration: [{ ...EMPTY_REGISTRATION_DATA }],
 };
+
+function DataController() {
+  this.techConfigData = null;
+  this.equipmentConfigData = null;
+  this.filterConfigData = null;
+
+  this.storeAll = () => {
+    let newJSONData = JSON.stringify({
+      compare_settings: {
+        tech_data: this.techConfigData,
+        car_features: this.equipmentConfigData,
+        filters: this.filterConfigData,
+      },
+    });
+    console.log(JSON.parse(newJSONData));
+  };
+  this.update = (obj) => {
+    Object.keys(obj).forEach((key) => {
+      this[key] = obj[key];
+    });
+    this.storeAll();
+  };
+  this.setConfigData = ({ compare_settings }) => {
+    this.techConfigData = compare_settings.tech_data;
+    this.equipmentConfigData = compare_settings.car_features;
+    this.filterConfigData = compare_settings.filters;
+  };
+  this.setData = ({ tech_data, car_features }) => {
+    this.techData = tech_data;
+    this.equipmentData = car_features;
+  };
+}
+const dataController = new DataController();
 
 function ConfirmPopup(params) {
   const default_params = {
@@ -99,9 +133,43 @@ function getSVGs() {
 }
 const svgsObj = new getSVGs();
 
-function TechListUI(data) {
+function TechListUI(configData) {
   this.wrapper = document.querySelector("#techList");
-  this.data = data;
+  this.popupWrapper = document.querySelector("#techListPopup");
+  this.popup = document.querySelector("#techListSettings");
+  this.saveButton = document.querySelector("#updateTechListPopup");
+
+  this.configData = configData;
+  this.storeConfig = () => {
+    const checkBoxes = this.popup.querySelectorAll(
+      'input[id^="tech-settings"]'
+    );
+    const newData = Array.from(checkBoxes).map((checkbox) => ({
+      key: checkbox.dataset?.key ?? "",
+      name: checkbox.dataset?.name ?? "",
+      active: checkbox.checked,
+    }));
+    dataController.update({ techConfigData: newData });
+    this.initList(newData);
+  };
+  this.popupClose = () => {
+    this.popupWrapper.classList.remove("active");
+    document.body.classList.remove("active");
+  };
+  this.createTechConfigItem = (data) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "input input--checkBox";
+    wrapper.innerHTML =
+      `<input type="checkbox" id="tech-settings-${data.key.toLowerCase()}" ` +
+      `data-name="${data.name}" data-key="${data.key}">` +
+      `<label for="tech-settings-${data.key.toLowerCase()}">` +
+      `<span class="checkBox"></span>${data.name}</label>`;
+
+    const check = wrapper.querySelector(`input`);
+    check.checked = data.active;
+
+    return wrapper;
+  };
   this.createTechItem = (data) => {
     const wrapper = document.createElement("div");
     const checkbox = document.createElement("div");
@@ -112,7 +180,9 @@ function TechListUI(data) {
     text.className = "input input--text";
 
     checkbox.innerHTML =
-      `<input type="checkbox" id="${data.key}-check">` +
+      `<input type="checkbox" id="${
+        data.key
+      }-check" data-key="${data.key.toLowerCase()}">` +
       `<label for="${data.key}-check"><span class="checkBox"></span></label>`;
     text.innerHTML = `<label for="${data.key}">${data.name}</label><input type="text" id="${data.key}">`;
     wrapper.append(checkbox, text);
@@ -120,37 +190,60 @@ function TechListUI(data) {
     const input = text.querySelector(`#${data.key}`);
     check.checked = data.active;
 
-    check.onchange = (e) => {
-      data.active = e.target.checked;
-    };
-    input.onchange = (e) => {
-      data.value = e.target.value;
-    };
+    // check.onchange = (e) => {
+    //   data.active = e.target.checked;
+    // };
+    // input.onchange = (e) => {
+    //   data.value = e.target.value;
+    // };
     return wrapper;
   };
-  this.initList = (data) => {
-    this.data = data;
+  this.initList = (configData) => {
+    this.configData = configData;
     this.wrapper.innerHTML = "";
-    this.data.forEach((element) => {
+    this.popup.innerHTML = "";
+    this.configData.forEach((element) => {
       this.wrapper.appendChild(this.createTechItem(element));
+      this.popup.appendChild(this.createTechConfigItem(element));
+    });
+    this.saveButton.onclick = () => {
+      this.popupClose();
+      this.storeConfig();
+    };
+  };
+  this.updateData = (data) => {
+    // this.wrapper.querySelectorAll();
+    data.forEach((itemData) => {
+      const item = document.getElementById(itemData.key);
+      if (!item) {
+        console.log(`Item not found - ${itemData.key}`);
+        return;
+      }
+
+      item.value = itemData.value;
     });
   };
-  this.getData = () => this.data;
-  this.initList(data);
+
+  this.getData = () => this.configData;
+  this.initList(configData);
 }
-function CarEquipmentUI({ equipmentAllData, equipmentData }) {
+function CarEquipmentUI({ equipmentConfigData, equipmentData }) {
   this.wrapper = document.querySelector("#carEquipment");
+  this.popupInner = document.querySelector("#carEquipments");
+
   this.data = equipmentData;
+  this.dataStates = [];
+
   this.settingsData = ((settingsData) => {
     return [...settingsData]
       .filter((item) => item.status)
       .map((item) => item.name);
-  })(equipmentAllData);
+  })(equipmentConfigData);
 
   this.checkState = (name) => {
     return this.settingsData.indexOf(name) >= 0;
   };
-  this.createTechItem = (data) => {
+  this.createTechItem = (data, onChange) => {
     const wrapper = document.createElement("div");
     wrapper.className = "input input--checkBox _orange";
     wrapper.innerHTML =
@@ -161,25 +254,47 @@ function CarEquipmentUI({ equipmentAllData, equipmentData }) {
     check.checked = this.checkState(data);
 
     check.onchange = (e) => {
-      //   data.active = e.target.checked;
+      onChange(e.target.checked);
     };
     return wrapper;
   };
+
   this.initList = (data) => {
     this.data = data;
+    this.dataStates = [];
     this.wrapper.innerHTML = "";
-    this.data.forEach((element) => {
-      this.wrapper.appendChild(this.createTechItem(element));
+    this.popupInner.innerHTML = "";
+
+    this.data.forEach((element, index) => {
+      this.dataStates[index] = this.checkState(data);
+
+      const onChange = (checked) => {
+        this.dataStates[index] = checked;
+
+        listItem.querySelector('input[type="checkbox"]').checked = checked;
+        popupItem.querySelector('input[type="checkbox"]').checked = checked;
+      };
+
+      let listItem = this.createTechItem(element, onChange);
+      let popupItem = this.createTechItem(element, onChange);
+
+      this.wrapper.appendChild(listItem);
+      this.popupInner.appendChild(popupItem);
     });
   };
 
   this.getData = () => this.data;
   this.initList(this.data);
 }
-function CarAllEquipmentsUI(data) {
+function CarEquipmentsConfigUI(data) {
   this.wrapper = document.querySelector("#carAllEquipments");
+  const carEquipmentAllPopup = document.querySelector("#carEquipmentAllPopup");
+  const updateCarAllEquipments = document.querySelector(
+    "#updateCarAllEquipments"
+  );
+
   this.data = data;
-  this.createTechItem = (data) => {
+  this.createEquipmentConfigItem = (data) => {
     const wrapper = document.createElement("div");
     wrapper.className = "input input--checkBox";
     wrapper.innerHTML =
@@ -194,19 +309,27 @@ function CarAllEquipmentsUI(data) {
     check.onchange = (e) => {
       data.status = e.target.checked;
     };
+
     return wrapper;
   };
   this.initList = (data) => {
     this.data = data;
     this.wrapper.innerHTML = "";
     this.data.forEach((element) => {
-      this.wrapper.appendChild(this.createTechItem(element));
+      this.wrapper.appendChild(this.createEquipmentConfigItem(element));
     });
+
+    updateCarAllEquipments.onclick = () => {
+      dataController.update({
+        equipmentConfigData: this.data,
+      });
+      carEquipmentAllPopup.classList.remove("active");
+    };
   };
   this.getData = () => this.data;
   this.initList(data);
 }
-function FilterPopupListUI() {
+function FilterConfigPopupUI() {
   this.data = null;
   this.mileageFilters = document.querySelector("#mileageFilters");
   this.registrationFilters = document.querySelector("#registrationFilters");
@@ -490,13 +613,18 @@ function FilterPopupListUI() {
     };
   };
 }
-
 function FilterListUI(data) {
   this.data = data;
 
   this.settingsList = document.querySelector("#filtersList");
   this.addFilterBtn = document.getElementById("addFilter");
-  this.popupUI = new FilterPopupListUI();
+  this.popupUI = new FilterConfigPopupUI();
+
+  this.storeData = () => {
+    dataController.update({
+      filterConfigData: this.data,
+    });
+  };
 
   this.createSettingsList = (data = this.data) => {
     const filters = Object.keys(data);
@@ -517,10 +645,20 @@ function FilterListUI(data) {
       buttonDelete.appendChild(svgsObj.getSVG("bin"));
 
       li.append(checkbox, buttonEdit, buttonDelete);
+      const checkInput = checkbox.querySelector("input");
 
+      checkInput.onchange = ({ target }) => {
+        data[filter].active = target.checked;
+        Object.keys(data).forEach((key) => {
+          data[key].active = key === filter && target.checked;
+        });
+        this.storeData();
+      };
+      checkInput.checked = data[filter].active;
       buttonDelete.onclick = () => {
         li.remove();
         delete data[filter];
+        this.storeData();
       };
       buttonEdit.onclick = () => {
         this.popupUI.initList({
@@ -547,10 +685,13 @@ function FilterListUI(data) {
 
           this.data[value] = { ...EMPTY_FILTERS_DATA };
           this.createSettingsList(this.data);
+
+          this.storeData();
           this.popupUI.initList({
-            data: data[value],
+            data: this.data[value],
             onSave: (newData) => {
-              data[value] = newData;
+              this.data[value] = newData;
+              this.storeData();
             },
           });
           this.popupUI.showPopup();
@@ -564,10 +705,10 @@ function FilterListUI(data) {
 
 let techList = null;
 let equipmentList = null;
-let equipmentAllList = null;
+let equipmentConfigList = null;
 let filterListUI = null;
 
-const fetchTechData = async ({ url, onSuccess }) => {
+const fetchData = async ({ url, onSuccess }) => {
   const response = await fetch(url);
   if (!response.ok)
     // check if response worked (no 404 errors etc...)
@@ -577,56 +718,37 @@ const fetchTechData = async ({ url, onSuccess }) => {
   if (data && onSuccess) onSuccess(data);
   return data; // returns a promise, which resolves to this data value
 };
-const fetchEquipmentData = async ({ url, onSuccess }) => {
-  const response = await fetch(url);
-  if (!response.ok)
-    // check if response worked (no 404 errors etc...)
-    console.log("error fetchinf data");
+const loadConfiguration = async (jsonData) => {
+  if (!jsonData) {
+    await fetchData({
+      url: "./data/init.json",
+      onSuccess: (data) => dataController.setConfigData(data),
+    });
+  } else {
+    dataController.setConfigData(JSON.parse(jsonData));
+  }
 
-  const data = await response.json(); // get JSON from the response
-  if (data && onSuccess) onSuccess(data);
-  return data; // returns a promise, which resolves to this data value
+  techList = new TechListUI(dataController.techConfigData);
+  equipmentConfigList = new CarEquipmentsConfigUI(
+    dataController.equipmentConfigData
+  );
+  filterListUI = new FilterListUI(dataController.filterConfigData);
 };
+const loadCarData = async (jsonData) => {
+  if (!jsonData) {
+    await fetchData({
+      url: "./data/data.json",
+      onSuccess: (data) => dataController.setData(data),
+    });
+  } else {
+    dataController.setData(JSON.parse(jsonData));
+  }
 
-const fetchAll = async () => {
-  let techData;
-  let equipmentData;
-  let filterData;
-  let equipmentAllData;
-
-  await fetchTechData({
-    url: "./data/tech_data.json",
-    onSuccess: (data) => (techData = data.tech_data),
-  });
-  await fetchTechData({
-    url: "./data/car_features_settings.json",
-    onSuccess: (data) => (equipmentAllData = data.car_features),
-  });
-  await fetchTechData({
-    url: "./data/car_features.json",
-    onSuccess: (data) => (equipmentData = data.car_features),
-  });
-  await fetchTechData({
-    url: "./data/filter.json",
-    onSuccess: (data) => (filterData = data.filters),
-  });
-  techList = new TechListUI(techData);
-  equipmentAllList = new CarAllEquipmentsUI(equipmentAllData);
   equipmentList = new CarEquipmentUI({
-    equipmentAllData,
-    equipmentData,
+    equipmentConfigData: dataController.equipmentConfigData,
+    equipmentData: dataController.equipmentData,
   });
-  filterListUI = new FilterListUI(filterData);
+  techList.updateData(dataController.techData);
 };
-fetchAll();
-
-const carEquipmentPopup = document.querySelector("#carEquipmentPopup");
-const updateCarEquipments = document.querySelector("#updateCarEquipments");
-updateCarEquipments.onclick = () => {
-  const activeData = equipmentAllList
-    .getData()
-    .filter((item) => item.status)
-    .map((item) => item.name);
-  equipmentList.initList(activeData);
-  carEquipmentPopup.classList.remove("active");
-};
+loadConfiguration();
+loadCarData();
