@@ -31,9 +31,15 @@ h2 {
 }
 h3 {
   font-size: 22px;
+  &._sm {
+    font-size: 20px;
+  }
 }
 h4 {
   font-size: 16px;
+  &._lg {
+    font-size: 18px;
+  }
 }
 h5 {
   font-size: 14px;
@@ -59,21 +65,21 @@ p {
     font-size: 23px;
   }
 }
-
-@mixin typography-1180{
+@mixin typography-1180 {
   h2 {
     font-size: 20px;
   }
 }
-@mixin typography-880{
-h4{
-  font-size: 14px;
-}}
-@mixin typography-580{
+@mixin typography-880 {
+  h4 {
+    font-size: 14px;
+  }
+}
+@mixin typography-580 {
   h2 {
     font-size: 18px;
   }
-h4{
-  font-size: 12px;
-}
+  h4 {
+    font-size: 12px;
+  }
 }

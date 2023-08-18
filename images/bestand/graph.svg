@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.917" height="33.189" viewBox="0 0 74.917 33.189">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-1" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#185f76" stop-opacity="0.949"/>
+      <stop offset="1" stop-color="#1fd286" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Widgets_-__Elements_-_Chart_-_Mini_Chart" data-name="Widgets - _Elements - Chart - Mini Chart" transform="translate(0.197 0.75)">
+    <g id="Chart_" data-name="Chart ">
+      <path id="Path_4_Copy_6" data-name="Path 4 Copy 6" d="M0,20.624l9.258-11,9.258,4.812L27.775,8.25,37.034,0l9.258,3.437L55.551,5.5,64.809,0l9.258,9.625V29.561H0Z" transform="translate(0 2.878)" fill="url(#linear-gradient)"/>
+      <path id="Path_4_Copy_8" data-name="Path 4 Copy 8" d="M0,30,9.258,14l9.258,7,9.258-9L37.034,0l9.258,5,9.258,3,9.258-8,9.258,14" transform="translate(0.235)" fill="none" stroke="#185f76" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="main">
+    <!-- #header start-->
+    <header class="header">
+      <div class="autoContainer">
+        <div class="header__inner">
+          <div class="header__inner-logo">
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <div class="header__inner-box">
+            <button class="button button--ico">
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <g>
+                    <path id="Path_381" data-name="Path 381" fill="none" />
+                    <path id="Path_382" data-name="Path 382"
+                      d="M3,20l1.3-3.9A7.417,7.417,0,0,1,6.4,5.726a9.856,9.856,0,0,1,11.846.48,7.362,7.362,0,0,1,1.029,10.5A9.733,9.733,0,0,1,7.7,19L3,20"
+                      fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_15" data-name="Line 15" transform="translate(12 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_16" data-name="Line 16" transform="translate(8 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_17" data-name="Line 17" transform="translate(16 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  </g>
+                </svg>
+              </span>
+            </button>
+            <button class="button button--ico">
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <g>
+                    <path id="Path_401" data-name="Path 401" fill="none" />
+                    <path id="Path_402" data-name="Path 402"
+                      d="M10,5a2,2,0,1,1,4,0,7,7,0,0,1,4,6v3a4,4,0,0,0,2,3H4a4,4,0,0,0,2-3V11a7,7,0,0,1,4-6" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_403" data-name="Path 403" d="M9,17v1a3,3,0,0,0,6,0V17" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  </g>
+                </svg>
+              </span>
+              <span class="notification"> 2 </span>
+            </button>
+            <div class="dropdown">
+              <div class="dropdown__button">
+                <div class="dropdown__image">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Max Mustermann</p>
+                <span class="ico">
+                  <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path id="Path_399" data-name="Path 399" fill="none" />
+                    <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" />
+                  </svg>
+                </span>
+              </div>
+              <div class="dropdown__content">
+                <div class="dropdown__content-box">
+                  <div class="dropdown__image">
+                    <img src="./images/avatar.png" alt="" />
+                  </div>
+                  <p>Max Mustermann</p>
+                </div>
+                <div class="dropdown__content-box">
+                  <div class="dropdown__image">
+                    <img src="./images/avatar.png" alt="" />
+                  </div>
+                  <p>Max Mustermann</p>
+                </div>
+              </div>
+            </div>
+            <div class="burger" id="menuBtn">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- #header end -->
+    <!-- wrapper start-->
+    <div class="wrapper">
+      <nav class="sidebar" id="menu">
+        <div class="sidebar__inner">
+          <div class="sidebar__inner-switch">
+            <span class="custIcon custIcon--right"></span>
+          </div>
+          <a href="#" class="sidebar__inner-link active">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_372" data-name="Path 372" fill="none" />
+                  <path id="Path_373" data-name="Path 373" d="M5,12H3l9-9,9,9H19" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_374" data-name="Path 374" d="M5,12v7a2,2,0,0,0,2,2H17a2,2,0,0,0,2-2V12" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_375" data-name="Path 375" d="M9,21V15a2,2,0,0,1,2-2h2a2,2,0,0,1,2,2v6" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <div class="text">Kontaktcontactrmationen</div>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg class="fill" width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <g id="home">
+                    <path id="Path_372" data-name="Path 372" fill="none" />
+                  </g>
+                  <path id="Shape"
+                    d="M13,20H1a1,1,0,0,1-1-1V6.5a2,2,0,0,1,2-2H6V2A2,2,0,0,1,8,0h4a2,2,0,0,1,2,2V9h4a2,2,0,0,1,2,2v8a1,1,0,0,1-1,1Zm5-2V11H14v7ZM8,18h4V11q0-.03,0-.059V2H8ZM2,18H6V6.5H2Z"
+                    transform="translate(2 2)" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Bestand </span>
+          </a>
+          <a href="#" class="sidebar__inner-link _notification">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_376" data-name="Path 376" fill="none" />
+                  <rect id="Rectangle_603" data-name="Rectangle 603" width="18" height="14" rx="2"
+                    transform="translate(3 5)" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" />
+                  <path id="Path_377" data-name="Path 377" d="M3,7l9,6,9-6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Benachrichtigung </span>
+            <span class="notification"> 16 </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg class="fill" width="20" height="18.677" viewBox="0 0 20 18.677">
+                <path id="setting_icon" data-name="setting icon"
+                  d="M188.473,1012.058a3.706,3.706,0,0,1,3.761-3.641,3.87,3.87,0,0,1,.84.091.853.853,0,0,1,.668,1.013l0,.008a.885.885,0,0,1-1.057.643,2.024,2.024,0,0,0-2.4,1.527,1.954,1.954,0,0,0-.044.358,2,2,0,0,0,4,0,1.9,1.9,0,0,0-.027-.322.858.858,0,0,1,.724-.98h0a.88.88,0,0,1,1.015.7,3.524,3.524,0,0,1,.051.6,3.762,3.762,0,0,1-7.523,0h0Zm-11.592.853a.854.854,0,1,1,0-1.708h7.235a.854.854,0,1,1,0,1.708h-7.235Zm-.882-12.2a3.5,3.5,0,0,1,.052-.6.879.879,0,0,1,1.015-.7.858.858,0,0,1,.725.98h0a2.005,2.005,0,1,0,2-1.612,2.036,2.036,0,0,0-.475.049.881.881,0,0,1-1.06-.638.852.852,0,0,1,.656-1.019h0a3.767,3.767,0,0,1,4.511,2.772,3.624,3.624,0,0,1,.095.771,3.764,3.764,0,0,1-7.523,0Zm11.882.854a.854.854,0,1,1,0-1.708h7.233a.854.854,0,1,1,0,1.708Z"
+                  transform="translate(-176 -997.073)" />
+              </svg>
+            </span>
+            <span class="text"> Invoices </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_393" data-name="Path 393" fill="none" />
+                  <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(5 3)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_394" data-name="Path 394" d="M3,21V19a4,4,0,0,1,4-4h4a4,4,0,0,1,4,4v2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_395" data-name="Path 395" d="M16,3.13a4,4,0,0,1,0,7.75" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_396" data-name="Path 396" d="M21,21V19a4,4,0,0,0-3-3.85" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Whatsapp </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_381" data-name="Path 381" fill="none" />
+                  <path id="Path_382" data-name="Path 382"
+                    d="M3,20l1.3-3.9A7.417,7.417,0,0,1,6.4,5.726a9.856,9.856,0,0,1,11.846.48,7.362,7.362,0,0,1,1.029,10.5A9.733,9.733,0,0,1,7.7,19L3,20"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_15" data-name="Line 15" transform="translate(12 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_16" data-name="Line 16" transform="translate(8 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_17" data-name="Line 17" transform="translate(16 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Nachrichten </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_383" data-name="Path 383" fill="none" />
+                  <rect id="Rectangle_604" data-name="Rectangle 604" width="16" height="16" rx="2"
+                    transform="translate(4 5)" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" />
+                  <line id="Line_18" data-name="Line 18" y2="4" transform="translate(16 3)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_19" data-name="Line 19" y2="4" transform="translate(8 3)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_20" data-name="Line 20" x2="16" transform="translate(4 11)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_21" data-name="Line 21" x2="4" transform="translate(10 16)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Kalender </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_384" data-name="Path 384" fill="none" />
+                  <circle id="Ellipse_1" data-name="Ellipse 1" cx="9" cy="9" r="9" transform="translate(3 3)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_22" data-name="Line 22" transform="translate(12 17)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_385" data-name="Path 385" d="M12,13.5A1.5,1.5,0,0,1,13,12a2.6,2.6,0,1,0-3-4"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <sspan class="text"> Hilfe </sspan>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_386" data-name="Path 386" fill="none" />
+                  <path id="Path_387" data-name="Path 387"
+                    d="M10.325,4.317a1.724,1.724,0,0,1,3.35,0,1.724,1.724,0,0,0,2.573,1.066,1.725,1.725,0,0,1,2.37,2.37,1.724,1.724,0,0,0,1.065,2.572,1.724,1.724,0,0,1,0,3.35,1.724,1.724,0,0,0-1.066,2.573,1.725,1.725,0,0,1-2.37,2.37,1.724,1.724,0,0,0-2.572,1.065,1.724,1.724,0,0,1-3.35,0,1.724,1.724,0,0,0-2.573-1.066,1.725,1.725,0,0,1-2.37-2.37,1.724,1.724,0,0,0-1.065-2.572,1.724,1.724,0,0,1,0-3.35A1.724,1.724,0,0,0,5.383,7.752a1.725,1.725,0,0,1,2.37-2.37,1.723,1.723,0,0,0,2.572-1.065Z"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <circle id="Ellipse_2" data-name="Ellipse 2" cx="3" cy="3" r="3" transform="translate(9 9)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Einstellungen </span>
+          </a>
+          <div class="dropdown">
+            <div class="dropdown__button">
+              <div class="dropdown__image">
+                <img src="./images/avatar.png" alt="" />
+              </div>
+              <p>Max Mustermann</p>
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path id="Path_399" data-name="Path 399" fill="none" />
+                  <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </svg>
+              </span>
+            </div>
+            <div class="dropdown__content">
+              <div class="dropdown__content-box">
+                <div class="dropdown__image">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Max Mustermann</p>
+              </div>
+              <div class="dropdown__content-box">
+                <div class="dropdown__image">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Max Mustermann</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="wrapper__body sideSpace">
+        <div class="stock">
+          <div class="autoContainer _sm">
+            <div class="stock__inner">
+              <div class="stock__inner-header">
+                <div class="stock__inner-group">
+                  <div class="stock__inner-box">
+                    <h3>
+                      Fahrzeugbestand
+                    </h3>
+                    <p>
+                      Alle aktuell verfügbaren Fahrzeuge werden hier gelistet
+                    </p>
+                  </div>
+                  <div class="stock__inner-info">
+                    <h3 class="_sm">
+                      88
+                      <small>
+                        Fahrzeuge
+                      </small>
+                    </h3>
+                    <div class="stock__inner-info-image">
+                      <img src="./images/bestand/graph.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="stock__inner-box _lg">
+                  <h4>
+                    In den Verträgen suchen
+                  </h4>
+                  <div class="input input--search">
+                    <input type="text" placeholder="Gib hier den Suchbegriff ein, wonach du suchen möchtest">
+                    <span class="ico">
+                      <svg id="Icon_Search_-_16" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.89" height="16.89"
+                        viewBox="0 0 16.89 16.89">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <path id="Path_3029" data-name="Path 3029"
+                              d="M800.943-2509.905l-5.207-5.207a6.677,6.677,0,0,0-.848-9.324,6.677,6.677,0,0,0-9.325.848,6.678,6.678,0,0,0,.848,9.324,6.59,6.59,0,0,0,8.477,0l5.207,5.207Zm-15.743-9.446a5.427,5.427,0,0,1,5.449-5.449,5.427,5.427,0,0,1,5.449,5.449,5.427,5.427,0,0,1-5.449,5.449A5.427,5.427,0,0,1,785.2-2519.351Z"
+                              transform="translate(-784.053 2525.948)" fill="#525252" clip-rule="evenodd" />
+                          </clipPath>
+                          <clipPath id="clip-path-2">
+                            <path id="Path_3028" data-name="Path 3028" d="M16-2496.248H1256.054V-2535H16Z"
+                              transform="translate(-16 2535)" fill="#525252" />
+                          </clipPath>
+                        </defs>
+                        <g id="Group_2829" data-name="Group 2829" clip-path="url(#clip-path)">
+                          <g id="Group_2828" data-name="Group 2828" transform="translate(-930.104 -10.963)"
+                            clip-path="url(#clip-path-2)">
+                            <path id="Path_3027" data-name="Path 3027" d="M779.053-2530.947h29v29h-29Z"
+                              transform="translate(144.997 2535.855)" fill="#525252" />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="stock__inner-box">
+                  <h4 class="_lg">
+                    Filter für den Fahrzeugbestand
+                  </h4>
+                  <button class="button button--secondary">
+                    Hinzufügen
+                    <span class="ico ">
+                      <svg fill="#000000" class="fill" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px"
+                        viewBox="0 0 45.402 45.402" xml:space="preserve">
+                        <g>
+                          <path d="M41.267,18.557H26.832V4.134C26.832,1.851,24.99,0,22.707,0c-2.283,0-4.124,1.851-4.124,4.135v14.432H4.141
+                          c-2.283,0-4.139,1.851-4.138,4.135c-0.001,1.141,0.46,2.187,1.207,2.934c0.748,0.749,1.78,1.222,2.92,1.222h14.453V41.27
+                          c0,1.142,0.453,2.176,1.201,2.922c0.748,0.748,1.777,1.211,2.919,1.211c2.282,0,4.129-1.851,4.129-4.133V26.857h14.435
+                          c2.283,0,4.134-1.867,4.133-4.15C45.399,20.425,43.548,18.557,41.267,18.557z" />
+                        </g>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="stock__inner-body">
+                <div class="stock__inner-tabs">
+                  <button class="stock__inner-tabs-button active">
+                    Übersicht
+                  </button>
+                  <button class="stock__inner-tabs-button">
+                    Geparkte Fahrzeuge
+                  </button>
+                  <button class="stock__inner-tabs-button">
+                    Archivierte Fahrzeuge
+                  </button>
+                </div>
+                <div class="stock__inner-table">
+                  <table class="stockTable">
+                    <thead>
+                      <th>
+                      </th>
+                      <th>
+                        KNR
+                      </th>
+                      <th>
+                        Käufer
+                      </th>
+                      <th>
+                        Hersteller/ Typ
+                      </th>
+                      <th>
+                        PLZ/ Ort
+                      </th>
+                      <th>
+                        Preis
+                      </th>
+                      <th>
+                        Abholdatum
+                      </th>
+                      <th>
+                        Quicklinks
+                      </th>
+                      <th>
+                        Details
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="input input--checkBox">
+                            <input type="checkbox" id="tabBtn" />
+                            <label for="tabBtn">
+                              <span class="checkBox"> </span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          #123456
+                        </td>
+                        <td>
+                          <div class="stockTable__box">
+                            <h4>
+                              Autoankauf Langenhagen
+                            </h4>
+                            <small>
+                              Max Mustermann
+                            </small>
+                          </div>
+                        </td>
+                        <td>
+                          Audi A7
+                        </td>
+                        <td>
+                          22926 Ahrensburg
+                        </td>
+                        <td>
+                          60.000€
+                        </td>
+                        <td>
+                          12.08.2023
+                        </td>
+                        <td>
+                          <div class="stockTable__group">
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_file" data-name="Icon / Line / file"
+                                  xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20">
+                                  <path id="Shape"
+                                    d="M17.007,20H.993a1.006,1.006,0,0,1-.7-.3A.994.994,0,0,1,0,18.993V6L6,0,17,0a1.01,1.01,0,0,1,1,.992V19.008A1,1,0,0,1,17.007,20ZM2,8V18H16V2H8V7A1,1,0,0,1,7,8ZM6,2.83,2.83,6H6Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Vertag
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_image" data-name="Icon / Line / image"
+                                  xmlns="http://www.w3.org/2000/svg" width="20" height="18.02" viewBox="0 0 20 18.02">
+                                  <path id="Shape"
+                                    d="M2.808,18.02h0L2.787,18H.992A1,1,0,0,1,0,17.007V.993A1,1,0,0,1,.992,0H19.008A.993.993,0,0,1,20,.993V17.007a1,1,0,0,1-.992.993H2.828l-.019.019ZM12,8.828h0L4.828,16H18V14.828l-6-6ZM2,2V16L12,6l6,6V2ZM6,8A2,2,0,1,1,8,6,2,2,0,0,1,6,8Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Blider
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_earth" data-name="Icon / Line / earth"
+                                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                  <path id="Shape"
+                                    d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM4.235,4.453A8,8,0,0,0,13.052,17.4a3.441,3.441,0,0,0-.239-1.722,12.289,12.289,0,0,0-2.254-2.844c-.338-.356-.316-.629-.194-1.437l.013-.091c.082-.554.219-.882,2.085-1.178a2.473,2.473,0,0,1,.383-.033c.643,0,.871.347,1.159.787l.116.172a1.83,1.83,0,0,0,.937.755c.169.077.373.172.647.325.652.373.652.794.652,1.716v.1a5.247,5.247,0,0,1-.1,1.034A8,8,0,0,0,13.152,2.645,7.792,7.792,0,0,0,11.575,3.91a1.4,1.4,0,0,0-.113.246c-.136.339-.364.906-.836.965a1.613,1.613,0,0,1-.194.01c-.123,0-.257-.008-.42-.019-.147-.01-.314-.02-.481-.02a1.2,1.2,0,0,0-1.262.664,2.921,2.921,0,0,0,.356,2.4.583.583,0,0,1,.046.519,1,1,0,0,1-.292.5,2.685,2.685,0,0,1-.4-.41l-.017-.02a2.726,2.726,0,0,0-1.21-.959c-.184-.051-.386-.094-.581-.135C5.618,7.533,5,7.4,4.85,7.093a2.134,2.134,0,0,1-.105-.857V6.228a3.191,3.191,0,0,0-.2-1.345A1.273,1.273,0,0,0,4.235,4.453Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Inserat
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19.335" height="21.728"
+                                  viewBox="0 0 19.335 21.728">
+                                  <path id="Shape"
+                                    d="M9.667,21.728h0L2.828,15.364a8.574,8.574,0,0,1,0-12.728A9.984,9.984,0,0,1,9.667,0a9.984,9.984,0,0,1,6.839,2.636,8.574,8.574,0,0,1,0,12.728L9.668,21.727ZM9.667,2a7.766,7.766,0,0,0-5.32,2.051,6.669,6.669,0,0,0,0,9.9l5.32,4.95,5.32-4.95a6.669,6.669,0,0,0,0-9.9A7.766,7.766,0,0,0,9.667,2Zm0,9A2.081,2.081,0,0,1,7.518,9,2.081,2.081,0,0,1,9.667,7a2.081,2.081,0,0,1,2.149,2A2.081,2.081,0,0,1,9.667,11Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Bahn
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_map" data-name="Icon / Line / map"
+                                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                  <path id="Shape"
+                                    d="M13,20h0L7,17,.7,19.7a.5.5,0,0,1-.472-.042A.5.5,0,0,1,0,19.241V3L7,0l6,3L19.3.3a.5.5,0,0,1,.7.46V17l-7,3ZM18,3.033,14,4.747V17.4l4-1.715V3.033Zm-10-.3V15.264l4,2V4.736ZM6,2.6,2,4.319V16.967l4-1.714V2.6Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Karte
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="22.061" height="21.828"
+                                  viewBox="0 0 22.061 21.828">
+                                  <g id="edit-2" transform="translate(1 1)">
+                                    <path id="edit-2-2" data-name="edit-2"
+                                      d="M17,3a2.828,2.828,0,0,1,4,4L7.5,20.5,2,22l1.5-5.5Z"
+                                      transform="translate(-2 -2.172)" fill="none" stroke="#165f76"
+                                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                  </g>
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Edit
+                              </span>
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="stockTable__button">
+                            <span class="text">
+                              anzeigen
+                            </span>
+                            <span class="ico">
+                              <img src="./images/bestand/arrow.png" alt="">
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="input input--checkBox">
+                            <input type="checkbox" id="tabBtn" />
+                            <label for="tabBtn">
+                              <span class="checkBox"> </span>
+                            </label>
+                          </div>
+                        </td>
+                        <td>
+                          #123456
+                        </td>
+                        <td>
+                          <div class="stockTable__box">
+                            <h4>
+                              Autoankauf Langenhagen
+                            </h4>
+                            <small>
+                              Max Mustermann
+                            </small>
+                          </div>
+                        </td>
+                        <td>
+                          Audi A7
+                        </td>
+                        <td>
+                          22926 Ahrensburg
+                        </td>
+                        <td>
+                          60.000€
+                        </td>
+                        <td>
+                          12.08.2023
+                        </td>
+                        <td>
+                          <div class="stockTable__group">
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_file" data-name="Icon / Line / file"
+                                  xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20">
+                                  <path id="Shape"
+                                    d="M17.007,20H.993a1.006,1.006,0,0,1-.7-.3A.994.994,0,0,1,0,18.993V6L6,0,17,0a1.01,1.01,0,0,1,1,.992V19.008A1,1,0,0,1,17.007,20ZM2,8V18H16V2H8V7A1,1,0,0,1,7,8ZM6,2.83,2.83,6H6Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Vertag
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_image" data-name="Icon / Line / image"
+                                  xmlns="http://www.w3.org/2000/svg" width="20" height="18.02" viewBox="0 0 20 18.02">
+                                  <path id="Shape"
+                                    d="M2.808,18.02h0L2.787,18H.992A1,1,0,0,1,0,17.007V.993A1,1,0,0,1,.992,0H19.008A.993.993,0,0,1,20,.993V17.007a1,1,0,0,1-.992.993H2.828l-.019.019ZM12,8.828h0L4.828,16H18V14.828l-6-6ZM2,2V16L12,6l6,6V2ZM6,8A2,2,0,1,1,8,6,2,2,0,0,1,6,8Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Blider
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_earth" data-name="Icon / Line / earth"
+                                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                  <path id="Shape"
+                                    d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM4.235,4.453A8,8,0,0,0,13.052,17.4a3.441,3.441,0,0,0-.239-1.722,12.289,12.289,0,0,0-2.254-2.844c-.338-.356-.316-.629-.194-1.437l.013-.091c.082-.554.219-.882,2.085-1.178a2.473,2.473,0,0,1,.383-.033c.643,0,.871.347,1.159.787l.116.172a1.83,1.83,0,0,0,.937.755c.169.077.373.172.647.325.652.373.652.794.652,1.716v.1a5.247,5.247,0,0,1-.1,1.034A8,8,0,0,0,13.152,2.645,7.792,7.792,0,0,0,11.575,3.91a1.4,1.4,0,0,0-.113.246c-.136.339-.364.906-.836.965a1.613,1.613,0,0,1-.194.01c-.123,0-.257-.008-.42-.019-.147-.01-.314-.02-.481-.02a1.2,1.2,0,0,0-1.262.664,2.921,2.921,0,0,0,.356,2.4.583.583,0,0,1,.046.519,1,1,0,0,1-.292.5,2.685,2.685,0,0,1-.4-.41l-.017-.02a2.726,2.726,0,0,0-1.21-.959c-.184-.051-.386-.094-.581-.135C5.618,7.533,5,7.4,4.85,7.093a2.134,2.134,0,0,1-.105-.857V6.228a3.191,3.191,0,0,0-.2-1.345A1.273,1.273,0,0,0,4.235,4.453Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Inserat
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19.335" height="21.728"
+                                  viewBox="0 0 19.335 21.728">
+                                  <path id="Shape"
+                                    d="M9.667,21.728h0L2.828,15.364a8.574,8.574,0,0,1,0-12.728A9.984,9.984,0,0,1,9.667,0a9.984,9.984,0,0,1,6.839,2.636,8.574,8.574,0,0,1,0,12.728L9.668,21.727ZM9.667,2a7.766,7.766,0,0,0-5.32,2.051,6.669,6.669,0,0,0,0,9.9l5.32,4.95,5.32-4.95a6.669,6.669,0,0,0,0-9.9A7.766,7.766,0,0,0,9.667,2Zm0,9A2.081,2.081,0,0,1,7.518,9,2.081,2.081,0,0,1,9.667,7a2.081,2.081,0,0,1,2.149,2A2.081,2.081,0,0,1,9.667,11Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Bahn
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" id="Icon_Line_map" data-name="Icon / Line / map"
+                                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                  <path id="Shape"
+                                    d="M13,20h0L7,17,.7,19.7a.5.5,0,0,1-.472-.042A.5.5,0,0,1,0,19.241V3L7,0l6,3L19.3.3a.5.5,0,0,1,.7.46V17l-7,3ZM18,3.033,14,4.747V17.4l4-1.715V3.033Zm-10-.3V15.264l4,2V4.736ZM6,2.6,2,4.319V16.967l4-1.714V2.6Z" />
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Karte
+                              </span>
+                            </button>
+                            <button class="stockTable__group-button">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="22.061" height="21.828"
+                                  viewBox="0 0 22.061 21.828">
+                                  <g id="edit-2" transform="translate(1 1)">
+                                    <path id="edit-2-2" data-name="edit-2"
+                                      d="M17,3a2.828,2.828,0,0,1,4,4L7.5,20.5,2,22l1.5-5.5Z"
+                                      transform="translate(-2 -2.172)" fill="none" stroke="#165f76"
+                                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                  </g>
+                                </svg>
+                              </span>
+                              <span class="text">
+                                Edit
+                              </span>
+                            </button>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="stockTable__button">
+                            <span class="text">
+                              anzeigen
+                            </span>
+                            <span class="ico">
+                              <img src="./images/bestand/arrow.png" alt="">
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- wrapper end-->
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

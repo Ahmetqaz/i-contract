@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="15" viewBox="0 0 15 15">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="_45_Background_Mask_" data-name="45 (Background/Mask)" width="15" height="15" transform="translate(0 15) rotate(-90)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="_45" data-name="45" clip-path="url(#clip-path)">
+    <path id="Vector" d="M5.121,11.295,0,5.647,5.121,0" transform="translate(2.056 9.791) rotate(-90)" fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" stroke-dasharray="0 0"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144" height="93" viewBox="0 0 144 93">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-1" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset="1" stop-color="#1fd286" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Feature_Background_Mask_" data-name="Feature (Background/Mask)" width="144" height="93" rx="8" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="-1" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#185f76" stop-opacity="0.949"/>
+      <stop offset="1" stop-color="#1fd286" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Feature" clip-path="url(#clip-path)">
+    <g id="Purchased_and_Available" data-name="Purchased and Available" transform="translate(34 18.836)">
+      <g id="Available" transform="translate(0 0)">
+        <g id="Amount">
+          <text id="_23.328" data-name="23.328" transform="translate(0 15.165)" fill="#185f76" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">88</tspan></text>
+          <text id="Pairs" transform="translate(29 13.165)" fill="#888" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Fahrzeuge</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="Widgets_-__Elements_-_Chart_-_Mini_Chart" data-name="Widgets - _Elements - Chart - Mini Chart" transform="translate(33.685 42.818)">
+      <g id="Chart_" data-name="Chart ">
+        <path id="Path_4_Copy_6" data-name="Path 4 Copy 6" d="M0,20.624l9.258-11,9.258,4.812L27.775,8.25,37.034,0l9.258,3.437L55.551,5.5,64.809,0l9.258,9.625V29.561H0Z" transform="translate(0 2.878)" fill="url(#linear-gradient-2)"/>
+        <path id="Path_4_Copy_8" data-name="Path 4 Copy 8" d="M0,30,9.258,14l9.258,7,9.258-9L37.034,0l9.258,5,9.258,3,9.258-8,9.258,14" transform="translate(0.235)" fill="none" stroke="#185f76" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

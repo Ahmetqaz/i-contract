@@ -26,9 +26,15 @@ h2 {
 h3 {
   font-size: 22px;
 }
+h3._sm {
+  font-size: 20px;
+}
 
 h4 {
   font-size: 16px;
+}
+h4._lg {
+  font-size: 18px;
 }
 
 h5 {
@@ -2233,6 +2239,7 @@ svg {
   .autoContainer {
     padding: 0 20px;
   }
+
   .carList {
     gap: 25px;
   }
@@ -2264,6 +2271,7 @@ svg {
   .autoContainer {
     padding: 0 15px;
   }
+
   .carList__box .input {
     font-size: 16px;
   }
