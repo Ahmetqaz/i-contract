@@ -309,19 +309,24 @@
         align-items: center;
         gap: 5px;
         font-size: 20px;
+        color: $primary;
         .ico {
           width: 1em;
           height: 1em;
-          @include transition;
-          color: $primary;
+          color: inherit;
+          transition: 0.3s ease-in;
           svg {
             fill: currentColor;
           }
         }
         .text {
           font-size: 12px;
-          color: $primary;
+          color: inherit;
           font-weight: 400;
+          transition: 0.3s ease-in;
+        }
+        &:hover {
+          color: $orange;
         }
       }
     }
