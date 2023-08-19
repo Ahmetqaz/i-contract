@@ -4092,6 +4092,14 @@ section {
   padding: 0.7em 18px 1.1em;
   font-weight: 400;
 }
+.stockTable th .input--checkBox .checkBox {
+  border-radius: 2px;
+  border-color: #DDDDDD;
+  border-width: 1px;
+}
+.stockTable th .input--checkBox input:checked + label .checkBox {
+  border-color: #DDDDDD;
+}
 .stockTable td {
   font-size: 1em;
   white-space: nowrap;

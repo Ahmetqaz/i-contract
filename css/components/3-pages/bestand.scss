@@ -234,6 +234,22 @@
       text-align: left;
       padding: 0.7em 18px 1.1em;
       font-weight: 400;
+      .input {
+        &--checkBox {
+          .checkBox {
+            border-radius: 2px;
+            border-color: $gray-2;
+            border-width: 1px;
+          }
+          input {
+            &:checked + label {
+              .checkBox {
+                border-color: $gray-2;
+              }
+            }
+          }
+        }
+      }
     }
     td {
       font-size: 1em;
@@ -513,7 +529,6 @@
         flex-direction: column;
         gap: 16px;
       }
-    
     }
   }
 }
