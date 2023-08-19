@@ -1857,6 +1857,16 @@ svg {
   gap: 1em;
   margin-top: auto;
 }
+.popUp__inner-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
 .popUp__checkBoxes {
   width: 80%;
   -webkit-box-orient: vertical;
@@ -1959,6 +1969,46 @@ svg {
 }
 .popUp--confirm .popUp__inner {
   max-width: 550px;
+}
+.popUp--stock .popUp__inner {
+  padding: 40px 34px 40px;
+  border-radius: 4px;
+  border: 2px solid #707070;
+  max-width: 480px;
+}
+.popUp--stock .popUp__inner-content {
+  gap: 45px;
+}
+.popUp--stock p {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+.popUp--stock h4 {
+  padding-bottom: 12px;
+  position: relative;
+}
+.popUp--stock h4:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #eaeaea;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.popUp--stock .button--text {
+  min-width: 120px;
+  color: #fff;
+  background: #838383;
+  border-radius: 6px;
+  border-width: 2px;
+  font-weight: 700;
+  padding: 8px 20px;
+}
+.popUp--stock .button--text._red {
+  color: #f0142f;
+  border-color: #f0142f;
+  background: transparent;
 }
 
 .filterBox__row {
