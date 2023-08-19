@@ -900,11 +900,11 @@ svg {
 .button--chevron {
   border-color: #DDDDDD;
   border-radius: 4px;
-  padding: 0.3em 1.15em;
+  padding: 0.4em 1.15em;
 }
 .button--chevron .ico {
   font-size: inherit;
-  width: 0.4em;
+  width: 0.5em;
 }
 .button--chevron .ico img {
   width: 100%;
@@ -921,6 +921,9 @@ svg {
 }
 .button--text._red {
   color: #f0142f;
+}
+.button--text:hover {
+  opacity: 0.7;
 }
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);

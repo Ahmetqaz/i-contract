@@ -1047,11 +1047,11 @@ svg {
 .button--chevron {
   border-color: #DDDDDD;
   border-radius: 4px;
-  padding: 0.3em 1.15em;
+  padding: 0.4em 1.15em;
 }
 .button--chevron .ico {
   font-size: inherit;
-  width: 0.4em;
+  width: 0.5em;
 }
 .button--chevron .ico img {
   width: 100%;
@@ -1068,6 +1068,9 @@ svg {
 }
 .button--text._red {
   color: #f0142f;
+}
+.button--text:hover {
+  opacity: 0.7;
 }
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
@@ -4299,7 +4302,47 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.stockPagination__body-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 5px;
+}
+.stockPagination__body .button {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: #185f76;
+}
+.stockPagination__body .button svg {
+  fill: currentColor;
+}
+.stockPagination__body .button svg g {
+  fill: currentColor;
+}
+.stockPagination__body .button:active {
+  background: #185f76;
+  color: #fff;
+}
+.stockPagination__body h6 {
+  color: #707070;
+  font-weight: 400;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.stockPagination__body:hover .button {
+  padding: 1em 1.15em;
+  border-color: #185f76;
+}
+.stockPagination__body:hover h6 {
+  opacity: 1;
 }
 .stockFooter {
   display: -webkit-box;
@@ -4814,10 +4857,6 @@ section {
   }
   .stock__inner-box:nth-child(3) {
     width: 50%;
-  }
-  .stock__inner-table {
-    height: 500px;
-    min-height: unset;
   }
   .stockFooter__group {
     gap: 20px;

@@ -376,7 +376,42 @@
     }
     &__body {
       display: flex;
-      gap: 5px;
+      gap: 15px;
+      align-items: center;
+      transition: 0.3s ease-in-out;
+      &-group {
+        display: flex;
+        gap: 5px;
+      }
+      .button {
+        transition: 0.3s ease-in-out;
+        color: $primary;
+        svg {
+          fill: currentColor;
+          g {
+            fill: currentColor;
+          }
+        }
+        &:active {
+          background: $primary;
+          color: $white;
+        }
+      }
+      h6 {
+        color: $gray;
+        font-weight: 400;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+      &:hover {
+        .button {
+          padding: 1em 1.15em;
+          border-color: $primary;
+        }
+        h6 {
+          opacity: 1;
+        }
+      }
     }
   }
   &Footer {
@@ -438,8 +473,6 @@
         }
       }
       &-table {
-        height: 500px;
-        min-height: unset;
       }
     }
     &Footer {
