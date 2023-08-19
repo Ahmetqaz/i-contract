@@ -3912,11 +3912,18 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 4px;
 }
 .stock__inner-info h3 {
   color: #185f76;
   white-space: nowrap;
+  font-weight: 400;
 }
 .stock__inner-info h3 small {
   font-size: 12px;
@@ -4002,7 +4009,8 @@ section {
 .stock__inner-table {
   overflow: auto;
   padding: 2px 0;
-  height: calc(100vh - 441px);
+  height: calc(100vh - 443px);
+  min-height: 340px;
 }
 .stock__inner__footer {
   display: -webkit-box;
@@ -4042,6 +4050,25 @@ section {
   border-collapse: collapse;
   font-weight: 400;
   width: 100%;
+}
+.stockTable thead {
+  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #f7f7f7;
+  z-index: 2;
+}
+.stockTable thead::before {
+  content: "";
+  width: calc(100% - 2px);
+  height: 100%;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  pointer-events: none;
+  background: #f7f7f7;
+  z-index: -1;
 }
 .stockTable thead tr {
   position: relative;
@@ -4227,6 +4254,7 @@ section {
   margin: 0 -15px;
   gap: 16px;
   border: 1px solid #707070;
+  overflow: hidden;
 }
 .stockFooter__group {
   display: -webkit-box;
@@ -4484,6 +4512,10 @@ section {
   .list .autoContainer {
     padding: 0 20px;
   }
+
+  .stock__inner-table {
+    height: calc(100vh - 433px);
+  }
 }
 @media (max-width: 1300px) {
   .details__inner-row {
@@ -4580,6 +4612,13 @@ section {
   .features__inner-wrapper .button--primary {
     width: 220px;
     font-size: 14px;
+  }
+
+  .stockFooter__group {
+    gap: 24px;
+  }
+  .stockFooter__box {
+    gap: 40px;
   }
 }
 @media (max-width: 1100px) {
@@ -4704,6 +4743,41 @@ section {
   }
   .list .autoContainer {
     padding: 0 15px;
+  }
+
+  .stock__inner-header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .stock__inner-box:nth-child(3) {
+    width: 50%;
+  }
+  .stock__inner-table {
+    height: 500px;
+    min-height: unset;
+  }
+  .stockFooter__group {
+    gap: 20px;
+  }
+  .stockFooter .button {
+    min-width: 170px;
+  }
+}
+@media (max-width: 940px) {
+  .stockFooter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .stockFooter__group {
+    gap: 24px;
   }
 }
 @media (max-width: 880px) {
@@ -5104,6 +5178,19 @@ section {
   .table__box .button--dropdown .ico {
     width: 10px;
   }
+
+  .stock__inner-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .stock__inner-box {
+    width: 100% !important;
+  }
+  .stock__inner-group {
+    width: 100%;
+  }
 }
 @media (max-width: 650px) {
   .popUp__checkBoxes {
@@ -5187,6 +5274,24 @@ section {
   .features__inner-body .input--checkText {
     width: 100%;
     max-width: unset;
+  }
+
+  .stock__inner-tabs-button {
+    font-size: 18px;
+  }
+  .stockFooter__group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    max-width: unset;
+    gap: 16px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .stockFooter .button {
+    width: calc(33.3% - 12px);
+    min-width: auto;
   }
 }
 @media (max-width: 580px) {
@@ -5283,6 +5388,24 @@ section {
   }
   .detailsRadio .input {
     font-size: 12px;
+  }
+
+  .stock__inner-tabs-button {
+    font-size: 16px;
+  }
+  .stockFooter .button {
+    width: calc(50% - 12px);
+  }
+  .stockPagination {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+  .stockPagination__body {
+    margin-left: auto;
   }
 }
 @media (max-width: 480px) {
@@ -5511,6 +5634,14 @@ section {
   }
   .detailsRadio .input__wrapper {
     width: 100%;
+  }
+
+  .stockPagination__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
   }
 }
 @media (max-height: 880px) {

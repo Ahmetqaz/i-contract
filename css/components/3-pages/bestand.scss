@@ -79,10 +79,13 @@
     &-info {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 4px;
       h3 {
         color: $primary;
         white-space: nowrap;
+        font-weight: 400;
         small {
           font-size: 12px;
           color: $black-6;
@@ -150,7 +153,8 @@
     &-table {
       overflow: auto;
       padding: 2px 0;
-      height: calc(100vh - 441px);
+      height: calc(100vh - 443px);
+      min-height: 340px;
     }
     &__footer {
       display: flex;
@@ -191,6 +195,18 @@
     font-weight: 400;
     width: 100%;
     thead {
+      position: relative;
+      &::before {
+        content: "";
+        width: calc(100% - 2px);
+        height: 100%;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        pointer-events: none;
+        background: $white-2;
+        z-index: -1;
+      }
       tr {
         position: relative;
         &::after {
@@ -205,6 +221,11 @@
           border-radius: 8px 8px 0 0;
         }
       }
+      position: sticky;
+      top: 0;
+      left: 0;
+      background: $white-2;
+      z-index: 2;
     }
     th {
       font-size: 1em;
@@ -347,6 +368,7 @@
     margin: 0 -15px;
     gap: 16px;
     border: 1px solid $gray;
+    overflow: hidden;
     &__group {
       display: flex;
       align-items: center;
@@ -359,6 +381,139 @@
       h5 {
         color: $white;
       }
+    }
+  }
+}
+@mixin stock-1440 {
+  .stock {
+    &__inner {
+      &-table {
+        height: calc(100vh - 433px);
+      }
+    }
+  }
+}
+@mixin stock-1180 {
+  .stock {
+    &Footer {
+      &__group {
+        gap: 24px;
+      }
+      &__box {
+        gap: 40px;
+      }
+    }
+  }
+}
+@mixin stock-1025 {
+  .stock {
+    &__inner {
+      &-header {
+        flex-wrap: wrap;
+      }
+      &-box {
+        &:nth-child(3) {
+          width: 50%;
+        }
+      }
+      &-table {
+        height: 500px;
+        min-height: unset;
+      }
+    }
+    &Footer {
+      &__group {
+        gap: 20px;
+      }
+      .button {
+        min-width: 170px;
+      }
+    }
+  }
+}
+@mixin stock-940 {
+  .stock {
+    &Footer {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      &__group {
+        gap: 24px;
+      }
+    }
+  }
+}
+@mixin stock-750 {
+  .stock {
+    &__inner {
+      &-header {
+        flex-direction: column;
+      }
+      &-box {
+        width: 100% !important;
+      }
+      &-group {
+        width: 100%;
+      }
+    }
+  }
+}
+@mixin stock-650 {
+  .stock {
+    &__inner {
+      &-tabs {
+        &-button {
+          font-size: 18px;
+        }
+      }
+    }
+    &Footer {
+      &__group {
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: unset;
+        gap: 16px;
+        justify-content: space-between;
+      }
+      .button {
+        width: calc(33.3% - 12px);
+        min-width: auto;
+      }
+    }
+  }
+}
+@mixin stock-580 {
+  .stock {
+    &__inner {
+      &-tabs {
+        &-button {
+          font-size: 16px;
+        }
+      }
+    }
+    &Footer {
+      .button {
+        width: calc(50% - 12px);
+      }
+    }
+    &Pagination {
+      flex-direction: column;
+      gap: 16px;
+      height: auto;
+      &__body {
+        margin-left: auto;
+      }
+    }
+  }
+}
+@mixin stock-390 {
+  .stock {
+    &Pagination {
+      &__box {
+        flex-direction: column;
+        gap: 16px;
+      }
+    
     }
   }
 }
