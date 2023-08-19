@@ -144,3 +144,22 @@ if (tabBtn) {
     }
   });
 }
+
+const stockCheckbox__footer = document.getElementById("stockCheckbox__footer");
+if (stockCheckbox__footer) {
+  const stockPagination = document.getElementById("stockPagination");
+  const stockCheckbox = document.getElementById("stockCheckbox");
+  stockCheckbox__footer.addEventListener("change", () => {
+    if (stockCheckbox__footer.checked) {
+      stockPagination.classList.add("_hide");
+      stockCheckbox.checked = true;
+      console.log(stockPagination, "1");
+      console.log(stockCheckbox, "2");
+    } else {
+      stockPagination.classList.remove("_hide");
+      stockCheckbox.checked = false;
+      console.log(stockPagination, "3");
+      console.log(stockCheckbox, "4");
+    }
+  });
+}

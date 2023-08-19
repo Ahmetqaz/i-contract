@@ -3847,6 +3847,17 @@ section {
   width: calc(37% - 5px);
 }
 
+.stock {
+  height: calc(100vh - 130px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 800px;
+}
 .stock__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3856,6 +3867,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
+  height: 100%;
 }
 .stock__inner-header {
   display: -webkit-box;
@@ -4058,12 +4070,14 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 18px;
+  height: 100vh;
 }
 .stock__inner-table {
   overflow: auto;
   padding: 2px 0;
-  height: calc(100vh - 443px);
-  min-height: 340px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
 }
 .stock__inner__footer {
   display: -webkit-box;
@@ -4149,9 +4163,11 @@ section {
   border-radius: 2px;
   border-color: #DDDDDD;
   border-width: 1px;
+  opacity: 0;
 }
 .stockTable th .input--checkBox input:checked + label .checkBox {
   border-color: #DDDDDD;
+  opacity: 1;
 }
 .stockTable td {
   font-size: 1em;
@@ -4272,6 +4288,10 @@ section {
   background: #f7f7f7;
   padding: 14px 0 14px;
   height: 72px;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 .stockPagination__box {
   display: -webkit-box;
@@ -4344,6 +4364,9 @@ section {
 .stockPagination__body:hover h6 {
   opacity: 1;
 }
+.stockPagination._hide {
+  display: none;
+}
 .stockFooter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4382,6 +4405,9 @@ section {
 }
 .stockFooter__box h5 {
   color: #fff;
+}
+.stock .autoContainer {
+  height: 100%;
 }
 
 @media (max-width: 1900px) {
@@ -4619,8 +4645,8 @@ section {
     padding: 0 20px;
   }
 
-  .stock__inner-table {
-    height: calc(100vh - 433px);
+  .stock {
+    height: calc(100vh - 120px);
   }
 }
 @media (max-width: 1300px) {
@@ -5496,6 +5522,9 @@ section {
     font-size: 12px;
   }
 
+  .stock {
+    height: calc(100vh - 90px);
+  }
   .stock__inner-tabs-button {
     font-size: 16px;
   }
