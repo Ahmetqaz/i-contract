@@ -7,6 +7,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      max-width: 1300px;
       .button {
         &--secondary {
           font-weight: 400;
@@ -25,13 +26,17 @@
         }
       }
       .input {
-        width: 100%;
+        width: 100% !important;
         max-width: 512px;
         input {
           font-size: 14px;
           padding: 1.07em 4em 1.07em 1em;
           border-radius: 8px;
           border: 1px solid $gray-2;
+          color: $black-6;
+          &::placeholder {
+            color: #838383;
+          }
         }
         .ico {
           left: unset;
@@ -145,6 +150,39 @@
     &-table {
       overflow: auto;
       padding: 2px 0;
+      height: calc(100vh - 441px);
+    }
+    &__footer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .input {
+    width: auto;
+    font-size: 10px;
+    input {
+      &:checked + label {
+        .checkBox {
+          border-color: $orange-2;
+          background: $orange-2;
+          &:after {
+            border-color: $white;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    label {
+      color: $white;
+      gap: 5px;
+      .text {
+        font-size: 14px;
+        padding-top: 2px;
+      }
+      .checkBox {
+        border: 2px solid $white;
+        border-radius: 2px;
+      }
     }
   }
   &Table {
@@ -159,7 +197,7 @@
           content: "";
           width: calc(100% - 2px);
           height: 100%;
-          border: 1px solid $black-6;
+          border: 1px solid $gray-2;
           position: absolute;
           bottom: 0;
           left: 0;
@@ -174,18 +212,20 @@
       white-space: nowrap;
       text-align: left;
       padding: 0.7em 18px 1.1em;
+      font-weight: 400;
     }
     td {
       font-size: 1em;
       white-space: nowrap;
       text-align: left;
       padding: 26px 17px 22px;
+      font-weight: 400;
       .input {
-        font-size: 10px;
-        width: 16px;
         &--checkBox {
           .checkBox {
             border-radius: 2px;
+            border-color: $gray-2;
+            border-width: 1px;
           }
         }
       }
@@ -203,7 +243,7 @@
           position: absolute;
           top: 10px;
           left: 0;
-          border: 1px solid $black-6;
+          border: 1px solid $gray-2;
           border-radius: 8px;
           pointer-events: none;
         }
@@ -262,6 +302,62 @@
           height: 100%;
           object-fit: contain;
         }
+      }
+    }
+  }
+  &Pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: $white-2;
+    padding: 14px 0 14px;
+    height: 72px;
+    &__box {
+      display: flex;
+      gap: 30px;
+      h5 {
+        display: flex;
+        font-weight: 400;
+        gap: 5px;
+        .ico {
+          width: 12px;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      h6 {
+        font-weight: 400;
+        color: $black-7;
+      }
+    }
+    &__body {
+      display: flex;
+      gap: 5px;
+    }
+  }
+  &Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $primary;
+    padding: 20px 15px;
+    border-radius: 6px 6px 0 0;
+    margin: 0 -15px;
+    gap: 16px;
+    border: 1px solid $gray;
+    &__group {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+    }
+    &__box {
+      display: flex;
+      align-items: center;
+      gap: 54px;
+      h5 {
+        color: $white;
       }
     }
   }

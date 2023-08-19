@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.5" height="7.125" viewBox="0 0 12.5 7.125">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="12.5" height="7.125" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_4275" data-name="Path 4275" d="M817-20.25l-6.25-6.25.875-.875L817-22l5.375-5.375.875.875Z" transform="translate(-810.75 27.375)" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Path_4274" data-name="Path 4274" d="M807-14h20V-34H807Z" transform="translate(-807 34)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="chevron--down_20" data-name="chevron--down / 20" clip-path="url(#clip-path)">
+    <g id="chevron--down_20-2" data-name="chevron--down / 20">
+      <g id="Group_4222" data-name="Group 4222" clip-path="url(#clip-path-2)">
+        <g id="Group_4221" data-name="Group 4221" transform="translate(-3.75 -6.625)" clip-path="url(#clip-path-3)">
+          <path id="Path_4273" data-name="Path 4273" d="M805.75-32.375h22.5V-15.25h-22.5Z" transform="translate(-807 34)" fill="#161616"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

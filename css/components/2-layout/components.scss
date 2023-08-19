@@ -1,3 +1,23 @@
+.wrapper {
+  max-width: 1980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 130px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1845px;
+    &._lg {
+      max-width: 1940px;
+    }
+  }
+  &._sm {
+    padding-bottom: 0;
+  }
+}
 .input {
   position: relative;
   display: flex;
@@ -541,6 +561,30 @@
       border-color: rgba($black-4, 0.5);
     }
   }
+  &--chevron {
+    border-color: $gray-2;
+    border-radius: 4px;
+    padding: 0.3em 1.15em;
+    .ico {
+      font-size: inherit;
+      width: 0.4em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &--text {
+    min-width: 196px;
+    border-radius: 7px;
+    padding: 6px 16px;
+    background: $white;
+    color: $primary;
+    &._red {
+      color: $red;
+    }
+  }
   &._shadow {
     box-shadow: 0 4px 15px rgba($primary, 0.2);
   }
@@ -986,23 +1030,6 @@
     color: $primary;
     display: flex;
     line-height: 0.9;
-  }
-}
-.wrapper {
-  max-width: 1980px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 130px 0 50px 0;
-  display: flex;
-  justify-content: space-between;
-  &__body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1845px;
-    &._lg {
-      max-width: 1940px;
-    }
   }
 }
 .setting {
