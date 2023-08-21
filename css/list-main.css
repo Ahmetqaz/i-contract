@@ -881,6 +881,21 @@ svg {
 .button--icoBg._sm .ico {
   height: 1em;
 }
+.button--icoBg._stock {
+  background: #185f76;
+  border: unset;
+  width: 3.5em;
+  height: 2.7em;
+}
+.button--icoBg._stock .ico {
+  color: #fff;
+}
+.button--icoBg._stock .ico svg {
+  stroke: currentColor;
+}
+.button--icoBg._stock:hover {
+  background: #e96d24;
+}
 .button--dropdown {
   font-size: 12px;
   font-weight: 500;
@@ -1287,6 +1302,12 @@ svg {
           align-items: center;
   gap: 12px;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.dropdown__content-box:hover {
+  opacity: 0.7;
 }
 .dropdown__content-box:hover p {
   color: #185f76;
@@ -2012,6 +2033,9 @@ svg {
   color: #f0142f;
   border-color: #f0142f;
   background: transparent;
+}
+.popUp--stock .button--text:hover {
+  opacity: 0.7;
 }
 
 .filterBox__row {

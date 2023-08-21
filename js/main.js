@@ -133,11 +133,11 @@ window.onclick = function (event) {
     closeMenu();
   }
 };
-const tabBtn = document.getElementById("tabBtn");
-if (tabBtn) {
+const checkTable = document.getElementById("checkTable");
+if (checkTable) {
   const tabContent = document.getElementById("tabContent");
-  tabBtn.addEventListener("change", () => {
-    if (tabBtn.checked === true) {
+  checkTable.addEventListener("change", () => {
+    if (checkTable.checked === true) {
       tabContent.classList.add("active");
     } else {
       tabContent.classList.remove("active");
@@ -149,17 +149,58 @@ const stockCheckbox__footer = document.getElementById("stockCheckbox__footer");
 if (stockCheckbox__footer) {
   const stockPagination = document.getElementById("stockPagination");
   const stockCheckbox = document.getElementById("stockCheckbox");
+  const stockDropdown__button = document.querySelectorAll(
+    ".stockDropdown__button"
+  );
+
   stockCheckbox__footer.addEventListener("change", () => {
     if (stockCheckbox__footer.checked) {
       stockPagination.classList.add("_hide");
       stockCheckbox.checked = true;
-      console.log(stockPagination, "1");
-      console.log(stockCheckbox, "2");
+      stockDropdown__button.forEach((button) => {
+        button.setAttribute("disabled" , "") ;
+      });
+      console.log(stockDropdown__button)
+
     } else {
       stockPagination.classList.remove("_hide");
       stockCheckbox.checked = false;
-      console.log(stockPagination, "3");
-      console.log(stockCheckbox, "4");
+      stockDropdown__button.forEach((button) => {
+        button.removeAttribute("disabled");
+      });
     }
   });
+}
+
+const tabBtn = document.querySelectorAll(".tabBtn");
+if (tabBtn) {
+  const tabEvent = document.querySelectorAll(".tabEvent");
+  tabBtn.forEach((e) => {
+    onTabClick(tabBtn, tabEvent, e);
+  });
+  function onTabClick(tabBtns, tabItems, item) {
+    item.addEventListener("click", function (e) {
+      let currentBtn = item;
+      let tabId = currentBtn.getAttribute("data-tab");
+      let currentTab = document.querySelector(tabId);
+      if (currentBtn.classList.contains("active")) {
+        console.log("now active");
+        const faq = currentBtn.parentElement.querySelector(".tabEvent");
+        if (faq) {
+          faq.classList.remove("active");
+          currentBtn.classList.remove("active");
+        }
+      } else if (!currentBtn.classList.contains("active")) {
+        tabBtns.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        tabItems.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        currentBtn.classList.add("active");
+        currentTab.classList.add("active");
+      }
+    });
+  }
 }

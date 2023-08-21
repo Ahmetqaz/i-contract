@@ -544,6 +544,21 @@
         height: 1em;
       }
     }
+    &._stock {
+      background: $primary;
+      border: unset;
+      width: 3.5em;
+      height: 2.7em;
+      .ico {
+        color: $white;
+        svg {
+          stroke: currentColor;
+        }
+      }
+      &:hover {
+        background: $orange;
+      }
+    }
   }
   &--dropdown {
     font-size: 12px;
@@ -913,10 +928,12 @@
       align-items: center;
       gap: 12px;
       cursor: pointer;
+      @include transition;
       &:hover {
         p {
           color: $primary;
         }
+        opacity: 0.7;
       }
     }
   }

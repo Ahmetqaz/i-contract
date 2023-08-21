@@ -277,6 +277,9 @@
           border-color: $red;
           background: transparent;
         }
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
