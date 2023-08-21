@@ -247,7 +247,7 @@ input::-webkit-inner-spin-button {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fff;
+  background: #f7f7f7;
 }
 
 /* Handle */
