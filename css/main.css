@@ -4189,11 +4189,6 @@ section {
   border-radius: 2px;
   border-color: #DDDDDD;
   border-width: 1px;
-  opacity: 0;
-}
-.stockTable th .input--checkBox input:checked + label .checkBox {
-  border-color: #DDDDDD;
-  opacity: 1;
 }
 .stockTable td {
   font-size: 1em;

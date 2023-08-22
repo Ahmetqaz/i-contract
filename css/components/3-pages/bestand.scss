@@ -248,15 +248,6 @@
             border-radius: 2px;
             border-color: $gray-2;
             border-width: 1px;
-            opacity: 0;
-          }
-          input {
-            &:checked + label {
-              .checkBox {
-                border-color: $gray-2;
-                opacity: 1;
-              }
-            }
           }
         }
       }

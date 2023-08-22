@@ -145,26 +145,20 @@ if (checkTable) {
   });
 }
 
-const stockCheckbox__footer = document.getElementById("stockCheckbox__footer");
-if (stockCheckbox__footer) {
+const stockCheckbox = document.getElementById("stockCheckbox");
+if (stockCheckbox) {
   const stockPagination = document.getElementById("stockPagination");
-  const stockCheckbox = document.getElementById("stockCheckbox");
   const stockDropdown__button = document.querySelectorAll(
     ".stockDropdown__button"
   );
-
-  stockCheckbox__footer.addEventListener("change", () => {
-    if (stockCheckbox__footer.checked) {
+  stockCheckbox.addEventListener("change", () => {
+    if (stockCheckbox.checked) {
       stockPagination.classList.add("_hide");
-      stockCheckbox.checked = true;
       stockDropdown__button.forEach((button) => {
-        button.setAttribute("disabled" , "") ;
+        button.setAttribute("disabled", "");
       });
-      console.log(stockDropdown__button)
-
     } else {
       stockPagination.classList.remove("_hide");
-      stockCheckbox.checked = false;
       stockDropdown__button.forEach((button) => {
         button.removeAttribute("disabled");
       });
@@ -204,3 +198,17 @@ if (tabBtn) {
     });
   }
 }
+
+const tableCheck = document.getElementById("tableCheck");
+tableCheck.addEventListener("change", () => {
+  const checkBoxes = document.querySelectorAll(" td .input input");
+  if (tableCheck.checked) {
+    checkBoxes.forEach((check) => {
+      check.setAttribute("checked", "");
+    });
+  } else {
+    checkBoxes.forEach((check) => {
+      check.removeAttribute("checked");
+    });
+  }
+});
