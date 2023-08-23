@@ -1221,7 +1221,7 @@ svg {
 }
 .button--rounded {
   padding: 0;
-  font-size: 16px;
+  font-size: 20px;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
@@ -5371,6 +5371,10 @@ section {
   .setting .button--primary {
     width: 220px;
     font-size: 15px;
+  }
+
+  .button--rounded {
+    font-size: 16px;
   }
 
   .help__inner-info {

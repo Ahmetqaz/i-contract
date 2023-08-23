@@ -726,7 +726,7 @@
   }
   &--rounded {
     padding: 0;
-    font-size: 16px;
+    font-size: 20px;
     @include transition;
     border-radius: 50%;
     .avatar {
@@ -1427,7 +1427,6 @@
   }
 }
 
-
 @mixin components-1440 {
   .wrapper {
     padding: 120px 0 40px;
@@ -1438,6 +1437,11 @@
         width: 220px;
         font-size: 15px;
       }
+    }
+  }
+  .button {
+    &--rounded {
+      font-size: 16px;
     }
   }
 }
