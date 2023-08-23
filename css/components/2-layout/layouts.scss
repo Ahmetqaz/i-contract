@@ -385,6 +385,94 @@
     }
   }
 }
+.tooltip {
+  position: absolute;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: transparent;
+  top: calc(100% + 10px);
+  left: 50%;
+  @include transformX;
+  @include transition;
+  background: $white;
+  opacity: 0;
+  border: 1px solid $primary;
+  &__outer {
+    position: relative;
+    margin-left: 5px;
+    @include noSelect;
+    z-index: 3;
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: calc(100% + 3px);
+      left: 50%;
+      width: 0;
+      height: 0;
+      @include transformX;
+      border-right: 7px solid transparent;
+      border-left: 7px solid transparent;
+      border-bottom: 0px solid transparent;
+      z-index: 3;
+      @include transition;
+    }
+
+    &.left {
+      .tooltip {
+        left: 0;
+        transform: translateX(-20%);
+      }
+    }
+
+    &.right {
+      .tooltip {
+        left: unset;
+        right: 0;
+        transform: translateX(10%);
+      }
+    }
+
+    &.sm {
+      .tooltip__inner {
+        color: #585858;
+        font-size: 0.88em;
+      }
+    }
+    &:hover {
+      .tooltip {
+        box-shadow: 0 2px 15px 5px rgba(237, 242, 249, 1);
+        padding: 16px 30px;
+        transition-delay: 0.1s;
+        opacity: 1;
+        &__inner {
+          color: #58667e;
+          opacity: 1;
+          max-width: 300px;
+          max-height: 300px;
+          transition: max-width 0.2s ease-in-out 0.2s,
+            max-height 0.2s ease-in-out 0.2s, opacity 0.2s ease-in-out 0.4s;
+        }
+      }
+      &::after {
+        border-bottom: 8px solid $white;
+      }
+    }
+  }
+  &__inner {
+    color: transparent;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.5;
+    width: max-content;
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0s;
+    white-space: nowrap;
+  }
+}
 @mixin layouts-1500 {
   .popUp {
     &__checkBoxes {

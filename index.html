@@ -55,10 +55,6 @@
             <div class="input input--select">
               <input type="hidden">
               <div class="input__selected">
-                <div class="dropdown__image">
-                  <img src="./images/avatar.png" alt="" />
-                </div>
-                <p>Max Mustermann</p>
               </div>
               <span class="ico">
                 <svg width="24" height="24" viewBox="0 0 24 24">
@@ -68,11 +64,11 @@
                 </svg>
               </span>
               <ul class="input__dropdown">
-                <li class="input__dropdown-item">
+                <li class="input__dropdown-item" data-default>
                   <div class="avatar">
                     <img src="./images/avatar.png" alt="" />
                   </div>
-                  <p>Nick Mustermann</p>
+                  <p>Max Mustermann</p>
                 </li>
                 <li class="input__dropdown-item">
                   <div class="avatar">
@@ -252,10 +248,6 @@
           <div class="input input--select">
             <input type="hidden">
             <div class="input__selected">
-              <div class="dropdown__image">
-                <img src="./images/avatar.png" alt="" />
-              </div>
-              <p>Max Mustermann</p>
             </div>
             <span class="ico">
               <svg width="24" height="24" viewBox="0 0 24 24">
@@ -265,11 +257,11 @@
               </svg>
             </span>
             <ul class="input__dropdown">
-              <li class="input__dropdown-item">
+              <li class="input__dropdown-item" data-default>
                 <div class="avatar">
                   <img src="./images/avatar.png" alt="" />
                 </div>
-                <p>Nick Mustermann</p>
+                <p>Max Mustermann</p>
               </li>
               <li class="input__dropdown-item">
                 <div class="avatar">
@@ -327,23 +319,22 @@
                     <div class="input input--select input--primary">
                       <input type="hidden">
                       <div class="input__selected">
-                        <p>Weitere Funktionen</p>
                       </div>
                       <ul class="input__dropdown">
-                        <li class="input__dropdown-item">
-                          <p>Weitere Funktionen</p>
+                        <li class="input__dropdown-item" data-default>
+                          Weitere Funktionen
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Inserat öffnen</p>
+                          Inserat öffnen
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Vergleichen</p>
+                          Vergleichen
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Kontakt finden</p>
+                          Kontakt finden
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Auto Message</p>
+                          Auto Message
                         </li>
                       </ul>
                     </div>
@@ -362,9 +353,9 @@
                             viewBox="0 0 395.71 395.71" xml:space="preserve">
                             <g>
                               <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
-      c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
-      C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
-      c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
+		c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
+		C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
+		c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
                             </g>
                           </svg>
                         </span>
@@ -404,17 +395,21 @@
                 <form class="contactForm">
                   <div class="contactForm__header">
                     <h2>Käufer</h2>
+                    <button class="button button--rounded" type="button">
+                      <span class="avatar">
+                        <img src="./images/avatar.png" alt="">
+                      </span>
+                    </button>
                     <div class="input input--select input--primary">
                       <input type="hidden">
                       <div class="input__selected">
-                        <p>I-Contract GmbH</p>
                       </div>
                       <ul class="input__dropdown">
-                        <li class="input__dropdown-item">
-                          <p>I-Contract GmbH</p>
+                        <li class="input__dropdown-item" data-default>
+                          I-Contract GmbH
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Auto 24</p>
+                          Auto 24
                         </li>
                       </ul>
                     </div>
@@ -525,14 +520,13 @@
                     <div class="input input--select input--primary">
                       <input type="hidden">
                       <div class="input__selected">
-                        <p>Nein</p>
                       </div>
                       <ul class="input__dropdown">
-                        <li class="input__dropdown-item">
-                          <p>Nein</p>
+                        <li class="input__dropdown-item" data-default>
+                          Nein
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Ja</p>
+                          Ja
                         </li>
                       </ul>
                     </div>
@@ -590,14 +584,13 @@
                     <div class="input input--select input--primary">
                       <input type="hidden">
                       <div class="input__selected">
-                        <p>Nein</p>
                       </div>
                       <ul class="input__dropdown">
-                        <li class="input__dropdown-item">
-                          <p>Nein</p>
+                        <li class="input__dropdown-item" data-default>
+                          Nein
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Ja</p>
+                          Ja
                         </li>
                       </ul>
                     </div>
@@ -650,8 +643,7 @@
                         <label for="contract-vehicle-accident-free-value">
                           Unfallfrei
                         </label>
-                        <textarea id="contract-vehicle-accident-free-value">
-  Ja</textarea>
+                        <textarea id="contract-vehicle-accident-free-value">Ja</textarea>
                       </div>
                     </div>
                     <div class="conditionBody__row-item">
@@ -659,8 +651,7 @@
                         <label for="contract-vehicle-repainting-value">
                           Nachlackierung
                         </label>
-                        <textarea id="contract-vehicle-repainting-value">
-  Nein</textarea>
+                        <textarea id="contract-vehicle-repainting-value">Nein</textarea>
                       </div>
                     </div>
                     <div class="conditionBody__row-item">
@@ -676,8 +667,7 @@
                         <label for="contract-vehicle-engine-gearbox-clutch-value">
                           Motor, Getriebe, Kupplung(editierbar)
                         </label>
-                        <textarea id="contract-vehicle-engine-gearbox-clutch-value">
-  Alles in Ordnung</textarea>
+                        <textarea id="contract-vehicle-engine-gearbox-clutch-value">Alles in Ordnung</textarea>
                       </div>
                     </div>
                   </div>
@@ -686,21 +676,13 @@
                     <div class="input input--select input--primary" id="contract-vehicle-ready-to-drive-value">
                       <input type="hidden">
                       <div class="input__selected">
-                        <p>Nein</p>
-                        <span class="ico">
-                          <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path id="Path_399" data-name="Path 399" fill="none" />
-                            <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
-                              stroke-linejoin="round" stroke-width="2" />
-                          </svg>
-                        </span>
                       </div>
                       <ul class="input__dropdown">
-                        <li class="input__dropdown-item">
-                          <p>Nein</p>
+                        <li class="input__dropdown-item" data-default>
+                          Nein
                         </li>
                         <li class="input__dropdown-item">
-                          <p>Ja</p>
+                          Ja
                         </li>
                       </ul>
                     </div>
@@ -743,17 +725,16 @@
                   <div class="input input--select input--primary " id="contract-vehicle-payment-method-value">
                     <input type="hidden">
                     <div class="input__selected">
-                      <p>Bargeld</p>
                     </div>
                     <ul class="input__dropdown">
-                      <li class="input__dropdown-item">
-                        <p>Bargeld</p>
+                      <li class="input__dropdown-item" data-default>
+                        Bargeld
                       </li>
                       <li class="input__dropdown-item">
-                        <p>Überweisung</p>
+                        Überweisung
                       </li>
                       <li class="input__dropdown-item">
-                        <p>Echtzeitüberweisung</p>
+                        Echtzeitüberweisung
                       </li>
                     </ul>
                   </div>
@@ -763,21 +744,13 @@
                   <div class="input input--select input--primary" id="contract-vehicle-pickup-date-value">
                     <input type="hidden">
                     <div class="input__selected">
-                      <p>Ja</p>
-                      <span class="ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                          <path id="Path_399" data-name="Path 399" fill="none" />
-                          <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" />
-                        </svg>
-                      </span>
                     </div>
                     <ul class="input__dropdown">
-                      <li class="input__dropdown-item">
-                        <p>Ja</p>
+                      <li class="input__dropdown-item" data-default>
+                        Ja
                       </li>
                       <li class="input__dropdown-item">
-                        <p>Nein</p>
+                        Nein
                       </li>
                     </ul>
                   </div>
