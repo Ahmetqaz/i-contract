@@ -1,478 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Home</title>
-  </head>
-  <body>
-    <div class="main">
-      <!-- #header start-->
-      <header class="header">
-        <div class="autoContainer">
-          <div class="header__inner">
-            <div class="header__inner-logo">
-              <img src="./images/logo.png" alt="" />
-            </div>
-            <div class="header__inner-box">
-              <button class="button button--ico">
-                <span class="ico">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <g>
-                      <path id="Path_381" data-name="Path 381" fill="none" />
-                      <path
-                        id="Path_382"
-                        data-name="Path 382"
-                        d="M3,20l1.3-3.9A7.417,7.417,0,0,1,6.4,5.726a9.856,9.856,0,0,1,11.846.48,7.362,7.362,0,0,1,1.029,10.5A9.733,9.733,0,0,1,7.7,19L3,20"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <line
-                        id="Line_15"
-                        data-name="Line 15"
-                        transform="translate(12 12)"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <line
-                        id="Line_16"
-                        data-name="Line 16"
-                        transform="translate(8 12)"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <line
-                        id="Line_17"
-                        data-name="Line 17"
-                        transform="translate(16 12)"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </svg>
-                </span>
-              </button>
-              <button class="button button--ico">
-                <span class="ico">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <g>
-                      <path id="Path_401" data-name="Path 401" fill="none" />
-                      <path
-                        id="Path_402"
-                        data-name="Path 402"
-                        d="M10,5a2,2,0,1,1,4,0,7,7,0,0,1,4,6v3a4,4,0,0,0,2,3H4a4,4,0,0,0,2-3V11a7,7,0,0,1,4-6"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                      <path
-                        id="Path_403"
-                        data-name="Path 403"
-                        d="M9,17v1a3,3,0,0,0,6,0V17"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </svg>
-                </span>
-                <span class="notification"> 2 </span>
-              </button>
-              <div class="dropdown">
-                <div class="dropdown__button">
-                  <div class="dropdown__image">
-                    <img src="./images/avatar.png" alt="" />
-                  </div>
-                  <p>Max Mustermann</p>
-                  <span class="ico">
-                    <svg width="24" height="24" viewBox="0 0 24 24">
-                      <path id="Path_399" data-name="Path 399" fill="none" />
-                      <path
-                        id="Path_400"
-                        data-name="Path 400"
-                        d="M6,9l6,6,6-6"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </span>
-                </div>
-                <div class="dropdown__content">
-                  <div class="dropdown__content-box">
-                    <div class="dropdown__image">
-                      <img src="./images/avatar.png" alt="" />
-                    </div>
-                    <p>Max Mustermann</p>
-                  </div>
-                  <div class="dropdown__content-box">
-                    <div class="dropdown__image">
-                      <img src="./images/avatar.png" alt="" />
-                    </div>
-                    <p>Max Mustermann</p>
-                  </div>
-                </div>
-              </div>
-              <div class="burger" id="menuBtn">
-                <span></span>
-              </div>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>generate Contract</title>
+</head>
+
+<body>
+  <div class="main">
+    <!-- #header start-->
+    <header class="header">
+      <div class="autoContainer">
+        <div class="header__inner">
+          <div class="header__inner-logo">
+            <img src="./images/logo.png" alt="" />
           </div>
-        </div>
-      </header>
-      <!-- #header end -->
-      <!-- wrapper start-->
-      <div class="wrapper">
-        <nav class="sidebar" id="menu">
-          <div class="sidebar__inner">
-            <div class="sidebar__inner-switch">
-              <span class="custIcon custIcon--right"></span>
-            </div>
-            <a href="#" class="sidebar__inner-link active">
-              <span class="ico">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <g>
-                    <path id="Path_372" data-name="Path 372" fill="none" />
-                    <path
-                      id="Path_373"
-                      data-name="Path 373"
-                      d="M5,12H3l9-9,9,9H19"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      id="Path_374"
-                      data-name="Path 374"
-                      d="M5,12v7a2,2,0,0,0,2,2H17a2,2,0,0,0,2-2V12"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      id="Path_375"
-                      data-name="Path 375"
-                      d="M9,21V15a2,2,0,0,1,2-2h2a2,2,0,0,1,2,2v6"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-              </span>
-              <div class="text">Kontaktcontactrmationen</div>
-            </a>
-            <a href="#" class="sidebar__inner-link">
-              <span class="ico">
-                <svg class="fill" width="24" height="24" viewBox="0 0 24 24">
-                  <g>
-                    <g id="home">
-                      <path id="Path_372" data-name="Path 372" fill="none" />
-                    </g>
-                    <path
-                      id="Shape"
-                      d="M13,20H1a1,1,0,0,1-1-1V6.5a2,2,0,0,1,2-2H6V2A2,2,0,0,1,8,0h4a2,2,0,0,1,2,2V9h4a2,2,0,0,1,2,2v8a1,1,0,0,1-1,1Zm5-2V11H14v7ZM8,18h4V11q0-.03,0-.059V2H8ZM2,18H6V6.5H2Z"
-                      transform="translate(2 2)"
-                    />
-                  </g>
-                </svg>
-              </span>
-              <span class="text"> Bestand </span>
-            </a>
-            <a href="#" class="sidebar__inner-link _notification">
-              <span class="ico">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <g>
-                    <path id="Path_376" data-name="Path 376" fill="none" />
-                    <rect
-                      id="Rectangle_603"
-                      data-name="Rectangle 603"
-                      width="18"
-                      height="14"
-                      rx="2"
-                      transform="translate(3 5)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      id="Path_377"
-                      data-name="Path 377"
-                      d="M3,7l9,6,9-6"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-              </span>
-              <span class="text"> Benachrichtigung </span>
-              <span class="notification"> 16 </span>
-            </a>
-            <a href="#" class="sidebar__inner-link">
-              <span class="ico">
-                <svg
-                  class="fill"
-                  width="20"
-                  height="18.677"
-                  viewBox="0 0 20 18.677"
-                >
-                  <path
-                    id="setting_icon"
-                    data-name="setting icon"
-                    d="M188.473,1012.058a3.706,3.706,0,0,1,3.761-3.641,3.87,3.87,0,0,1,.84.091.853.853,0,0,1,.668,1.013l0,.008a.885.885,0,0,1-1.057.643,2.024,2.024,0,0,0-2.4,1.527,1.954,1.954,0,0,0-.044.358,2,2,0,0,0,4,0,1.9,1.9,0,0,0-.027-.322.858.858,0,0,1,.724-.98h0a.88.88,0,0,1,1.015.7,3.524,3.524,0,0,1,.051.6,3.762,3.762,0,0,1-7.523,0h0Zm-11.592.853a.854.854,0,1,1,0-1.708h7.235a.854.854,0,1,1,0,1.708h-7.235Zm-.882-12.2a3.5,3.5,0,0,1,.052-.6.879.879,0,0,1,1.015-.7.858.858,0,0,1,.725.98h0a2.005,2.005,0,1,0,2-1.612,2.036,2.036,0,0,0-.475.049.881.881,0,0,1-1.06-.638.852.852,0,0,1,.656-1.019h0a3.767,3.767,0,0,1,4.511,2.772,3.624,3.624,0,0,1,.095.771,3.764,3.764,0,0,1-7.523,0Zm11.882.854a.854.854,0,1,1,0-1.708h7.233a.854.854,0,1,1,0,1.708Z"
-                    transform="translate(-176 -997.073)"
-                  />
-                </svg>
-              </span>
-              <span class="text"> Invoices </span>
-            </a>
-            <a href="#" class="sidebar__inner-link">
-              <span class="ico">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <g>
-                    <path id="Path_393" data-name="Path 393" fill="none" />
-                    <circle
-                      id="Ellipse_3"
-                      data-name="Ellipse 3"
-                      cx="4"
-                      cy="4"
-                      r="4"
-                      transform="translate(5 3)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      id="Path_394"
-                      data-name="Path 394"
-                      d="M3,21V19a4,4,0,0,1,4-4h4a4,4,0,0,1,4,4v2"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      id="Path_395"
-                      data-name="Path 395"
-                      d="M16,3.13a4,4,0,0,1,0,7.75"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      id="Path_396"
-                      data-name="Path 396"
-                      d="M21,21V19a4,4,0,0,0-3-3.85"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-              </span>
-              <span class="text"> Whatsapp </span>
-            </a>
-            <a href="#" class="sidebar__inner-link">
+          <div class="header__inner-box">
+            <button class="button button--ico">
               <span class="ico">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g>
                     <path id="Path_381" data-name="Path 381" fill="none" />
-                    <path
-                      id="Path_382"
-                      data-name="Path 382"
+                    <path id="Path_382" data-name="Path 382"
                       d="M3,20l1.3-3.9A7.417,7.417,0,0,1,6.4,5.726a9.856,9.856,0,0,1,11.846.48,7.362,7.362,0,0,1,1.029,10.5A9.733,9.733,0,0,1,7.7,19L3,20"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_15"
-                      data-name="Line 15"
-                      transform="translate(12 12)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_16"
-                      data-name="Line 16"
-                      transform="translate(8 12)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_17"
-                      data-name="Line 17"
-                      transform="translate(16 12)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
+                      fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_15" data-name="Line 15" transform="translate(12 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_16" data-name="Line 16" transform="translate(8 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_17" data-name="Line 17" transform="translate(16 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </g>
                 </svg>
               </span>
-              <span class="text"> Nachrichten </span>
-            </a>
-            <a href="#" class="sidebar__inner-link">
+            </button>
+            <button class="button button--ico">
               <span class="ico">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g>
-                    <path id="Path_383" data-name="Path 383" fill="none" />
-                    <rect
-                      id="Rectangle_604"
-                      data-name="Rectangle 604"
-                      width="16"
-                      height="16"
-                      rx="2"
-                      transform="translate(4 5)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_18"
-                      data-name="Line 18"
-                      y2="4"
-                      transform="translate(16 3)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_19"
-                      data-name="Line 19"
-                      y2="4"
-                      transform="translate(8 3)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_20"
-                      data-name="Line 20"
-                      x2="16"
-                      transform="translate(4 11)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_21"
-                      data-name="Line 21"
-                      x2="4"
-                      transform="translate(10 16)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
+                    <path id="Path_401" data-name="Path 401" fill="none" />
+                    <path id="Path_402" data-name="Path 402"
+                      d="M10,5a2,2,0,1,1,4,0,7,7,0,0,1,4,6v3a4,4,0,0,0,2,3H4a4,4,0,0,0,2-3V11a7,7,0,0,1,4-6" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_403" data-name="Path 403" d="M9,17v1a3,3,0,0,0,6,0V17" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                   </g>
                 </svg>
               </span>
-              <span class="text"> Kalender </span>
-            </a>
-            <a href="#" class="sidebar__inner-link">
-              <span class="ico">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <g>
-                    <path id="Path_384" data-name="Path 384" fill="none" />
-                    <circle
-                      id="Ellipse_1"
-                      data-name="Ellipse 1"
-                      cx="9"
-                      cy="9"
-                      r="9"
-                      transform="translate(3 3)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <line
-                      id="Line_22"
-                      data-name="Line 22"
-                      transform="translate(12 17)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <path
-                      id="Path_385"
-                      data-name="Path 385"
-                      d="M12,13.5A1.5,1.5,0,0,1,13,12a2.6,2.6,0,1,0-3-4"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-              </span>
-              <sspan class="text"> Hilfe </sspan>
-            </a>
-            <a href="#" class="sidebar__inner-link">
-              <span class="ico">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <g>
-                    <path id="Path_386" data-name="Path 386" fill="none" />
-                    <path
-                      id="Path_387"
-                      data-name="Path 387"
-                      d="M10.325,4.317a1.724,1.724,0,0,1,3.35,0,1.724,1.724,0,0,0,2.573,1.066,1.725,1.725,0,0,1,2.37,2.37,1.724,1.724,0,0,0,1.065,2.572,1.724,1.724,0,0,1,0,3.35,1.724,1.724,0,0,0-1.066,2.573,1.725,1.725,0,0,1-2.37,2.37,1.724,1.724,0,0,0-2.572,1.065,1.724,1.724,0,0,1-3.35,0,1.724,1.724,0,0,0-2.573-1.066,1.725,1.725,0,0,1-2.37-2.37,1.724,1.724,0,0,0-1.065-2.572,1.724,1.724,0,0,1,0-3.35A1.724,1.724,0,0,0,5.383,7.752a1.725,1.725,0,0,1,2.37-2.37,1.723,1.723,0,0,0,2.572-1.065Z"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                    <circle
-                      id="Ellipse_2"
-                      data-name="Ellipse 2"
-                      cx="3"
-                      cy="3"
-                      r="3"
-                      transform="translate(9 9)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-              </span>
-              <span class="text"> Einstellungen </span>
-            </a>
+              <span class="notification"> 2 </span>
+            </button>
             <div class="dropdown">
               <div class="dropdown__button">
                 <div class="dropdown__image">
@@ -482,15 +61,8 @@
                 <span class="ico">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <path id="Path_399" data-name="Path 399" fill="none" />
-                    <path
-                      id="Path_400"
-                      data-name="Path 400"
-                      d="M6,9l6,6,6-6"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    />
+                    <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" />
                   </svg>
                 </span>
               </div>
@@ -509,980 +81,768 @@
                 </div>
               </div>
             </div>
+            <div class="burger" id="menuBtn">
+              <span></span>
+            </div>
           </div>
-        </nav>
-        <div class="wrapper__body sideSpace">
-          <div class="tabs">
-            <div class="autoContainer _sm">
-              <div class="tabs__inner">
-                <div class="tabs__inner-row">
-                  <button class="button button--primary">Vertragsdaten</button>
-                  <button class="button button--primary _bg">Vorschau</button>
+        </div>
+      </div>
+    </header>
+    <!-- #header end -->
+    <!-- wrapper start-->
+    <div class="wrapper">
+      <nav class="sidebar" id="menu">
+        <div class="sidebar__inner">
+          <div class="sidebar__inner-switch">
+            <span class="custIcon custIcon--right"></span>
+          </div>
+          <a href="#" class="sidebar__inner-link active">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_372" data-name="Path 372" fill="none" />
+                  <path id="Path_373" data-name="Path 373" d="M5,12H3l9-9,9,9H19" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_374" data-name="Path 374" d="M5,12v7a2,2,0,0,0,2,2H17a2,2,0,0,0,2-2V12" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_375" data-name="Path 375" d="M9,21V15a2,2,0,0,1,2-2h2a2,2,0,0,1,2,2v6" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <div class="text">Kontaktcontactrmationen</div>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg class="fill" width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <g id="home">
+                    <path id="Path_372" data-name="Path 372" fill="none" />
+                  </g>
+                  <path id="Shape"
+                    d="M13,20H1a1,1,0,0,1-1-1V6.5a2,2,0,0,1,2-2H6V2A2,2,0,0,1,8,0h4a2,2,0,0,1,2,2V9h4a2,2,0,0,1,2,2v8a1,1,0,0,1-1,1Zm5-2V11H14v7ZM8,18h4V11q0-.03,0-.059V2H8ZM2,18H6V6.5H2Z"
+                    transform="translate(2 2)" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Bestand </span>
+          </a>
+          <a href="#" class="sidebar__inner-link _notification">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_376" data-name="Path 376" fill="none" />
+                  <rect id="Rectangle_603" data-name="Rectangle 603" width="18" height="14" rx="2"
+                    transform="translate(3 5)" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" />
+                  <path id="Path_377" data-name="Path 377" d="M3,7l9,6,9-6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Benachrichtigung </span>
+            <span class="notification"> 16 </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg class="fill" width="20" height="18.677" viewBox="0 0 20 18.677">
+                <path id="setting_icon" data-name="setting icon"
+                  d="M188.473,1012.058a3.706,3.706,0,0,1,3.761-3.641,3.87,3.87,0,0,1,.84.091.853.853,0,0,1,.668,1.013l0,.008a.885.885,0,0,1-1.057.643,2.024,2.024,0,0,0-2.4,1.527,1.954,1.954,0,0,0-.044.358,2,2,0,0,0,4,0,1.9,1.9,0,0,0-.027-.322.858.858,0,0,1,.724-.98h0a.88.88,0,0,1,1.015.7,3.524,3.524,0,0,1,.051.6,3.762,3.762,0,0,1-7.523,0h0Zm-11.592.853a.854.854,0,1,1,0-1.708h7.235a.854.854,0,1,1,0,1.708h-7.235Zm-.882-12.2a3.5,3.5,0,0,1,.052-.6.879.879,0,0,1,1.015-.7.858.858,0,0,1,.725.98h0a2.005,2.005,0,1,0,2-1.612,2.036,2.036,0,0,0-.475.049.881.881,0,0,1-1.06-.638.852.852,0,0,1,.656-1.019h0a3.767,3.767,0,0,1,4.511,2.772,3.624,3.624,0,0,1,.095.771,3.764,3.764,0,0,1-7.523,0Zm11.882.854a.854.854,0,1,1,0-1.708h7.233a.854.854,0,1,1,0,1.708Z"
+                  transform="translate(-176 -997.073)" />
+              </svg>
+            </span>
+            <span class="text"> Invoices </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_393" data-name="Path 393" fill="none" />
+                  <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(5 3)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_394" data-name="Path 394" d="M3,21V19a4,4,0,0,1,4-4h4a4,4,0,0,1,4,4v2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_395" data-name="Path 395" d="M16,3.13a4,4,0,0,1,0,7.75" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_396" data-name="Path 396" d="M21,21V19a4,4,0,0,0-3-3.85" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Whatsapp </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_381" data-name="Path 381" fill="none" />
+                  <path id="Path_382" data-name="Path 382"
+                    d="M3,20l1.3-3.9A7.417,7.417,0,0,1,6.4,5.726a9.856,9.856,0,0,1,11.846.48,7.362,7.362,0,0,1,1.029,10.5A9.733,9.733,0,0,1,7.7,19L3,20"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_15" data-name="Line 15" transform="translate(12 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_16" data-name="Line 16" transform="translate(8 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_17" data-name="Line 17" transform="translate(16 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Nachrichten </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_383" data-name="Path 383" fill="none" />
+                  <rect id="Rectangle_604" data-name="Rectangle 604" width="16" height="16" rx="2"
+                    transform="translate(4 5)" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" />
+                  <line id="Line_18" data-name="Line 18" y2="4" transform="translate(16 3)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_19" data-name="Line 19" y2="4" transform="translate(8 3)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_20" data-name="Line 20" x2="16" transform="translate(4 11)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_21" data-name="Line 21" x2="4" transform="translate(10 16)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Kalender </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_384" data-name="Path 384" fill="none" />
+                  <circle id="Ellipse_1" data-name="Ellipse 1" cx="9" cy="9" r="9" transform="translate(3 3)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_22" data-name="Line 22" transform="translate(12 17)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_385" data-name="Path 385" d="M12,13.5A1.5,1.5,0,0,1,13,12a2.6,2.6,0,1,0-3-4"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <sspan class="text"> Hilfe </sspan>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_386" data-name="Path 386" fill="none" />
+                  <path id="Path_387" data-name="Path 387"
+                    d="M10.325,4.317a1.724,1.724,0,0,1,3.35,0,1.724,1.724,0,0,0,2.573,1.066,1.725,1.725,0,0,1,2.37,2.37,1.724,1.724,0,0,0,1.065,2.572,1.724,1.724,0,0,1,0,3.35,1.724,1.724,0,0,0-1.066,2.573,1.725,1.725,0,0,1-2.37,2.37,1.724,1.724,0,0,0-2.572,1.065,1.724,1.724,0,0,1-3.35,0,1.724,1.724,0,0,0-2.573-1.066,1.725,1.725,0,0,1-2.37-2.37,1.724,1.724,0,0,0-1.065-2.572,1.724,1.724,0,0,1,0-3.35A1.724,1.724,0,0,0,5.383,7.752a1.725,1.725,0,0,1,2.37-2.37,1.723,1.723,0,0,0,2.572-1.065Z"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <circle id="Ellipse_2" data-name="Ellipse 2" cx="3" cy="3" r="3" transform="translate(9 9)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Einstellungen </span>
+          </a>
+          <div class="dropdown">
+            <div class="dropdown__button">
+              <div class="dropdown__image">
+                <img src="./images/avatar.png" alt="" />
+              </div>
+              <p>Max Mustermann</p>
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path id="Path_399" data-name="Path 399" fill="none" />
+                  <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </svg>
+              </span>
+            </div>
+            <div class="dropdown__content">
+              <div class="dropdown__content-box">
+                <div class="dropdown__image">
+                  <img src="./images/avatar.png" alt="" />
                 </div>
-                <div class="tabs__inner-row _links">
-                  <a href="#contact" class="tabsLink active"> Kontaktdaten </a>
-                  <a href="#condition" class="tabsLink"> Fahrzeugdaten </a>
-                  <a href="#info" class="tabsLink"> Fahrzeugzustand </a>
-                  <a href="#details" class="tabsLink"> Fahrzeugdetails </a>
-                  <a href="#data" class="tabsLink">
-                    Besondere Vereinbarungen
-                  </a>
+                <p>Max Mustermann</p>
+              </div>
+              <div class="dropdown__content-box">
+                <div class="dropdown__image">
+                  <img src="./images/avatar.png" alt="" />
                 </div>
+                <p>Max Mustermann</p>
               </div>
             </div>
           </div>
-          <div class="anchor" id="contact"></div>
-          <section class="contact">
-            <div class="autoContainer _sm">
-              <div class="contact__inner">
-                <div class="contact__inner-row">
-                  <div class="contactContent">
-                    <div class="contactContent__header">
-                      <div class="input input--search">
-                        <input type="text" placeholder="Suche" />
-                        <span class="ico">
-                          <svg
-                            class="fill"
-                            width="17"
-                            height="17"
-                            viewBox="0 0 17 17"
-                          >
-                            <path
-                              id="color"
-                              d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
-                              fill="#7e84a3"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div class="dropdown">
-                        <div class="dropdown__button">
-                          <p>Weitere Funktionen</p>
-                          <span class="ico">
-                            <svg
-                              class="fill"
-                              width="10.008"
-                              height="7.391"
-                              viewBox="0 0 10.008 7.391"
-                            >
-                              <g
-                                id="control_down_"
-                                data-name="control down "
-                                transform="translate(0 0)"
-                              >
-                                <path
-                                  id="Dreieck_545_Kopie_2"
-                                  data-name="Dreieck 545 Kopie 2"
-                                  d="M1215.328,1885.949a1,1,0,0,1-1.656,0l-4-5.389a1,1,0,0,1,.828-1.562h8a1,1,0,0,1,.828,1.562Z"
-                                  transform="translate(-1209.496 -1878.999)"
-                                  fill="#fff"
-                                />
-                              </g>
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="dropdown__content">
-                          <div class="dropdown__content-box">
-                            <p>Weitere Funktionen</p>
-                          </div>
-                          <div class="dropdown__content-box">
-                            <p>Weitere Funktionen</p>
-                          </div>
-                        </div>
-                      </div>
-                      <h4>Bitte fügen Sie die Url von dem Inserat ein</h4>
-                    </div>
-                    <div class="contactContent__image">
-                      <div class="ratioImage ratioImage--contain">
-                        <img src="./images/car.png" alt="" />
-                      </div>
-                      <div class="contactContent__image-info">
-                        <h2>TESLA</h2>
-                        <h4>NUR PLATZHALTER FÜR BILD</h4>
-                        <h3>
-                          <span class="ico">
-                            <svg
-                              class="fill"
-                              fill="#000000"
-                              version="1.1"
-                              id="Capa_1"
-                              width="800px"
-                              height="800px"
-                              viewBox="0 0 395.71 395.71"
-                              xml:space="preserve"
-                            >
-                              <g>
-                                <path
-                                  d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
-		c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
-		C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
-		c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"
-                                />
-                              </g>
-                            </svg>
-                          </span>
-                          NUR PLATZHALTER FÜR BILD
-                        </h3>
-                      </div>
-                    </div>
-                    <div class="contactContent__currency">
-                      <div class="contactContent__currency-item _lg">
-                        <div class="input input--currency">
-                          <label for="contract-purchase-price-value">
-                            Kaufpreis
-                          </label>
-                          <input
-                            type="text"
-                            placeholder="XXXXXX"
-                            id="contract-purchase-price-value"
-                          />
-                          <span class="currency"> Euro </span>
-                        </div>
-                      </div>
-                      <div class="contactContent__currency-item">
-                        <div
-                          class="contactContent__currency-item-wrapper"
-                          id="tabContent"
-                        >
-                          <div class="input input--currencySm">
-                            <label for="cur-2"> Nettobetrag </label>
-                            <input type="text" placeholder="XXX" id="cur-2" />
-                          </div>
-                          <div class="input input--currencySm">
-                            <label for="cur-3"> 19% MwSt. </label>
-                            <input type="text" placeholder="XXX" id="cur-3" />
-                          </div>
-                        </div>
-                        <div class="input input--checkBox">
-                          <input type="checkbox" id="tabBtn" />
-                          <label for="tabBtn">
-                            MwSt. hinzufügen
-                            <span class="checkBox"> </span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <form class="contactForm">
-                    <div class="contactForm__header">
-                      <h2>Verkäufer</h2>
-                      <div class="dropdown">
-                        <div class="dropdown__button">
-                          <p>Daten ansehen</p>
-                          <span class="ico">
-                            <svg
-                              class="fill"
-                              width="10.008"
-                              height="7.391"
-                              viewBox="0 0 10.008 7.391"
-                            >
-                              <g
-                                id="control_down_"
-                                data-name="control down "
-                                transform="translate(0 0)"
-                              >
-                                <path
-                                  id="Dreieck_545_Kopie_2"
-                                  data-name="Dreieck 545 Kopie 2"
-                                  d="M1215.328,1885.949a1,1,0,0,1-1.656,0l-4-5.389a1,1,0,0,1,.828-1.562h8a1,1,0,0,1,.828,1.562Z"
-                                  transform="translate(-1209.496 -1878.999)"
-                                  fill="#fff"
-                                />
-                              </g>
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="dropdown__content">
-                          <div class="dropdown__content-box">
-                            <p>Daten ansehen</p>
-                          </div>
-                          <div class="dropdown__content-box">
-                            <p>Daten ansehen</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contactForm__body">
-                      <h2>Käufer</h2>
-                      <div class="input input--text">
-                        <label for="contract-buyer-name-value">
-                          Name/Firma
-                        </label>
-                        <input type="text" id="contract-buyer-name-value" />
-                      </div>
-                      <div class="input input--text">
-                        <label for="contract-buyer-address-value">
-                          Straße, Hausnummer
-                        </label>
-                        <input type="text" id="contract-buyer-address-value" />
-                      </div>
-                      <div class="input input--text">
-                        <label for="contract-buyer-location-value">
-                          PLZ, Ort
-                          <span> * </span>
-                        </label>
-                        <input type="text" id="contract-buyer-location-value" />
-                      </div>
-                      <div class="input input--text">
-                        <label for="contract-buyer-phone-value">
-                          Telefonnummer
-                        </label>
-                        <input type="text" id="contract-buyer-phone-value" />
-                      </div>
-                      <div class="input input--text">
-                        <label for="contract-buyer-mail-value">
-                          E-Mail
-                          <span> * </span>
-                        </label>
-                        <input type="email" id="contract-buyer-mail-value" />
-                      </div>
-                      <div class="input input--text">
-                        <label for="contract-buyer-tax-number-value">
-                          Steuernummer
-                        </label>
-                        <input
-                          type="text"
-                          id="contract-buyer-tax-number-value"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                </div>
+        </div>
+      </nav>
+      <div class="wrapper__body sideSpace">
+        <div class="tabs">
+          <div class="autoContainer _sm">
+            <div class="tabs__inner">
+              <div class="tabs__inner-row">
+                <button class="button button--primary">Vertragsdaten</button>
+                <button class="button button--primary _bg">Vorschau</button>
+              </div>
+              <div class="tabs__inner-row _links">
+                <a href="#contact" class="tabsLink active"> Kontaktdaten </a>
+                <a href="#info" class="tabsLink"> Fahrzeugdaten </a>
+                <a href="#condition" class="tabsLink"> Fahrzeugzustand </a>
+                <a href="#details" class="tabsLink"> Fahrzeugdetails </a>
+                <a href="#data" class="tabsLink">
+                  Besondere Vereinbarungen
+                </a>
               </div>
             </div>
-          </section>
-          <div class="anchor" id="condition"></div>
-          <section class="condition">
-            <div class="autoContainer _sm">
-              <div class="condition__inner">
-                <div class="condition__inner-content">
-                  <h2>Fahrzeugzustand</h2>
-                  <div class="conditionBox">
-                    <div class="conditionBox__image">
+          </div>
+        </div>
+        <div class="anchor" id="contact"></div>
+        <section class="contact">
+          <div class="autoContainer _sm">
+            <div class="contact__inner">
+              <div class="contact__inner-row">
+                <div class="contactContent">
+                  <div class="contactContent__header">
+                    <div class="input input--search">
+                      <input type="text" placeholder="Suche" id="car_url" />
                       <span class="ico">
-                        <img src="./images/condition.png" alt="" />
+                        <svg class="fill" width="17" height="17" viewBox="0 0 17 17">
+                          <path id="color"
+                            d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
+                            fill="#7e84a3" />
+                        </svg>
                       </span>
                     </div>
-                    <div class="conditionBox__info">
-                      <h4>Fahrzeugskizze</h4>
-                      <p>
-                        Schauen Sie sich die Fahrzeugskizze erneut an oder
-                        überarbeiten Sie diese hier.
-                      </p>
+                    <div class="input input--select input--primary">
+                      <input type="hidden">
+                      <div class="input__selected">
+                        <p>Weitere Funktionen</p>
+                      </div>
+                      <ul class="input__dropdown">
+                        <li class="input__dropdown-item">
+                          <p>Weitere Funktionen</p>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Inserat öffnen</p>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Vergleichen</p>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Kontakt finden</p>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Auto Message</p>
+                        </li>
+                      </ul>
                     </div>
-                    <button
-                      class="button button--primary"
-                      id="addContractFields"
-                    >
-                      anzeigen
-                    </button>
+                    <h4>Bitte fügen Sie die Url von dem Inserat ein</h4>
                   </div>
-                  <div class="conditionBody">
-                    <h4>Ausgewählte Schäden</h4>
-                    <div class="conditionBody__row">
-                      <div class="conditionBody__row-item">
-                        <div class="input input--textarea">
-                          <label for="contract-vehicle-accident-free-value">
-                            Unfallfrei
-                          </label>
-                          <textarea id="contract-vehicle-accident-free-value">
-Ja</textarea
-                          >
-                        </div>
-                      </div>
-                      <div class="conditionBody__row-item">
-                        <div class="input input--textarea">
-                          <label for="contract-vehicle-repainting-value">
-                            Nachlackierung
-                          </label>
-                          <textarea id="contract-vehicle-repainting-value">
-Nein</textarea
-                          >
-                        </div>
-                      </div>
-                      <div class="conditionBody__row-item">
-                        <div class="input input--textarea">
-                          <label for="contract-vehicle-damages-key">
-                            Sonstige Schäden
-                          </label>
-                          <textarea
-                            id="contract-vehicle-damages-key"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <div class="conditionBody__row-item _lg">
-                        <div class="input input--textarea">
-                          <label
-                            for="contract-vehicle-engine-gearbox-clutch-value"
-                          >
-                            Motor, Getriebe, Kupplung(editierbar)
-                          </label>
-                          <textarea
-                            id="contract-vehicle-engine-gearbox-clutch-value"
-                          >
-Alles in Ordnung</textarea
-                          >
-                        </div>
+                  <div class="contactContent__image">
+                    <div class="ratioImage ratioImage--contain">
+                      <img src="./images/car.png" alt="" />
+                    </div>
+                    <div class="contactContent__image-info">
+                      <h2>TESLA</h2>
+                      <h4>NUR PLATZHALTER FÜR BILD</h4>
+                      <h3>
+                        <span class="ico">
+                          <svg class="fill" fill="#000000" version="1.1" id="Capa_1" width="800px" height="800px"
+                            viewBox="0 0 395.71 395.71" xml:space="preserve">
+                            <g>
+                              <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
+      c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
+      C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
+      c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
+                            </g>
+                          </svg>
+                        </span>
+                        NUR PLATZHALTER FÜR BILD
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="contactContent__currency">
+                    <div class="contactContent__currency-item _lg">
+                      <div class="input input--currency">
+                        <label for="contract-purchase-price-value">
+                          Kaufpreis
+                        </label>
+                        <input type="text" placeholder="XXXXXX" id="contract-purchase-price-value" />
+                        <span class="currency"> Euro </span>
                       </div>
                     </div>
-                    <div class="conditionBody__info">
-                      <h4>Uneingeschränkt Fahrbereit</h4>
-                      <div
-                        class="dropdown dropdown--primary"
-                        id="contract-vehicle-ready-to-drive-value"
-                      >
-                        <div class="dropdown__button">
-                          <p>Nein</p>
-                          <span class="ico">
-                            <svg width="24" height="24" viewBox="0 0 24 24">
-                              <path
-                                id="Path_399"
-                                data-name="Path 399"
-                                fill="none"
-                              />
-                              <path
-                                id="Path_400"
-                                data-name="Path 400"
-                                d="M6,9l6,6,6-6"
-                                fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="dropdown__content">
-                          <div class="dropdown__content-item">
-                            <p>Nein</p>
-                          </div>
-                          <div class="dropdown__content-item">
-                            <p>Ja</p>
-                          </div>
-                        </div>
+                    <div class="contactContent__currency-item">
+                      <div class="input input--currencySm">
+                        <label for="cur-2"> Nettobetrag </label>
+                        <input type="text" placeholder="XXX" id="cur-2" />
+                      </div>
+                      <div class="input input--currencySm">
+                        <label for="cur-3"> 19% MwSt. </label>
+                        <input type="text" placeholder="XXX" id="cur-3" />
+                      </div>
+                      <div class="input input--checkBox">
+                        <input type="checkbox" id="check" />
+                        <label for="check">
+                          MwSt. hinzufügen
+                          <span class="checkBox"> </span>
+                        </label>
                       </div>
                     </div>
                   </div>
                 </div>
+                <form class="contactForm">
+                  <div class="contactForm__header">
+                    <h2>Käufer</h2>
+                    <div class="input input--select input--primary">
+                      <input type="hidden">
+                      <div class="input__selected">
+                        <p>I-Contract GmbH</p>
+                      </div>
+                      <ul class="input__dropdown">
+                        <li class="input__dropdown-item">
+                          <p>I-Contract GmbH</p>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Auto 24</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="contactForm__body">
+                    <h2>Verkäufer</h2>
+                    <div class="input input--text">
+                      <label for="contract-seller-name-value">
+                        Name/Firma
+                      </label>
+                      <input type="text" id="contract-seller-name-value" />
+                    </div>
+                    <div class="input input--text">
+                      <label for="contract-seller-address-value">
+                        Straße, Hausnummer
+                      </label>
+                      <input type="text" id="contract-seller-address-value" />
+                    </div>
+                    <div class="input input--text">
+                      <label for="contract-seller-location-value">
+                        PLZ, Ort
+                        <span> * </span>
+                      </label>
+                      <input type="text" id="contract-seller-location-value" />
+                    </div>
+                    <div class="input input--text">
+                      <label for="contract-seller-phone-value">
+                        Telefonnummer
+                      </label>
+                      <input type="text" id="contract-seller-phone-value" />
+                    </div>
+                    <div class="input input--text">
+                      <label for="contract-seller-mail-value">
+                        E-Mail
+                        <span> * </span>
+                      </label>
+                      <input type="email" id="contract-seller-mail-value" />
+                    </div>
+                    <div class="input input--text">
+                      <label for="contract-seller-tax-number-value">
+                        Steuernummer
+                      </label>
+                      <input type="text" id="contract-seller-tax-number-value" />
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-          </section>
-          <div class="anchor" id="info"></div>
-          <section class="info">
-            <div class="autoContainer _sm">
-              <div class="info__inner">
-                <div class="info__inner-row">
-                  <h2>Fahrzeugdaten</h2>
+          </div>
+        </section>
+        <div class="anchor" id="info"></div>
+        <section class="info">
+          <div class="autoContainer _sm">
+            <div class="info__inner">
+              <div class="info__inner-row">
+                <h2>Fahrzeugdaten</h2>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-brand-value">
+                    Hersteller/Typ
+                  </label>
+                  <input type="text" id="contract-vehicle-brand-value" />
+                </div>
+                <div class="infoColumn">
                   <div class="input input--text _sm">
-                    <label for="contract-vehicle-brand-value">
-                      Hersteller/Typ
+                    <label for="contract-vehicle-first-registration-value">
+                      Erstzulassung
                     </label>
-                    <input type="text" id="contract-vehicle-brand-value" />
+                    <input type="text" id="contract-vehicle-first-registration-value" />
                   </div>
-                  <div class="infoColumn">
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-first-registration-value">
-                        Erstzulassung
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-first-registration-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-number-of-owners-value">
-                        Anzahl der Fahrzeughalter
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-number-of-owners-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-performance-value">
-                        PS/KW
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-performance-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-gear-type-value">
-                        Getriebeart
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-gear-type-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-emission-class-value">
-                        Schadstoffklasse
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-emission-class-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-climate-control-value">
-                        Klima
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-climate-control-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-vehicle-type-value">
-                        Fahrzeugtyp
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-vehicle-type-value"
-                      />
-                    </div>
-                    <div class="dropdown__wrapper">
-                      <h4>EU-Import</h4>
-                      <div class="dropdown dropdown--primary">
-                        <div class="dropdown__button">
-                          <p>Nein</p>
-                          <span class="ico">
-                            <svg width="24" height="24" viewBox="0 0 24 24">
-                              <path
-                                id="Path_399"
-                                data-name="Path 399"
-                                fill="none"
-                              />
-                              <path
-                                id="Path_400"
-                                data-name="Path 400"
-                                d="M6,9l6,6,6-6"
-                                fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="dropdown__content">
-                          <div class="dropdown__content-item">
-                            <p>Nein</p>
-                          </div>
-                          <div class="dropdown__content-item">
-                            <p>Ja</p>
-                          </div>
-                        </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-number-of-owners-value">
+                      Anzahl der Fahrzeughalter
+                    </label>
+                    <input type="text" id="contract-vehicle-number-of-owners-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-performance-value">
+                      PS/KW
+                    </label>
+                    <input type="text" id="contract-vehicle-performance-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-gear-type-value">
+                      Getriebeart
+                    </label>
+                    <input type="text" id="contract-vehicle-gear-type-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-emission-class-value">
+                      Schadstoffklasse
+                    </label>
+                    <input type="text" id="contract-vehicle-emission-class-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-climate-control-value">
+                      Klima
+                    </label>
+                    <input type="text" id="contract-vehicle-climate-control-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-vehicle-type-value">
+                      Fahrzeugtyp
+                    </label>
+                    <input type="text" id="contract-vehicle-vehicle-type-value" />
+                  </div>
+                  <div class="input__wrapper">
+                    <h4>EU-Import</h4>
+                    <div class="input input--select input--primary">
+                      <input type="hidden">
+                      <div class="input__selected">
+                        <p>Nein</p>
                       </div>
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-id-value">
-                        Fahrzeug-Ident.-Nr.
-                      </label>
-                      <input type="text" id="contract-vehicle-id-value" />
+                      <ul class="input__dropdown">
+                        <li class="input__dropdown-item">
+                          <p>Nein</p>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Ja</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="infoColumn">
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-total-mileage-value">
-                        KFZ-Gesamtfahrleistung
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-total-mileage-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-color-value"> Farbe </label>
-                      <input type="text" id="contract-vehicle-color-value" />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-cubic-capacity-value">
-                        Hubraum
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-cubic-capacity-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-cubic-capacity-value">
-                        Kraftstoffart
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-cubic-capacity-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-checkbook-until-value">
-                        Scheckheftgepflegt
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-checkbook-until-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-inspection-value">
-                        TÜV/AU
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-inspection-value"
-                      />
-                    </div>
-                    <div class="input input--text _sm">
-                      <label for="contract-vehicle-number-of-doors-value">
-                        Anzahl der Türen
-                      </label>
-                      <input
-                        type="text"
-                        id="contract-vehicle-number-of-doors-value"
-                      />
-                    </div>
-                    <div class="dropdown__wrapper">
-                      <h4>Gewerblich genutzt ab EZ</h4>
-                      <div class="dropdown dropdown--primary">
-                        <div class="dropdown__button">
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-id-value">
+                      Fahrzeug-Ident.-Nr.
+                    </label>
+                    <input type="text" id="contract-vehicle-id-value" />
+                  </div>
+                </div>
+                <div class="infoColumn">
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-total-mileage-value">
+                      KFZ-Gesamtfahrleistung
+                    </label>
+                    <input type="text" id="contract-vehicle-total-mileage-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-color-value"> Farbe </label>
+                    <input type="text" id="contract-vehicle-color-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-cubic-capacity-value">
+                      Hubraum
+                    </label>
+                    <input type="text" id="contract-vehicle-cubic-capacity-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-fuel-type-value">
+                      Kraftstoffart
+                    </label>
+                    <input type="text" id="contract-vehicle-fuel-type-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-checkbook-until-value">
+                      Scheckheftgepflegt
+                    </label>
+                    <input type="text" id="contract-vehicle-checkbook-until-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-inspection-value">
+                      TÜV/AU
+                    </label>
+                    <input type="text" id="contract-vehicle-inspection-value" />
+                  </div>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-number-of-doors-value">
+                      Anzahl der Türen
+                    </label>
+                    <input type="text" id="contract-vehicle-number-of-doors-value" />
+                  </div>
+                  <div class="input__wrapper">
+                    <h4>Gewerblich genutzt ab EZ</h4>
+                    <div class="input input--select input--primary">
+                      <input type="hidden">
+                      <div class="input__selected">
+                        <p>Nein</p>
+                      </div>
+                      <ul class="input__dropdown">
+                        <li class="input__dropdown-item">
                           <p>Nein</p>
-                          <span class="ico">
-                            <svg width="24" height="24" viewBox="0 0 24 24">
-                              <path
-                                id="Path_399"
-                                data-name="Path 399"
-                                fill="none"
-                              />
-                              <path
-                                id="Path_400"
-                                data-name="Path 400"
-                                d="M6,9l6,6,6-6"
-                                fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                              />
-                            </svg>
-                          </span>
-                        </div>
-                        <div class="dropdown__content">
-                          <div class="dropdown__content-item">
-                            <p>Nein</p>
-                          </div>
-                          <div class="dropdown__content-item">
-                            <p>Ja</p>
-                          </div>
-                        </div>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Ja</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="input input--file">
+                    <label for="file">
+                      <span class="ico">
+                        <svg class="fill" width="23.223" height="20.877" viewBox="0 0 23.223 20.877">
+                          <path id="icon"
+                            d="M9.528,19.242l-.02-.223V12.326H2.1A2.006,2.006,0,0,1,0,10.438,1.974,1.974,0,0,1,1.817,8.566l.251-.018h7.44V1.888A2.007,2.007,0,0,1,11.612,0,2.049,2.049,0,0,1,13.7,1.633l.018.226v6.69H21.12a2.006,2.006,0,0,1,2.1,1.89,1.975,1.975,0,0,1-1.816,1.873l-.252.015H13.715v6.661a2.006,2.006,0,0,1-2.1,1.89A2.048,2.048,0,0,1,9.528,19.242Z" />
+                        </svg>
+                      </span>
+                      <p>Eigenschaften hinzufügen</p>
+                    </label>
+                    <input type="file" id="file" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="anchor" id="condition"></div>
+        <section class="condition">
+          <div class="autoContainer _sm">
+            <div class="condition__inner">
+              <div class="condition__inner-content">
+                <h2>Fahrzeugzustand</h2>
+                <div class="conditionBox">
+                  <div class="conditionBox__image">
+                    <span class="ico">
+                      <img src="./images/condition.png" alt="" />
+                    </span>
+                  </div>
+                  <div class="conditionBox__info">
+                    <h4>Fahrzeugskizze</h4>
+                    <p>
+                      Schauen Sie sich die Fahrzeugskizze erneut an oder
+                      überarbeiten Sie diese hier.
+                    </p>
+                  </div>
+                  <button class="button button--primary" data-event="togglePopup" data-popup="#carInspector">
+                    anzeigen
+                  </button>
+                </div>
+                <div class="conditionBody">
+                  <h4>Ausgewählte Schäden</h4>
+                  <div class="conditionBody__row">
+                    <div class="conditionBody__row-item">
+                      <div class="input input--textarea">
+                        <label for="contract-vehicle-accident-free-value">
+                          Unfallfrei
+                        </label>
+                        <textarea id="contract-vehicle-accident-free-value">
+  Ja</textarea>
                       </div>
                     </div>
-                    <div class="input input--file">
-                      <label for="file">
+                    <div class="conditionBody__row-item">
+                      <div class="input input--textarea">
+                        <label for="contract-vehicle-repainting-value">
+                          Nachlackierung
+                        </label>
+                        <textarea id="contract-vehicle-repainting-value">
+  Nein</textarea>
+                      </div>
+                    </div>
+                    <div class="conditionBody__row-item">
+                      <div class="input input--textarea">
+                        <label for="contract-vehicle-damages-key">
+                          Sonstige Schäden
+                        </label>
+                        <textarea id="contract-vehicle-damages-key"></textarea>
+                      </div>
+                    </div>
+                    <div class="conditionBody__row-item _lg">
+                      <div class="input input--textarea">
+                        <label for="contract-vehicle-engine-gearbox-clutch-value">
+                          Motor, Getriebe, Kupplung(editierbar)
+                        </label>
+                        <textarea id="contract-vehicle-engine-gearbox-clutch-value">
+  Alles in Ordnung</textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="conditionBody__info">
+                    <h4>Uneingeschränkt Fahrbereit</h4>
+                    <div class="input input--select input--primary" id="contract-vehicle-ready-to-drive-value">
+                      <input type="hidden">
+                      <div class="input__selected">
+                        <p>Nein</p>
                         <span class="ico">
-                          <svg
-                            class="fill"
-                            width="23.223"
-                            height="20.877"
-                            viewBox="0 0 23.223 20.877"
-                          >
-                            <path
-                              id="icon"
-                              d="M9.528,19.242l-.02-.223V12.326H2.1A2.006,2.006,0,0,1,0,10.438,1.974,1.974,0,0,1,1.817,8.566l.251-.018h7.44V1.888A2.007,2.007,0,0,1,11.612,0,2.049,2.049,0,0,1,13.7,1.633l.018.226v6.69H21.12a2.006,2.006,0,0,1,2.1,1.89,1.975,1.975,0,0,1-1.816,1.873l-.252.015H13.715v6.661a2.006,2.006,0,0,1-2.1,1.89A2.048,2.048,0,0,1,9.528,19.242Z"
-                            />
+                          <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path id="Path_399" data-name="Path 399" fill="none" />
+                            <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="2" />
                           </svg>
                         </span>
-                        <p>Eigenschaften hinzufügen</p>
-                      </label>
-                      <input type="file" id="file" />
+                      </div>
+                      <ul class="input__dropdown">
+                        <li class="input__dropdown-item">
+                          <p>Nein</p>
+                        </li>
+                        <li class="input__dropdown-item">
+                          <p>Ja</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-          <div class="anchor" id="details"></div>
-          <section class="details">
-            <div class="autoContainer _sm">
-              <div class="details__inner">
-                <h2>Fahrzeugdetails</h2>
-                <div class="popUp" id="popUp">
-                  <div class="popUp__checkBoxes">
-                    <h4>Ausstattung</h4>
-                    <div class="popUp__checkBoxes-row">
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-1" />
-                        <label for="check-1">
-                          <span class="checkBox"> </span>
-                          Start/Stopp-Automatik
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-2" />
-                        <label for="check-2">
-                          <span class="checkBox"> </span>
-                          Abstandswarner
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-3" />
-                        <label for="check-3">
-                          <span class="checkBox"> </span>
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-4" />
-                        <label for="check-4">
-                          <span class="checkBox"> </span>
-                          Beheizbare Frontscheibe
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-5" />
-                        <label for="check-5">
-                          <span class="checkBox"> </span>
-                          Adaptives Kurvenlicht
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-6" />
-                        <label for="check-6">
-                          <span class="checkBox"> </span>
-                          Dachreling
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-7" />
-                        <label for="check-7">
-                          <span class="checkBox"> </span>
-                          Berganfahrassistent
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-8" />
-                        <label for="check-8">
-                          <span class="checkBox"> </span>
-                          Verkehrszeichenerkennungk
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-9" />
-                        <label for="check-9">
-                          <span class="checkBox"> </span>
-                          Elektr. Heckklappe
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-10" />
-                        <label for="check-10">
-                          <span class="checkBox"> </span>
-                          Bi-Xenon Scheinwerfer
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-11" />
-                        <label for="check-11">
-                          <span class="checkBox"> </span>
-                          Allwetterreifen
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-12" />
-                        <label for="check-12">
-                          <span class="checkBox"> </span>
-                          Elektr. Wegfahrsperre
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-13" />
-                        <label for="check-13">
-                          <span class="checkBox"> </span>
-                          Bi-Xenon Scheinwerfer
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-14" />
-                        <label for="check-14">
-                          <span class="checkBox"> </span>
-                          Allwetterreifen
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-15" />
-                        <label for="check-15">
-                          <span class="checkBox"> </span>
-                          Elektr. Wegfahrsperre
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-16" />
-                        <label for="check-16">
-                          <span class="checkBox"> </span>
-                          Bi-Xenon Scheinwerfer
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-17" />
-                        <label for="check-17">
-                          <span class="checkBox"> </span>
-                          Allwetterreifen
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-18" />
-                        <label for="check-18">
-                          <span class="checkBox"> </span>
-                          Elektr. Wegfahrsperre
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-20" />
-                        <label for="check-20">
-                          <span class="checkBox"> </span>
-                          Bi-Xenon Scheinwerfer
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-21" />
-                        <label for="check-21">
-                          <span class="checkBox"> </span>
-                          Allwetterreifen
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-22" />
-                        <label for="check-22">
-                          <span class="checkBox"> </span>
-                          Elektr. Wegfahrsperre
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-24" />
-                        <label for="check-24">
-                          <span class="checkBox"> </span>
-                          Bi-Xenon Scheinwerfer
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-25" />
-                        <label for="check-25">
-                          <span class="checkBox"> </span>
-                          Allwetterreifen
-                        </label>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check-26" />
-                        <label for="check-26">
-                          <span class="checkBox"> </span>
-                          Elektr. Wegfahrsperre
-                        </label>
-                      </div>
-                    </div>
-                    <div class="close" id="popupClose"></div>
-                  </div>
+          </div>
+        </section>
+        <div class="anchor" id="details"></div>
+        <section class="details">
+          <div class="autoContainer _sm">
+            <div class="details__inner">
+              <h2>Fahrzeugdetails</h2>
+              <div class="data__inner-body">
+                <div class="input input--textarea" id="contract-special-terms-value2">
+                  <label for="contract-vehicle-details-options">
+                    Ausstattung
+                  </label>
+                  <textarea id="contract-vehicle-details-options-value"></textarea>
                 </div>
-                <button class="button button--primary" id="popUpBtn">
-                  Pop Up
-                </button>
+                <div class="input input--textarea" id="contract-special-terms-value2">
+                  <label for="contract-vehicle-details-description">
+                    Beschreibung
+                  </label>
+                  <textarea id="contract-vehicle-details-description-value"></textarea>
+                </div>
               </div>
             </div>
-          </section>
-          <div class="anchor" id="data"></div>
-          <section class="data">
-            <div class="autoContainer _sm">
-              <div class="data__inner">
-                <h2>Vertragsdaten</h2>
-                <div class="data__inner-box">
-                  <div class="dropdown__wrapper">
-                    <h4>Zahlungsart</h4>
-                    <div
-                      class="dropdown dropdown--primary _up"
-                      id="contract-vehicle-payment-method-value"
-                    >
-                      <div class="dropdown__button">
+          </div>
+        </section>
+        <div class="anchor" id="data"></div>
+        <section class="data">
+          <div class="autoContainer _sm">
+            <div class="data__inner">
+              <h2>Besondere Vereinbarungen</h2>
+              <div class="data__inner-box">
+                <div class="input__wrapper">
+                  <h4>Zahlungsart</h4>
+                  <div class="input input--select input--primary " id="contract-vehicle-payment-method-value">
+                    <input type="hidden">
+                    <div class="input__selected">
+                      <p>Bargeld</p>
+                    </div>
+                    <ul class="input__dropdown">
+                      <li class="input__dropdown-item">
                         <p>Bargeld</p>
-                        <span class="ico">
-                          <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path
-                              id="Path_399"
-                              data-name="Path 399"
-                              fill="none"
-                            />
-                            <path
-                              id="Path_400"
-                              data-name="Path 400"
-                              d="M6,9l6,6,6-6"
-                              fill="none"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div class="dropdown__content">
-                        <div class="dropdown__content-item">
-                          <p>Bargeld</p>
-                        </div>
-                        <div class="dropdown__content-item">
-                          <p>Überweisung</p>
-                        </div>
-                        <div class="dropdown__content-item">
-                          <p>Echtzeitüberweisung</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="dropdown__wrapper">
-                    <h4>Abholdatum *</h4>
-                    <div
-                      class="dropdown dropdown--primary"
-                      id="contract-vehicle-pickup-date-value"
-                    >
-                      <div class="dropdown__button">
-                        <p>Bitte auswählen</p>
-                        <span class="ico">
-                          <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path
-                              id="Path_399"
-                              data-name="Path 399"
-                              fill="none"
-                            />
-                            <path
-                              id="Path_400"
-                              data-name="Path 400"
-                              d="M6,9l6,6,6-6"
-                              fill="none"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                            />
-                          </svg>
-                        </span>
-                      </div>
-                      <div class="dropdown__content">
-                        <div class="dropdown__content-item">
-                          <p>Bitte auswählen</p>
-                        </div>
-                        <div class="dropdown__content-item">
-                          <p>Bitte auswählen</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="dropdown__wrapper">
-                    <h4>Zugelassen</h4>
-                    <div class="input input--date">
-                      <input type="date" />
-                    </div>
-                  </div>
-                </div>
-                <div class="data__inner-body">
-                  <div
-                    class="data__inner-list"
-                    id="contract-special-terms-value"
-                  >
-                    <h4>Besondere Vereinbarung (nicht editierbar)</h4>
-                    <ul>
-                      <li>
-                        Die Fahrzeugübergabe findet bis/am {Datum} in {Ort}
-                        gegen Bargeld statt.
                       </li>
-                      <li>
-                        Das Fahrzeug wird nur unter der Vorlage der
-                        Kundennummer: {KNR} nach einem kurzen
-                        Gebrauchtwagencheck ausgehändigt.
+                      <li class="input__dropdown-item">
+                        <p>Überweisung</p>
+                      </li>
+                      <li class="input__dropdown-item">
+                        <p>Echtzeitüberweisung</p>
                       </li>
                     </ul>
                   </div>
-                  <div
-                    class="input input--textarea"
-                    id="contract-special-terms-value2"
-                  >
-                    <label for="text-40">
-                      Weitere besondere Vereinbarungen (editierbar)
-                    </label>
-                    <textarea id="text-40"></textarea>
+                </div>
+                <div class="input__wrapper">
+                  <h4>Zugelassen</h4>
+                  <div class="input input--select input--primary" id="contract-vehicle-pickup-date-value">
+                    <input type="hidden">
+                    <div class="input__selected">
+                      <p>Ja</p>
+                      <span class="ico">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                          <path id="Path_399" data-name="Path 399" fill="none" />
+                          <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" />
+                        </svg>
+                      </span>
+                    </div>
+                    <ul class="input__dropdown">
+                      <li class="input__dropdown-item">
+                        <p>Ja</p>
+                      </li>
+                      <li class="input__dropdown-item">
+                        <p>Nein</p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="data__inner-button" id="button-create-contract">
-                  <button class="button">
-                    <span class="ico">
-                      <svg
-                        class="fill"
-                        width="28"
-                        height="33"
-                        viewBox="0 0 28 33"
-                      >
-                        <defs>
-                          <clipPath id="clip-path">
-                            <rect width="28" height="33" fill="none" />
-                          </clipPath>
-                        </defs>
-                        <g
-                          id="Repeat_Grid_38"
-                          data-name="Repeat Grid 38"
-                          clip-path="url(#clip-path)"
-                        >
-                          <g transform="translate(-22.685 -18.585)">
-                            <g
-                              id="vuesax_outline_export"
-                              data-name="vuesax/outline/export"
-                              transform="translate(22.685 18.585)"
-                            >
-                              <rect
-                                id="vuesax_outline_export-2"
-                                data-name="vuesax/outline/export"
-                                width="28"
-                                height="33"
-                                fill="none"
-                              />
-                              <g
-                                id="vuesax_outline_export-3"
-                                data-name="vuesax/outline/export"
-                              >
-                                <g id="export">
-                                  <path
-                                    id="Vector"
-                                    d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
-                                    transform="translate(18.21 1.71)"
-                                  />
-                                  <path
-                                    id="Vector-2"
-                                    data-name="Vector"
-                                    d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
-                                    transform="translate(21.708 1.042)"
-                                  />
-                                  <path
-                                    id="Vector-3"
-                                    data-name="Vector"
-                                    d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
-                                    transform="translate(1.042 1.042)"
-                                  />
-                                  <path
-                                    id="Vector-4"
-                                    data-name="Vector"
-                                    d="M0,0H28V33H0Z"
-                                    fill="none"
-                                    opacity="0"
-                                  />
-                                </g>
+                <div class="input__wrapper">
+                  <h4>Abholdatum *</h4>
+                  <div class="input input--date">
+                    <input type="date" />
+                  </div>
+                </div>
+              </div>
+              <div class="data__inner-body">
+                <div class="data__inner-list" id="contract-special-terms-value">
+                  <h4>Besondere Vereinbarung (nicht editierbar)</h4>
+                  <ul>
+                    <li>
+                      Die Fahrzeugübergabe findet bis/am {Datum} in {Ort}
+                      gegen Bargeld statt.
+                    </li>
+                    <li>
+                      Das Fahrzeug wird nur unter der Vorlage der
+                      Kundennummer: {KNR} nach einem kurzen
+                      Gebrauchtwagencheck ausgehändigt.
+                    </li>
+                  </ul>
+                </div>
+                <div class="input input--textarea" id="contract-special-terms-value2">
+                  <label for="text-40">
+                    Weitere besondere Vereinbarungen (editierbar)
+                  </label>
+                  <textarea id="text-40"></textarea>
+                </div>
+              </div>
+              <div class="data__inner-button" id="button-create-contract">
+                <button class="button">
+                  <span class="ico">
+                    <svg class="fill" width="28" height="33" viewBox="0 0 28 33">
+                      <defs>
+                        <clipPath id="clip-path">
+                          <rect width="28" height="33" fill="none" />
+                        </clipPath>
+                      </defs>
+                      <g id="Repeat_Grid_38" data-name="Repeat Grid 38" clip-path="url(#clip-path)">
+                        <g transform="translate(-22.685 -18.585)">
+                          <g id="vuesax_outline_export" data-name="vuesax/outline/export"
+                            transform="translate(22.685 18.585)">
+                            <rect id="vuesax_outline_export-2" data-name="vuesax/outline/export" width="28" height="33"
+                              fill="none" />
+                            <g id="vuesax_outline_export-3" data-name="vuesax/outline/export">
+                              <g id="export">
+                                <path id="Vector"
+                                  d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
+                                  transform="translate(18.21 1.71)" />
+                                <path id="Vector-2" data-name="Vector"
+                                  d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
+                                  transform="translate(21.708 1.042)" />
+                                <path id="Vector-3" data-name="Vector"
+                                  d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
+                                  transform="translate(1.042 1.042)" />
+                                <path id="Vector-4" data-name="Vector" d="M0,0H28V33H0Z" fill="none" opacity="0" />
                               </g>
                             </g>
                           </g>
                         </g>
-                      </svg>
-                    </span>
-                    Vertrag erstellen
-                  </button>
-                </div>
+                      </g>
+                    </svg>
+                  </span>
+                  Vertrag erstellen
+                </button>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
-      <!-- wrapper end-->
     </div>
-    <script src="js/main.js"></script>
-  </body>
+    <!-- wrapper end-->
+  </div>
+  <script src="js/customSelect.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

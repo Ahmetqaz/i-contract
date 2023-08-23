@@ -23,10 +23,14 @@
       align-items: center;
       gap: 12px;
       width: 100%;
-      max-width: 700px;
       flex-wrap: wrap;
       .input {
-        width: calc(62% - 6px);
+        &--search {
+          width: calc(62% - 6px);
+        }
+        &--select {
+          width: calc(38% - 6px);
+        }
       }
       h4 {
         color: $primary;
@@ -112,20 +116,6 @@
             }
           }
         }
-        &-wrapper {
-          gap: 5px;
-          display: flex;
-          flex-direction: column;
-          opacity: 0;
-          pointer-events: none;
-          max-height: 0;
-          transition: 0.3s ease-in-out;
-          &.active {
-            opacity: 1;
-            max-height: 500px;
-            pointer-events: all;
-          }
-        }
         h2 {
           color: $primary;
           width: 32%;
@@ -146,6 +136,11 @@
         color: $primary;
         opacity: 0.5;
       }
+      .input {
+        &--select {
+          width: calc(44.5% - 6px);
+        }
+      }
     }
     &__body {
       display: flex;
@@ -154,43 +149,6 @@
       h2 {
         margin-bottom: 10px;
         color: $primary;
-      }
-    }
-  }
-  .dropdown {
-    width: calc(38% - 6px);
-    font-size: 13px;
-    position: relative;
-    z-index: 2;
-    &__button {
-      background: $primary;
-      padding: 1.1em 2em 0.9em 2.6em;
-      border-radius: 5px;
-      @include transition;
-      p {
-        color: $white;
-        font-weight: 700;
-      }
-      .ico {
-        width: 1em;
-        height: 1em;
-      }
-    }
-    &__content {
-      padding: 1.1em 2em 0.9em 2.6em;
-      background: $primary;
-      border: unset;
-      border-radius: 0 0 5px 5px;
-      p {
-        color: $white;
-        font-weight: 700;
-      }
-    }
-    &:hover {
-      .dropdown {
-        &__button {
-          border-radius: 5px 5px 0 0;
-        }
       }
     }
   }
@@ -283,9 +241,21 @@
       h4 {
         color: $black !important;
       }
-      .dropdown {
+      .input {
         width: calc(33% - 15px);
         max-width: 386px;
+        &--select {
+          .input {
+            &__selected {
+              &::after {
+                width: 1.5em;
+                height: 1.5em;
+                right: 1em;
+                background-image: url("../images/icons/arrow-down-2.svg");
+              }
+            }
+          }
+        }
       }
     }
     h4 {
@@ -322,33 +292,31 @@
     flex-direction: column;
     gap: 15px;
   }
-  .dropdown {
-    max-width: 340px;
-    &__button {
-      padding: 1em;
-      .ico {
-        width: 1.5em;
-        height: 1.5em;
-      }
-      &:hover {
-        p {
-          opacity: 0.7;
+  .input {
+    &--select {
+      max-width: 340px;
+      .input {
+        &__selected {
+          padding: 1.4em 1em;
+          &::after {
+            width: 1.5em;
+            height: 1.5em;
+            right: 1em;
+            background-image: url("../images/icons/arrow-down-2.svg");
+          }
+          p {
+            font-weight: 400;
+          }
         }
-      }
-    }
-    &__content {
-      padding: 1em;
-      &-item {
-        cursor: pointer;
-        p {
-          &:hover {
-            opacity: 0.7;
+        &__dropdown {
+          padding: 1em 1em 1.2em;
+          p {
+            font-weight: 400;
+          }
+          &-item {
           }
         }
       }
-    }
-    p {
-      font-weight: 400;
     }
     &__wrapper {
       display: flex;
@@ -358,8 +326,6 @@
         font-size: 15px;
       }
     }
-  }
-  .input {
     &--file {
       max-width: 340px;
     }
@@ -371,13 +337,15 @@
 .tabs {
   width: 100%;
   position: sticky;
-  top: 18px;
+  top: 0px !important ;
+  padding-top: 10px;
   border-bottom: 2px solid #f7f7f7;
   z-index: 7;
+  background: $white-2;
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 25px;
     &-row {
       margin-left: auto;
       display: flex;
@@ -429,6 +397,31 @@ section {
       display: flex;
       flex-direction: column;
       gap: 14px;
+      ul {
+        font-size: 16px;
+        background: $white-3;
+        border-radius: 5px;
+        padding: 40px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        li {
+          font-size: 1em;
+          font-weight: 400;
+          position: relative;
+          padding-left: 12px;
+          &::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background: $black;
+            position: absolute;
+            left: 0;
+            top: 8px;
+            border-radius: 50%;
+          }
+        }
+      }
     }
     &-body {
       display: flex;
@@ -442,27 +435,31 @@ section {
       justify-content: center;
     }
   }
-  .dropdown {
-    width: 100%;
-    &__button {
-      padding: 1.1em 0.9em;
-      .ico {
-        width: 1.5em;
-        height: 1.5em;
-      }
-      &:hover {
-        p {
-          opacity: 0.7;
-        }
-      }
+  .input {
+    &--textarea {
+      gap: 14px;
     }
-    &__content {
-      padding: 1.1em 0.9em;
-      &-item {
-        cursor: pointer;
-        &:hover {
+    &--select {
+      font-size: 13px !important;
+      .input {
+        &__selected {
+          padding: 1.5em 1em;
+          &::after {
+            width: 1.5em;
+            height: 1.5em;
+            right: 1em;
+            background-image: url("../images/icons/arrow-down-2.svg");
+          }
           p {
-            opacity: 0.7;
+            font-weight: 400;
+          }
+        }
+        &__dropdown {
+          padding: 1em 1em 1.2em;
+          p {
+            font-weight: 400;
+          }
+          &-item {
           }
         }
       }
@@ -473,43 +470,6 @@ section {
       gap: 10px;
       max-width: 340px;
       width: calc(33% - 35px);
-    }
-    &._up {
-      z-index: 4;
-    }
-  }
-  ul {
-    font-size: 16px;
-    background: $white-3;
-    border-radius: 5px;
-    padding: 40px 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    li {
-      font-size: 1em;
-      font-weight: 400;
-      position: relative;
-      padding-left: 12px;
-      &::before {
-        content: "";
-        width: 5px;
-        height: 5px;
-        background: $black;
-        position: absolute;
-        left: 0;
-        top: 8px;
-        border-radius: 50%;
-      }
-    }
-  }
-  h2 {
-    color: $primary;
-    margin-bottom: 25px;
-  }
-  .input {
-    &--textarea {
-      gap: 14px;
     }
   }
   .button {
@@ -539,6 +499,10 @@ section {
       background: $primary;
     }
   }
+  h2 {
+    color: $primary;
+    margin-bottom: 25px;
+  }
 }
 .details {
   &__inner {
@@ -547,7 +511,6 @@ section {
     border-radius: 6px;
     box-shadow: 0 1px 4px rgba($black, 0.1);
   }
-
   .button {
     font-size: 18px;
     padding: 1em 2em;
@@ -670,7 +633,7 @@ section {
     padding-left: 60px;
   }
   .tabs {
-    top: 5px;
+    top: 15px;
   }
 }
 @mixin index-1440 {
@@ -702,11 +665,10 @@ section {
         }
       }
     }
-    .dropdown {
+    .input--select {
       width: 100%;
     }
   }
-
   .sideSpace {
     padding-left: 60px;
   }
@@ -773,9 +735,9 @@ section {
         gap: 20px;
       }
     }
-    .dropdown {
+    .input {
       &__wrapper {
-        width: calc(33.3% - 17px);
+        width: calc(33.3% - 10px);
       }
     }
   }
@@ -838,8 +800,6 @@ section {
         }
       }
     }
-    &Radio {
-    }
   }
 }
 @mixin index-880 {
@@ -866,7 +826,7 @@ section {
     &Body {
       &__info {
         width: 100%;
-        .dropdown {
+        .input {
           width: 100%;
           max-width: unset;
         }
@@ -897,15 +857,6 @@ section {
       width: calc(33.3% - 10px);
     }
   }
-  .input {
-    .dropdown {
-      &__wrapper {
-        h4 {
-          font-size: 14px;
-        }
-      }
-    }
-  }
   .data {
     &__inner {
       gap: 35px;
@@ -923,9 +874,9 @@ section {
     .button {
       font-size: 20px;
     }
-    .dropdown {
+    .input {
       &__wrapper {
-        width: calc(50% - 10px);
+        width: calc(50% - 8px);
         max-width: unset;
       }
     }
@@ -951,6 +902,15 @@ section {
   .sideSpace {
     padding-left: 0;
   }
+  .info {
+    .input {
+      &__wrapper {
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 @mixin index-750 {
   .info {
@@ -964,7 +924,7 @@ section {
       width: 100%;
       max-width: unset;
     }
-    .dropdown {
+    .input--select {
       max-width: unset;
     }
     .input {
@@ -974,7 +934,7 @@ section {
     }
   }
   .data {
-    .dropdown {
+    .input {
       &__wrapper {
         width: 100%;
       }

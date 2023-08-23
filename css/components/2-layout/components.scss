@@ -431,7 +431,6 @@
       }
     }
   }
-
   &--select {
     font-size: 14px;
     position: relative;
@@ -596,6 +595,81 @@
     &.active {
       .input__selected {
         border-radius: 4px 4px 0 0;
+      }
+    }
+  }
+  &--primary {
+    font-size: 13px;
+    position: relative;
+    z-index: 2;
+    .ico {
+      width: 1em;
+      height: 1em;
+    }
+    .input {
+      &__selected {
+        background: $primary;
+        padding: 1.5em 4em 1.3em 2.6em;
+        border-radius: 5px;
+        @include transition;
+        position: relative;
+        p {
+          color: $white;
+          font-weight: 700;
+        }
+        &:hover {
+          p {
+            color: $white;
+            opacity: 0.7;
+          }
+        }
+        &::after {
+          content: "";
+          width: 1em;
+          height: 1em;
+          position: absolute;
+          right: 2em;
+          top: 50%;
+          transform: translate(0, -50%);
+          background-image: url("../images/icons/arrow-down-sm.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          @include transition;
+        }
+      }
+      &__dropdown {
+        padding: 1.1em 2em 1.3em 2.6em;
+        background: $primary;
+        border: unset;
+        border-radius: 0 0 5px 5px;
+        align-items: flex-start;
+        gap: 18px;
+        p {
+          color: $white;
+          font-weight: 700;
+        }
+        &-item {
+          &:hover {
+            p {
+              color: $white;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+    &.active {
+      .input {
+        &__selected {
+          border-radius: 5px 5px 0 0;
+          &::after {
+            transform:  translateY(-50%) rotate(180deg);
+          }
+        }
+        &__dropdown {
+          border-radius: 0 0 5px 5px;
+        }
       }
     }
   }
