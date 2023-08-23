@@ -39,8 +39,8 @@
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
   }
-  .input{
-    &--select{
+  .input {
+    &--select {
       font-size: 14px !important;
     }
   }
@@ -145,6 +145,9 @@
       &.active {
         background: $blue-3;
         color: $primary;
+        .ico {
+          color: $orange;
+        }
         &::before {
           opacity: 1;
           background: $orange;
@@ -157,6 +160,9 @@
           opacity: 1;
           background: $primary;
           transform: scale(1);
+        }
+        .ico {
+          color: $orange;
         }
       }
     }
@@ -192,6 +198,15 @@
   .ico {
     width: 1.75em;
     height: 1.75em;
+    @include transition;
+    color: $blue;
+    svg {
+      stroke: currentColor;
+      &.fill {
+        stroke: transparent;
+        fill: currentColor;
+      }
+    }
   }
   .notification {
     display: flex;
