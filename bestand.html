@@ -52,34 +52,41 @@
               </span>
               <span class="notification"> 2 </span>
             </button>
-            <div class="dropdown">
-              <div class="dropdown__button">
+            <div class="input input--select">
+              <input type="hidden">
+              <div class="input__selected">
                 <div class="dropdown__image">
                   <img src="./images/avatar.png" alt="" />
                 </div>
                 <p>Max Mustermann</p>
-                <span class="ico">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <path id="Path_399" data-name="Path 399" fill="none" />
-                    <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
-                      stroke-linejoin="round" stroke-width="2" />
-                  </svg>
-                </span>
               </div>
-              <div class="dropdown__content">
-                <div class="dropdown__content-box">
-                  <div class="dropdown__image">
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path id="Path_399" data-name="Path 399" fill="none" />
+                  <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </svg>
+              </span>
+              <ul class="input__dropdown">
+                <li class="input__dropdown-item">
+                  <div class="avatar">
                     <img src="./images/avatar.png" alt="" />
                   </div>
-                  <p>Max Mustermann</p>
-                </div>
-                <div class="dropdown__content-box">
-                  <div class="dropdown__image">
+                  <p>Nick Mustermann</p>
+                </li>
+                <li class="input__dropdown-item">
+                  <div class="avatar">
                     <img src="./images/avatar.png" alt="" />
                   </div>
-                  <p>Max Mustermann</p>
-                </div>
-              </div>
+                  <p>Alexandr Mustermann</p>
+                </li>
+                <li class="input__dropdown-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="" />
+                  </div>
+                  <p>Dustin Musterman</p>
+                </li>
+              </ul>
             </div>
             <div class="burger" id="menuBtn">
               <span></span>
@@ -242,34 +249,41 @@
             </span>
             <span class="text"> Einstellungen </span>
           </a>
-          <div class="dropdown">
-            <div class="dropdown__button">
-              <div class="dropdown__image">
+          <div class="input input--select">
+            <input type="hidden">
+            <div class="input__selected">
+              <div class="avatar">
                 <img src="./images/avatar.png" alt="" />
               </div>
               <p>Max Mustermann</p>
-              <span class="ico">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <path id="Path_399" data-name="Path 399" fill="none" />
-                  <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="2" />
-                </svg>
-              </span>
             </div>
-            <div class="dropdown__content">
-              <div class="dropdown__content-box">
-                <div class="dropdown__image">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path id="Path_399" data-name="Path 399" fill="none" />
+                <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </span>
+            <ul class="input__dropdown">
+              <li class="input__dropdown-item">
+                <div class="avatar">
                   <img src="./images/avatar.png" alt="" />
                 </div>
-                <p>Max Mustermann</p>
-              </div>
-              <div class="dropdown__content-box">
-                <div class="dropdown__image">
+                <p>Nick Mustermann</p>
+              </li>
+              <li class="input__dropdown-item">
+                <div class="avatar">
                   <img src="./images/avatar.png" alt="" />
                 </div>
-                <p>Max Mustermann</p>
-              </div>
-            </div>
+                <p>Alexandr Mustermann</p>
+              </li>
+              <li class="input__dropdown-item">
+                <div class="avatar">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Dustin Musterman</p>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -585,31 +599,32 @@
                                   <h4>
                                     Zugeteilete Fahrer
                                   </h4>
-                                  <div class="dropdown dropdown--stock">
-                                    <div class="dropdown__button">
+                                  <div class="input input--select input--stock">
+                                    <input type="hidden">
+                                    <div class="input__selected">
                                       <span class="text">
                                         Max Mustermann
                                       </span>
-                                      <span class="ico">
-                                        <svg width="24" height="24" viewBox="0 0 24 24">
-                                          <path id="Path_399" data-name="Path 399" fill="none"></path>
-                                          <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none"
-                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                        </svg>
-                                      </span>
                                     </div>
-                                    <div class="dropdown__content">
-                                      <div class="dropdown__content-box">
+                                    <span class="ico">
+                                      <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <path id="Path_399" data-name="Path 399" fill="none"></path>
+                                        <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none"
+                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                      </svg>
+                                    </span>
+                                    <ul class="input__dropdown">
+                                      <li class="input__dropdown-item">
                                         <span class="text">
-                                          Max Mustermann
+                                          Nick Mustermann
                                         </span>
-                                      </div>
-                                      <div class="dropdown__content-box">
+                                      </li>
+                                      <li class="input__dropdown-item">
                                         <span class="text">
-                                          Max Mustermann
+                                          Alexndr Mustermann
                                         </span>
-                                      </div>
-                                    </div>
+                                      </li>
+                                    </ul>
                                   </div>
                                 </div>
                                 <div class="stockDropdown__content-box">
@@ -2293,6 +2308,7 @@
       </div>
     </div>
   </div>
+  <script src="js/customSelect.js"></script>
   <script src="js/main.js"></script>
 </body>
 

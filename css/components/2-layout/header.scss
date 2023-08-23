@@ -39,6 +39,11 @@
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
   }
+  .input{
+    &--select{
+      font-size: 14px !important;
+    }
+  }
 }
 .burger {
   cursor: pointer;
@@ -211,6 +216,12 @@
       padding: 0.5em 1em;
     }
   }
+  .input {
+    &--select {
+      font-size: 14px !important;
+      display: none;
+    }
+  }
 }
 
 @mixin header-1700 {
@@ -366,6 +377,11 @@
     .dropdown {
       display: none;
     }
+    .input {
+      &--select {
+        display: none;
+      }
+    }
   }
   .sidebar {
     position: fixed;
@@ -452,6 +468,30 @@
           &__content {
             padding: 0.5em 1em;
           }
+        }
+      }
+    }
+    .input {
+      &__selected {
+        gap: 24px;
+      }
+      &--select {
+        display: block;
+        width: calc(100% - 10px);
+        margin: 0 auto 0;
+        &.active {
+          .input {
+            &__dropdown {
+              padding: 0.5em 1em;
+            }
+          }
+        }
+      }
+      &__dropdown {
+        position: unset;
+        padding: 0 1em;
+        &-item {
+          gap: 24px;
         }
       }
     }

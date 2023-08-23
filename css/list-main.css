@@ -751,6 +751,212 @@ svg {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
+.input--select {
+  font-size: 14px;
+  position: relative;
+  width: auto;
+}
+.input--select p {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1em;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.input--select .ico {
+  width: 1.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  position: absolute;
+  top: 12px;
+  right: 5px;
+}
+.input--select .ico svg {
+  width: 100%;
+  stroke: #5a607f;
+}
+.input--select.active .input__dropdown {
+  max-height: 300px;
+  pointer-events: all;
+  opacity: 1;
+}
+.input--select.active .ico {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.input--select.active .ico svg {
+  stroke: #185f76;
+}
+.input--select--primary {
+  font-size: 13px;
+  position: relative;
+  z-index: 2;
+}
+.input--select--primary .dropdown__button {
+  background: #185f76;
+  padding: 1.1em 2em 0.9em 2.6em;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.input--select--primary .dropdown__button p {
+  color: #fff;
+  font-weight: 700;
+}
+.input--select--primary .dropdown__button .ico {
+  width: 1em;
+  height: 1em;
+}
+.input--select--primary .dropdown__button .ico svg {
+  stroke: #fff;
+}
+.input--select--primary .dropdown__content {
+  padding: 1.1em 2em 0.9em 2.6em;
+  background: #185f76;
+  border: unset;
+  border-radius: 0 0 5px 5px;
+}
+.input--select--primary .dropdown__content p {
+  color: #fff;
+  font-weight: 700;
+}
+.input--select--primary:hover .input__selected {
+  border-radius: 5px 5px 0 0;
+}
+.input--select .input__selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 12px;
+  padding: 0.5em 3em 0.5em 0.8em;
+  cursor: pointer;
+  width: 100%;
+}
+.input--select .input__selected:hover p {
+  color: #185f76;
+}
+.input--select .input__dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  padding: 1em 0.8em;
+  border: 1px solid #185f76;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border-radius: 0.5em;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  max-height: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+.input--select .input__dropdown-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.input--select .input__dropdown-item:hover {
+  opacity: 0.7;
+}
+.input--select .input__dropdown-item:hover p {
+  color: #185f76;
+}
+.input--stock {
+  z-index: 2;
+  max-width: 170px;
+}
+.input--stock .input__selected {
+  padding: 6px 40px 6px 14px;
+  border-radius: 4px;
+  border: 1px solid #707070;
+}
+.input--stock .input__dropdown {
+  border-color: #707070;
+  padding: 6px 14px;
+  gap: 10px;
+  border-radius: 0 0 4px 4px;
+  border-top: unset;
+}
+.input--stock .text {
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 400;
+  color: #707070;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.input--stock .ico {
+  color: #707070;
+  width: 18px;
+  top: 7px;
+  right: 10px;
+}
+.input--stock .ico svg {
+  stroke: currentColor;
+}
+.input--stock.active .input__selected {
+  border-radius: 4px 4px 0 0;
+}
+
+.avatar {
+  width: 2.4em;
+  height: 2.4em;
+  min-width: 2.4em;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .button {
   cursor: pointer;
