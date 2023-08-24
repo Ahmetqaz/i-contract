@@ -374,13 +374,15 @@
                       </div>
                     </div>
                     <div class="contactContent__currency-item">
-                      <div class="input input--currencySm">
-                        <label for="cur-2"> Nettobetrag </label>
-                        <input type="text" placeholder="XXX" id="cur-2" />
-                      </div>
-                      <div class="input input--currencySm">
-                        <label for="cur-3"> 19% MwSt. </label>
-                        <input type="text" placeholder="XXX" id="cur-3" />
+                      <div class="contactContent__currency-item-wrapper">
+                        <div class="input input--currencySm">
+                          <label for="cur-2"> Nettobetrag </label>
+                          <input type="text" placeholder="XXX" id="cur-2" />
+                        </div>
+                        <div class="input input--currencySm">
+                          <label for="cur-3"> 19% MwSt. </label>
+                          <input type="text" placeholder="XXX" id="cur-3" />
+                        </div>
                       </div>
                       <div class="input input--checkBox">
                         <input type="checkbox" id="check" />
@@ -461,63 +463,103 @@
           </div>
         </section>
         <div class="anchor" id="info"></div>
-        <section class="info">
+        <section class="contract">
           <div class="autoContainer _sm">
-            <div class="info__inner">
-              <div class="info__inner-row">
+            <div class="contract__inner">
+              <div class="contract__inner-row">
                 <h2>Fahrzeugdaten</h2>
-                <div class="input input--text _sm">
+                <div class="input input--text _sm _wide">
                   <label for="contract-vehicle-brand-value">
                     Hersteller/Typ
                   </label>
                   <input type="text" id="contract-vehicle-brand-value" />
                 </div>
-                <div class="infoColumn">
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-first-registration-value">
-                      Erstzulassung
-                    </label>
-                    <input type="text" id="contract-vehicle-first-registration-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-number-of-owners-value">
-                      Anzahl der Fahrzeughalter
-                    </label>
-                    <input type="text" id="contract-vehicle-number-of-owners-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-performance-value">
-                      PS/KW
-                    </label>
-                    <input type="text" id="contract-vehicle-performance-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-gear-type-value">
-                      Getriebeart
-                    </label>
-                    <input type="text" id="contract-vehicle-gear-type-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-emission-class-value">
-                      Schadstoffklasse
-                    </label>
-                    <input type="text" id="contract-vehicle-emission-class-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-climate-control-value">
-                      Klima
-                    </label>
-                    <input type="text" id="contract-vehicle-climate-control-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-vehicle-type-value">
-                      Fahrzeugtyp
-                    </label>
-                    <input type="text" id="contract-vehicle-vehicle-type-value" />
-                  </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-first-registration-value">
+                    Erstzulassung
+                  </label>
+                  <input type="text" id="contract-vehicle-first-registration-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-total-mileage-value">
+                    KFZ-Gesamtfahrleistung
+                  </label>
+                  <input type="text" id="contract-vehicle-total-mileage-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-number-of-owners-value">
+                    Anzahl der Fahrzeughalter
+                  </label>
+                  <input type="text" id="contract-vehicle-number-of-owners-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-color-value"> Farbe </label>
+                  <input type="text" id="contract-vehicle-color-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-performance-value">
+                    PS/KW
+                  </label>
+                  <input type="text" id="contract-vehicle-performance-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-cubic-capacity-value">
+                    Hubraum
+                  </label>
+                  <input type="text" id="contract-vehicle-cubic-capacity-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-gear-type-value">
+                    Getriebeart
+                  </label>
+                  <input type="text" id="contract-vehicle-gear-type-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-fuel-type-value">
+                    Kraftstoffart
+                  </label>
+                  <input type="text" id="contract-vehicle-fuel-type-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-emission-class-value">
+                    Schadstoffklasse
+                  </label>
+                  <input type="text" id="contract-vehicle-emission-class-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-checkbook-until-value">
+                    Scheckheftgepflegt
+                  </label>
+                  <input type="text" id="contract-vehicle-checkbook-until-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-climate-control-value">
+                    Klima
+                  </label>
+                  <input type="text" id="contract-vehicle-climate-control-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-inspection-value">
+                    TÜV/AU
+                  </label>
+                  <input type="text" id="contract-vehicle-inspection-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-vehicle-type-value">
+                    Fahrzeugtyp
+                  </label>
+                  <input type="text" id="contract-vehicle-vehicle-type-value" />
+                </div>
+                <div class="input input--text _sm">
+                  <label for="contract-vehicle-number-of-doors-value">
+                    Anzahl der Türen
+                  </label>
+                  <input type="text" id="contract-vehicle-number-of-doors-value" />
+                </div>
+                <div class="contract__inner-row-body">
                   <div class="input__wrapper">
                     <h4>EU-Import</h4>
-                    <div class="input input--select input--primary">
+                    <div class="input input--select input--primary input--arrow">
                       <input type="hidden">
                       <div class="input__selected">
                       </div>
@@ -531,57 +573,17 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="input input--text _sm">
+                  <div class="input input--text _sm _wide">
                     <label for="contract-vehicle-id-value">
                       Fahrzeug-Ident.-Nr.
                     </label>
                     <input type="text" id="contract-vehicle-id-value" />
                   </div>
                 </div>
-                <div class="infoColumn">
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-total-mileage-value">
-                      KFZ-Gesamtfahrleistung
-                    </label>
-                    <input type="text" id="contract-vehicle-total-mileage-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-color-value"> Farbe </label>
-                    <input type="text" id="contract-vehicle-color-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-cubic-capacity-value">
-                      Hubraum
-                    </label>
-                    <input type="text" id="contract-vehicle-cubic-capacity-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-fuel-type-value">
-                      Kraftstoffart
-                    </label>
-                    <input type="text" id="contract-vehicle-fuel-type-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-checkbook-until-value">
-                      Scheckheftgepflegt
-                    </label>
-                    <input type="text" id="contract-vehicle-checkbook-until-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-inspection-value">
-                      TÜV/AU
-                    </label>
-                    <input type="text" id="contract-vehicle-inspection-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-number-of-doors-value">
-                      Anzahl der Türen
-                    </label>
-                    <input type="text" id="contract-vehicle-number-of-doors-value" />
-                  </div>
+                <div class="contract__inner-row-body _footer">
                   <div class="input__wrapper">
                     <h4>Gewerblich genutzt ab EZ</h4>
-                    <div class="input input--select input--primary">
+                    <div class="input input--select input--primary  input--arrow">
                       <input type="hidden">
                       <div class="input__selected">
                       </div>
@@ -595,18 +597,17 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="input input--file">
-                    <label for="file">
-                      <span class="ico">
-                        <svg class="fill" width="23.223" height="20.877" viewBox="0 0 23.223 20.877">
-                          <path id="icon"
-                            d="M9.528,19.242l-.02-.223V12.326H2.1A2.006,2.006,0,0,1,0,10.438,1.974,1.974,0,0,1,1.817,8.566l.251-.018h7.44V1.888A2.007,2.007,0,0,1,11.612,0,2.049,2.049,0,0,1,13.7,1.633l.018.226v6.69H21.12a2.006,2.006,0,0,1,2.1,1.89,1.975,1.975,0,0,1-1.816,1.873l-.252.015H13.715v6.661a2.006,2.006,0,0,1-2.1,1.89A2.048,2.048,0,0,1,9.528,19.242Z" />
-                        </svg>
-                      </span>
-                      <p>Eigenschaften hinzufügen</p>
-                    </label>
-                    <input type="file" id="file" />
-                  </div>
+                  <button class="button button--file">
+                    <span class="ico">
+                      <svg class="fill" width="23.223" height="20.877" viewBox="0 0 23.223 20.877">
+                        <path id="icon"
+                          d="M9.528,19.242l-.02-.223V12.326H2.1A2.006,2.006,0,0,1,0,10.438,1.974,1.974,0,0,1,1.817,8.566l.251-.018h7.44V1.888A2.007,2.007,0,0,1,11.612,0,2.049,2.049,0,0,1,13.7,1.633l.018.226v6.69H21.12a2.006,2.006,0,0,1,2.1,1.89,1.975,1.975,0,0,1-1.816,1.873l-.252.015H13.715v6.661a2.006,2.006,0,0,1-2.1,1.89A2.048,2.048,0,0,1,9.528,19.242Z" />
+                      </svg>
+                    </span>
+                    <span class="text">
+                      Eigenschaften hinzufügen
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -673,7 +674,8 @@
                   </div>
                   <div class="conditionBody__info">
                     <h4>Uneingeschränkt Fahrbereit</h4>
-                    <div class="input input--select input--primary" id="contract-vehicle-ready-to-drive-value">
+                    <div class="input input--select input--primary  input--arrow"
+                      id="contract-vehicle-ready-to-drive-value">
                       <input type="hidden">
                       <div class="input__selected">
                       </div>
@@ -722,7 +724,8 @@
               <div class="data__inner-box">
                 <div class="input__wrapper">
                   <h4>Zahlungsart</h4>
-                  <div class="input input--select input--primary " id="contract-vehicle-payment-method-value">
+                  <div class="input input--select input--primary  input--arrow"
+                    id="contract-vehicle-payment-method-value">
                     <input type="hidden">
                     <div class="input__selected">
                     </div>
@@ -741,7 +744,7 @@
                 </div>
                 <div class="input__wrapper">
                   <h4>Zugelassen</h4>
-                  <div class="input input--select input--primary" id="contract-vehicle-pickup-date-value">
+                  <div class="input input--select input--primary  input--arrow" id="contract-vehicle-pickup-date-value">
                     <input type="hidden">
                     <div class="input__selected">
                     </div>

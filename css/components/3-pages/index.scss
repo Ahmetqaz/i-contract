@@ -1,3 +1,6 @@
+section {
+  padding: 35px 0;
+}
 .contact {
   max-width: 1856px;
   width: 100%;
@@ -120,6 +123,11 @@
           color: $primary;
           width: 32%;
         }
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
       }
     }
   }
@@ -235,7 +243,6 @@
       width: 100%;
       &-item {
         width: calc(33% - 15px);
-        max-width: 386px;
         &._lg {
           max-width: unset;
           width: 100%;
@@ -256,11 +263,10 @@
         &--select {
           .input {
             &__selected {
+            }
+            &:hover {
               &::after {
-                width: 1.5em;
-                height: 1.5em;
-                right: 1em;
-                background-image: url("../images/icons/arrow-down-2.svg");
+                background-image: url("../images/icons/arrow-down-orange.svg");
               }
             }
           }
@@ -276,7 +282,7 @@
     padding: 12px 30px;
   }
 }
-.info {
+.contract {
   width: 100%;
   &__inner {
     display: flex;
@@ -288,44 +294,40 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 18px;
+      gap: 20px;
+      &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: calc(50% - 16px);
+        &._footer {
+          order: 1;
+        }
+      }
+    }
+  }
+  &Column {
+    width: calc(50% - 16px);
+    // max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &._footer {
+      order: 1;
     }
   }
   h2 {
     color: $primary;
   }
-  &Column {
-    width: calc(50% - 10px);
-    max-width: 620px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
   .input {
+    &--text {
+      width: calc(50% - 16px);
+      &._wide {
+        width: 100%;
+      }
+    }
     &--select {
       max-width: 340px;
-      .input {
-        &__selected {
-          padding: 1.4em 1em;
-          &::after {
-            width: 1.5em;
-            height: 1.5em;
-            right: 1em;
-            background-image: url("../images/icons/arrow-down-2.svg");
-          }
-          p {
-            font-weight: 400;
-          }
-        }
-        &__dropdown {
-          padding: 1em 1em 1.2em;
-          p {
-            font-weight: 400;
-          }
-          &-item {
-          }
-        }
-      }
     }
     &__wrapper {
       display: flex;
@@ -337,6 +339,11 @@
     }
     &--file {
       max-width: 340px;
+    }
+  }
+  .button {
+    &--file {
+      margin-top: auto;
     }
   }
 }
@@ -375,21 +382,18 @@
       }
     }
   }
-
   &Link {
     color: $primary;
     font-size: inherit;
     @include transition;
     &.active {
       text-decoration: underline;
+      color: $orange;
     }
     &:hover {
       opacity: 0.7;
     }
   }
-}
-section {
-  padding: 35px 0;
 }
 .data {
   &__inner {
@@ -486,28 +490,6 @@ section {
     }
     &--select {
       font-size: 13px !important;
-      .input {
-        &__selected {
-          padding: 1.5em 1em;
-          &::after {
-            width: 1.5em;
-            height: 1.5em;
-            right: 1em;
-            background-image: url("../images/icons/arrow-down-2.svg");
-          }
-          p {
-            font-weight: 400;
-          }
-        }
-        &__dropdown {
-          padding: 1em 1em 1.2em;
-          p {
-            font-weight: 400;
-          }
-          &-item {
-          }
-        }
-      }
     }
     &__wrapper {
       display: flex;
@@ -603,7 +585,6 @@ section {
   position: relative;
   top: -120px;
 }
-
 @mixin index-1900 {
   .contact {
     &Content {
@@ -638,6 +619,9 @@ section {
                 font-size: 1em;
               }
             }
+          }
+          &-wrapper {
+            gap: 20px 10px;
           }
         }
       }
@@ -962,7 +946,7 @@ section {
   .sideSpace {
     padding-left: 0;
   }
-  .info {
+  .contract {
     .input {
       &__wrapper {
         h4 {
@@ -973,21 +957,30 @@ section {
   }
 }
 @mixin index-750 {
-  .info {
+  .contract {
     &__inner {
       &-row {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
+        &-body {
+          width: 100%;
+          gap: 30px;
+        }
       }
     }
     &Column {
       width: 100%;
       max-width: unset;
     }
-    .input--select {
-      max-width: unset;
-    }
     .input {
+      &--select {
+        max-width: unset;
+      }
+      &--text {
+        width: 100%;
+      }
+    }
+    .button {
       &--file {
         max-width: unset;
       }
@@ -1197,7 +1190,7 @@ section {
       font-size: 14px;
     }
   }
-  .info {
+  .contract {
     &__inner {
       &-row {
         padding: 20px 15px;
