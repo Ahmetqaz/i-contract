@@ -14,11 +14,15 @@
         border: unset;
         padding-top: 25px;
       }
+      &._sm {
+        padding: 0;
+      }
     }
     &-header {
       display: flex;
       align-items: center;
       position: relative;
+      justify-content: space-between;
       h2 {
         color: $primary;
         font-weight: 400;
@@ -26,31 +30,21 @@
       h3 {
         font-weight: 400;
       }
-    }
-    &-date {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%);
-      .button {
-        .ico {
-          color: $primary;
-          @include transition;
-          svg {
-            stroke: currentColor;
-          }
-        }
-        &:hover {
-          .ico {
-            color: $orange;
-          }
-        }
+      h4 {
+        color: $black-8;
+        font-weight: 400;
       }
-      h3 {
-        white-space: nowrap;
+      .date {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .button {
+        &--primary {
+          font-weight: 400;
+          border-radius: 8px;
+        }
       }
     }
     &-row {
@@ -78,6 +72,94 @@
       overflow: auto;
       &._lg {
         max-height: 500px;
+      }
+      &._extraLg {
+        max-height: 700px;
+      }
+    }
+    &-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 30px 0 16px;
+      .input {
+        &--borderDropdown {
+          .ico {
+            color: #77838f;
+          }
+        }
+        &__selected {
+          border-color: $black-10;
+        }
+        &__dropdown {
+          border-color: $black-10;
+        }
+        .text {
+          color: #77838f;
+        }
+      }
+      &-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .ico {
+          width: 14px;
+          height: 14px;
+        }
+        h5 {
+          font-weight: 400;
+          color: #77838f;
+          line-height: 1;
+        }
+      }
+      .button {
+        &--icoText {
+          gap: 10px;
+          font-size: 14px;
+          color: #77838f;
+          font-weight: 400;
+          @include transition;
+          .ico {
+            color: #77838f;
+            @include transition;
+            svg {
+              fill: currentColor;
+            }
+          }
+          &:hover {
+            color: $orange;
+            .ico {
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    &-body {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      h6 {
+        color: $primary;
+        font-weight: 500;
+      }
+    }
+    &-avatars {
+      display: flex;
+      align-items: center;
+      .avatar {
+        margin-left: -10px;
+        font-size: 14.5px;
+        &:nth-child(1) {
+          margin: 0;
+        }
       }
     }
   }
@@ -144,10 +226,21 @@
         display: flex;
         flex-direction: column;
         letter-spacing: -0.5px;
+        flex: 1;
         .text {
           display: block;
           white-space: nowrap;
           line-height: 1.2;
+          &._primary {
+            font-size: 15px;
+            font-weight: 700;
+            color: $primary;
+            margin-top: 14px;
+          }
+          &._bottom {
+            margin-top: auto;
+            font-size: 9px;
+          }
         }
       }
       &-box {
@@ -172,7 +265,7 @@
           }
         }
       }
-      &._secondary {
+      &._header {
         padding: 35px 10px 10px;
         align-items: center;
         justify-content: center;
@@ -190,6 +283,37 @@
         .calendarTable__button {
           .ico {
             color: $white;
+          }
+        }
+      }
+      &._primary {
+        min-height: 140px;
+        min-width: 130px;
+        background: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: unset;
+        h4 {
+          color: $white;
+          font-weight: 400;
+        }
+      }
+      &._secondary {
+        background: rgba($orange-2, 0.3);
+        min-height: 140px;
+        min-width: 130px;
+        box-shadow: unset;
+        h5 {
+          font-size: 12px;
+        }
+        .text {
+          font-size: 12px;
+          &._primary {
+            font-size: 15px;
+          }
+          &._bottom {
+            font-size: 9px;
           }
         }
       }
@@ -228,17 +352,17 @@
       flex-direction: column;
       gap: 8px;
       white-space: nowrap;
-      h5 {
-        font-size: 15px;
-        color: $black-8;
-        font-weight: 500;
-        line-height: 1;
-      }
       .text {
         font-size: 14px;
         color: #77838f;
         line-height: 1;
         font-weight: 400;
+        &._lg {
+          font-size: 15px;
+          color: $black-8;
+          font-weight: 500;
+          line-height: 1;
+        }
       }
     }
     &__devider {
@@ -253,6 +377,210 @@
         left: 0;
       }
     }
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .text {
+        color: #77838f;
+        font-weight: 400;
+        font-size: 16px;
+        display: block;
+        &._lg {
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+    }
+    &--border {
+      th {
+        padding-bottom: 12px;
+      }
+      td {
+        border-right: 1px solid #e3e3e4;
+        padding: 10px 8px 8px !important;
+      }
+      .calendarTable {
+        &__column {
+          min-height: 170px;
+        }
+      }
+    }
+  }
+  &__slider {
+    margin-bottom: 28px;
+    padding-left: 48px;
+    position: relative;
+    &-item {
+      padding: 10px 15px;
+      background: rgba($primary, 0.4);
+      border-radius: 16px;
+      max-width: 166px;
+      display: flex !important;
+      flex-direction: column;
+      gap: 5px;
+    }
+    &-image {
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 108px;
+      height: 45px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-info {
+      font-size: 12px;
+      font-weight: 400;
+      color: #24242c;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      max-width: 106px;
+      margin: 0 auto;
+      .text {
+        display: block;
+        &._primary {
+          color: $primary;
+        }
+      }
+      &._sm {
+        gap: 0;
+      }
+    }
+    .swiper {
+      &-arrow {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 2;
+        .ico {
+          width: 100%;
+          height: 100%;
+          color: $black;
+          @include transition;
+          svg {
+            fill: currentColor;
+            stroke: unset;
+          }
+        }
+        &-prev {
+          left: 11px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &-next {
+          right: 11px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:hover {
+          .ico {
+            color: $orange;
+          }
+        }
+      }
+    }
+    &:after {
+      content: "";
+      width: 48px;
+      height: 100%;
+      background: linear-gradient(to right, rgba($white, 0), rgba($white, 1));
+      position: absolute;
+      right: -1px;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
+.date {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  .button {
+    .ico {
+      color: $primary;
+      @include transition;
+      svg {
+        color: inherit;
+        stroke: currentColor;
+        &.fill {
+          stroke: unset;
+        }
+      }
+    }
+    &:hover {
+      .ico {
+        color: $orange;
+      }
+    }
+  }
+  h3,
+  h4,
+  h5 {
+    white-space: nowrap;
+    font-weight: 400;
+  }
+  h5 {
+    color: #77838f;
+  }
+  &--lg {
+    min-width: 260px;
+    justify-content: space-between;
+    .button {
+      width: 1em;
+      height: 1em;
+      .ico {
+        color: $black-10;
+      }
+    }
+  }
+  &__group {
+    display: flex;
+    hr {
+      background: #6f52ed;
+      width: 1px;
+      border: 1px solid $primary;
+      border-right: unset;
+      border-left: unset;
+    }
+    .button {
+      &--ico {
+        border: 1px solid $primary;
+        border-radius: 5px 0 0 5px;
+        border-right: unset;
+        width: 42px;
+        height: 28px;
+        &._right {
+          border-right: 1px solid $primary;
+          border-left: unset;
+          border-radius: 0 5px 5px 0;
+        }
+        .ico {
+          width: 8px;
+          color: #5c6b91;
+          svg {
+            fill: currentColor;
+          }
+        }
+        &:hover {
+          background: $primary;
+          .ico {
+            color: $white;
+          }
+        }
+      }
+    }
   }
 }
 @mixin calendar-1025 {
@@ -262,11 +590,11 @@
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
-      }
-      &-date {
-        position: unset;
-        transform: unset;
-        align-self: center;
+        .date {
+          position: unset;
+          transform: unset;
+          align-self: center;
+        }
       }
     }
   }
