@@ -243,6 +243,7 @@ section {
       width: 100%;
       &-item {
         width: calc(33% - 15px);
+        max-width: 386px;
         &._lg {
           max-width: unset;
           width: 100%;
@@ -282,7 +283,7 @@ section {
     padding: 12px 30px;
   }
 }
-.contract {
+.info {
   width: 100%;
   &__inner {
     display: flex;
@@ -294,17 +295,11 @@ section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px;
-      &-body {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: calc(50% - 16px);
-        &._footer {
-          order: 1;
-        }
-      }
+      gap: 18px;
     }
+  }
+  h2 {
+    color: $primary;
   }
   &Column {
     width: calc(50% - 16px);
@@ -316,16 +311,7 @@ section {
       order: 1;
     }
   }
-  h2 {
-    color: $primary;
-  }
   .input {
-    &--text {
-      width: calc(50% - 16px);
-      &._wide {
-        width: 100%;
-      }
-    }
     &--select {
       max-width: 340px;
     }
@@ -946,7 +932,7 @@ section {
   .sideSpace {
     padding-left: 0;
   }
-  .contract {
+  .info {
     .input {
       &__wrapper {
         h4 {
@@ -957,28 +943,19 @@ section {
   }
 }
 @mixin index-750 {
-  .contract {
+  .info {
     &__inner {
       &-row {
         flex-direction: column;
-        gap: 30px;
-        &-body {
-          width: 100%;
-          gap: 30px;
-        }
+        gap: 40px;
       }
     }
     &Column {
       width: 100%;
       max-width: unset;
     }
-    .input {
-      &--select {
-        max-width: unset;
-      }
-      &--text {
-        width: 100%;
-      }
+    .input--select {
+      max-width: unset;
     }
     .button {
       &--file {
@@ -1190,7 +1167,7 @@ section {
       font-size: 14px;
     }
   }
-  .contract {
+  .info {
     &__inner {
       &-row {
         padding: 20px 15px;

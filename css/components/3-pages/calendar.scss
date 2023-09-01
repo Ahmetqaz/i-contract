@@ -9,8 +9,13 @@
       display: flex;
       flex-direction: column;
       gap: 26px;
+      &._secondary {
+        background: transparent;
+        border: unset;
+        padding-top: 25px;
+      }
     }
-    &-title {
+    &-header {
       display: flex;
       align-items: center;
       position: relative;
@@ -49,8 +54,6 @@
       display: flex;
       justify-content: space-between;
       gap: 14px;
-      height: 450px;
-      overflow: auto;
       &-column {
         width: calc(14.28% - 10px);
         min-width: 180px;
@@ -67,31 +70,182 @@
         }
       }
     }
-  }
-  &Item {
-    padding: 15px;
-    border: 1px solid $white-6;
-    border-radius: 12px;
-    background: #fafafa;
-    box-shadow: 0 3px 6px rgba($black, 0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    strong {
-      color: $black-8;
-      font-weight: 700;
-      font-size: 16px;
+    &-table {
+      height: 450px;
+      overflow: auto;
+      &._lg {
+        height: 500px;
+      }
     }
-    &__info {
-      font-size: 16px;
-      color: $black-8;
+  }
+  &Table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      color: $black-9;
       font-weight: 400;
-      line-height: 1.4em;
+      font-size: 18px;
+      padding: 0 10px 25px;
+      white-space: nowrap;
+    }
+    td {
+      padding: 0 10px 14px;
+      vertical-align: top;
+    }
+    &._sm {
+      .calendarTable {
+        &__column {
+          min-height: 190px;
+          justify-content: space-between;
+        }
+      }
+      td {
+        padding: 28px 10px 18px;
+      }
+      tbody {
+        tr {
+          &:first-child {
+            td {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+    }
+    &__item {
+      padding: 15px;
+      border: 1px solid $white-6;
+      border-radius: 12px;
+      background: #fafafa;
+      box-shadow: 0 3px 6px rgba($black, 0.2);
       display: flex;
       flex-direction: column;
-      letter-spacing: -0.5px;
+      position: relative;
+      width: 100%;
+      gap: 5px;
+      min-height: 134px;
+      min-width: 160px;
+      strong,
+      h5 {
+        color: $black-8;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+      &-info {
+        font-size: 16px;
+        color: $black-8;
+        font-weight: 400;
+        line-height: 1.4em;
+        display: flex;
+        flex-direction: column;
+        letter-spacing: -0.5px;
+        .text {
+          display: block;
+          white-space: nowrap;
+          line-height: 1.2;
+        }
+      }
+      &-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      &._sm {
+        border-radius: 12px;
+        padding: 10px 15px;
+        min-height: unset;
+        .calendarTable {
+          &__item {
+            &-box {
+              flex-direction: row;
+              gap: 10px;
+              justify-content: space-between;
+              h5 {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+      &._secondary {
+        padding: 35px 10px 10px;
+        align-items: center;
+        justify-content: center;
+        &::before {
+          content: "";
+          width: calc(100% + 2px);
+          height: 26px;
+          background: $orange;
+          position: absolute;
+          top: -1px;
+          left: -1px;
+          border-top-right-radius: inherit;
+          border-top-left-radius: inherit;
+        }
+        .calendarTable__button {
+          .ico {
+            color: $white;
+          }
+        }
+      }
+    }
+    &__button {
+      position: absolute;
+      font-size: 18px;
+      width: 1.5em;
+      color: $primary;
+      top: 10px;
+      right: 15px;
+      .ico {
+        width: inherit;
+        height: auto;
+        color: inherit;
+        svg {
+          fill: currentColor;
+        }
+      }
+    }
+    &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 14px;
+      &._bottom {
+        align-items: flex-end;
+        justify-content: flex-end !important;
+      }
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      white-space: nowrap;
+      h5 {
+        font-size: 15px;
+        color: $black-8;
+        font-weight: 500;
+        line-height: 1;
+      }
       .text {
-        display: block;
+        font-size: 14px;
+        color: #77838f;
+        line-height: 1;
+        font-weight: 400;
+      }
+    }
+    &__devider {
+      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #e3e3e4;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
     }
   }
