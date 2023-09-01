@@ -1,5 +1,5 @@
 .calendar {
-  padding-top: 0;
+  padding: 0;
   &__inner {
     &-content {
       padding: 20px 30px;
@@ -49,6 +49,9 @@
           }
         }
       }
+      h3 {
+        white-space: nowrap;
+      }
     }
     &-row {
       display: flex;
@@ -71,10 +74,10 @@
       }
     }
     &-table {
-      height: 450px;
+      max-height: 450px;
       overflow: auto;
       &._lg {
-        height: 500px;
+        max-height: 500px;
       }
     }
   }
@@ -195,9 +198,11 @@
       position: absolute;
       font-size: 18px;
       width: 1.5em;
+      height: 1.5em;
       color: $primary;
-      top: 10px;
+      top: 0;
       right: 15px;
+      cursor: grab;
       .ico {
         width: inherit;
         height: auto;
@@ -246,6 +251,36 @@
         position: absolute;
         top: 0;
         left: 0;
+      }
+    }
+  }
+}
+@mixin calendar-1025 {
+  .calendar {
+    &__inner {
+      &-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      &-date {
+        position: unset;
+        transform: unset;
+        align-self: center;
+      }
+    }
+  }
+}
+@mixin calendar-650 {
+  .calendar {
+    &__inner {
+      &-header {
+      }
+      &-date {
+        gap: 20px;
+        h3 {
+          font-size: 20px;
+        }
       }
     }
   }

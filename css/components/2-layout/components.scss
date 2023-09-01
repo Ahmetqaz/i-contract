@@ -495,6 +495,48 @@
       }
     }
   }
+  &--stock {
+    z-index: 2;
+    max-width: 170px;
+    .input {
+      &__selected {
+        padding: 6px 40px 6px 14px;
+        border-radius: 4px;
+        border: 1px solid $gray;
+      }
+      &__dropdown {
+        border-color: $gray;
+        padding: 6px 14px;
+        gap: 10px;
+        border-radius: 0 0 4px 4px;
+        border-top: unset;
+      }
+    }
+    .text {
+      font-size: 14px;
+      line-height: 1em;
+      font-weight: 400;
+      color: $gray;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ico {
+      color: $gray;
+      width: 18px;
+      top: 7px;
+      right: 10px;
+      svg {
+        stroke: currentColor;
+      }
+    }
+    &.active {
+      .input__selected {
+        border-radius: 4px 4px 0 0;
+      }
+    }
+  }
   &--primary {
     font-size: 13px;
     position: relative;
@@ -732,6 +774,87 @@
     &:hover {
       border-color: $orange;
       background: rgba($orange, 0.05);
+    }
+  }
+  &--icoBg {
+    padding: 0.5em;
+    width: 3.5em;
+    height: 3.14em;
+    background: $white;
+    border: 1px solid $black-5;
+    color: $primary;
+    .ico {
+      width: auto;
+      height: 1.28em;
+      svg {
+        fill: currentColor;
+        stroke: unset;
+      }
+    }
+    &:hover {
+      border-color: rgba($black-4, 0.5);
+    }
+    &._sm {
+      width: 2.5em;
+      height: 2.5em;
+      .ico {
+        height: 1em;
+      }
+    }
+    &._stock {
+      background: $primary;
+      border: unset;
+      width: 3.5em;
+      height: 2.7em;
+      .ico {
+        color: $white;
+        svg {
+          stroke: currentColor;
+        }
+      }
+      &:hover {
+        background: $orange;
+      }
+    }
+  }
+  &--dropdown {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba($black-4, 0.65);
+    padding: 0.9em 0.5em 0.9em 0.9em;
+    background: $white;
+    border-radius: 5px;
+    gap: 10px;
+    border-color: $black-5;
+    .ico {
+      width: 8px;
+    }
+    &:hover {
+      border-color: rgba($black-4, 0.5);
+    }
+  }
+  &--chevron {
+    border-color: $gray-2;
+    border-radius: 4px;
+    padding: 0.3em 1.15em;
+    .ico {
+      font-size: inherit;
+      width: 0.4em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &--text {
+    min-width: 196px;
+    border-radius: 7px;
+    padding: 6px 16px;
+    background: $white;
+    color: $primary;
+    &._red {
+      color: $red;
     }
   }
   &._shadow {
@@ -1199,6 +1322,9 @@
     &._lg {
       max-width: 1940px;
     }
+  }
+  &._sm {
+    padding-bottom: 0;
   }
 }
 .setting {

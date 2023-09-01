@@ -47,6 +47,7 @@
   @include layouts-1025;
   @include table-1025;
   @include stock-1025;
+  @include calendar-1025;
 }
 @media (max-width: 940px) {
   @include stock-940;
@@ -68,6 +69,7 @@
   @include index-650;
   @include compare-650;
   @include stock-650;
+  @include calendar-650;
 }
 @media (max-width: 580px) {
   @include typography-580;

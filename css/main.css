@@ -976,6 +976,44 @@ svg {
 .input--select .input__dropdown-item:hover p {
   color: #185f76;
 }
+.input--stock {
+  z-index: 2;
+  max-width: 170px;
+}
+.input--stock .input__selected {
+  padding: 6px 40px 6px 14px;
+  border-radius: 4px;
+  border: 1px solid #707070;
+}
+.input--stock .input__dropdown {
+  border-color: #707070;
+  padding: 6px 14px;
+  gap: 10px;
+  border-radius: 0 0 4px 4px;
+  border-top: unset;
+}
+.input--stock .text {
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 400;
+  color: #707070;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.input--stock .ico {
+  color: #707070;
+  width: 18px;
+  top: 7px;
+  right: 10px;
+}
+.input--stock .ico svg {
+  stroke: currentColor;
+}
+.input--stock.active .input__selected {
+  border-radius: 4px 4px 0 0;
+}
 .input--primary {
   font-size: 13px;
   position: relative;
@@ -1234,6 +1272,88 @@ svg {
 .button--file:hover {
   border-color: #e96d24;
   background: rgba(233, 109, 36, 0.05);
+}
+.button--icoBg {
+  padding: 0.5em;
+  width: 3.5em;
+  height: 3.14em;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  color: #185f76;
+}
+.button--icoBg .ico {
+  width: auto;
+  height: 1.28em;
+}
+.button--icoBg .ico svg {
+  fill: currentColor;
+  stroke: unset;
+}
+.button--icoBg:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.button--icoBg._sm {
+  width: 2.5em;
+  height: 2.5em;
+}
+.button--icoBg._sm .ico {
+  height: 1em;
+}
+.button--icoBg._stock {
+  background: #185f76;
+  border: unset;
+  width: 3.5em;
+  height: 2.7em;
+}
+.button--icoBg._stock .ico {
+  color: #fff;
+}
+.button--icoBg._stock .ico svg {
+  stroke: currentColor;
+}
+.button--icoBg._stock:hover {
+  background: #e96d24;
+}
+.button--dropdown {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 0.9em 0.5em 0.9em 0.9em;
+  background: #fff;
+  border-radius: 5px;
+  gap: 10px;
+  border-color: #ebebeb;
+}
+.button--dropdown .ico {
+  width: 8px;
+}
+.button--dropdown:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.button--chevron {
+  border-color: #DDDDDD;
+  border-radius: 4px;
+  padding: 0.3em 1.15em;
+}
+.button--chevron .ico {
+  font-size: inherit;
+  width: 0.4em;
+}
+.button--chevron .ico img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.button--text {
+  min-width: 196px;
+  border-radius: 7px;
+  padding: 6px 16px;
+  background: #fff;
+  color: #185f76;
+}
+.button--text._red {
+  color: #f0142f;
 }
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
@@ -1766,6 +1886,9 @@ svg {
 }
 .wrapper__body._lg {
   max-width: 1940px;
+}
+.wrapper._sm {
+  padding-bottom: 0;
 }
 
 .setting {
@@ -4967,7 +5090,7 @@ section {
 }
 
 .calendar {
-  padding-top: 0;
+  padding: 0;
 }
 .calendar__inner-content {
   padding: 20px 30px;
@@ -5030,6 +5153,9 @@ section {
 .calendar__inner-date .button:hover .ico {
   color: #e96d24;
 }
+.calendar__inner-date h3 {
+  white-space: nowrap;
+}
 .calendar__inner-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5058,11 +5184,11 @@ section {
   margin-bottom: 20px;
 }
 .calendar__inner-table {
-  height: 450px;
+  max-height: 450px;
   overflow: auto;
 }
 .calendar__inner-table._lg {
-  height: 500px;
+  max-height: 500px;
 }
 .calendarTable {
   width: 100%;
@@ -5193,9 +5319,12 @@ section {
   position: absolute;
   font-size: 18px;
   width: 1.5em;
+  height: 1.5em;
   color: #185f76;
-  top: 10px;
+  top: 0;
   right: 15px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .calendarTable__button .ico {
   width: inherit;
@@ -5761,6 +5890,25 @@ section {
   .stockFooter .button {
     min-width: 170px;
   }
+
+  .calendar__inner-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .calendar__inner-date {
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 @media (max-width: 940px) {
   .stockFooter {
@@ -6312,6 +6460,13 @@ section {
   .stockFooter .button {
     width: calc(33.3% - 12px);
     min-width: auto;
+  }
+
+  .calendar__inner-date {
+    gap: 20px;
+  }
+  .calendar__inner-date h3 {
+    font-size: 20px;
   }
 }
 @media (max-width: 580px) {
