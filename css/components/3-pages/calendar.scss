@@ -137,18 +137,18 @@
         }
       }
     }
-    &-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
     &-body {
       display: flex;
       align-items: center;
-      gap: 6px;
-      h6 {
-        color: $primary;
-        font-weight: 500;
+      gap: 30px;
+      &-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h6 {
+          color: $primary;
+          font-weight: 500;
+        }
       }
     }
     &-avatars {
@@ -280,11 +280,6 @@
           border-top-right-radius: inherit;
           border-top-left-radius: inherit;
         }
-        .calendarTable__button {
-          .ico {
-            color: $white;
-          }
-        }
       }
       &._primary {
         min-height: 140px;
@@ -318,24 +313,7 @@
         }
       }
     }
-    &__button {
-      position: absolute;
-      font-size: 18px;
-      width: 1.5em;
-      height: 1.5em;
-      color: $primary;
-      top: 0;
-      right: 15px;
-      cursor: grab;
-      .ico {
-        width: inherit;
-        height: auto;
-        color: inherit;
-        svg {
-          fill: currentColor;
-        }
-      }
-    }
+
     &__column {
       display: flex;
       flex-direction: column;
@@ -502,6 +480,16 @@
       z-index: 1;
     }
   }
+  &--notifications {
+    width: calc(100% - 430px);
+  }
+  .button {
+    &--drag {
+      position: absolute;
+      top: 0;
+      right: 15px;
+    }
+  }
 }
 .date {
   display: flex;
@@ -583,6 +571,193 @@
     }
   }
 }
+.notifications {
+  width: 420px;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  padding-right: 5px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  &__drivers {
+    padding: 12px 10px 12px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(#d9e1e7, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: $white;
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h5 {
+        color: $black;
+      }
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      .avatar {
+        font-size: 19px;
+      }
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .text {
+        font-size: 12px;
+        color: #06152b;
+        &--primary {
+          color: $blue-11;
+        }
+      }
+    }
+    &-group {
+      display: flex;
+      gap: 30px;
+      margin-left: auto;
+      .button {
+        color: $blue-11;
+        .ico {
+          transition: unset;
+        }
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 168px;
+      overflow: auto;
+      padding-right: 20px;
+    }
+  }
+  &__events {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 10px 30px 30px;
+    background: $white;
+    border-radius: 15px;
+    flex-grow: 1;
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .buttonText {
+        font-weight: 400;
+      }
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      h4 {
+        color: #585861;
+        font-weight: 400;
+      }
+    }
+    &-item {
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: rgba($orange-2, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      h5 {
+        color: $primary;
+      }
+      .text {
+        font-size: 15px;
+        color: #24242c;
+        display: block;
+        font-weight: 400;
+        &._bottom {
+          margin-top: 8px;
+        }
+      }
+      strong {
+        color: $primary;
+        font-size: 17px;
+      }
+    }
+    &-box {
+      display: flex;
+      align-items: center;
+      max-width: 308px;
+      width: 100%;
+      justify-content: space-between;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      overflow: auto;
+      padding-right: 20px;
+      flex: 1 0 0;
+    }
+  }
+}
+.button {
+  &._hdie {
+    display: none;
+  }
+}
+
+@mixin calendar-1830 {
+  .notifications {
+    width: 370px;
+  }
+  .calendar {
+    &--notifications {
+      width: calc(100% - 370px);
+    }
+  }
+  .date--lg {
+    min-width: 200px;
+  }
+}
+@mixin calendar-1660 {
+  .calendar {
+    &--notifications {
+      width: calc(100% - 74px);
+    }
+  }
+  .notifications {
+    position: fixed;
+    right: 0;
+    top: 93px;
+    width: 100%;
+    height: calc(100% - 93px);
+    z-index: 8;
+    &__inner {
+      width: 400px;
+      background: $white-2;
+      padding: 0 0 0 10px;
+    }
+  }
+  .button {
+    &._hdie {
+      display: flex;
+    }
+  }
+}
+
 @mixin calendar-1025 {
   .calendar {
     &__inner {

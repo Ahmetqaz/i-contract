@@ -187,6 +187,9 @@ h4._lg {
 h5 {
   font-size: 14px;
 }
+h5._lg {
+  font-size: 15px;
+}
 
 h6 {
   font-size: 12px;
@@ -1390,6 +1393,70 @@ svg {
 .button--text._red {
   color: #f0142f;
 }
+.button--drag {
+  font-size: 18px;
+  width: 1.5em;
+  height: 1.5em;
+  color: #185f76;
+  padding: 0;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.button--drag .ico {
+  width: inherit;
+  height: auto;
+  color: inherit;
+}
+.button--drag .ico svg {
+  fill: currentColor;
+}
+.button--drag._secondary .ico {
+  color: #fff;
+}
+.button--notification {
+  width: 74px;
+  height: 56px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e5e5e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 9;
+}
+.button--notification .button__burger {
+  width: 22px;
+  height: 18px;
+  position: relative;
+}
+.button--notification .button__burger::before, .button--notification .button__burger::after,
+.button--notification .button__burger span {
+  content: "";
+  width: 100%;
+  height: 2.9px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #185f76;
+}
+.button--notification .button__burger::after {
+  width: 9px;
+  top: unset;
+  bottom: 0;
+}
+.button--notification .button__burger span {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+}
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
           box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
@@ -1920,7 +1987,13 @@ svg {
   max-width: 1845px;
 }
 .wrapper__body._lg {
-  max-width: 1940px;
+  max-width: 1920px;
+}
+.wrapper__body._row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .wrapper._sm {
   padding-bottom: 0;
@@ -2177,7 +2250,7 @@ svg {
   padding: 27px 0;
   -webkit-box-shadow: 0 1px 4px rgba(30, 31, 36, 0.2);
           box-shadow: 0 1px 4px rgba(30, 31, 36, 0.2);
-  z-index: 10;
+  z-index: 11;
 }
 .header__inner {
   display: -webkit-box;
@@ -5290,7 +5363,7 @@ section {
 .calendar__inner-group .button--icoText:hover .ico {
   color: #e96d24;
 }
-.calendar__inner-wrapper {
+.calendar__inner-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5299,16 +5372,16 @@ section {
           align-items: center;
   gap: 30px;
 }
-.calendar__inner-body {
+.calendar__inner-body-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
-.calendar__inner-body h6 {
+.calendar__inner-body-group h6 {
   color: #185f76;
   font-weight: 500;
 }
@@ -5462,9 +5535,6 @@ section {
   border-top-right-radius: inherit;
   border-top-left-radius: inherit;
 }
-.calendarTable__item._header .calendarTable__button .ico {
-  color: #fff;
-}
 .calendarTable__item._primary {
   min-height: 140px;
   min-width: 130px;
@@ -5503,25 +5573,6 @@ section {
 }
 .calendarTable__item._secondary .text._bottom {
   font-size: 9px;
-}
-.calendarTable__button {
-  position: absolute;
-  font-size: 18px;
-  width: 1.5em;
-  height: 1.5em;
-  color: #185f76;
-  top: 0;
-  right: 15px;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-.calendarTable__button .ico {
-  width: inherit;
-  height: auto;
-  color: inherit;
-}
-.calendarTable__button .ico svg {
-  fill: currentColor;
 }
 .calendarTable__column {
   display: -webkit-box;
@@ -5731,6 +5782,14 @@ section {
   top: 0;
   z-index: 1;
 }
+.calendar--notifications {
+  width: calc(100% - 430px);
+}
+.calendar .button--drag {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
 
 .date {
   display: -webkit-box;
@@ -5817,6 +5876,229 @@ section {
   color: #fff;
 }
 
+.notifications {
+  width: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  padding-right: 5px;
+}
+.notifications__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.notifications__drivers {
+  padding: 12px 10px 12px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(217, 225, 231, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  background: #fff;
+}
+.notifications__drivers-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.notifications__drivers-header h5 {
+  color: #1e1f24;
+}
+.notifications__drivers-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+.notifications__drivers-item .avatar {
+  font-size: 19px;
+}
+.notifications__drivers-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.notifications__drivers-box .text {
+  font-size: 12px;
+  color: #06152b;
+}
+.notifications__drivers-box .text--primary {
+  color: #809FB8;
+}
+.notifications__drivers-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
+.notifications__drivers-group .button {
+  color: #809FB8;
+}
+.notifications__drivers-group .button .ico {
+  -webkit-transition: unset;
+  transition: unset;
+}
+.notifications__drivers-group .button:hover {
+  color: #e96d24;
+}
+.notifications__drivers-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  max-height: 168px;
+  overflow: auto;
+  padding-right: 20px;
+}
+.notifications__events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  padding: 20px 10px 30px 30px;
+  background: #fff;
+  border-radius: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.notifications__events-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.notifications__events-header .buttonText {
+  font-weight: 400;
+}
+.notifications__events-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+.notifications__events-body h4 {
+  color: #585861;
+  font-weight: 400;
+}
+.notifications__events-item {
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: rgba(250, 100, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.notifications__events-item h5 {
+  color: #185f76;
+}
+.notifications__events-item .text {
+  font-size: 15px;
+  color: #24242c;
+  display: block;
+  font-weight: 400;
+}
+.notifications__events-item .text._bottom {
+  margin-top: 8px;
+}
+.notifications__events-item strong {
+  color: #185f76;
+  font-size: 17px;
+}
+.notifications__events-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 308px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.notifications__events-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.notifications__events-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  overflow: auto;
+  padding-right: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+}
+
+.button._hdie {
+  display: none;
+}
+
 @media (max-width: 1900px) {
   .contactContent__currency {
     -webkit-box-orient: vertical;
@@ -5861,6 +6143,19 @@ section {
     gap: 20px 10px;
   }
 }
+@media (max-width: 1830px) {
+  .notifications {
+    width: 370px;
+  }
+
+  .calendar--notifications {
+    width: calc(100% - 370px);
+  }
+
+  .date--lg {
+    min-width: 200px;
+  }
+}
 @media (max-width: 1700px) {
   .sideSpace {
     padding-left: 300px;
@@ -5875,25 +6170,8 @@ section {
   }
 }
 @media (max-width: 1660px) {
-  .contactContent__image h2 {
-    font-size: 27px;
-  }
-  .contactContent__image h3 {
-    font-size: 20px;
-  }
-  .contactContent__image h4 {
-    font-size: 18px;
-  }
-  .contactForm {
-    padding: 12px 20px;
-  }
-
-  .sideSpace {
-    padding-left: 60px;
-  }
-
-  .tabs {
-    top: 5px;
+  h2 {
+    font-size: 23px;
   }
 
   .sidebar {
@@ -5979,8 +6257,49 @@ section {
     padding: 20px 0;
   }
 
-  h2 {
-    font-size: 23px;
+  .contactContent__image h2 {
+    font-size: 27px;
+  }
+  .contactContent__image h3 {
+    font-size: 20px;
+  }
+  .contactContent__image h4 {
+    font-size: 18px;
+  }
+  .contactForm {
+    padding: 12px 20px;
+  }
+
+  .sideSpace {
+    padding-left: 60px;
+  }
+
+  .tabs {
+    top: 5px;
+  }
+
+  .calendar--notifications {
+    width: calc(100% - 74px);
+  }
+
+  .notifications {
+    position: fixed;
+    right: 0;
+    top: 93px;
+    width: 100%;
+    height: calc(100% - 93px);
+    z-index: 8;
+  }
+  .notifications__inner {
+    width: 400px;
+    background: #f7f7f7;
+    padding: 0 0 0 10px;
+  }
+
+  .button._hdie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media (max-width: 1500px) {
@@ -6388,12 +6707,11 @@ section {
     background: rgba(30, 31, 36, 0.4);
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
-    z-index: 0;
     -webkit-transform: translate(-100%);
             transform: translate(-100%);
     opacity: 0;
     pointer-events: none;
-    z-index: 9;
+    z-index: 10;
     -webkit-transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
     transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
     padding: 0;

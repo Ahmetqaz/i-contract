@@ -1,14 +1,18 @@
 @media (max-width: 1900px) {
   @include index-1900;
 }
+@media (max-width: 1830px) {
+  @include calendar-1830;
+}
 @media (max-width: 1700px) {
   @include index-1700;
   @include header-1700;
 }
 @media (max-width: 1660px) {
-  @include index-1660;
-  @include header-1660;
   @include typography-1660;
+  @include header-1660;
+  @include index-1660;
+  @include calendar-1660;
 }
 @media (max-width: 1500px) {
   @include layouts-1500;
