@@ -76,6 +76,9 @@
       &._extraLg {
         max-height: 700px;
       }
+      &._sm {
+        max-height: 360px;
+      }
     }
     &-group {
       display: flex;
@@ -177,6 +180,20 @@
     td {
       padding: 0 10px 14px;
       vertical-align: top;
+    }
+    &__sticky {
+      position: sticky;
+      top: -1px;
+      left: 0;
+      z-index: 2;
+      th {
+        background: $white;
+      }
+      &._gray {
+        th {
+          background: $white-2;
+        }
+      }
     }
     &._sm {
       .calendarTable {
@@ -314,7 +331,6 @@
         }
       }
     }
-
     &__column {
       display: flex;
       flex-direction: column;
@@ -491,6 +507,11 @@
       right: 15px;
     }
   }
+  .date {
+    &--extraLg {
+      margin: 0 auto;
+    }
+  }
 }
 .date {
   display: flex;
@@ -532,6 +553,21 @@
       .ico {
         color: $black-10;
       }
+    }
+  }
+  &--extraLg {
+    justify-content: space-between;
+    width: 100%;
+    max-width: 265px;
+    .button {
+      width: 1em;
+      height: 1em;
+      .ico {
+        color: $black-10;
+      }
+    }
+    h4 {
+      color: $black-8;
     }
   }
   &__group {
@@ -952,7 +988,6 @@
     }
   }
 }
-
 @mixin calendar-480 {
   .notifications {
     top: 61px;

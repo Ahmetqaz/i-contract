@@ -5339,6 +5339,9 @@ section {
 .calendar__inner-table._extraLg {
   max-height: 700px;
 }
+.calendar__inner-table._sm {
+  max-height: 360px;
+}
 .calendar__inner-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5463,6 +5466,18 @@ section {
 .calendarTable td {
   padding: 0 10px 14px;
   vertical-align: top;
+}
+.calendarTable__sticky {
+  position: sticky;
+  top: -1px;
+  left: 0;
+  z-index: 2;
+}
+.calendarTable__sticky th {
+  background: #fff;
+}
+.calendarTable__sticky._gray th {
+  background: #f7f7f7;
 }
 .calendarTable._sm .calendarTable__column {
   min-height: 190px;
@@ -5839,6 +5854,9 @@ section {
   top: 0;
   right: 15px;
 }
+.calendar .date--extraLg {
+  margin: 0 auto;
+}
 
 .date {
   display: -webkit-box;
@@ -5886,6 +5904,23 @@ section {
 }
 .date--lg .button .ico {
   color: #AFADB9;
+}
+.date--extraLg {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 265px;
+}
+.date--extraLg .button {
+  width: 1em;
+  height: 1em;
+}
+.date--extraLg .button .ico {
+  color: #AFADB9;
+}
+.date--extraLg h4 {
+  color: #393649;
 }
 .date__group {
   display: -webkit-box;
