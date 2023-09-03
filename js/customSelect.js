@@ -55,7 +55,6 @@ const customSelectInit = ({
         li.removeAttribute("data-default");
         setSelected(li);
       }
-
       li.onclick = () => setSelected(li);
     });
   });

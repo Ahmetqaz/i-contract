@@ -277,7 +277,8 @@ body {
   -moz-font-smoothing: antialiased;
 }
 
-body.active {
+body.active,
+body.freeze {
   overflow: hidden;
 }
 
@@ -1282,6 +1283,23 @@ svg {
   width: 100%;
   height: 100%;
 }
+.button--icoText .ico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+.button--icoText .ico svg {
+  width: 100%;
+  height: 100%;
+}
 .button--file {
   position: relative;
   border: 1px dashed #185f76;
@@ -1445,6 +1463,8 @@ svg {
   top: 0;
   right: 0;
   background: #185f76;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .button--notification .button__burger::after {
   width: 9px;
@@ -1456,6 +1476,29 @@ svg {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 15px;
+}
+.button--notification.active {
+  border-color: #e96d24;
+}
+.button--notification.active .button__burger::before {
+  width: 100%;
+  top: 50%;
+  right: unset;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  background: #e96d24;
+}
+.button--notification.active .button__burger::after {
+  top: 50%;
+  bottom: unset;
+  width: 100%;
+  -webkit-transform: translate(0, -50%) rotate(45deg);
+          transform: translate(0, -50%) rotate(45deg);
+  background: #e96d24;
+}
+.button--notification.active .button__burger span {
+  opacity: 0;
 }
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
@@ -5300,9 +5343,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 30px;
   padding: 30px 0 16px;
 }
@@ -5371,8 +5411,14 @@ section {
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-.calendar__inner-body-group {
+.calendar__inner-body-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5381,7 +5427,7 @@ section {
           align-items: center;
   gap: 10px;
 }
-.calendar__inner-body-group h6 {
+.calendar__inner-body-box h6 {
   color: #185f76;
   font-weight: 500;
 }
@@ -6095,7 +6141,7 @@ section {
           flex: 1 0 0;
 }
 
-.button._hdie {
+.button._hide {
   display: none;
 }
 
@@ -6279,7 +6325,7 @@ section {
   }
 
   .calendar--notifications {
-    width: calc(100% - 74px);
+    width: 100%;
   }
 
   .notifications {
@@ -6289,17 +6335,42 @@ section {
     width: 100%;
     height: calc(100% - 93px);
     z-index: 8;
+    background: rgba(30, 31, 36, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    overflow: auto;
+    -webkit-transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+    opacity: 0;
   }
   .notifications__inner {
-    width: 400px;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    min-height: 650px;
     background: #f7f7f7;
-    padding: 0 0 0 10px;
+    padding: 10px;
+    -webkit-transition: 0.15s ease-in-out 0s;
+    transition: 0.15s ease-in-out 0s;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
-
-  .button._hdie {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .notifications.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  .notifications.active .notifications__inner {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
   }
 }
 @media (max-width: 1500px) {
@@ -6468,6 +6539,10 @@ section {
     font-size: 13px;
   }
 
+  .button--notification {
+    width: 66px;
+  }
+
   .help__inner-info {
     width: calc(100% - 230px);
   }
@@ -6493,6 +6568,13 @@ section {
   }
   .stockFooter__box {
     gap: 40px;
+  }
+
+  .calendarTable__title .text {
+    font-size: 14px;
+  }
+  .calendarTable__title .text._lg {
+    font-size: 20px;
   }
 }
 @media (max-width: 1100px) {
@@ -6524,6 +6606,26 @@ section {
   .sidebar.active {
     top: 78px;
     height: calc(100% - 78px);
+  }
+
+  .calendar__inner-group {
+    gap: 20px 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .calendar__inner-body {
+    width: calc(50% - 15px);
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .notifications {
+    top: 77px;
+    height: calc(100% - 77px);
   }
 }
 @media (max-width: 1025px) {
@@ -6650,6 +6752,12 @@ section {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  .calendar__inner-header._lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 @media (max-width: 940px) {
@@ -6908,6 +7016,14 @@ section {
   .info .input__wrapper h4 {
     font-size: 14px;
   }
+
+  .calendar--notifications {
+    width: 100%;
+  }
+
+  .button._hide {
+    display: none !important;
+  }
 }
 @media (max-width: 750px) {
   .info__inner-row {
@@ -7099,6 +7215,42 @@ section {
   }
   .stock__inner-group {
     width: 100%;
+  }
+
+  .calendar__inner-body {
+    width: auto;
+  }
+  .calendar__slider {
+    padding-left: 24px;
+  }
+  .calendar__slider .swiper-arrow {
+    width: 20px;
+    height: 20px;
+  }
+  .calendar__slider .swiper-arrow-prev {
+    left: 0;
+  }
+  .calendar__slider .swiper-arrow-next {
+    right: 0;
+  }
+
+  .notifications__inner {
+    max-width: 350px;
+  }
+  .notifications__drivers {
+    padding: 12px 10px 12px 20px;
+  }
+  .notifications__drivers-item {
+    gap: 30px;
+  }
+  .notifications__drivers-wrapper {
+    padding-right: 10px;
+  }
+  .notifications__events {
+    padding-left: 20px;
+  }
+  .notifications__events-wrapper {
+    padding-right: 10px;
   }
 }
 @media (max-width: 650px) {
@@ -7330,6 +7482,55 @@ section {
   .stockPagination__body {
     margin-left: auto;
   }
+
+  .notifications__inner {
+    max-width: 300px;
+    padding: 5px;
+  }
+  .notifications__drivers {
+    padding: 12px 10px 12px 10px;
+  }
+  .notifications__drivers-wrapper {
+    gap: 20px;
+  }
+  .notifications__drivers-item {
+    gap: 20px;
+  }
+  .notifications__drivers-item .avatar {
+    font-size: 16px;
+  }
+  .notifications__drivers-item .button--ico {
+    font-size: 12px;
+  }
+  .notifications__drivers-group {
+    gap: 20px;
+  }
+  .notifications__events {
+    padding: 12px 10px 12px 10px;
+  }
+  .notifications__events-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 10px;
+  }
+  .notifications__events-item {
+    padding: 12px;
+    border-radius: 10px;
+  }
+  .notifications__events-item .text {
+    font-size: 14px;
+  }
+  .notifications__events-item strong {
+    font-size: 16px;
+  }
 }
 @media (max-width: 480px) {
   .input {
@@ -7523,6 +7724,16 @@ section {
   }
   .table .title {
     color: rgba(24, 95, 118, 0.6);
+  }
+
+  .notifications {
+    top: 61px;
+    height: calc(100% - 61px);
+  }
+
+  .button._hide {
+    width: 50px;
+    height: 36px;
   }
 }
 @media (max-width: 390px) {

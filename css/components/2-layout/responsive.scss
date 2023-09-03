@@ -39,10 +39,12 @@
   @include components-1180;
   @include compare-1180;
   @include stock-1180;
+  @include calendar-1180;
 }
 @media (max-width: 1100px) {
   @include index-1100;
   @include header-1100;
+  @include calendar-1100;
 }
 @media (max-width: 1025px) {
   @include components-1025;
@@ -61,11 +63,13 @@
   @include components-880;
   @include header-880;
   @include index-880;
+  @include calendar-880;
 }
 @media (max-width: 750px) {
   @include index-750;
   @include table-750;
   @include stock-750;
+  @include calendar-750;
 }
 @media (max-width: 650px) {
   @include layouts-650;
@@ -81,6 +85,7 @@
   @include layouts-580;
   @include index-580;
   @include stock-580;
+  @include calendar-580;
 }
 @media (max-width: 480px) {
   @include components-480;
@@ -88,6 +93,7 @@
   @include compare-480;
   @include index-480;
   @include table-480;
+  @include calendar-480;
 }
 @media (max-width: 390px) {
   @include index-390;

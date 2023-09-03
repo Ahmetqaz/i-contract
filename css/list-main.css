@@ -130,7 +130,8 @@ body {
   -moz-font-smoothing: antialiased;
 }
 
-body.active {
+body.active,
+body.freeze {
   overflow: hidden;
 }
 
@@ -1135,6 +1136,23 @@ svg {
   width: 100%;
   height: 100%;
 }
+.button--icoText .ico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 16px;
+  height: 16px;
+}
+.button--icoText .ico svg {
+  width: 100%;
+  height: 100%;
+}
 .button--file {
   position: relative;
   border: 1px dashed #185f76;
@@ -1298,6 +1316,8 @@ svg {
   top: 0;
   right: 0;
   background: #185f76;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .button--notification .button__burger::after {
   width: 9px;
@@ -1309,6 +1329,29 @@ svg {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 15px;
+}
+.button--notification.active {
+  border-color: #e96d24;
+}
+.button--notification.active .button__burger::before {
+  width: 100%;
+  top: 50%;
+  right: unset;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  background: #e96d24;
+}
+.button--notification.active .button__burger::after {
+  top: 50%;
+  bottom: unset;
+  width: 100%;
+  -webkit-transform: translate(0, -50%) rotate(45deg);
+          transform: translate(0, -50%) rotate(45deg);
+  background: #e96d24;
+}
+.button--notification.active .button__burger span {
+  opacity: 0;
 }
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);

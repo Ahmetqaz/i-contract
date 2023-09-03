@@ -38,7 +38,7 @@
                 </svg>
               </span>
             </button>
-            <button class="button button--ico">
+            <button class="button button--ico" id="notificationsBtn">
               <span class="ico">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g>
@@ -605,7 +605,7 @@
                     </span>
                   </button>
                 </div>
-                <div class="calendar__inner-header">
+                <div class="calendar__inner-header _lg">
                   <h4 class="_lg">
                     Kalender
                   </h4>
@@ -614,116 +614,114 @@
                   </button>
                 </div>
                 <div class="calendar__inner-group">
-                  <div class="calendar__inner-body">
-                    <div class="date date--lg">
-                      <button class="button button--ico">
-                        <span class="ico" style="transform: rotate(180deg);">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414"
-                            viewBox="0 0 7.207 13.414">
-                            <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
-                          </svg>
-                        </span>
-                      </button>
-                      <h4 class="_lg">
-                        Juli, 2023
-                      </h4>
-                      <button class="button button--ico">
-                        <span class="ico">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414"
-                            viewBox="0 0 7.207 13.414">
-                            <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
-                    <div class="input input--select input--borderDropdown">
-                      <input type="hidden">
-                      <div class="input__selected">
-                      </div>
-                      <ul class="input__dropdown">
-                        <li class="input__dropdown-item" data-default>
-                          <span class="text">
-                            Wochenansicht
-                          </span>
-                        </li>
-                        <li class="input__dropdown-item">
-                          <span class="text">
-                            Wochenansicht-1
-                          </span>
-                        </li>
-                        <li class="input__dropdown-item">
-                          <span class="text">
-                            Wochenansicht-2
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="calendar__inner-group-box">
-                      <span class="ico">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                          <g id="Shape" transform="translate(1 1)">
-                            <circle id="Oval" cx="3.182" cy="3.182" r="3.182" transform="translate(3.818 3.818)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path" d="M.318,0V1.273" transform="translate(6.682)" fill="none" stroke="#185f76"
-                              stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path-2" data-name="Path" d="M.318,0V1.273" transform="translate(6.682 12.727)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path-3" data-name="Path" d="M0,0,.9.9" transform="translate(2.049 2.049)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path-4" data-name="Path" d="M0,0,.9.9" transform="translate(11.047 11.047)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path-5" data-name="Path" d="M0,.318H1.273" transform="translate(0 6.682)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path-6" data-name="Path" d="M0,.318H1.273" transform="translate(12.727 6.682)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path-7" data-name="Path" d="M0,.9.9,0" transform="translate(2.049 11.047)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                            <path id="Path-8" data-name="Path" d="M0,.9.9,0" transform="translate(11.047 2.049)"
-                              fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
-                              stroke-miterlimit="10" stroke-width="2" />
-                          </g>
+                  <div class="date date--lg">
+                    <button class="button button--ico">
+                      <span class="ico" style="transform: rotate(180deg);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414"
+                          viewBox="0 0 7.207 13.414">
+                          <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
                         </svg>
                       </span>
-                      <h5>
-                        Heute
-                      </h5>
+                    </button>
+                    <h4 class="_lg">
+                      Juli, 2023
+                    </h4>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414"
+                          viewBox="0 0 7.207 13.414">
+                          <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="input input--select input--borderDropdown">
+                    <input type="hidden">
+                    <div class="input__selected">
                     </div>
-                    <div class="date date--secondary">
-                      <h5 class="_lg">
-                        24-30 Juli 2022
-                      </h5>
-                      <div class="date__group">
-                        <button class="button button--ico">
-                          <span class="ico" style="transform: rotate(180deg);">
-                            <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="8.225" height="14"
-                              viewBox="0 0 8.225 14">
-                              <path id="Path"
-                                d="M1320,535.454l-6.23-6.23a.767.767,0,0,0-1.083,0l-.459.459a.767.767,0,0,0,0,1.083l5.232,5.232-5.237,5.237a.767.767,0,0,0,0,1.083l.459.459a.767.767,0,0,0,1.083,0l6.236-6.236a.773.773,0,0,0,0-1.087Z"
-                                transform="translate(-1312 -529)" />
-                            </svg>
-                          </span>
-                        </button>
-                        <hr>
-                        <button class="button button--ico _right">
-                          <span class="ico">
-                            <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="8.225" height="14"
-                              viewBox="0 0 8.225 14">
-                              <path id="Path"
-                                d="M1320,535.454l-6.23-6.23a.767.767,0,0,0-1.083,0l-.459.459a.767.767,0,0,0,0,1.083l5.232,5.232-5.237,5.237a.767.767,0,0,0,0,1.083l.459.459a.767.767,0,0,0,1.083,0l6.236-6.236a.773.773,0,0,0,0-1.087Z"
-                                transform="translate(-1312 -529)" />
-                            </svg>
-                          </span>
-                        </button>
-                      </div>
+                    <ul class="input__dropdown">
+                      <li class="input__dropdown-item" data-default>
+                        <span class="text">
+                          Wochenansicht
+                        </span>
+                      </li>
+                      <li class="input__dropdown-item">
+                        <span class="text">
+                          Wochenansicht-1
+                        </span>
+                      </li>
+                      <li class="input__dropdown-item">
+                        <span class="text">
+                          Wochenansicht-2
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="calendar__inner-group-box">
+                    <span class="ico">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <g id="Shape" transform="translate(1 1)">
+                          <circle id="Oval" cx="3.182" cy="3.182" r="3.182" transform="translate(3.818 3.818)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path" d="M.318,0V1.273" transform="translate(6.682)" fill="none" stroke="#185f76"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path-2" data-name="Path" d="M.318,0V1.273" transform="translate(6.682 12.727)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path-3" data-name="Path" d="M0,0,.9.9" transform="translate(2.049 2.049)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path-4" data-name="Path" d="M0,0,.9.9" transform="translate(11.047 11.047)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path-5" data-name="Path" d="M0,.318H1.273" transform="translate(0 6.682)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path-6" data-name="Path" d="M0,.318H1.273" transform="translate(12.727 6.682)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path-7" data-name="Path" d="M0,.9.9,0" transform="translate(2.049 11.047)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                          <path id="Path-8" data-name="Path" d="M0,.9.9,0" transform="translate(11.047 2.049)"
+                            fill="none" stroke="#185f76" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10" stroke-width="2" />
+                        </g>
+                      </svg>
+                    </span>
+                    <h5>
+                      Heute
+                    </h5>
+                  </div>
+                  <div class="date date--secondary">
+                    <h5 class="_lg">
+                      24-30 Juli 2022
+                    </h5>
+                    <div class="date__group">
+                      <button class="button button--ico">
+                        <span class="ico" style="transform: rotate(180deg);">
+                          <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="8.225" height="14"
+                            viewBox="0 0 8.225 14">
+                            <path id="Path"
+                              d="M1320,535.454l-6.23-6.23a.767.767,0,0,0-1.083,0l-.459.459a.767.767,0,0,0,0,1.083l5.232,5.232-5.237,5.237a.767.767,0,0,0,0,1.083l.459.459a.767.767,0,0,0,1.083,0l6.236-6.236a.773.773,0,0,0,0-1.087Z"
+                              transform="translate(-1312 -529)" />
+                          </svg>
+                        </span>
+                      </button>
+                      <hr>
+                      <button class="button button--ico _right">
+                        <span class="ico">
+                          <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="8.225" height="14"
+                            viewBox="0 0 8.225 14">
+                            <path id="Path"
+                              d="M1320,535.454l-6.23-6.23a.767.767,0,0,0-1.083,0l-.459.459a.767.767,0,0,0,0,1.083l5.232,5.232-5.237,5.237a.767.767,0,0,0,0,1.083l.459.459a.767.767,0,0,0,1.083,0l6.236-6.236a.773.773,0,0,0,0-1.087Z"
+                              transform="translate(-1312 -529)" />
+                          </svg>
+                        </span>
+                      </button>
                     </div>
                   </div>
                   <div class="calendar__inner-body">
@@ -762,7 +760,7 @@
                         Filter
                       </span>
                     </button>
-                    <div class="calendar__inner-body-group">
+                    <div class="calendar__inner-body-box">
                       <div class="calendar__inner-avatars">
                         <div class="avatar avatar--border">
                           <img src="./images/avatar.png" alt="avatar">
@@ -1122,7 +1120,7 @@
             </div>
           </div>
         </section>
-        <div class="notifications">
+        <div class="notifications" id="notifications">
           <div class="notifications__inner">
             <div class="notifications__drivers">
               <div class="notifications__drivers-header">
@@ -1518,11 +1516,6 @@
             </div>
           </div>
         </div>
-        <button class="button button--notification _hdie">
-          <div class="button__burger">
-            <span></span>
-          </div>
-        </button>
       </div>
     </div>
     <!-- wrapper end-->

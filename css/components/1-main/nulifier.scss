@@ -60,7 +60,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
 }
-body.active {
+body.active,
+body.freeze {
   overflow: hidden;
 }
 a {

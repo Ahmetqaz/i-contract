@@ -2,6 +2,14 @@ const settings = {
   calendarCars: {
     slidesPerView: "auto",
     spaceBetween: 30,
+    breakpoints: {
+      320: {
+        spaceBetween: 20
+      },
+      1025: {
+        spaceBetween: 30
+      },
+    }
   },
 };
 

@@ -200,15 +200,34 @@ if (tabBtn) {
 }
 
 const tableCheck = document.getElementById("tableCheck");
-tableCheck.addEventListener("change", () => {
-  const checkBoxes = document.querySelectorAll(" td .input input");
-  if (tableCheck.checked) {
-    checkBoxes.forEach((check) => {
-      check.setAttribute("checked", "");
-    });
-  } else {
-    checkBoxes.forEach((check) => {
-      check.removeAttribute("checked");
-    });
-  }
-});
+if (tableCheck) {
+  tableCheck.addEventListener("change", () => {
+    const checkBoxes = document.querySelectorAll(" td .input input");
+    if (tableCheck.checked) {
+      checkBoxes.forEach((check) => {
+        check.setAttribute("checked", "");
+      });
+    } else {
+      checkBoxes.forEach((check) => {
+        check.removeAttribute("checked");
+      });
+    }
+  });
+}
+
+const notifications = document.getElementById("notifications");
+if (notifications) {
+  const notificationsBtn = document.getElementById("notificationsBtn");
+  notificationsBtn.addEventListener("click", () => {
+    notifications.classList.toggle("active");
+    notificationsBtn.classList.toggle("active");
+    body.classList.toggle("freeze");
+  });
+  notifications.addEventListener("click", (event) => {
+    if (event.target == notifications) {
+      notifications.classList.remove("active");
+      notificationsBtn.classList.remove("active");
+      body.classList.toggle("freeze");
+    }
+  });
+}
