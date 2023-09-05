@@ -1438,6 +1438,8 @@
   justify-content: space-between;
   &._noheader {
     padding-top: 20px !important;
+    justify-content: center;
+    max-width: 1920px;
   }
   &__body {
     display: flex;

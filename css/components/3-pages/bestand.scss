@@ -1,8 +1,7 @@
 .stock {
-  height: calc(100vh - 130px);
   display: flex;
   flex-direction: column;
-  min-height: 800px;
+  min-height: calc(100vh - 20px);
   &__inner {
     display: flex;
     flex-direction: column;
@@ -155,14 +154,17 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
-      height: 100vh;
+      height: 100%;
     }
     &-table {
-      overflow: auto;
+      overflow-x: auto;
       padding: 2px 0;
       // height: calc(100vh - 443px);
-      min-height: 340px;
-      flex: 1 0 0;
+      &-wrapper {
+        position: relative;
+        flex: 1;
+        min-height: 340px;
+      }
     }
     &__footer {
       display: flex;
@@ -250,6 +252,13 @@
             border-width: 1px;
           }
         }
+        .text {
+          font-weight: 400;
+          font-size: 16px;
+          color: $black-6;
+          white-space: nowrap;
+          margin-left: 20px;
+        }
       }
     }
     td {
@@ -265,6 +274,13 @@
             border-color: $gray-2;
             border-width: 1px;
           }
+        }
+        .text {
+          font-weight: 400;
+          white-space: nowrap;
+          text-align: left;
+          font-size: 16px;
+          margin-left: 20px;
         }
       }
       h4 {
@@ -293,7 +309,6 @@
         }
         &.active {
           &::after {
-            border-radius: 8px 8px 0 0;
             border-color: $black-6;
           }
         }
@@ -306,6 +321,9 @@
       small {
         font-size: 12px;
         color: #165f76;
+      }
+      h4 {
+        font-size: 16px;
       }
     }
     &__group {
@@ -340,6 +358,19 @@
           opacity: 0.6;
         }
       }
+    }
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    &__header {
+      font-size: 1em;
+      color: $black-6;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: 400;
+      display: none;
     }
   }
   &Pagination {
@@ -455,31 +486,36 @@
           object-fit: contain;
         }
       }
-     
+
       &:disabled {
         opacity: 0.95;
         pointer-events: none !important;
-        .ico{
-          opacity: .4;
+        .ico {
+          opacity: 0.4;
         }
       }
     }
     &__content {
       position: absolute;
-      top: calc(100% - 8px);
+      top: 134px;
       left: 0;
       width: 100%;
-      background: $white-2;
-      border: 1px solid $gray-2;
-      border-top: unset;
-      border-radius: 0 0 8px 8px;
-      z-index: 1;
-      padding: 18px 17px;
+      z-index: 2;
       display: none;
-      justify-content: space-between;
-      @include transition;
+      &-body {
+        width: 100%;
+        background: $white-2;
+        border: 1px solid $gray-2;
+        border-radius: 8px;
+        padding: 18px 17px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        @include transition;
+        z-index: 2;
+      }
       &-image {
-        width: 18%;
+        width: calc(20% - 10px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -491,6 +527,8 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+        width: calc(17% - 5px);
+        max-width: 170px;
       }
       &-box {
         display: flex;
@@ -500,11 +538,12 @@
         h4 {
           font-weight: 400;
           color: $gray;
+          font-size: 16px;
         }
         h5 {
           font-weight: 400;
           position: relative;
-          padding: 0 10px 2px;
+          padding: 5px 10px 6.3px;
           &::after {
             content: "";
             width: 100%;
@@ -515,13 +554,56 @@
             left: 0;
           }
         }
+        .input {
+          margin: 0 auto;
+          width: 100%;
+          max-width: unset;
+        }
       }
       &-tab {
-        width: 25%;
+        width: calc(29% - 20px);
+        max-width: 420px;
+      }
+      &-close {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        top: 16px;
+        right: 16px;
+        color: $black;
+        @include transition;
+        cursor: pointer;
+        display: none;
+        &::before,
+        &::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background: currentColor;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &:hover {
+          color: $orange;
+        }
       }
       &.active {
         display: flex;
-        border-color: $black-6;
+        .stock {
+          &Dropdown {
+            &__content {
+              &-body {
+                border-color: $black-6;
+              }
+            }
+          }
+        }
       }
     }
     &__tab {
@@ -656,7 +738,30 @@
 }
 @mixin stock-1440 {
   .stock {
-    height: calc(100vh - 120px);
+  }
+}
+@mixin stock-1280 {
+  .stock {
+    &Dropdown {
+      &__content {
+        &-body {
+          flex-wrap: wrap;
+          gap: 40px 20px;
+        }
+        &-tab {
+          width: calc(50% - 16px);
+          max-width: 400px;
+        }
+        &-image {
+          width: calc(50% - 16px);
+        }
+        &-column {
+          width: calc(33.3% - 16px);
+          max-width: 280px;
+          order: 1;
+        }
+      }
+    }
   }
 }
 @mixin stock-1180 {
@@ -674,15 +779,24 @@
 @mixin stock-1025 {
   .stock {
     &__inner {
+      &-group {
+        width: 100%;
+        max-width: unset;
+        justify-content: space-between;
+      }
       &-header {
         flex-wrap: wrap;
       }
       &-box {
-        &:nth-child(3) {
-          width: 50%;
+        &._lg {
+          max-width: unset;
+          .input {
+            max-width: unset;
+          }
         }
       }
       &-table {
+        overflow: unset;
       }
     }
     &Footer {
@@ -691,6 +805,72 @@
       }
       .button {
         min-width: 170px;
+      }
+    }
+    &Table {
+      thead {
+        display: none;
+      }
+      tbody {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 16px;
+        justify-content: space-between;
+        tr {
+          width: calc(50% - 10px);
+          &::after {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+          }
+          &:first-child {
+            td {
+              margin: unset;
+            }
+          }
+        }
+      }
+      td {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      &__box {
+        text-align: right;
+      }
+      &__header {
+        display: flex;
+      }
+      &__wrapper {
+        gap: 16px;
+      }
+    }
+    &Dropdown {
+      &__content {
+        flex-wrap: wrap;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        padding: 20px;
+        background-color: rgba($black, 0.3);
+        backdrop-filter: blur(4px);
+        z-index: 4;
+        &-body {
+          width: 100%;
+          padding-top: 60px;
+          position: relative;
+          padding: 60px 20px 30px;
+          margin: auto;
+        }
+        &-close {
+          display: block;
+        }
       }
     }
   }
@@ -705,9 +885,49 @@
         gap: 24px;
       }
     }
+    &Table {
+      &__group {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        max-width: 180px;
+        &-button {
+          width: 40px;
+        }
+      }
+    }
   }
 }
 @mixin stock-750 {
+  .stock {
+    &Dropdown {
+      &__content {
+        &-tab {
+          width: 100%;
+          max-width: unset;
+          order: 1;
+        }
+        &-column {
+          width: calc(33.3% - 16px);
+          max-width: 280px;
+        }
+        &-image {
+          width: 100%;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
+    }
+    &Table {
+      tbody {
+        tr {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@mixin stock-650 {
   .stock {
     &__inner {
       &-header {
@@ -719,12 +939,6 @@
       &-group {
         width: 100%;
       }
-    }
-  }
-}
-@mixin stock-650 {
-  .stock {
-    &__inner {
       &-tabs {
         &-button {
           font-size: 18px;
@@ -742,6 +956,18 @@
       .button {
         width: calc(33.3% - 12px);
         min-width: auto;
+      }
+    }
+    &Dropdown {
+      &__content {
+        &-tab {
+          width: 100%;
+          max-width: unset;
+          order: 1;
+        }
+        &-column {
+          width: calc(50% - 10px);
+        }
       }
     }
   }
@@ -771,12 +997,32 @@
     }
   }
 }
+@mixin stock-480 {
+  .stock {
+    &Dropdown {
+      &__content {
+        &-column {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
 @mixin stock-390 {
   .stock {
     &Pagination {
       &__box {
         flex-direction: column;
         gap: 16px;
+      }
+    }
+    &Dropdown {
+      &__content {
+        padding: 10px;
+        &-body {
+          padding: 60px 16px 30px;
+        }
       }
     }
   }

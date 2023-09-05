@@ -29,6 +29,9 @@
   @include compare-1300;
   @include components-1300;
 }
+@media (max-width: 1280px) {
+  @include stock-1280;
+}
 @media (max-width: 1180px) {
   ::-webkit-scrollbar {
     width: 5px;
@@ -94,6 +97,7 @@
   @include index-480;
   @include table-480;
   @include calendar-480;
+  @include stock-480;
 }
 @media (max-width: 390px) {
   @include index-390;

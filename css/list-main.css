@@ -1870,6 +1870,10 @@ svg {
 }
 .wrapper._noheader {
   padding-top: 20px !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1920px;
 }
 .wrapper__body {
   display: -webkit-box;
