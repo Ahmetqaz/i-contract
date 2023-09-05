@@ -7748,9 +7748,6 @@ section {
     font-size: 12px;
   }
 
-  .stock {
-    height: calc(100vh - 90px);
-  }
   .stock__inner-tabs-button {
     font-size: 16px;
   }

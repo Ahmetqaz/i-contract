@@ -974,7 +974,6 @@
 }
 @mixin stock-580 {
   .stock {
-    height: calc(100vh - 90px);
     &__inner {
       &-tabs {
         &-button {
