@@ -209,19 +209,19 @@ if (tableCheck) {
       const checkBoxes = document.querySelectorAll(".checkBox--body");
       if (input.checked) {
         checkBoxes.forEach((check) => {
-          check.setAttribute("checked", "");
+          check.checked = true;
         });
         tableCheck.forEach((input) => {
-          input.setAttribute("checked", "");
+          input.checked = true;
+
         });
       } else {
         checkBoxes.forEach((check) => {
-          check.removeAttribute("checked");
+          check.checked = false;
         });
         tableCheck.forEach((input) => {
-          input.removeAttribute("checked");
+          input.checked = false;
         });
-
       }
     });
   });
