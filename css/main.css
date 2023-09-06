@@ -4700,6 +4700,18 @@ section {
   border: 2px solid #fff;
   border-radius: 2px;
 }
+.stock .input._select {
+  margin-bottom: 16px;
+  display: none;
+}
+.stock .input._select label {
+  color: #888888;
+  font-weight: 600;
+  gap: 14px;
+}
+.stock .input._select label .checkBox {
+  border-color: #dddddd;
+}
 .stockTable {
   font-size: 16px;
   border-collapse: collapse;
@@ -6976,6 +6988,11 @@ section {
   }
   .stockDropdown__content-close {
     display: block;
+  }
+  .stock .input._select {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 
   .calendar__inner-header {
