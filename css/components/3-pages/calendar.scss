@@ -17,6 +17,15 @@
       &._sm {
         padding: 0;
       }
+      &._lg {
+        max-height: unset;
+      }
+      &._space {
+        margin-bottom: 18px;
+      }
+      &._padding {
+        padding: 15px 20px;
+      }
     }
     &-header {
       display: flex;
@@ -78,6 +87,9 @@
       }
       &._sm {
         max-height: 360px;
+      }
+      &._heightUnset {
+        max-height: unset !important;
       }
     }
     &-group {
@@ -181,6 +193,13 @@
       padding: 0 10px 14px;
       vertical-align: top;
     }
+    thead {
+      &._sm {
+        th {
+          font-size: 12px;
+        }
+      }
+    }
     &__sticky {
       position: sticky;
       top: -1px;
@@ -215,8 +234,17 @@
         }
       }
     }
+    &._extraSm {
+      td {
+        padding: 0 5px 10px;
+        border-right: 1px solid #e3e3e4;
+      }
+      th {
+        border-right: 1px solid #e3e3e4;
+      }
+    }
     &__item {
-      padding: 15px;
+      padding: 20px 15px 15px;
       border: 1px solid $white-6;
       border-radius: 12px;
       background: #fafafa;
@@ -260,6 +288,9 @@
             font-size: 9px;
           }
         }
+        &._lg {
+          gap: 5px;
+        }
       }
       &-box {
         display: flex;
@@ -282,6 +313,10 @@
             }
           }
         }
+      }
+      &._padding {
+        padding: 15px;
+        box-shadow: unset;
       }
       &._header {
         padding: 35px 10px 10px;
@@ -330,6 +365,84 @@
           }
         }
       }
+      &._extraSm {
+        text-align: center;
+        min-height: unset;
+        border: 1px solid;
+        border-color: rgba(#e5e5e6, 0.4);
+        box-shadow: unset;
+        padding: 5px 10px;
+        min-width: unset;
+        h6 {
+          color: #575757;
+          font-weight: 700;
+        }
+      }
+      &._note {
+        padding-top: 30px;
+        box-shadow: unset;
+        min-width: unset;
+        h6 {
+          color: $black;
+        }
+        .text {
+          font-size: 12px;
+          color: #24242c;
+          &--secondary {
+            color: $orange;
+          }
+          &--primary {
+            color: $primary;
+            margin-top: 10px;
+          }
+        }
+        .button {
+          color: #99b2c6;
+        }
+        &Secondary {
+          min-height: 66px;
+          background: rgba($orange-2, 0.75);
+          border-radius: 14px;
+          text-align: center;
+          gap: 10px;
+          padding-top: 25px;
+          box-shadow: unset;
+          min-width: unset;
+          .button {
+            color: $white;
+            width: 1.7em;
+            height: 1.7em;
+          }
+          h6 {
+            font-weight: 700;
+            color: $white;
+          }
+          .text {
+            font-weight: 700;
+            color: $white;
+            font-size: 9px;
+          }
+        }
+      }
+      &._lg {
+        &Orange {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba($orange-2, 0.75);
+          min-height: 132px;
+          box-shadow: unset;
+          min-width: unset;
+          .button {
+            width: 1.7em;
+            height: 1.7em;
+            color: $white;
+          }
+          h4 {
+            color: $white;
+          }
+        }
+      }
     }
     &__column {
       display: flex;
@@ -340,6 +453,12 @@
       &._bottom {
         align-items: flex-end;
         justify-content: flex-end !important;
+      }
+      &._sm {
+        justify-content: flex-start;
+        gap: 10px;
+        width: 130px;
+        margin: 0 auto;
       }
     }
     &__box {
@@ -390,6 +509,7 @@
     &--border {
       th {
         padding-bottom: 12px;
+        border-right: 1px solid #e3e3e4;
       }
       td {
         border-right: 1px solid #e3e3e4;
@@ -610,14 +730,14 @@
 }
 .notifications {
   width: 420px;
-  height: 100%;
   display: flex;
-  position: relative;
   z-index: 2;
   padding-right: 5px;
   position: fixed;
   right: 5px;
   top: 130px;
+  height: calc(100% - 150px);
+  overflow: auto;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -686,6 +806,24 @@
       max-height: 168px;
       overflow: auto;
       padding-right: 20px;
+    }
+    &._distance {
+      .notifications {
+        &__drivers {
+          &-header {
+            justify-content: flex-start;
+            h5 {
+              font-weight: 400;
+            }
+            .date{
+              max-width: 75px;
+              h4{
+
+              }
+            }
+          }
+        }
+      }
     }
   }
   &__events {
@@ -867,6 +1005,9 @@
         &._lg {
           flex-direction: row;
         }
+      }
+      &-content {
+        padding: 15px;
       }
     }
   }

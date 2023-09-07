@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Calendar</title>
+</head>
+
+<body>
+  <div class="main">
+    <!-- #header start-->
+    <header class="header">
+      <div class="autoContainer">
+        <div class="header__inner">
+          <div class="header__inner-logo">
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <div class="header__inner-box">
+            <button class="button button--ico">
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <g>
+                    <path id="Path_381" data-name="Path 381" fill="none" />
+                    <path id="Path_382" data-name="Path 382"
+                      d="M3,20l1.3-3.9A7.417,7.417,0,0,1,6.4,5.726a9.856,9.856,0,0,1,11.846.48,7.362,7.362,0,0,1,1.029,10.5A9.733,9.733,0,0,1,7.7,19L3,20"
+                      fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_15" data-name="Line 15" transform="translate(12 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_16" data-name="Line 16" transform="translate(8 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <line id="Line_17" data-name="Line 17" transform="translate(16 12)" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  </g>
+                </svg>
+              </span>
+            </button>
+            <button class="button button--ico" id="notificationsBtn">
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <g>
+                    <path id="Path_401" data-name="Path 401" fill="none" />
+                    <path id="Path_402" data-name="Path 402"
+                      d="M10,5a2,2,0,1,1,4,0,7,7,0,0,1,4,6v3a4,4,0,0,0,2,3H4a4,4,0,0,0,2-3V11a7,7,0,0,1,4-6" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_403" data-name="Path 403" d="M9,17v1a3,3,0,0,0,6,0V17" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  </g>
+                </svg>
+              </span>
+              <span class="notification"> 2 </span>
+            </button>
+            <div class="input input--select">
+              <input type="hidden">
+              <div class="input__selected">
+                <div class="dropdown__image">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Max Mustermann</p>
+              </div>
+              <span class="ico">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <path id="Path_399" data-name="Path 399" fill="none" />
+                  <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </svg>
+              </span>
+              <ul class="input__dropdown">
+                <li class="input__dropdown-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="" />
+                  </div>
+                  <p>Nick Mustermann</p>
+                </li>
+                <li class="input__dropdown-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="" />
+                  </div>
+                  <p>Alexandr Mustermann</p>
+                </li>
+                <li class="input__dropdown-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="" />
+                  </div>
+                  <p>Dustin Musterman</p>
+                </li>
+              </ul>
+            </div>
+            <div class="burger" id="menuBtn">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- #header end -->
+    <!-- wrapper start-->
+    <div class="wrapper">
+      <nav class="sidebar" id="menu">
+        <div class="sidebar__inner">
+          <div class="sidebar__inner-switch">
+            <span class="custIcon custIcon--right"></span>
+          </div>
+          <a href="#" class="sidebar__inner-link active">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_372" data-name="Path 372" fill="none" />
+                  <path id="Path_373" data-name="Path 373" d="M5,12H3l9-9,9,9H19" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_374" data-name="Path 374" d="M5,12v7a2,2,0,0,0,2,2H17a2,2,0,0,0,2-2V12" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_375" data-name="Path 375" d="M9,21V15a2,2,0,0,1,2-2h2a2,2,0,0,1,2,2v6" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <div class="text">Kontaktcontactrmationen</div>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg class="fill" width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <g id="home">
+                    <path id="Path_372" data-name="Path 372" fill="none" />
+                  </g>
+                  <path id="Shape"
+                    d="M13,20H1a1,1,0,0,1-1-1V6.5a2,2,0,0,1,2-2H6V2A2,2,0,0,1,8,0h4a2,2,0,0,1,2,2V9h4a2,2,0,0,1,2,2v8a1,1,0,0,1-1,1Zm5-2V11H14v7ZM8,18h4V11q0-.03,0-.059V2H8ZM2,18H6V6.5H2Z"
+                    transform="translate(2 2)" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Bestand </span>
+          </a>
+          <a href="#" class="sidebar__inner-link _notification">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_376" data-name="Path 376" fill="none" />
+                  <rect id="Rectangle_603" data-name="Rectangle 603" width="18" height="14" rx="2"
+                    transform="translate(3 5)" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" />
+                  <path id="Path_377" data-name="Path 377" d="M3,7l9,6,9-6" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Benachrichtigung </span>
+            <span class="notification"> 16 </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg class="fill" width="20" height="18.677" viewBox="0 0 20 18.677">
+                <path id="setting_icon" data-name="setting icon"
+                  d="M188.473,1012.058a3.706,3.706,0,0,1,3.761-3.641,3.87,3.87,0,0,1,.84.091.853.853,0,0,1,.668,1.013l0,.008a.885.885,0,0,1-1.057.643,2.024,2.024,0,0,0-2.4,1.527,1.954,1.954,0,0,0-.044.358,2,2,0,0,0,4,0,1.9,1.9,0,0,0-.027-.322.858.858,0,0,1,.724-.98h0a.88.88,0,0,1,1.015.7,3.524,3.524,0,0,1,.051.6,3.762,3.762,0,0,1-7.523,0h0Zm-11.592.853a.854.854,0,1,1,0-1.708h7.235a.854.854,0,1,1,0,1.708h-7.235Zm-.882-12.2a3.5,3.5,0,0,1,.052-.6.879.879,0,0,1,1.015-.7.858.858,0,0,1,.725.98h0a2.005,2.005,0,1,0,2-1.612,2.036,2.036,0,0,0-.475.049.881.881,0,0,1-1.06-.638.852.852,0,0,1,.656-1.019h0a3.767,3.767,0,0,1,4.511,2.772,3.624,3.624,0,0,1,.095.771,3.764,3.764,0,0,1-7.523,0Zm11.882.854a.854.854,0,1,1,0-1.708h7.233a.854.854,0,1,1,0,1.708Z"
+                  transform="translate(-176 -997.073)" />
+              </svg>
+            </span>
+            <span class="text"> Invoices </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_393" data-name="Path 393" fill="none" />
+                  <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(5 3)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_394" data-name="Path 394" d="M3,21V19a4,4,0,0,1,4-4h4a4,4,0,0,1,4,4v2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_395" data-name="Path 395" d="M16,3.13a4,4,0,0,1,0,7.75" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_396" data-name="Path 396" d="M21,21V19a4,4,0,0,0-3-3.85" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Whatsapp </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_381" data-name="Path 381" fill="none" />
+                  <path id="Path_382" data-name="Path 382"
+                    d="M3,20l1.3-3.9A7.417,7.417,0,0,1,6.4,5.726a9.856,9.856,0,0,1,11.846.48,7.362,7.362,0,0,1,1.029,10.5A9.733,9.733,0,0,1,7.7,19L3,20"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_15" data-name="Line 15" transform="translate(12 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_16" data-name="Line 16" transform="translate(8 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_17" data-name="Line 17" transform="translate(16 12)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Nachrichten </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_383" data-name="Path 383" fill="none" />
+                  <rect id="Rectangle_604" data-name="Rectangle 604" width="16" height="16" rx="2"
+                    transform="translate(4 5)" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" />
+                  <line id="Line_18" data-name="Line 18" y2="4" transform="translate(16 3)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_19" data-name="Line 19" y2="4" transform="translate(8 3)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_20" data-name="Line 20" x2="16" transform="translate(4 11)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_21" data-name="Line 21" x2="4" transform="translate(10 16)" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Kalender </span>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_384" data-name="Path 384" fill="none" />
+                  <circle id="Ellipse_1" data-name="Ellipse 1" cx="9" cy="9" r="9" transform="translate(3 3)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line id="Line_22" data-name="Line 22" transform="translate(12 17)" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" />
+                  <path id="Path_385" data-name="Path 385" d="M12,13.5A1.5,1.5,0,0,1,13,12a2.6,2.6,0,1,0-3-4"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <sspan class="text"> Hilfe </sspan>
+          </a>
+          <a href="#" class="sidebar__inner-link">
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                  <path id="Path_386" data-name="Path 386" fill="none" />
+                  <path id="Path_387" data-name="Path 387"
+                    d="M10.325,4.317a1.724,1.724,0,0,1,3.35,0,1.724,1.724,0,0,0,2.573,1.066,1.725,1.725,0,0,1,2.37,2.37,1.724,1.724,0,0,0,1.065,2.572,1.724,1.724,0,0,1,0,3.35,1.724,1.724,0,0,0-1.066,2.573,1.725,1.725,0,0,1-2.37,2.37,1.724,1.724,0,0,0-2.572,1.065,1.724,1.724,0,0,1-3.35,0,1.724,1.724,0,0,0-2.573-1.066,1.725,1.725,0,0,1-2.37-2.37,1.724,1.724,0,0,0-1.065-2.572,1.724,1.724,0,0,1,0-3.35A1.724,1.724,0,0,0,5.383,7.752a1.725,1.725,0,0,1,2.37-2.37,1.723,1.723,0,0,0,2.572-1.065Z"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <circle id="Ellipse_2" data-name="Ellipse 2" cx="3" cy="3" r="3" transform="translate(9 9)"
+                    fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </g>
+              </svg>
+            </span>
+            <span class="text"> Einstellungen </span>
+          </a>
+          <div class="input input--select">
+            <input type="hidden">
+            <div class="input__selected">
+              <div class="dropdown__image">
+                <img src="./images/avatar.png" alt="" />
+              </div>
+              <p>Max Mustermann</p>
+            </div>
+            <span class="ico">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path id="Path_399" data-name="Path 399" fill="none" />
+                <path id="Path_400" data-name="Path 400" d="M6,9l6,6,6-6" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </span>
+            <ul class="input__dropdown">
+              <li class="input__dropdown-item">
+                <div class="avatar">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Nick Mustermann</p>
+              </li>
+              <li class="input__dropdown-item">
+                <div class="avatar">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Alexandr Mustermann</p>
+              </li>
+              <li class="input__dropdown-item">
+                <div class="avatar">
+                  <img src="./images/avatar.png" alt="" />
+                </div>
+                <p>Dustin Musterman</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="wrapper__body sideSpace _row _lg">
+        <section class="calendar calendar--notifications ">
+          <div class="autoContainer _sm">
+            <div class="calendar__inner">
+              <div class="calendar__inner-content _space _padding">
+                <div class="date date--extraLg">
+                  <button class="button button--ico">
+                    <span class="ico" style="transform: rotate(180deg);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414" viewBox="0 0 7.207 13.414">
+                        <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1">
+                        </path>
+                      </svg>
+                    </span>
+                  </button>
+                  <h4 class="_lg">
+                    24.07-30.07.2023
+                  </h4>
+                  <button class="button button--ico">
+                    <span class="ico">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414" viewBox="0 0 7.207 13.414">
+                        <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1">
+                        </path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="calendar__inner-table _sm">
+                  <table class="calendarTable _extraSm">
+                    <thead class="calendarTable__sticky _sm">
+                      <th></th>
+                      <th>
+                        Mo 24.07.2023
+                      </th>
+                      <th>
+                        Di 25.07.2023
+                      </th>
+                      <th>
+                        Mi 26.07.2023
+                      </th>
+                      <th>
+                        Do 27.07.2023
+                      </th>
+                      <th>
+                        Fr 28.07.2023
+                      </th>
+                      <th>
+                        Sa 29.07.2023
+                      </th>
+                      <th>
+                        So 30.07.2023
+                      </th>
+                    </thead>
+                    <tbody>
+                      <td>
+                        <div class="calendarTable__box">
+                          <strong class="text">
+                            Verfügbare
+                          </strong>
+                          <strong class="text">
+                            Fahrzeuge
+                          </strong>
+                        </div>
+                      </td>
+                      <td>
+                        <ul class="calendarTable__column _sm">
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="calendarTable__column _sm">
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="calendarTable__column _sm">
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="calendarTable__column _sm">
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info _lg">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="calendarTable__column _sm">
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="calendarTable__column _sm">
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul class="calendarTable__column _sm">
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                          <li class="calendarTable__item _note">
+                            <h6>
+                              Renault Clio
+                            </h6>
+                            <button class="button button--drag">
+                              <span class="ico">
+                                <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                  viewBox="0 0 28 6">
+                                  <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                    d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                    fill="currentColor" />
+                                </svg>
+                              </span>
+                            </button>
+                            <div class="calendarTable__item-info">
+                              <span class="text">
+                                KNr: 9143 (190750)
+                              </span>
+                              <span class="text">
+                                01108 Dresden
+                              </span>
+                              <span class="text text--primary">
+                                6000,00€
+                              </span>
+                            </div>
+                          </li>
+                        </ul>
+                      </td>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="calendar__inner-content _padding">
+                <div class="date date--extraLg">
+                  <button class="button button--ico">
+                    <span class="ico" style="transform: rotate(180deg);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414" viewBox="0 0 7.207 13.414">
+                        <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1">
+                        </path>
+                      </svg>
+                    </span>
+                  </button>
+                  <h4 class="_lg">
+                    24.07-30.07.2023
+                  </h4>
+                  <button class="button button--ico">
+                    <span class="ico">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="7.207" height="13.414" viewBox="0 0 7.207 13.414">
+                        <path id="Icon" d="M0,12,6,6,0,0" transform="translate(0.707 0.707)" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1">
+                        </path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="calendar__inner-table _lg _heightUnset">
+                  <table class="calendarTable _extraSm">
+                    <thead class="calendarTable__sticky">
+                      <tr>
+                        <th></th>
+                        <th>
+                          <div class="calendarTable__title">
+                            <span class="text">
+                              Montag
+                            </span>
+                            <span class="text _lg">
+                              24
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="calendarTable__title">
+                            <span class="text">
+                              Dienstag
+                            </span>
+                            <span class="text _lg">
+                              25
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="calendarTable__title">
+                            <span class="text">
+                              Mittwoch
+                            </span>
+                            <span class="text _lg">
+                              26
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="calendarTable__title">
+                            <span class="text">
+                              Donnerstag
+                            </span>
+                            <span class="text _lg">
+                              27
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="calendarTable__title">
+                            <span class="text">
+                              Freitag
+                            </span>
+                            <span class="text _lg">
+                              28
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="calendarTable__title">
+                            <span class="text">
+                              Samstag
+                            </span>
+                            <span class="text _lg">
+                              29
+                            </span>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="calendarTable__title">
+                            <span class="text">
+                              Sonntag
+                            </span>
+                            <span class="text _lg">
+                              30
+                            </span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="calendarTable__box">
+                            <span class="text _lg">
+                              Indigo Violet
+                            </span>
+                            <span class="text">
+                              Fahrer
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _noteSecondary">
+                              <h6 class="_lg">
+                                Abwesend
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <span class="text">
+                                von 08:00-13 Uhr
+                              </span>
+                            </li>
+                            <li class="calendarTable__item _note">
+                              <h6>
+                                Renault Clio
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <div class="calendarTable__item-info">
+                                <span class="text">
+                                  KNr: 9143 (190750)
+                                </span>
+                                <span class="text">
+                                  01108 Dresden
+                                </span>
+                                <span class="text text--secondary">
+                                  313 KM
+                                </span>
+                                <span class="text text--primary">
+                                  6000,00€
+                                </span>
+                              </div>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _note">
+                              <h6>
+                                Renault Clio
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <div class="calendarTable__item-info">
+                                <span class="text">
+                                  KNr: 9143 (190750)
+                                </span>
+                                <span class="text">
+                                  01108 Dresden
+                                </span>
+                                <span class="text text--secondary">
+                                  313 KM
+                                </span>
+                                <span class="text text--primary">
+                                  6000,00€
+                                </span>
+                              </div>
+                            </li>
+                            <li class="calendarTable__item _noteSecondary">
+                              <h6 class="_lg">
+                                Abwesend
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <span class="text">
+                                von 08:00-13 Uhr
+                              </span>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _note">
+                              <h6>
+                                Renault Clio
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <div class="calendarTable__item-info">
+                                <span class="text">
+                                  KNr: 9143 (190750)
+                                </span>
+                                <span class="text">
+                                  01108 Dresden
+                                </span>
+                                <span class="text text--secondary">
+                                  313 KM
+                                </span>
+                                <span class="text text--primary">
+                                  6000,00€
+                                </span>
+                              </div>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _lgOrange">
+                              <h4>
+                                Abwesend
+                              </h4>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor"></path>
+                                  </svg>
+                                </span>
+                              </button>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _lgOrange">
+                              <h4>
+                                Abwesend
+                              </h4>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor"></path>
+                                  </svg>
+                                </span>
+                              </button>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="calendarTable__devider">
+                        <td>
+                          <div class="calendarTable__box">
+                            <span class="text _lg">
+                              Indigo Violet
+                            </span>
+                            <span class="text">
+                              Fahrer
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _note">
+                              <h6>
+                                Renault Clio
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <div class="calendarTable__item-info">
+                                <span class="text">
+                                  KNr: 9143 (190750)
+                                </span>
+                                <span class="text">
+                                  01108 Dresden
+                                </span>
+                                <span class="text text--secondary">
+                                  313 KM
+                                </span>
+                                <span class="text text--primary">
+                                  6000,00€
+                                </span>
+                              </div>
+                            </li>
+                            <li class="calendarTable__item _noteSecondary">
+                              <h6 class="_lg">
+                                Abwesend
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <span class="text">
+                                von 08:00-13 Uhr
+                              </span>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _note">
+                              <h6>
+                                Renault Clio
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <div class="calendarTable__item-info">
+                                <span class="text">
+                                  KNr: 9143 (190750)
+                                </span>
+                                <span class="text">
+                                  01108 Dresden
+                                </span>
+                                <span class="text text--secondary">
+                                  313 KM
+                                </span>
+                                <span class="text text--primary">
+                                  6000,00€
+                                </span>
+                              </div>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _note">
+                              <h6>
+                                Renault Clio
+                              </h6>
+                              <button class="button button--drag">
+                                <span class="ico">
+                                  <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6"
+                                    viewBox="0 0 28 6">
+                                    <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                                      d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                                      fill="currentColor" />
+                                  </svg>
+                                </span>
+                              </button>
+                              <div class="calendarTable__item-info">
+                                <span class="text">
+                                  KNr: 9143 (190750)
+                                </span>
+                                <span class="text">
+                                  01108 Dresden
+                                </span>
+                                <span class="text text--secondary">
+                                  313 KM
+                                </span>
+                                <span class="text text--primary">
+                                  6000,00€
+                                </span>
+                              </div>
+                            </li>
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                        <td>
+                          <ul class="calendarTable__column _sm">
+                            <li class="calendarTable__item _extraSm">
+                              <h6>
+                                + <small>Hinzufügen</small>
+                              </h6>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="notifications" id="notifications">
+          <div class="notifications__inner">
+            <div class="notifications__drivers">
+              <div class="notifications__drivers-header">
+                <h5 class="_lg">
+                  Fahrer
+                </h5>
+                <button class="button button--drag ">
+                  <span class="ico">
+                    <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="28" height="6" viewBox="0 0 28 6">
+                      <path id="dotted_icon_Kopie_2" data-name="dotted icon Kopie 2"
+                        d="M22,3a3,3,0,1,1,3,3A3,3,0,0,1,22,3ZM11,3a3,3,0,1,1,3,3A3,3,0,0,1,11,3ZM0,3A3,3,0,1,1,3,6,3,3,0,0,1,0,3Z"
+                        fill="currentColor" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="notifications__drivers-wrapper">
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="notifications__drivers _distance">
+              <div class="notifications__drivers-header ">
+                <h5 class="_lg">
+                  Meist hinterlegte Strecken
+                </h5>
+                <div class="date">
+                  <button class="button button--ico">
+                    <span class="ico">
+                      <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="8.225" height="14"
+                        viewBox="0 0 8.225 14">
+                        <path id="Path"
+                          d="M1260,535.454l6.23-6.23a.768.768,0,0,1,1.083,0l.459.459a.767.767,0,0,1,0,1.083L1262.539,536l5.237,5.237a.767.767,0,0,1,0,1.083l-.459.459a.767.767,0,0,1-1.083,0L1260,536.541a.773.773,0,0,1,0-1.087Z"
+                          transform="translate(-1259.775 -529)" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                  <h5>
+                    Juli
+                  </h5>
+                  <button class="button button--ico" style="transform: rotate(180deg);">
+                    <span class="ico">
+                      <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="8.225" height="14"
+                        viewBox="0 0 8.225 14">
+                        <path id="Path"
+                          d="M1260,535.454l6.23-6.23a.768.768,0,0,1,1.083,0l.459.459a.767.767,0,0,1,0,1.083L1262.539,536l5.237,5.237a.767.767,0,0,1,0,1.083l-.459.459a.767.767,0,0,1-1.083,0L1260,536.541a.773.773,0,0,1,0-1.087Z"
+                          transform="translate(-1259.775 -529)" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="notifications__drivers-wrapper">
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="notifications__drivers-item">
+                  <div class="avatar">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="notifications__drivers-box">
+                    <strong class="text">
+                      Indigo Violet
+                    </strong>
+                    <strong class="text text--primary"> KNr: 002143</strong>
+                  </div>
+                  <div class="notifications__drivers-group">
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" id="Group_701" data-name="Group 701" xmlns="http://www.w3.org/2000/svg"
+                          width="21.644" height="19.514" viewBox="0 0 21.644 19.514">
+                          <path id="Path_1987" data-name="Path 1987"
+                            d="M40.172,15.209l-.121-.218c-.363-.714-4.836-1.809-5.207-1.826l-.3.019a7.938,7.938,0,0,0-2.692,1.626A18.4,18.4,0,0,1,27.065,11.6,13.3,13.3,0,0,1,24.07,7.5c1.609-1.187,2.279-1.7,2.321-2.275.023-.309-.745-4.134-1.553-4.522L24.6.576A3.4,3.4,0,0,0,22.44.03a2.119,2.119,0,0,0-.6.2,7.217,7.217,0,0,0-2.647,2.2c-.4.667-.581,6.759,4.9,11.908a19.388,19.388,0,0,0,12.317,5.175h.283a3.7,3.7,0,0,0,.5-.035l.029,0,.089-.023a7.521,7.521,0,0,0,2.936-1.923C41.05,16.707,40.481,15.732,40.172,15.209Z"
+                            transform="translate(-19.015 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                    <button class="button button--ico">
+                      <span class="ico">
+                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="19.458" height="20"
+                          viewBox="0 0 19.458 20">
+                          <path id="Vector"
+                            d="M9.729,6A4,4,0,1,1,6.9,7.172,4,4,0,0,1,9.729,6Zm0,2a2,2,0,1,0,1.414.586A2,2,0,0,0,9.729,8Zm-2,12a.506.506,0,0,1-.5-.42l-.37-2.65a6.945,6.945,0,0,1-1.69-.99l-2.49,1.01a.5.5,0,0,1-.61-.22l-2-3.46a.493.493,0,0,1,.12-.64L2.3,10.97,2.229,10,2.3,9,.189,7.37a.493.493,0,0,1-.12-.64l2-3.46a.492.492,0,0,1,.61-.22l2.49,1a7.249,7.249,0,0,1,1.69-.98L7.229.42a.506.506,0,0,1,.5-.42h4a.506.506,0,0,1,.5.42l.37,2.65a7.249,7.249,0,0,1,1.69.98l2.49-1a.492.492,0,0,1,.61.22l2,3.46a.493.493,0,0,1-.12.64L17.159,9l.07,1-.07,1,2.11,1.63a.493.493,0,0,1,.12.64l-2,3.46a.492.492,0,0,1-.61.22l-2.49-1a7.249,7.249,0,0,1-1.69.98l-.37,2.65a.506.506,0,0,1-.5.42h-4ZM8.979,2l-.37,2.61a5.492,5.492,0,0,0-3.03,1.78L3.169,5.35l-.75,1.3L4.529,8.2a5.55,5.55,0,0,0,0,3.6l-2.12,1.56.75,1.3,2.43-1.04A5.444,5.444,0,0,0,8.6,15.38L8.969,18h1.52l.37-2.61a5.518,5.518,0,0,0,3.01-1.77l2.43,1.04.75-1.3-2.12-1.55a5.58,5.58,0,0,0,0-3.61l2.11-1.55-.75-1.3-2.41,1.04a5.42,5.42,0,0,0-3.03-1.77L10.479,2h-1.5Z"
+                            transform="translate(0 0)" fill="currentColor" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="notifications__events">
+              <div class="notifications__events-header">
+                <h5 class="_lg">
+                  Anstehende Ereignisse
+                </h5>
+                <button class="buttonText buttonText--primary">
+                  Alle anzeigen
+                </button>
+              </div>
+              <div class="notifications__events-wrapper">
+                <div class="notifications__events-body">
+                  <h4>
+                    Montag, 24 Juli 2023
+                  </h4>
+                  <div class="notifications__events-item">
+                    <h5 class="_lg">
+                      Fahrer: Rick Mistex
+                    </h5>
+                    <div class="notifications__events-box">
+                      <div class="notifications__events-info">
+                        <span class="text">
+                          Renault Clio
+                        </span>
+                        <span class="text">
+                          KNr: 9143 (190750)
+                        </span>
+                        <span class="text">
+                          01108 Dresden
+                        </span>
+                      </div>
+                      <strong>
+                        6000,00€
+                      </strong>
+                    </div>
+                    <span class="text _bottom">
+                      08:00-09:00 Uhr
+                    </span>
+                  </div>
+                </div>
+                <div class="notifications__events-item">
+                  <h5 class="_lg">
+                    Fahrer: Rick Mistex
+                  </h5>
+                  <div class="notifications__events-box">
+                    <div class="notifications__events-info">
+                      <span class="text">
+                        Renault Clio
+                      </span>
+                      <span class="text">
+                        KNr: 9143 (190750)
+                      </span>
+                      <span class="text">
+                        01108 Dresden
+                      </span>
+                    </div>
+                    <strong>
+                      6000,00€
+                    </strong>
+                  </div>
+                  <span class="text _bottom">
+                    08:00-09:00 Uhr
+                  </span>
+                </div>
+                <div class="notifications__events-body">
+                  <h4>
+                    Dienstag, 25 Juli 2023
+                  </h4>
+                  <div class="notifications__events-item">
+                    <h5 class="_lg">
+                      Fahrer: Rick Mistex
+                    </h5>
+                    <div class="notifications__events-box">
+                      <div class="notifications__events-info">
+                        <span class="text">
+                          Renault Clio
+                        </span>
+                        <span class="text">
+                          KNr: 9143 (190750)
+                        </span>
+                        <span class="text">
+                          01108 Dresden
+                        </span>
+                      </div>
+                      <strong>
+                        6000,00€
+                      </strong>
+                    </div>
+                    <span class="text _bottom">
+                      08:00-09:00 Uhr
+                    </span>
+                  </div>
+                </div>
+                <div class="notifications__events-body">
+                  <h4>
+                    Montag, 24 Juli 2023
+                  </h4>
+                  <div class="notifications__events-item">
+                    <h5 class="_lg">
+                      Fahrer: Rick Mistex
+                    </h5>
+                    <div class="notifications__events-box">
+                      <div class="notifications__events-info">
+                        <span class="text">
+                          Renault Clio
+                        </span>
+                        <span class="text">
+                          KNr: 9143 (190750)
+                        </span>
+                        <span class="text">
+                          01108 Dresden
+                        </span>
+                      </div>
+                      <strong>
+                        6000,00€
+                      </strong>
+                    </div>
+                    <span class="text _bottom">
+                      08:00-09:00 Uhr
+                    </span>
+                  </div>
+                </div>
+                <div class="notifications__events-item">
+                  <h5 class="_lg">
+                    Fahrer: Rick Mistex
+                  </h5>
+                  <div class="notifications__events-box">
+                    <div class="notifications__events-info">
+                      <span class="text">
+                        Renault Clio
+                      </span>
+                      <span class="text">
+                        KNr: 9143 (190750)
+                      </span>
+                      <span class="text">
+                        01108 Dresden
+                      </span>
+                    </div>
+                    <strong>
+                      6000,00€
+                    </strong>
+                  </div>
+                  <span class="text _bottom">
+                    08:00-09:00 Uhr
+                  </span>
+                </div>
+                <div class="notifications__events-body">
+                  <h4>
+                    Dienstag, 25 Juli 2023
+                  </h4>
+                  <div class="notifications__events-item">
+                    <h5 class="_lg">
+                      Fahrer: Rick Mistex
+                    </h5>
+                    <div class="notifications__events-box">
+                      <div class="notifications__events-info">
+                        <span class="text">
+                          Renault Clio
+                        </span>
+                        <span class="text">
+                          KNr: 9143 (190750)
+                        </span>
+                        <span class="text">
+                          01108 Dresden
+                        </span>
+                      </div>
+                      <strong>
+                        6000,00€
+                      </strong>
+                    </div>
+                    <span class="text _bottom">
+                      08:00-09:00 Uhr
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- wrapper end-->
+  </div>
+  <script src="js/customSelect.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

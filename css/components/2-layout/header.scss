@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     &-logo {
       width: 204px;
       display: flex;
@@ -43,9 +42,6 @@
     &--select {
       font-size: 14px !important;
     }
-  }
-  #notificationsBtn{
-    display: none;
   }
 }
 .burger {

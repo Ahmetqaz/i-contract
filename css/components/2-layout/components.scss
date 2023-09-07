@@ -1650,11 +1650,12 @@
     }
   }
 }
-
-@mixin components-1440 {
+@mixin components-1660 {
   .wrapper {
-    padding: 120px 0 40px;
+    padding: 110px 0 40px;
   }
+}
+@mixin components-1440 {
   .setting {
     .button {
       &--primary {
@@ -1697,9 +1698,13 @@
     }
   }
 }
-@mixin components-1025 {
-  .setting {
+@mixin components-1100{
+  .wrapper {
+    padding: 100px 0 40px;
   }
+}
+@mixin components-1025 {
+ 
 }
 @mixin components-880 {
   .input {
@@ -1743,5 +1748,8 @@
         min-width: 670px;
       }
     }
+  }
+  .wrapper {
+    padding: 80px 0 40px;
   }
 }

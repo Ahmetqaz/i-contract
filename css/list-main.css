@@ -47,6 +47,9 @@ h5._lg {
 h6 {
   font-size: 12px;
 }
+h6._lg {
+  font-size: 14px;
+}
 
 h1,
 h2,

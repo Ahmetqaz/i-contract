@@ -194,6 +194,9 @@ h5._lg {
 h6 {
   font-size: 12px;
 }
+h6._lg {
+  font-size: 14px;
+}
 
 h1,
 h2,
@@ -2353,9 +2356,6 @@ svg {
 }
 .header .input--select {
   font-size: 14px !important;
-}
-.header #notificationsBtn {
-  display: none;
 }
 
 .burger {
@@ -5371,6 +5371,15 @@ section {
 .calendar__inner-content._sm {
   padding: 0;
 }
+.calendar__inner-content._lg {
+  max-height: unset;
+}
+.calendar__inner-content._space {
+  margin-bottom: 18px;
+}
+.calendar__inner-content._padding {
+  padding: 15px 20px;
+}
 .calendar__inner-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5444,6 +5453,9 @@ section {
 }
 .calendar__inner-table._sm {
   max-height: 360px;
+}
+.calendar__inner-table._heightUnset {
+  max-height: unset !important;
 }
 .calendar__inner-group {
   display: -webkit-box;
@@ -5570,6 +5582,9 @@ section {
   padding: 0 10px 14px;
   vertical-align: top;
 }
+.calendarTable thead._sm th {
+  font-size: 12px;
+}
 .calendarTable__sticky {
   position: sticky;
   top: -1px;
@@ -5594,8 +5609,15 @@ section {
 .calendarTable._sm tbody tr:first-child td {
   padding-top: 0;
 }
+.calendarTable._extraSm td {
+  padding: 0 5px 10px;
+  border-right: 1px solid #e3e3e4;
+}
+.calendarTable._extraSm th {
+  border-right: 1px solid #e3e3e4;
+}
 .calendarTable__item {
-  padding: 15px;
+  padding: 20px 15px 15px;
   border: 1px solid #E5E5E6;
   border-radius: 12px;
   background: #fafafa;
@@ -5654,6 +5676,9 @@ section {
   margin-top: auto;
   font-size: 9px;
 }
+.calendarTable__item-info._lg {
+  gap: 5px;
+}
 .calendarTable__item-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5681,6 +5706,11 @@ section {
 }
 .calendarTable__item._sm .calendarTable__item-box h5 {
   font-size: 13px;
+}
+.calendarTable__item._padding {
+  padding: 15px;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
 }
 .calendarTable__item._header {
   padding: 35px 10px 10px;
@@ -5741,6 +5771,92 @@ section {
 .calendarTable__item._secondary .text._bottom {
   font-size: 9px;
 }
+.calendarTable__item._extraSm {
+  text-align: center;
+  min-height: unset;
+  border: 1px solid;
+  border-color: rgba(229, 229, 230, 0.4);
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: 5px 10px;
+  min-width: unset;
+}
+.calendarTable__item._extraSm h6 {
+  color: #575757;
+  font-weight: 700;
+}
+.calendarTable__item._note {
+  padding-top: 30px;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  min-width: unset;
+}
+.calendarTable__item._note h6 {
+  color: #1e1f24;
+}
+.calendarTable__item._note .text {
+  font-size: 12px;
+  color: #24242c;
+}
+.calendarTable__item._note .text--secondary {
+  color: #e96d24;
+}
+.calendarTable__item._note .text--primary {
+  color: #185f76;
+  margin-top: 10px;
+}
+.calendarTable__item._note .button {
+  color: #99b2c6;
+}
+.calendarTable__item._noteSecondary {
+  min-height: 66px;
+  background: rgba(250, 100, 0, 0.75);
+  border-radius: 14px;
+  text-align: center;
+  gap: 10px;
+  padding-top: 25px;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  min-width: unset;
+}
+.calendarTable__item._noteSecondary .button {
+  color: #fff;
+  width: 1.7em;
+  height: 1.7em;
+}
+.calendarTable__item._noteSecondary h6 {
+  font-weight: 700;
+  color: #fff;
+}
+.calendarTable__item._noteSecondary .text {
+  font-weight: 700;
+  color: #fff;
+  font-size: 9px;
+}
+.calendarTable__item._lgOrange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(250, 100, 0, 0.75);
+  min-height: 132px;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  min-width: unset;
+}
+.calendarTable__item._lgOrange .button {
+  width: 1.7em;
+  height: 1.7em;
+  color: #fff;
+}
+.calendarTable__item._lgOrange h4 {
+  color: #fff;
+}
 .calendarTable__column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5764,6 +5880,14 @@ section {
   -webkit-box-pack: end !important;
       -ms-flex-pack: end !important;
           justify-content: flex-end !important;
+}
+.calendarTable__column._sm {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  width: 130px;
+  margin: 0 auto;
 }
 .calendarTable__box {
   display: -webkit-box;
@@ -5822,6 +5946,7 @@ section {
 }
 .calendarTable--border th {
   padding-bottom: 12px;
+  border-right: 1px solid #e3e3e4;
 }
 .calendarTable--border td {
   border-right: 1px solid #e3e3e4;
@@ -6065,16 +6190,16 @@ section {
 
 .notifications {
   width: 420px;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   z-index: 2;
   padding-right: 5px;
   position: fixed;
   right: 5px;
   top: 130px;
+  height: calc(100% - 150px);
+  overflow: auto;
 }
 .notifications__inner {
   display: -webkit-box;
@@ -6178,6 +6303,17 @@ section {
   max-height: 168px;
   overflow: auto;
   padding-right: 20px;
+}
+.notifications__drivers._distance .notifications__drivers-header {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.notifications__drivers._distance .notifications__drivers-header h5 {
+  font-weight: 400;
+}
+.notifications__drivers._distance .notifications__drivers-header .date {
+  max-width: 75px;
 }
 .notifications__events {
   display: -webkit-box;
@@ -6368,6 +6504,10 @@ section {
 @media (max-width: 1660px) {
   h2 {
     font-size: 23px;
+  }
+
+  .wrapper {
+    padding: 110px 0 40px;
   }
 
   .sidebar {
@@ -6575,10 +6715,6 @@ section {
     padding-left: 60px;
   }
 
-  .wrapper {
-    padding: 120px 0 40px;
-  }
-
   .setting .button--primary {
     width: 220px;
     font-size: 15px;
@@ -6745,6 +6881,10 @@ section {
   }
 }
 @media (max-width: 1100px) {
+  .wrapper {
+    padding: 100px 0 40px;
+  }
+
   .tabs {
     top: 4px;
   }
@@ -7018,6 +7158,9 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .calendar__inner-content {
+    padding: 15px;
   }
 }
 @media (max-width: 940px) {
@@ -7838,6 +7981,10 @@ section {
   }
   .input__box-wrapper {
     min-width: 670px;
+  }
+
+  .wrapper {
+    padding: 80px 0 40px;
   }
 
   .header {
