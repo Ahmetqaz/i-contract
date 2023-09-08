@@ -6308,12 +6308,40 @@ section {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  gap: 20px;
 }
 .notifications__drivers._distance .notifications__drivers-header h5 {
   font-weight: 400;
+  color: #575757;
 }
 .notifications__drivers._distance .notifications__drivers-header .date {
-  max-width: 75px;
+  max-width: unset;
+  gap: 14px;
+}
+.notifications__drivers._distance .notifications__drivers-header .date .button {
+  width: 1em;
+  height: 1em;
+}
+.notifications__drivers._distance .notifications__drivers-header .date .button .ico {
+  color: #575757;
+}
+.notifications__drivers._distance .notifications__drivers-header .date .button:hover .ico {
+  color: #e96d24;
+}
+.notifications__drivers._distance .notifications__drivers-item .text--primary {
+  color: #185f76;
+}
+.notifications__drivers._distance .notifications__drivers-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .notifications__events {
   display: -webkit-box;
@@ -6425,6 +6453,53 @@ section {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
+  min-height: 200px;
+}
+.notifications__events._price .notifications__events-item {
+  background: #f7f7f7;
+  border-radius: 10px;
+  border: 1px solid #E5E5E6;
+  padding: 15px 12px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.notifications__events._price .notifications__events-item .text {
+  font-size: 12px;
+  color: #575757;
+  font-weight: 700;
+}
+.notifications__events._price .notifications__events-item .text--primary {
+  color: #185f76;
+}
+.notifications__events._price .notifications__events-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+.notifications__events._price .notifications__events-body {
+  gap: 10px;
+}
+.notifications__events._price .notifications__events-wrapper {
+  gap: 25px;
 }
 
 .button._hide {
