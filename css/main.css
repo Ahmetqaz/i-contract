@@ -6707,7 +6707,7 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 20px;
-  border: 1px solid rgba(217, 225, 231, 0.8);
+  border-bottom: 1px solid rgba(217, 225, 231, 0.8);
 }
 .notifications__create-header .button--ico {
   font-size: 10px;
