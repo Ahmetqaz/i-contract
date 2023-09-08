@@ -1,3 +1,8 @@
+:root {
+  --td-width: 76px;
+  --td-height: 55px;
+}
+
 @font-face {
   font-family: "Tahoma";
   src: url("./Tahoma.eot");
@@ -1243,7 +1248,7 @@ svg {
   border-color: rgba(0, 0, 0, 0.5);
 }
 .button--chevron {
-  border-color: #DDDDDD;
+  border-color: #dddddd;
   border-radius: 4px;
   padding: 0.3em 1.15em;
 }

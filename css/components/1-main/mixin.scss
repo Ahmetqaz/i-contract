@@ -42,6 +42,15 @@
   -webkit-line-clamp: $line;
 }
 
+@mixin td-width {
+  width: 76px;
+  min-width: unset;
+}
+@mixin td-height {
+  height: 55px;
+  min-height: unset;
+}
+
 @mixin contentAbsolute {
   content: "";
   display: block;

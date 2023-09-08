@@ -8,23 +8,23 @@ $black-5: #ebebeb;
 $black-6: #888888;
 $black-7: #525252;
 $black-8: #393649;
-$black-9: #9F9F9F;
-$black-10: #AFADB9;
+$black-9: #9f9f9f;
+$black-10: #afadb9;
 $white: #fff;
 $white-2: #f7f7f7;
 $white-3: #f5f6fa;
 $white-4: #e6e9f4;
 $white-5: #d1d4de;
-$white-6: #E5E5E6;
+$white-6: #e5e5e6;
 $gray: #707070;
-$gray-2: #DDDDDD;
+$gray-2: #dddddd;
 $whiteBg: #e4e4e4;
 $white-1: rgba(
   $color: #fff,
   $alpha: 0.3,
 );
 $orange: #e96d24;
-$orange-2: #FA6400;
+$orange-2: #fa6400;
 $red: #f0142f;
 $blue: #7e84a3;
 $blue-light: #7a86a1;
@@ -37,8 +37,13 @@ $blue-7: #d3d9de;
 $blue-8: #d5d7e3;
 $blue-9: #0062ff;
 $blue-10: #a4a7b8;
-$blue-11: #809FB8;
+$blue-11: #809fb8;
 $green: #3cb63c;
 $green-2: #008a00;
 $yellow: #def510;
 $font-primary: "Tahoma", sans-serif;
+
+:root {
+  --td-width: 76px;
+  --td-height: 55px;
+}

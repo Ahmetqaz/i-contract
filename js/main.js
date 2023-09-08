@@ -213,7 +213,6 @@ if (tableCheck) {
         });
         tableCheck.forEach((input) => {
           input.checked = true;
-
         });
       } else {
         checkBoxes.forEach((check) => {
@@ -243,3 +242,18 @@ if (notifications) {
     }
   });
 }
+
+const tableLine = document.getElementById("tableLine");
+const table = document.getElementById("table");
+
+const calendarTable__event = document.getElementsByClassName(
+  "calendarTable__title _sm active"
+)[0];
+const rect = calendarTable__event.getBoundingClientRect();
+const rectTable = table.getBoundingClientRect();
+
+tableLine.style.left = rect.left - rectTable.left + 44 + "px";
+
+console.log(rect);
+console.log(rectTable);
+
