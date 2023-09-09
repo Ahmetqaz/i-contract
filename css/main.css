@@ -4798,6 +4798,17 @@ section {
 .stockTable td h4 {
   font-weight: 400;
 }
+.stockTable td .text,
+.stockTable td h4,
+.stockTable td small {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  display: block;
+}
 .stockTable tbody tr {
   position: relative;
 }
@@ -7483,13 +7494,13 @@ section {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 24px 16px;
+    gap: 22px 12px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
   .stockTable tbody tr {
-    width: calc(50% - 10px);
+    width: calc(50% - 8px);
   }
   .stockTable tbody tr::after {
     width: 100%;
@@ -7512,6 +7523,11 @@ section {
         -ms-flex-align: center;
             align-items: center;
     padding: 20px;
+  }
+  .stockTable td .text,
+.stockTable td h4,
+.stockTable td small {
+    max-width: 184px;
   }
   .stockTable__box {
     text-align: right;
@@ -8606,6 +8622,17 @@ section {
   .stockDropdown__content-column {
     width: 100%;
     margin: 0 auto;
+  }
+  .stockTable th {
+    font-size: 14px;
+  }
+  .stockTable td {
+    font-size: 14px;
+  }
+  .stockTable td .text,
+.stockTable td h4,
+.stockTable td small {
+    max-width: 170px;
   }
 }
 @media (max-width: 390px) {

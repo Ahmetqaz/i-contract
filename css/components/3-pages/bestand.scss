@@ -298,6 +298,13 @@
       h4 {
         font-weight: 400;
       }
+      .text,
+      h4,
+      small {
+        @include ellipsis(1);
+        max-width: 200px;
+        display: block;
+      }
     }
     tbody {
       tr {
@@ -824,10 +831,10 @@
       tbody {
         display: flex;
         flex-wrap: wrap;
-        gap: 24px 16px;
+        gap: 22px 12px;
         justify-content: space-between;
         tr {
-          width: calc(50% - 10px);
+          width: calc(50% - 8px);
           &::after {
             width: 100%;
             height: 100%;
@@ -847,6 +854,11 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px;
+        .text,
+        h4,
+        small {
+          max-width: 184px;
+        }
       }
       &__box {
         text-align: right;
@@ -1018,6 +1030,19 @@
         &-column {
           width: 100%;
           margin: 0 auto;
+        }
+      }
+    }
+    &Table {
+      th{
+        font-size: 14px;
+      }
+      td {
+        font-size: 14px;
+        .text,
+        h4,
+        small {
+          max-width: 170px;
         }
       }
     }
