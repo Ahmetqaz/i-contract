@@ -756,6 +756,7 @@
   }
 }
 @mixin stock-1440 {
+  
 }
 @mixin stock-1280 {
   .stock {
@@ -1034,7 +1035,7 @@
       }
     }
     &Table {
-      th{
+      th {
         font-size: 14px;
       }
       td {
