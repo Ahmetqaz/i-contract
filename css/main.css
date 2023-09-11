@@ -4978,7 +4978,6 @@ section {
 }
 .stockPagination__box .input__dropdown::-webkit-scrollbar-track {
   background: transparent !important;
-  overflow: hidden;
 }
 .stockPagination__box .input__dropdown-item {
   padding: 5px 0;
