@@ -403,6 +403,7 @@
     animation-duration: 0.3s;
     &__box {
       display: flex;
+      align-items: center;
       gap: 30px;
       h5 {
         display: flex;
@@ -419,6 +420,38 @@
       h6 {
         font-weight: 400;
         color: $black-7;
+      }
+      .input {
+        max-width: 250px;
+        &__selected {
+          display: flex;
+          font-weight: 400;
+          gap: 5px;
+          border-color: transparent;
+          color: $black-7;
+          padding: 6px 30px 6px 14px;
+        }
+        &__dropdown {
+          border: 1px solid $gray;
+          top: calc(100% + 7px);
+          gap: 5px;
+          overflow-y: auto;
+          border-radius: 5px;
+          &::-webkit-scrollbar-track {
+            background: transparent !important;
+            overflow: hidden;
+          }
+          &-item {
+            padding: 5px 0;
+          }
+        }
+        &.active {
+          .input {
+            &__dropdown {
+              max-height: 80px;
+            }
+          }
+        }
       }
     }
     &__body {
@@ -756,7 +789,6 @@
   }
 }
 @mixin stock-1440 {
-  
 }
 @mixin stock-1280 {
   .stock {
@@ -1020,6 +1052,17 @@
       height: auto;
       &__body {
         margin-left: auto;
+      }
+      &__box {
+        .input {
+          &.active {
+            .input {
+              &__dropdown {
+                max-height: 120px;
+              }
+            }
+          }
+        }
       }
     }
   }
