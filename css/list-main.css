@@ -449,6 +449,12 @@ svg {
 .input--checkBox input:checked + label .checkBox:after {
   opacity: 1;
 }
+.input--checkBox input:checked + label .checkBox--round {
+  border-color: #185f76;
+}
+.input--checkBox input:checked + label .checkBox--round::before {
+  opacity: 1;
+}
 .input--checkBox label {
   color: #185f76;
   font-weight: 700;
@@ -496,6 +502,28 @@ svg {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
+}
+.input--checkBox .checkBox--round {
+  border-radius: 50%;
+}
+.input--checkBox .checkBox--round::after {
+  display: none;
+}
+.input--checkBox .checkBox--round::before {
+  content: "";
+  width: 64%;
+  height: 64%;
+  background: #185f76;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: inherit;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  opacity: 0;
 }
 .input--checkBox._orange .checkBox::after {
   border-color: #fff;
@@ -1069,6 +1097,19 @@ svg {
 .button--secondary:hover {
   opacity: 0.8;
 }
+.button--secondary._round {
+  border-radius: 100px;
+  gap: 14px;
+  padding: 0.8em 1.4em;
+}
+.button--secondary._round .ico {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+}
+.button--secondary._round .ico svg {
+  fill: currentColor;
+}
 .button--rounded {
   padding: 0;
   font-size: 20px;
@@ -1361,6 +1402,20 @@ svg {
 .button--notification.active .button__burger span {
   opacity: 0;
 }
+.button--tab {
+  border: 1px solid #d7dbec;
+  border-radius: 4px;
+  font-weight: 400;
+  min-width: 100px;
+}
+.button--tab:hover {
+  color: #e96d24;
+}
+.button--tab.active {
+  background-color: #185f76;
+  border-color: #185f76;
+  color: #fff;
+}
 .button._shadow {
   -webkit-box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
           box-shadow: 0 4px 15px rgba(24, 95, 118, 0.2);
@@ -1403,6 +1458,25 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.button__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.button__group .button:nth-child(1) {
+  border-radius: 4px 0 0 4px;
+}
+.button__group .button:nth-child(2) {
+  border-right: unset;
+  border-left: unset;
+  border-radius: 0;
+}
+.button__group .button:nth-child(3) {
+  border-radius: 0px 4px 4px 0;
 }
 .button svg,
 .button img {

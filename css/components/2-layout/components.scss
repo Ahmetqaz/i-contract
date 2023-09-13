@@ -139,12 +139,17 @@
       opacity: 0;
       cursor: pointer;
       z-index: 1;
-
       &:checked + label {
         .checkBox {
           border-color: $primary;
           &:after {
             opacity: 1;
+          }
+          &--round {
+            border-color: $primary;
+            &::before {
+              opacity: 1;
+            }
           }
         }
       }
@@ -180,6 +185,25 @@
         transform: translate(-50%, -50%) rotate(45deg);
         opacity: 0;
         @include transition;
+      }
+      &--round {
+        border-radius: 50%;
+        &::after {
+          display: none;
+        }
+        &::before {
+          content: "";
+          width: 64%;
+          height: 64%;
+          background: $primary;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: inherit;
+          @include transition;
+          opacity: 0;
+        }
       }
     }
     &._orange {
@@ -715,6 +739,19 @@
     &:hover {
       opacity: 0.8;
     }
+    &._round {
+      border-radius: 100px;
+      gap: 14px;
+      padding: 0.8em 1.4em;
+      .ico {
+        color: $white;
+        width: 20px;
+        height: 20px;
+        svg {
+          fill: currentColor;
+        }
+      }
+    }
   }
   &--rounded {
     padding: 0;
@@ -982,6 +1019,20 @@
       }
     }
   }
+  &--tab {
+    border: 1px solid $blue-4;
+    border-radius: 4px;
+    font-weight: 400;
+    min-width: 100px;
+    &:hover {
+      color: $orange;
+    }
+    &.active {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
   &._shadow {
     box-shadow: 0 4px 15px rgba($primary, 0.2);
   }
@@ -1016,6 +1067,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__group {
+    display: flex;
+    align-items: center;
+    .button {
+      &:nth-child(1) {
+        border-radius: 4px 0 0 4px;
+      }
+      &:nth-child(2) {
+        border-right: unset;
+        border-left: unset;
+        border-radius: 0;
+      }
+      &:nth-child(3) {
+        border-radius: 0px 4px 4px 0;
+      }
+    }
   }
   svg,
   img {
@@ -1687,7 +1755,9 @@
 }
 @mixin components-1180 {
   .input {
-    font-size: 15px;
+    &--text {
+      font-size: 15px;
+    }
     &--date {
       font-size: 13px;
     }
@@ -1698,13 +1768,12 @@
     }
   }
 }
-@mixin components-1100{
+@mixin components-1100 {
   .wrapper {
     padding: 100px 0 40px;
   }
 }
 @mixin components-1025 {
- 
 }
 @mixin components-880 {
   .input {
