@@ -1084,9 +1084,13 @@ svg {
 .button--primary:hover {
   opacity: 0.8;
 }
-.button--primary._bg {
+.button--primary._header {
   background: #fff;
   color: #1e1f24;
+}
+.button--primary._header.active {
+  color: #fff;
+  background: #185f76;
 }
 .button--secondary {
   color: #fff;
@@ -1409,7 +1413,7 @@ svg {
   min-width: 100px;
 }
 .button--tab:hover {
-  color: #e96d24;
+  color: #e96d24 !important;
 }
 .button--tab.active {
   background-color: #185f76;

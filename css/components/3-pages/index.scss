@@ -415,6 +415,9 @@ section {
         background: $white;
         padding: 1.5em 1.8em;
         width: 100%;
+        &.hide {
+          display: none;
+        }
       }
       .button {
         border-color: $blue-4;
@@ -435,6 +438,16 @@ section {
   }
   &--top {
     top: 0 !important;
+  }
+}
+.tab {
+  &__content {
+    display: none;
+    &.active {
+      display: block;
+      animation-name: fadeIn;
+      animation-duration: 0.4s;
+    }
   }
 }
 .data {
@@ -628,6 +641,7 @@ section {
   top: -120px;
 }
 .preview {
+  overflow: hidden;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -645,66 +659,86 @@ section {
       .text--primary {
         font-size: 16px;
         color: $primary;
+        line-height: 1.6;
       }
     }
     &-content {
       background: $white;
       padding: 16px 24px;
       border-radius: 6px;
-    }
-    &-group {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-    }
-    &-info {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      flex: 1;
-      &-title {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        .text {
-          &--secondary {
-            color: $orange;
-          }
-        }
-      }
-      &-row {
-        display: flex;
-        gap: 16px;
-      }
-      &-box {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        .input {
-          font-size: 12px;
-          width: auto;
-          label {
-            gap: 12px;
-            .checkBox {
-              border: 2px solid #d5d9db;
-              &::after {
-                width: 0.3em;
-                height: 0.6em;
-              }
-            }
-            .text {
-              color: $black;
-              font-weight: 400;
-            }
-          }
-        }
-      }
     }
     &-box {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
+      .button {
+        &--secondary {
+          padding: 0.8em 1.4em;
+          display: none;
+          margin: 0 auto;
+          &.active {
+            display: flex;
+            animation-name: fadeIn;
+            animation-duration: 0.4s;
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    flex: 1;
+    transition: 0.3s ease-in;
+    display: none;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .text {
+        &--secondary {
+          color: $orange;
+        }
+      }
+    }
+    &-row {
+      display: flex;
+      gap: 16px;
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      .input {
+        font-size: 12px;
+        width: auto;
+        label {
+          gap: 12px;
+          .checkBox {
+            border: 2px solid #d5d9db;
+            &::after {
+              width: 0.3em;
+              height: 0.6em;
+            }
+          }
+          .text {
+            color: $black;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    &.active {
+      display: flex;
+      animation-name: fadeIn;
+      animation-duration: 0.4s;
     }
   }
 }
@@ -977,6 +1011,20 @@ section {
     }
   }
 }
+@mixin index-940 {
+  .preview {
+    &__inner {
+      &-content {
+        flex-direction: column;
+        gap: 40px;
+      }
+      &-box {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
 @mixin index-880 {
   .contact {
     &__inner {
@@ -1156,6 +1204,23 @@ section {
     &Radio {
       .input {
         font-size: 13px;
+      }
+    }
+  }
+  .preview {
+    &__inner {
+      &-header {
+        padding: 16px 20px;
+        gap: 16px;
+      }
+      &-content {
+        padding: 14px 16px;
+      }
+    }
+    &__item {
+      &-row {
+        flex-direction: column;
+        gap: 14px;
       }
     }
   }

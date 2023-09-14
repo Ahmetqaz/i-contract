@@ -62,6 +62,7 @@
 }
 @media (max-width: 940px) {
   @include stock-940;
+  @include index-940;
 }
 @media (max-width: 880px) {
   @include typography-880;

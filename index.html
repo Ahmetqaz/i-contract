@@ -279,13 +279,14 @@
           </div>
         </div>
       </nav> -->
-      <div class="wrapper__body ">
+      <div class="wrapper__body">
         <div class="tabs tabs--top">
           <div class="autoContainer _sm">
             <div class="tabs__inner">
               <div class="tabs__inner-row">
-                <button class="button button--primary">Vertragsdaten</button>
-                <button class="button button--primary _bg">Vorschau</button>
+                <button class="button button--primary _header active"
+                  data-page-button="vertragsdaten">Vertragsdaten</button>
+                <button class="button button--primary  _header" data-page-button="vorschau">Vorschau</button>
               </div>
               <div class="tabs__inner-row _links">
                 <a href="#contact" class="tabsLink active"> Kontaktdaten </a>
@@ -299,727 +300,905 @@
             </div>
           </div>
         </div>
-        <!-- contact start-->
-        <div class="anchor" id="contact"></div>
-        <section class="contact">
-          <div class="autoContainer _sm">
-            <div class="contact__inner">
-              <div class="contact__inner-row">
-                <div class="contactContent">
-                  <div class="contactContent__header">
-                    <div class="input input--search">
-                      <input type="text" placeholder="Suche" id="car_url" />
-                      <span class="ico">
-                        <svg class="fill" width="17" height="17" viewBox="0 0 17 17">
-                          <path id="color"
-                            d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
-                            fill="#7e84a3" />
-                        </svg>
-                      </span>
-                    </div>
-                    <!-- <div class="input input--select input--primary">
-                      <input type="hidden">
-                      <div class="input__selected">
+        <!-- tab__content start-->
+        <div class="tab__content active" data-page="vertragsdaten">
+          <!-- contact start-->
+          <div class="anchor" id="contact"></div>
+          <section class="contact">
+            <div class="autoContainer _sm">
+              <div class="contact__inner">
+                <div class="contact__inner-row">
+                  <div class="contactContent">
+                    <div class="contactContent__header">
+                      <div class="input input--search">
+                        <input type="text" placeholder="Suche" id="car_url" />
+                        <span class="ico">
+                          <svg class="fill" width="17" height="17" viewBox="0 0 17 17">
+                            <path id="color"
+                              d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
+                              fill="#7e84a3" />
+                          </svg>
+                        </span>
                       </div>
-                      <ul class="input__dropdown">
-                        <li class="input__dropdown-item" data-default>
-                          Weitere Funktionen
-                        </li>
-                        <li class="input__dropdown-item">
-                          Inserat öffnen
-                        </li>
-                        <li class="input__dropdown-item">
-                          Vergleichen
-                        </li>
-                        <li class="input__dropdown-item">
-                          Kontakt finden
-                        </li>
-                        <li class="input__dropdown-item">
-                          Auto Message
-                        </li>
-                      </ul>
-                    </div> -->
-                    <div class="contactContent__header-wrapper">
-                      <button class="contactContent__header-button">
-                        <span class="ico">
-                          <svg class="fill" width="800px" height="800px" viewBox="0 0 15 15" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M2.8 1L2.74967 0.99997C2.52122 0.999752 2.32429 0.999564 2.14983 1.04145C1.60136 1.17312 1.17312 1.60136 1.04145 2.14983C0.999564 2.32429 0.999752 2.52122 0.99997 2.74967L1 2.8V5.2L0.99997 5.25033C0.999752 5.47878 0.999564 5.67572 1.04145 5.85017C1.17312 6.39864 1.60136 6.82688 2.14983 6.95856C2.32429 7.00044 2.52122 7.00025 2.74967 7.00003L2.8 7H5.2L5.25033 7.00003C5.47878 7.00025 5.67572 7.00044 5.85017 6.95856C6.39864 6.82688 6.82688 6.39864 6.95856 5.85017C7.00044 5.67572 7.00025 5.47878 7.00003 5.25033L7 5.2V2.8L7.00003 2.74967C7.00025 2.52122 7.00044 2.32429 6.95856 2.14983C6.82688 1.60136 6.39864 1.17312 5.85017 1.04145C5.67572 0.999564 5.47878 0.999752 5.25033 0.99997L5.2 1H2.8ZM2.38328 2.01382C2.42632 2.00348 2.49222 2 2.8 2H5.2C5.50779 2 5.57369 2.00348 5.61672 2.01382C5.79955 2.05771 5.94229 2.20045 5.98619 2.38328C5.99652 2.42632 6 2.49222 6 2.8V5.2C6 5.50779 5.99652 5.57369 5.98619 5.61672C5.94229 5.79955 5.79955 5.94229 5.61672 5.98619C5.57369 5.99652 5.50779 6 5.2 6H2.8C2.49222 6 2.42632 5.99652 2.38328 5.98619C2.20045 5.94229 2.05771 5.79955 2.01382 5.61672C2.00348 5.57369 2 5.50779 2 5.2V2.8C2 2.49222 2.00348 2.42632 2.01382 2.38328C2.05771 2.20045 2.20045 2.05771 2.38328 2.01382ZM9.8 1L9.74967 0.99997C9.52122 0.999752 9.32429 0.999564 9.14983 1.04145C8.60136 1.17312 8.17312 1.60136 8.04145 2.14983C7.99956 2.32429 7.99975 2.52122 7.99997 2.74967L8 2.8V5.2L7.99997 5.25033C7.99975 5.47878 7.99956 5.67572 8.04145 5.85017C8.17312 6.39864 8.60136 6.82688 9.14983 6.95856C9.32429 7.00044 9.52122 7.00025 9.74967 7.00003L9.8 7H12.2L12.2503 7.00003C12.4788 7.00025 12.6757 7.00044 12.8502 6.95856C13.3986 6.82688 13.8269 6.39864 13.9586 5.85017C14.0004 5.67572 14.0003 5.47878 14 5.25033L14 5.2V2.8L14 2.74967C14.0003 2.52122 14.0004 2.32429 13.9586 2.14983C13.8269 1.60136 13.3986 1.17312 12.8502 1.04145C12.6757 0.999564 12.4788 0.999752 12.2503 0.99997L12.2 1H9.8ZM9.38328 2.01382C9.42632 2.00348 9.49222 2 9.8 2H12.2C12.5078 2 12.5737 2.00348 12.6167 2.01382C12.7995 2.05771 12.9423 2.20045 12.9862 2.38328C12.9965 2.42632 13 2.49222 13 2.8V5.2C13 5.50779 12.9965 5.57369 12.9862 5.61672C12.9423 5.79955 12.7995 5.94229 12.6167 5.98619C12.5737 5.99652 12.5078 6 12.2 6H9.8C9.49222 6 9.42632 5.99652 9.38328 5.98619C9.20045 5.94229 9.05771 5.79955 9.01382 5.61672C9.00348 5.57369 9 5.50779 9 5.2V2.8C9 2.49222 9.00348 2.42632 9.01382 2.38328C9.05771 2.20045 9.20045 2.05771 9.38328 2.01382ZM2.74967 7.99997L2.8 8H5.2L5.25033 7.99997C5.47878 7.99975 5.67572 7.99956 5.85017 8.04145C6.39864 8.17312 6.82688 8.60136 6.95856 9.14983C7.00044 9.32429 7.00025 9.52122 7.00003 9.74967L7 9.8V12.2L7.00003 12.2503C7.00025 12.4788 7.00044 12.6757 6.95856 12.8502C6.82688 13.3986 6.39864 13.8269 5.85017 13.9586C5.67572 14.0004 5.47878 14.0003 5.25033 14L5.2 14H2.8L2.74967 14C2.52122 14.0003 2.32429 14.0004 2.14983 13.9586C1.60136 13.8269 1.17312 13.3986 1.04145 12.8502C0.999564 12.6757 0.999752 12.4788 0.99997 12.2503L1 12.2V9.8L0.99997 9.74967C0.999752 9.52122 0.999564 9.32429 1.04145 9.14983C1.17312 8.60136 1.60136 8.17312 2.14983 8.04145C2.32429 7.99956 2.52122 7.99975 2.74967 7.99997ZM2.8 9C2.49222 9 2.42632 9.00348 2.38328 9.01382C2.20045 9.05771 2.05771 9.20045 2.01382 9.38328C2.00348 9.42632 2 9.49222 2 9.8V12.2C2 12.5078 2.00348 12.5737 2.01382 12.6167C2.05771 12.7995 2.20045 12.9423 2.38328 12.9862C2.42632 12.9965 2.49222 13 2.8 13H5.2C5.50779 13 5.57369 12.9965 5.61672 12.9862C5.79955 12.9423 5.94229 12.7995 5.98619 12.6167C5.99652 12.5737 6 12.5078 6 12.2V9.8C6 9.49222 5.99652 9.42632 5.98619 9.38328C5.94229 9.20045 5.79955 9.05771 5.61672 9.01382C5.57369 9.00348 5.50779 9 5.2 9H2.8ZM9.8 8L9.74967 7.99997C9.52122 7.99975 9.32429 7.99956 9.14983 8.04145C8.60136 8.17312 8.17312 8.60136 8.04145 9.14983C7.99956 9.32429 7.99975 9.52122 7.99997 9.74967L8 9.8V12.2L7.99997 12.2503C7.99975 12.4788 7.99956 12.6757 8.04145 12.8502C8.17312 13.3986 8.60136 13.8269 9.14983 13.9586C9.32429 14.0004 9.52122 14.0003 9.74967 14L9.8 14H12.2L12.2503 14C12.4788 14.0003 12.6757 14.0004 12.8502 13.9586C13.3986 13.8269 13.8269 13.3986 13.9586 12.8502C14.0004 12.6757 14.0003 12.4788 14 12.2503L14 12.2V9.8L14 9.74967C14.0003 9.52122 14.0004 9.32429 13.9586 9.14983C13.8269 8.60136 13.3986 8.17312 12.8502 8.04145C12.6757 7.99956 12.4788 7.99975 12.2503 7.99997L12.2 8H9.8ZM9.38328 9.01382C9.42632 9.00348 9.49222 9 9.8 9H12.2C12.5078 9 12.5737 9.00348 12.6167 9.01382C12.7995 9.05771 12.9423 9.20045 12.9862 9.38328C12.9965 9.42632 13 9.49222 13 9.8V12.2C13 12.5078 12.9965 12.5737 12.9862 12.6167C12.9423 12.7995 12.7995 12.9423 12.6167 12.9862C12.5737 12.9965 12.5078 13 12.2 13H9.8C9.49222 13 9.42632 12.9965 9.38328 12.9862C9.20045 12.9423 9.05771 12.7995 9.01382 12.6167C9.00348 12.5737 9 12.5078 9 12.2V9.8C9 9.49222 9.00348 9.42632 9.01382 9.38328C9.05771 9.20045 9.20045 9.05771 9.38328 9.01382Z"
-                              fill="currentColor" />
-                          </svg>
-                        </span>
-                        <span class="text">
-                          Irterart Offnen
-                        </span>
-                      </button>
-                      <button class="contactContent__header-button">
-                        <span class="ico">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <g id="ic_inbox">
-                              <rect id="Rectangle_603" data-name="Rectangle 603" width="18" height="14" rx="2"
-                                transform="translate(3 5)" fill="none" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" />
-                              <path id="Path_377" data-name="Path 377" d="M3,7l9,6,9-6" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                            </g>
-                          </svg>
-                        </span>
-                        <span class="text">
-                          Kontact
-                        </span>
-                      </button>
-                      <button class="contactContent__header-button">
-                        <span class="ico">
-                          <svg class="fill" width="800px" height="800px" viewBox="0 0 48 48"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="Layer_2" data-name="Layer 2">
-                              <g id="invisible_box" data-name="invisible box">
-                                <rect width="48" height="48" fill="none" />
+                      <!-- <div class="input input--select input--primary">
+                       <input type="hidden">
+                       <div class="input__selected">
+                       </div>
+                       <ul class="input__dropdown">
+                         <li class="input__dropdown-item" data-default>
+                           Weitere Funktionen
+                         </li>
+                         <li class="input__dropdown-item">
+                           Inserat öffnen
+                         </li>
+                         <li class="input__dropdown-item">
+                           Vergleichen
+                         </li>
+                         <li class="input__dropdown-item">
+                           Kontakt finden
+                         </li>
+                         <li class="input__dropdown-item">
+                           Auto Message
+                         </li>
+                       </ul>
+                     </div> -->
+                      <div class="contactContent__header-wrapper">
+                        <button class="contactContent__header-button">
+                          <span class="ico">
+                            <svg class="fill" width="800px" height="800px" viewBox="0 0 15 15" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M2.8 1L2.74967 0.99997C2.52122 0.999752 2.32429 0.999564 2.14983 1.04145C1.60136 1.17312 1.17312 1.60136 1.04145 2.14983C0.999564 2.32429 0.999752 2.52122 0.99997 2.74967L1 2.8V5.2L0.99997 5.25033C0.999752 5.47878 0.999564 5.67572 1.04145 5.85017C1.17312 6.39864 1.60136 6.82688 2.14983 6.95856C2.32429 7.00044 2.52122 7.00025 2.74967 7.00003L2.8 7H5.2L5.25033 7.00003C5.47878 7.00025 5.67572 7.00044 5.85017 6.95856C6.39864 6.82688 6.82688 6.39864 6.95856 5.85017C7.00044 5.67572 7.00025 5.47878 7.00003 5.25033L7 5.2V2.8L7.00003 2.74967C7.00025 2.52122 7.00044 2.32429 6.95856 2.14983C6.82688 1.60136 6.39864 1.17312 5.85017 1.04145C5.67572 0.999564 5.47878 0.999752 5.25033 0.99997L5.2 1H2.8ZM2.38328 2.01382C2.42632 2.00348 2.49222 2 2.8 2H5.2C5.50779 2 5.57369 2.00348 5.61672 2.01382C5.79955 2.05771 5.94229 2.20045 5.98619 2.38328C5.99652 2.42632 6 2.49222 6 2.8V5.2C6 5.50779 5.99652 5.57369 5.98619 5.61672C5.94229 5.79955 5.79955 5.94229 5.61672 5.98619C5.57369 5.99652 5.50779 6 5.2 6H2.8C2.49222 6 2.42632 5.99652 2.38328 5.98619C2.20045 5.94229 2.05771 5.79955 2.01382 5.61672C2.00348 5.57369 2 5.50779 2 5.2V2.8C2 2.49222 2.00348 2.42632 2.01382 2.38328C2.05771 2.20045 2.20045 2.05771 2.38328 2.01382ZM9.8 1L9.74967 0.99997C9.52122 0.999752 9.32429 0.999564 9.14983 1.04145C8.60136 1.17312 8.17312 1.60136 8.04145 2.14983C7.99956 2.32429 7.99975 2.52122 7.99997 2.74967L8 2.8V5.2L7.99997 5.25033C7.99975 5.47878 7.99956 5.67572 8.04145 5.85017C8.17312 6.39864 8.60136 6.82688 9.14983 6.95856C9.32429 7.00044 9.52122 7.00025 9.74967 7.00003L9.8 7H12.2L12.2503 7.00003C12.4788 7.00025 12.6757 7.00044 12.8502 6.95856C13.3986 6.82688 13.8269 6.39864 13.9586 5.85017C14.0004 5.67572 14.0003 5.47878 14 5.25033L14 5.2V2.8L14 2.74967C14.0003 2.52122 14.0004 2.32429 13.9586 2.14983C13.8269 1.60136 13.3986 1.17312 12.8502 1.04145C12.6757 0.999564 12.4788 0.999752 12.2503 0.99997L12.2 1H9.8ZM9.38328 2.01382C9.42632 2.00348 9.49222 2 9.8 2H12.2C12.5078 2 12.5737 2.00348 12.6167 2.01382C12.7995 2.05771 12.9423 2.20045 12.9862 2.38328C12.9965 2.42632 13 2.49222 13 2.8V5.2C13 5.50779 12.9965 5.57369 12.9862 5.61672C12.9423 5.79955 12.7995 5.94229 12.6167 5.98619C12.5737 5.99652 12.5078 6 12.2 6H9.8C9.49222 6 9.42632 5.99652 9.38328 5.98619C9.20045 5.94229 9.05771 5.79955 9.01382 5.61672C9.00348 5.57369 9 5.50779 9 5.2V2.8C9 2.49222 9.00348 2.42632 9.01382 2.38328C9.05771 2.20045 9.20045 2.05771 9.38328 2.01382ZM2.74967 7.99997L2.8 8H5.2L5.25033 7.99997C5.47878 7.99975 5.67572 7.99956 5.85017 8.04145C6.39864 8.17312 6.82688 8.60136 6.95856 9.14983C7.00044 9.32429 7.00025 9.52122 7.00003 9.74967L7 9.8V12.2L7.00003 12.2503C7.00025 12.4788 7.00044 12.6757 6.95856 12.8502C6.82688 13.3986 6.39864 13.8269 5.85017 13.9586C5.67572 14.0004 5.47878 14.0003 5.25033 14L5.2 14H2.8L2.74967 14C2.52122 14.0003 2.32429 14.0004 2.14983 13.9586C1.60136 13.8269 1.17312 13.3986 1.04145 12.8502C0.999564 12.6757 0.999752 12.4788 0.99997 12.2503L1 12.2V9.8L0.99997 9.74967C0.999752 9.52122 0.999564 9.32429 1.04145 9.14983C1.17312 8.60136 1.60136 8.17312 2.14983 8.04145C2.32429 7.99956 2.52122 7.99975 2.74967 7.99997ZM2.8 9C2.49222 9 2.42632 9.00348 2.38328 9.01382C2.20045 9.05771 2.05771 9.20045 2.01382 9.38328C2.00348 9.42632 2 9.49222 2 9.8V12.2C2 12.5078 2.00348 12.5737 2.01382 12.6167C2.05771 12.7995 2.20045 12.9423 2.38328 12.9862C2.42632 12.9965 2.49222 13 2.8 13H5.2C5.50779 13 5.57369 12.9965 5.61672 12.9862C5.79955 12.9423 5.94229 12.7995 5.98619 12.6167C5.99652 12.5737 6 12.5078 6 12.2V9.8C6 9.49222 5.99652 9.42632 5.98619 9.38328C5.94229 9.20045 5.79955 9.05771 5.61672 9.01382C5.57369 9.00348 5.50779 9 5.2 9H2.8ZM9.8 8L9.74967 7.99997C9.52122 7.99975 9.32429 7.99956 9.14983 8.04145C8.60136 8.17312 8.17312 8.60136 8.04145 9.14983C7.99956 9.32429 7.99975 9.52122 7.99997 9.74967L8 9.8V12.2L7.99997 12.2503C7.99975 12.4788 7.99956 12.6757 8.04145 12.8502C8.17312 13.3986 8.60136 13.8269 9.14983 13.9586C9.32429 14.0004 9.52122 14.0003 9.74967 14L9.8 14H12.2L12.2503 14C12.4788 14.0003 12.6757 14.0004 12.8502 13.9586C13.3986 13.8269 13.8269 13.3986 13.9586 12.8502C14.0004 12.6757 14.0003 12.4788 14 12.2503L14 12.2V9.8L14 9.74967C14.0003 9.52122 14.0004 9.32429 13.9586 9.14983C13.8269 8.60136 13.3986 8.17312 12.8502 8.04145C12.6757 7.99956 12.4788 7.99975 12.2503 7.99997L12.2 8H9.8ZM9.38328 9.01382C9.42632 9.00348 9.49222 9 9.8 9H12.2C12.5078 9 12.5737 9.00348 12.6167 9.01382C12.7995 9.05771 12.9423 9.20045 12.9862 9.38328C12.9965 9.42632 13 9.49222 13 9.8V12.2C13 12.5078 12.9965 12.5737 12.9862 12.6167C12.9423 12.7995 12.7995 12.9423 12.6167 12.9862C12.5737 12.9965 12.5078 13 12.2 13H9.8C9.49222 13 9.42632 12.9965 9.38328 12.9862C9.20045 12.9423 9.05771 12.7995 9.01382 12.6167C9.00348 12.5737 9 12.5078 9 12.2V9.8C9 9.49222 9.00348 9.42632 9.01382 9.38328C9.05771 9.20045 9.20045 9.05771 9.38328 9.01382Z"
+                                fill="currentColor" />
+                            </svg>
+                          </span>
+                          <span class="text">
+                            Irterart Offnen
+                          </span>
+                        </button>
+                        <button class="contactContent__header-button">
+                          <span class="ico">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <g id="ic_inbox">
+                                <rect id="Rectangle_603" data-name="Rectangle 603" width="18" height="14" rx="2"
+                                  transform="translate(3 5)" fill="none" stroke="currentColor" stroke-linecap="round"
+                                  stroke-linejoin="round" stroke-width="2" />
+                                <path id="Path_377" data-name="Path 377" d="M3,7l9,6,9-6" fill="none"
+                                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="2" />
                               </g>
-                              <g id="icons_Q2" data-name="icons Q2">
-                                <path
-                                  d="M19.3,10l4.9,4.8L25.3,16H42V38H6V10H19.3M21,6H4A2,2,0,0,0,2,8V40a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V14a2,2,0,0,0-2-2H27L21,6Z" />
-                                <path d="M20,34H16V26a2,2,0,0,1,2-2h0a2,2,0,0,1,2,2Z" />
-                                <path d="M26,34H22V22a2,2,0,0,1,2-2h0a2,2,0,0,1,2,2Z" />
-                                <path d="M32,34H28V27a2,2,0,0,1,2-2h0a2,2,0,0,1,2,2Z" />
+                            </svg>
+                          </span>
+                          <span class="text">
+                            Kontact
+                          </span>
+                        </button>
+                        <button class="contactContent__header-button">
+                          <span class="ico">
+                            <svg class="fill" width="800px" height="800px" viewBox="0 0 48 48"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g id="Layer_2" data-name="Layer 2">
+                                <g id="invisible_box" data-name="invisible box">
+                                  <rect width="48" height="48" fill="none" />
+                                </g>
+                                <g id="icons_Q2" data-name="icons Q2">
+                                  <path
+                                    d="M19.3,10l4.9,4.8L25.3,16H42V38H6V10H19.3M21,6H4A2,2,0,0,0,2,8V40a2,2,0,0,0,2,2H44a2,2,0,0,0,2-2V14a2,2,0,0,0-2-2H27L21,6Z" />
+                                  <path d="M20,34H16V26a2,2,0,0,1,2-2h0a2,2,0,0,1,2,2Z" />
+                                  <path d="M26,34H22V22a2,2,0,0,1,2-2h0a2,2,0,0,1,2,2Z" />
+                                  <path d="M32,34H28V27a2,2,0,0,1,2-2h0a2,2,0,0,1,2,2Z" />
+                                </g>
                               </g>
-                            </g>
-                          </svg>
-                        </span>
-                        <span class="text">
-                          Vergiech Extern
-                        </span>
-                      </button>
-                      <button class="contactContent__header-button">
+                            </svg>
+                          </span>
+                          <span class="text">
+                            Vergiech Extern
+                          </span>
+                        </button>
+                        <button class="contactContent__header-button">
+                          <span class="ico">
+                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M9 13H15M12.0627 6.06274L11.9373 5.93726C11.5914 5.59135 11.4184 5.4184 11.2166 5.29472C11.0376 5.18506 10.8425 5.10425 10.6385 5.05526C10.4083 5 10.1637 5 9.67452 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V10.2C21 9.0799 21 8.51984 20.782 8.09202C20.5903 7.71569 20.2843 7.40973 19.908 7.21799C19.4802 7 18.9201 7 17.8 7H14.3255C13.8363 7 13.5917 7 13.3615 6.94474C13.1575 6.89575 12.9624 6.81494 12.7834 6.70528C12.5816 6.5816 12.4086 6.40865 12.0627 6.06274Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <span class="text">
+                            Irterart Offnen
+                          </span>
+                        </button>
+                      </div>
+                      <h4>Bitte fügen Sie die Url von dem Inserat ein</h4>
+                    </div>
+                    <div class="contactContent__image">
+                      <div class="ratioImage ratioImage--contain">
+                        <img src="./images/car.png" alt="" />
+                      </div>
+                      <div class="contactContent__image-info">
+                        <h2>TESLA</h2>
+                        <h4>NUR PLATZHALTER FÜR BILD</h4>
+                        <h3>
+                          <span class="ico">
+                            <svg class="fill" fill="#000000" version="1.1" id="Capa_1" width="800px" height="800px"
+                              viewBox="0 0 395.71 395.71" xml:space="preserve">
+                              <g>
+                                <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
+     c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
+     C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
+     c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
+                              </g>
+                            </svg>
+                          </span>
+                          NUR PLATZHALTER FÜR BILD
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="contactContent__currency">
+                      <div class="contactContent__currency-item _lg">
+                        <div class="input input--currency">
+                          <label for="contract-purchase-price-value">
+                            Kaufpreis
+                          </label>
+                          <input type="text" placeholder="XXXXXX" id="contract-purchase-price-value" />
+                          <span class="currency"> Euro </span>
+                        </div>
+                      </div>
+                      <div class="contactContent__currency-item">
+                        <div class="contactContent__currency-item-wrapper">
+                          <div class="input input--currencySm">
+                            <label for="cur-2"> Nettobetrag </label>
+                            <input type="text" placeholder="XXX" id="cur-2" />
+                          </div>
+                          <div class="input input--currencySm">
+                            <label for="cur-3"> 19% MwSt. </label>
+                            <input type="text" placeholder="XXX" id="cur-3" />
+                          </div>
+                        </div>
+                        <div class="input input--checkBox">
+                          <input type="checkbox" id="check" />
+                          <label for="check">
+                            MwSt. hinzufügen
+                            <span class="checkBox"> </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="contactForm">
+                    <div class="contactForm__header">
+                      <h2>Verkäufer</h2>
+                      <button class="button button--rounded" type="button">
                         <span class="ico">
-                          <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                          <svg class="fill" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
-                              d="M9 13H15M12.0627 6.06274L11.9373 5.93726C11.5914 5.59135 11.4184 5.4184 11.2166 5.29472C11.0376 5.18506 10.8425 5.10425 10.6385 5.05526C10.4083 5 10.1637 5 9.67452 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V10.2C21 9.0799 21 8.51984 20.782 8.09202C20.5903 7.71569 20.2843 7.40973 19.908 7.21799C19.4802 7 18.9201 7 17.8 7H14.3255C13.8363 7 13.5917 7 13.3615 6.94474C13.1575 6.89575 12.9624 6.81494 12.7834 6.70528C12.5816 6.5816 12.4086 6.40865 12.0627 6.06274Z"
-                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22V18a5.006,5.006,0,0,1,5-5h8a5.006,5.006,0,0,1,5,5v4a1,1,0,0,1-2,0V18a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v4a1,1,0,0,1-2,0Z" />
                           </svg>
-                        </span>
-                        <span class="text">
-                          Irterart Offnen
                         </span>
                       </button>
-                    </div>
-                    <h4>Bitte fügen Sie die Url von dem Inserat ein</h4>
-                  </div>
-                  <div class="contactContent__image">
-                    <div class="ratioImage ratioImage--contain">
-                      <img src="./images/car.png" alt="" />
-                    </div>
-                    <div class="contactContent__image-info">
-                      <h2>TESLA</h2>
-                      <h4>NUR PLATZHALTER FÜR BILD</h4>
-                      <h3>
-                        <span class="ico">
-                          <svg class="fill" fill="#000000" version="1.1" id="Capa_1" width="800px" height="800px"
-                            viewBox="0 0 395.71 395.71" xml:space="preserve">
-                            <g>
-                              <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
-		c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
-		C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
-		c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
-                            </g>
-                          </svg>
-                        </span>
-                        NUR PLATZHALTER FÜR BILD
-                      </h3>
-                    </div>
-                  </div>
-                  <div class="contactContent__currency">
-                    <div class="contactContent__currency-item _lg">
-                      <div class="input input--currency">
-                        <label for="contract-purchase-price-value">
-                          Kaufpreis
-                        </label>
-                        <input type="text" placeholder="XXXXXX" id="contract-purchase-price-value" />
-                        <span class="currency"> Euro </span>
-                      </div>
-                    </div>
-                    <div class="contactContent__currency-item">
-                      <div class="contactContent__currency-item-wrapper">
-                        <div class="input input--currencySm">
-                          <label for="cur-2"> Nettobetrag </label>
-                          <input type="text" placeholder="XXX" id="cur-2" />
+                      <div class="input input--select input--primary">
+                        <input type="hidden">
+                        <div class="input__selected">
                         </div>
-                        <div class="input input--currencySm">
-                          <label for="cur-3"> 19% MwSt. </label>
-                          <input type="text" placeholder="XXX" id="cur-3" />
-                        </div>
-                      </div>
-                      <div class="input input--checkBox">
-                        <input type="checkbox" id="check" />
-                        <label for="check">
-                          MwSt. hinzufügen
-                          <span class="checkBox"> </span>
-                        </label>
+                        <ul class="input__dropdown">
+                          <li class="input__dropdown-item" data-default>
+                            I-Contract GmbH
+                          </li>
+                          <li class="input__dropdown-item">
+                            Auto 24
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                  </div>
+                    <div class="contactForm__body">
+                      <h2>Käufer</h2>
+                      <div class="input input--text">
+                        <label for="contract-seller-name-value">
+                          Name/Firma
+                        </label>
+                        <input type="text" id="contract-seller-name-value" />
+                      </div>
+                      <div class="input input--text">
+                        <label for="contract-seller-address-value">
+                          Straße, Hausnummer
+                        </label>
+                        <input type="text" id="contract-seller-address-value" />
+                      </div>
+                      <div class="input input--text">
+                        <label for="contract-seller-location-value">
+                          PLZ, Ort
+                          <span> * </span>
+                        </label>
+                        <input type="text" id="contract-seller-location-value" />
+                      </div>
+                      <div class="input input--text">
+                        <label for="contract-seller-phone-value">
+                          Telefonnummer
+                        </label>
+                        <input type="text" id="contract-seller-phone-value" />
+                      </div>
+                      <div class="input input--text">
+                        <label for="contract-seller-mail-value">
+                          E-Mail
+                          <span> * </span>
+                        </label>
+                        <input type="email" id="contract-seller-mail-value" />
+                      </div>
+                      <div class="input input--text">
+                        <label for="contract-seller-tax-number-value">
+                          Steuernummer
+                        </label>
+                        <input type="text" id="contract-seller-tax-number-value" />
+                      </div>
+                    </div>
+                  </form>
                 </div>
-                <form class="contactForm">
-                  <div class="contactForm__header">
-                    <h2>Verkäufer</h2>
-                    <button class="button button--rounded" type="button">
+              </div>
+            </div>
+          </section>
+          <!-- contact end-->
+          <!-- info start-->
+          <div class="anchor" id="info"></div>
+          <section class="info">
+            <div class="autoContainer _sm">
+              <div class="info__inner">
+                <div class="info__inner-row">
+                  <h2>Fahrzeugdaten</h2>
+                  <div class="input input--text _sm">
+                    <label for="contract-vehicle-brand-value">
+                      Hersteller/Typ
+                    </label>
+                    <input type="text" id="contract-vehicle-brand-value" />
+                  </div>
+                  <div class="infoColumn">
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-first-registration-value">
+                        Erstzulassung
+                      </label>
+                      <input type="text" id="contract-vehicle-first-registration-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-number-of-owners-value">
+                        Anzahl der Fahrzeughalter
+                      </label>
+                      <input type="text" id="contract-vehicle-number-of-owners-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-performance-value">
+                        PS/KW
+                      </label>
+                      <input type="text" id="contract-vehicle-performance-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-gear-type-value">
+                        Getriebeart
+                      </label>
+                      <input type="text" id="contract-vehicle-gear-type-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-emission-class-value">
+                        Schadstoffklasse
+                      </label>
+                      <input type="text" id="contract-vehicle-emission-class-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-climate-control-value">
+                        Klima
+                      </label>
+                      <input type="text" id="contract-vehicle-climate-control-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-vehicle-type-value">
+                        Fahrzeugtyp
+                      </label>
+                      <input type="text" id="contract-vehicle-vehicle-type-value" />
+                    </div>
+                    <div class="input__wrapper">
+                      <h4>EU-Import</h4>
+                      <div class="input input--select input--primary input--arrow">
+                        <input type="hidden">
+                        <div class="input__selected">
+                        </div>
+                        <ul class="input__dropdown">
+                          <li class="input__dropdown-item" data-default>
+                            Nein
+                          </li>
+                          <li class="input__dropdown-item">
+                            Ja
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-id-value">
+                        Fahrzeug-Ident.-Nr.
+                      </label>
+                      <input type="text" id="contract-vehicle-id-value" />
+                    </div>
+                  </div>
+                  <div class="infoColumn _footer">
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-total-mileage-value">
+                        KFZ-Gesamtfahrleistung
+                      </label>
+                      <input type="text" id="contract-vehicle-total-mileage-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-color-value"> Farbe </label>
+                      <input type="text" id="contract-vehicle-color-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-cubic-capacity-value">
+                        Hubraum
+                      </label>
+                      <input type="text" id="contract-vehicle-cubic-capacity-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-fuel-type-value">
+                        Kraftstoffart
+                      </label>
+                      <input type="text" id="contract-vehicle-fuel-type-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-checkbook-until-value">
+                        Scheckheftgepflegt
+                      </label>
+                      <input type="text" id="contract-vehicle-checkbook-until-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-inspection-value">
+                        TÜV/AU
+                      </label>
+                      <input type="text" id="contract-vehicle-inspection-value" />
+                    </div>
+                    <div class="input input--text _sm">
+                      <label for="contract-vehicle-number-of-doors-value">
+                        Anzahl der Türen
+                      </label>
+                      <input type="text" id="contract-vehicle-number-of-doors-value" />
+                    </div>
+                    <div class="input__wrapper">
+                      <h4>Gewerblich genutzt ab EZ</h4>
+                      <div class="input input--select input--primary  input--arrow">
+                        <input type="hidden">
+                        <div class="input__selected">
+                        </div>
+                        <ul class="input__dropdown">
+                          <li class="input__dropdown-item" data-default>
+                            Nein
+                          </li>
+                          <li class="input__dropdown-item">
+                            Ja
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <button class="button button--file">
                       <span class="ico">
-                        <svg class="fill" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22V18a5.006,5.006,0,0,1,5-5h8a5.006,5.006,0,0,1,5,5v4a1,1,0,0,1-2,0V18a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v4a1,1,0,0,1-2,0Z" />
+                        <svg class="fill" width="23.223" height="20.877" viewBox="0 0 23.223 20.877">
+                          <path id="icon"
+                            d="M9.528,19.242l-.02-.223V12.326H2.1A2.006,2.006,0,0,1,0,10.438,1.974,1.974,0,0,1,1.817,8.566l.251-.018h7.44V1.888A2.007,2.007,0,0,1,11.612,0,2.049,2.049,0,0,1,13.7,1.633l.018.226v6.69H21.12a2.006,2.006,0,0,1,2.1,1.89,1.975,1.975,0,0,1-1.816,1.873l-.252.015H13.715v6.661a2.006,2.006,0,0,1-2.1,1.89A2.048,2.048,0,0,1,9.528,19.242Z" />
                         </svg>
                       </span>
+                      <span class="text">
+                        Eigenschaften hinzufügen
+                      </span>
                     </button>
-                    <div class="input input--select input--primary">
-                      <input type="hidden">
-                      <div class="input__selected">
-                      </div>
-                      <ul class="input__dropdown">
-                        <li class="input__dropdown-item" data-default>
-                          I-Contract GmbH
-                        </li>
-                        <li class="input__dropdown-item">
-                          Auto 24
-                        </li>
-                      </ul>
-                    </div>
                   </div>
-                  <div class="contactForm__body">
-                    <h2>Käufer</h2>
-                    <div class="input input--text">
-                      <label for="contract-seller-name-value">
-                        Name/Firma
-                      </label>
-                      <input type="text" id="contract-seller-name-value" />
-                    </div>
-                    <div class="input input--text">
-                      <label for="contract-seller-address-value">
-                        Straße, Hausnummer
-                      </label>
-                      <input type="text" id="contract-seller-address-value" />
-                    </div>
-                    <div class="input input--text">
-                      <label for="contract-seller-location-value">
-                        PLZ, Ort
-                        <span> * </span>
-                      </label>
-                      <input type="text" id="contract-seller-location-value" />
-                    </div>
-                    <div class="input input--text">
-                      <label for="contract-seller-phone-value">
-                        Telefonnummer
-                      </label>
-                      <input type="text" id="contract-seller-phone-value" />
-                    </div>
-                    <div class="input input--text">
-                      <label for="contract-seller-mail-value">
-                        E-Mail
-                        <span> * </span>
-                      </label>
-                      <input type="email" id="contract-seller-mail-value" />
-                    </div>
-                    <div class="input input--text">
-                      <label for="contract-seller-tax-number-value">
-                        Steuernummer
-                      </label>
-                      <input type="text" id="contract-seller-tax-number-value" />
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- contact end-->
-        <!-- info start-->
-        <div class="anchor" id="info"></div>
-        <section class="info">
-          <div class="autoContainer _sm">
-            <div class="info__inner">
-              <div class="info__inner-row">
-                <h2>Fahrzeugdaten</h2>
-                <div class="input input--text _sm">
-                  <label for="contract-vehicle-brand-value">
-                    Hersteller/Typ
-                  </label>
-                  <input type="text" id="contract-vehicle-brand-value" />
-                </div>
-                <div class="infoColumn">
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-first-registration-value">
-                      Erstzulassung
-                    </label>
-                    <input type="text" id="contract-vehicle-first-registration-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-number-of-owners-value">
-                      Anzahl der Fahrzeughalter
-                    </label>
-                    <input type="text" id="contract-vehicle-number-of-owners-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-performance-value">
-                      PS/KW
-                    </label>
-                    <input type="text" id="contract-vehicle-performance-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-gear-type-value">
-                      Getriebeart
-                    </label>
-                    <input type="text" id="contract-vehicle-gear-type-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-emission-class-value">
-                      Schadstoffklasse
-                    </label>
-                    <input type="text" id="contract-vehicle-emission-class-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-climate-control-value">
-                      Klima
-                    </label>
-                    <input type="text" id="contract-vehicle-climate-control-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-vehicle-type-value">
-                      Fahrzeugtyp
-                    </label>
-                    <input type="text" id="contract-vehicle-vehicle-type-value" />
-                  </div>
-                  <div class="input__wrapper">
-                    <h4>EU-Import</h4>
-                    <div class="input input--select input--primary input--arrow">
-                      <input type="hidden">
-                      <div class="input__selected">
-                      </div>
-                      <ul class="input__dropdown">
-                        <li class="input__dropdown-item" data-default>
-                          Nein
-                        </li>
-                        <li class="input__dropdown-item">
-                          Ja
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-id-value">
-                      Fahrzeug-Ident.-Nr.
-                    </label>
-                    <input type="text" id="contract-vehicle-id-value" />
-                  </div>
-                </div>
-                <div class="infoColumn _footer">
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-total-mileage-value">
-                      KFZ-Gesamtfahrleistung
-                    </label>
-                    <input type="text" id="contract-vehicle-total-mileage-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-color-value"> Farbe </label>
-                    <input type="text" id="contract-vehicle-color-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-cubic-capacity-value">
-                      Hubraum
-                    </label>
-                    <input type="text" id="contract-vehicle-cubic-capacity-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-fuel-type-value">
-                      Kraftstoffart
-                    </label>
-                    <input type="text" id="contract-vehicle-fuel-type-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-checkbook-until-value">
-                      Scheckheftgepflegt
-                    </label>
-                    <input type="text" id="contract-vehicle-checkbook-until-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-inspection-value">
-                      TÜV/AU
-                    </label>
-                    <input type="text" id="contract-vehicle-inspection-value" />
-                  </div>
-                  <div class="input input--text _sm">
-                    <label for="contract-vehicle-number-of-doors-value">
-                      Anzahl der Türen
-                    </label>
-                    <input type="text" id="contract-vehicle-number-of-doors-value" />
-                  </div>
-                  <div class="input__wrapper">
-                    <h4>Gewerblich genutzt ab EZ</h4>
-                    <div class="input input--select input--primary  input--arrow">
-                      <input type="hidden">
-                      <div class="input__selected">
-                      </div>
-                      <ul class="input__dropdown">
-                        <li class="input__dropdown-item" data-default>
-                          Nein
-                        </li>
-                        <li class="input__dropdown-item">
-                          Ja
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <button class="button button--file">
-                    <span class="ico">
-                      <svg class="fill" width="23.223" height="20.877" viewBox="0 0 23.223 20.877">
-                        <path id="icon"
-                          d="M9.528,19.242l-.02-.223V12.326H2.1A2.006,2.006,0,0,1,0,10.438,1.974,1.974,0,0,1,1.817,8.566l.251-.018h7.44V1.888A2.007,2.007,0,0,1,11.612,0,2.049,2.049,0,0,1,13.7,1.633l.018.226v6.69H21.12a2.006,2.006,0,0,1,2.1,1.89,1.975,1.975,0,0,1-1.816,1.873l-.252.015H13.715v6.661a2.006,2.006,0,0,1-2.1,1.89A2.048,2.048,0,0,1,9.528,19.242Z" />
-                      </svg>
-                    </span>
-                    <span class="text">
-                      Eigenschaften hinzufügen
-                    </span>
-                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <!-- info end-->
-        <!-- condition start-->
-        <div class="anchor" id="condition"></div>
-        <section class="condition">
-          <div class="autoContainer _sm">
-            <div class="condition__inner">
-              <div class="condition__inner-content">
-                <h2>Fahrzeugzustand</h2>
-                <div class="conditionBox">
-                  <div class="conditionBox__image">
-                    <span class="ico">
-                      <img src="./images/condition.png" alt="" />
-                    </span>
+          </section>
+          <!-- info end-->
+          <!-- condition start-->
+          <div class="anchor" id="condition"></div>
+          <section class="condition">
+            <div class="autoContainer _sm">
+              <div class="condition__inner">
+                <div class="condition__inner-content">
+                  <h2>Fahrzeugzustand</h2>
+                  <div class="conditionBox">
+                    <div class="conditionBox__image">
+                      <span class="ico">
+                        <img src="./images/condition.png" alt="" />
+                      </span>
+                    </div>
+                    <div class="conditionBox__info">
+                      <h4>Fahrzeugskizze</h4>
+                      <p>
+                        Schauen Sie sich die Fahrzeugskizze erneut an oder
+                        überarbeiten Sie diese hier.
+                      </p>
+                    </div>
+                    <button class="button button--primary" data-event="togglePopup" data-popup="#carInspector">
+                      anzeigen
+                    </button>
                   </div>
-                  <div class="conditionBox__info">
-                    <h4>Fahrzeugskizze</h4>
-                    <p>
-                      Schauen Sie sich die Fahrzeugskizze erneut an oder
-                      überarbeiten Sie diese hier.
-                    </p>
+                  <div class="conditionBody">
+                    <h4>Ausgewählte Schäden</h4>
+                    <div class="conditionBody__row">
+                      <div class="conditionBody__row-item">
+                        <div class="input input--textarea">
+                          <label for="contract-vehicle-accident-free-value">
+                            Unfallfrei
+                          </label>
+                          <textarea id="contract-vehicle-accident-free-value">Ja</textarea>
+                        </div>
+                      </div>
+                      <div class="conditionBody__row-item">
+                        <div class="input input--textarea">
+                          <label for="contract-vehicle-repainting-value">
+                            Nachlackierung
+                          </label>
+                          <textarea id="contract-vehicle-repainting-value">Nein</textarea>
+                        </div>
+                      </div>
+                      <div class="conditionBody__row-item">
+                        <div class="input input--textarea">
+                          <label for="contract-vehicle-damages-key">
+                            Sonstige Schäden
+                          </label>
+                          <textarea id="contract-vehicle-damages-key"></textarea>
+                        </div>
+                      </div>
+                      <div class="conditionBody__row-item _lg">
+                        <div class="input input--textarea">
+                          <label for="contract-vehicle-engine-gearbox-clutch-value">
+                            Motor, Getriebe, Kupplung(editierbar)
+                          </label>
+                          <textarea id="contract-vehicle-engine-gearbox-clutch-value">Alles in Ordnung</textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="conditionBody__info">
+                      <h4>Uneingeschränkt Fahrbereit</h4>
+                      <div class="input input--select input--primary  input--arrow"
+                        id="contract-vehicle-ready-to-drive-value">
+                        <input type="hidden">
+                        <div class="input__selected">
+                        </div>
+                        <ul class="input__dropdown">
+                          <li class="input__dropdown-item" data-default>
+                            Nein
+                          </li>
+                          <li class="input__dropdown-item">
+                            Ja
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <button class="button button--primary" data-event="togglePopup" data-popup="#carInspector">
-                    anzeigen
-                  </button>
                 </div>
-                <div class="conditionBody">
-                  <h4>Ausgewählte Schäden</h4>
-                  <div class="conditionBody__row">
-                    <div class="conditionBody__row-item">
-                      <div class="input input--textarea">
-                        <label for="contract-vehicle-accident-free-value">
-                          Unfallfrei
-                        </label>
-                        <textarea id="contract-vehicle-accident-free-value">Ja</textarea>
-                      </div>
-                    </div>
-                    <div class="conditionBody__row-item">
-                      <div class="input input--textarea">
-                        <label for="contract-vehicle-repainting-value">
-                          Nachlackierung
-                        </label>
-                        <textarea id="contract-vehicle-repainting-value">Nein</textarea>
-                      </div>
-                    </div>
-                    <div class="conditionBody__row-item">
-                      <div class="input input--textarea">
-                        <label for="contract-vehicle-damages-key">
-                          Sonstige Schäden
-                        </label>
-                        <textarea id="contract-vehicle-damages-key"></textarea>
-                      </div>
-                    </div>
-                    <div class="conditionBody__row-item _lg">
-                      <div class="input input--textarea">
-                        <label for="contract-vehicle-engine-gearbox-clutch-value">
-                          Motor, Getriebe, Kupplung(editierbar)
-                        </label>
-                        <textarea id="contract-vehicle-engine-gearbox-clutch-value">Alles in Ordnung</textarea>
-                      </div>
-                    </div>
+              </div>
+            </div>
+          </section>
+          <!-- condition end-->
+          <!-- details start-->
+          <div class="anchor" id="details"></div>
+          <section class="details">
+            <div class="autoContainer _sm">
+              <div class="details__inner">
+                <h2>Fahrzeugdetails</h2>
+                <div class="data__inner-body">
+                  <div class="input input--textarea" id="contract-special-terms-value2">
+                    <label for="contract-vehicle-details-options">
+                      Ausstattung
+                    </label>
+                    <textarea id="contract-vehicle-details-options-value"></textarea>
                   </div>
-                  <div class="conditionBody__info">
-                    <h4>Uneingeschränkt Fahrbereit</h4>
+                  <div class="input input--textarea" id="contract-special-terms-value2">
+                    <label for="contract-vehicle-details-description">
+                      Beschreibung
+                    </label>
+                    <textarea id="contract-vehicle-details-description-value"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- details end-->
+          <!-- data start-->
+          <div class="anchor" id="data"></div>
+          <section class="data">
+            <div class="autoContainer _sm">
+              <div class="data__inner">
+                <h2>Besondere Vereinbarungen</h2>
+                <div class="data__inner-box">
+                  <div class="input__wrapper">
+                    <h4>Zahlungsart</h4>
                     <div class="input input--select input--primary  input--arrow"
-                      id="contract-vehicle-ready-to-drive-value">
+                      id="contract-vehicle-payment-method-value">
                       <input type="hidden">
                       <div class="input__selected">
                       </div>
                       <ul class="input__dropdown">
                         <li class="input__dropdown-item" data-default>
-                          Nein
+                          Bargeld
                         </li>
                         <li class="input__dropdown-item">
-                          Ja
+                          Überweisung
+                        </li>
+                        <li class="input__dropdown-item">
+                          Echtzeitüberweisung
                         </li>
                       </ul>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- condition end-->
-        <!-- details start-->
-        <div class="anchor" id="details"></div>
-        <section class="details">
-          <div class="autoContainer _sm">
-            <div class="details__inner">
-              <h2>Fahrzeugdetails</h2>
-              <div class="data__inner-body">
-                <div class="input input--textarea" id="contract-special-terms-value2">
-                  <label for="contract-vehicle-details-options">
-                    Ausstattung
-                  </label>
-                  <textarea id="contract-vehicle-details-options-value"></textarea>
-                </div>
-                <div class="input input--textarea" id="contract-special-terms-value2">
-                  <label for="contract-vehicle-details-description">
-                    Beschreibung
-                  </label>
-                  <textarea id="contract-vehicle-details-description-value"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- details end-->
-        <!-- data start-->
-        <div class="anchor" id="data"></div>
-        <section class="data">
-          <div class="autoContainer _sm">
-            <div class="data__inner">
-              <h2>Besondere Vereinbarungen</h2>
-              <div class="data__inner-box">
-                <div class="input__wrapper">
-                  <h4>Zahlungsart</h4>
-                  <div class="input input--select input--primary  input--arrow"
-                    id="contract-vehicle-payment-method-value">
-                    <input type="hidden">
-                    <div class="input__selected">
+                  <div class="input__wrapper">
+                    <h4>Zugelassen</h4>
+                    <div class="input input--select input--primary  input--arrow"
+                      id="contract-vehicle-pickup-date-value">
+                      <input type="hidden">
+                      <div class="input__selected">
+                      </div>
+                      <ul class="input__dropdown">
+                        <li class="input__dropdown-item" data-default>
+                          Ja
+                        </li>
+                        <li class="input__dropdown-item">
+                          Nein
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="input__dropdown">
-                      <li class="input__dropdown-item" data-default>
-                        Bargeld
+                  </div>
+                  <div class="input__wrapper">
+                    <h4>Abholdatum *</h4>
+                    <div class="input input--date">
+                      <input type="date" />
+                    </div>
+                  </div>
+                </div>
+                <div class="data__inner-body">
+                  <div class="data__inner-list" id="contract-special-terms-value">
+                    <h4>Besondere Vereinbarung (nicht editierbar)</h4>
+                    <ul>
+                      <li>
+                        Die Fahrzeugübergabe findet bis/am {Datum} in {Ort}
+                        gegen Bargeld statt.
                       </li>
-                      <li class="input__dropdown-item">
-                        Überweisung
-                      </li>
-                      <li class="input__dropdown-item">
-                        Echtzeitüberweisung
+                      <li>
+                        Das Fahrzeug wird nur unter der Vorlage der
+                        Kundennummer: {KNR} nach einem kurzen
+                        Gebrauchtwagencheck ausgehändigt.
                       </li>
                     </ul>
                   </div>
-                </div>
-                <div class="input__wrapper">
-                  <h4>Zugelassen</h4>
-                  <div class="input input--select input--primary  input--arrow" id="contract-vehicle-pickup-date-value">
-                    <input type="hidden">
-                    <div class="input__selected">
-                    </div>
-                    <ul class="input__dropdown">
-                      <li class="input__dropdown-item" data-default>
-                        Ja
-                      </li>
-                      <li class="input__dropdown-item">
-                        Nein
-                      </li>
-                    </ul>
+                  <div class="input input--textarea" id="contract-special-terms-value2">
+                    <label for="text-40">
+                      Weitere besondere Vereinbarungen (editierbar)
+                    </label>
+                    <textarea id="text-40"></textarea>
                   </div>
                 </div>
-                <div class="input__wrapper">
-                  <h4>Abholdatum *</h4>
-                  <div class="input input--date">
-                    <input type="date" />
-                  </div>
-                </div>
-              </div>
-              <div class="data__inner-body">
-                <div class="data__inner-list" id="contract-special-terms-value">
-                  <h4>Besondere Vereinbarung (nicht editierbar)</h4>
-                  <ul>
-                    <li>
-                      Die Fahrzeugübergabe findet bis/am {Datum} in {Ort}
-                      gegen Bargeld statt.
-                    </li>
-                    <li>
-                      Das Fahrzeug wird nur unter der Vorlage der
-                      Kundennummer: {KNR} nach einem kurzen
-                      Gebrauchtwagencheck ausgehändigt.
-                    </li>
-                  </ul>
-                </div>
-                <div class="input input--textarea" id="contract-special-terms-value2">
-                  <label for="text-40">
-                    Weitere besondere Vereinbarungen (editierbar)
-                  </label>
-                  <textarea id="text-40"></textarea>
-                </div>
-              </div>
-              <div class="data__inner-button" id="button-create-contract">
-                <button class="button">
-                  <span class="ico">
-                    <svg class="fill" width="28" height="33" viewBox="0 0 28 33">
-                      <defs>
-                        <clipPath id="clip-path">
-                          <rect width="28" height="33" fill="none" />
-                        </clipPath>
-                      </defs>
-                      <g id="Repeat_Grid_38" data-name="Repeat Grid 38" clip-path="url(#clip-path)">
-                        <g transform="translate(-22.685 -18.585)">
-                          <g id="vuesax_outline_export" data-name="vuesax/outline/export"
-                            transform="translate(22.685 18.585)">
-                            <rect id="vuesax_outline_export-2" data-name="vuesax/outline/export" width="28" height="33"
-                              fill="none" />
-                            <g id="vuesax_outline_export-3" data-name="vuesax/outline/export">
-                              <g id="export">
-                                <path id="Vector"
-                                  d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
-                                  transform="translate(18.21 1.71)" />
-                                <path id="Vector-2" data-name="Vector"
-                                  d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
-                                  transform="translate(21.708 1.042)" />
-                                <path id="Vector-3" data-name="Vector"
-                                  d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
-                                  transform="translate(1.042 1.042)" />
-                                <path id="Vector-4" data-name="Vector" d="M0,0H28V33H0Z" fill="none" opacity="0" />
+                <div class="data__inner-button" id="button-create-contract">
+                  <button class="button">
+                    <span class="ico">
+                      <svg class="fill" width="28" height="33" viewBox="0 0 28 33">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect width="28" height="33" fill="none" />
+                          </clipPath>
+                        </defs>
+                        <g id="Repeat_Grid_38" data-name="Repeat Grid 38" clip-path="url(#clip-path)">
+                          <g transform="translate(-22.685 -18.585)">
+                            <g id="vuesax_outline_export" data-name="vuesax/outline/export"
+                              transform="translate(22.685 18.585)">
+                              <rect id="vuesax_outline_export-2" data-name="vuesax/outline/export" width="28"
+                                height="33" fill="none" />
+                              <g id="vuesax_outline_export-3" data-name="vuesax/outline/export">
+                                <g id="export">
+                                  <path id="Vector"
+                                    d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
+                                    transform="translate(18.21 1.71)" />
+                                  <path id="Vector-2" data-name="Vector"
+                                    d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
+                                    transform="translate(21.708 1.042)" />
+                                  <path id="Vector-3" data-name="Vector"
+                                    d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
+                                    transform="translate(1.042 1.042)" />
+                                  <path id="Vector-4" data-name="Vector" d="M0,0H28V33H0Z" fill="none" opacity="0" />
+                                </g>
                               </g>
                             </g>
                           </g>
                         </g>
-                      </g>
-                    </svg>
-                  </span>
-                  Vertrag erstellen
-                </button>
+                      </svg>
+                    </span>
+                    Vertrag erstellen
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-        <!-- data end-->
-        <!-- preview start-->
-        <!-- <section class="preview">
-          <div class="autoContainer _sm">
-            <div class="preview__inner">
-              <div class="preview__inner-header">
-                <h2>
-                  Vorschau
-                </h2>
-                <p class="text--primary">
-                  Bitte fügen Sie die Url von dem Inserat ein
-                </p>
-              </div>
-              <div class="preview__inner-content">
-                <div class="preview__inner-group">
-                  <div class="preview__inner-info">
-                    <div class="preview__inner-info-title">
-                      <p class="text--secondary">
-                        Bitte auf „Vertrag senden klicken“, um den Vertrag abzusenden
-                      </p>
-                      <strong>
-                        Kundennummer: 2572
-                      </strong>
-                    </div>
-                    <div class="preview__inner-info-box">
-                      <div class="input input--checkBox">
-                        <input type="radio" name="radio-1">
-                        <label>
-                          <span class="checkBox checkBox--round">
-                          </span>
-                          <span class="text">
-                            Vertrag an den Kunden senden
-                          </span>
-                        </label>
-                      </div>
-                      <div class="preview__inner-info-row">
-                        <div class="input input--checkBox">
-                          <input type="radio" name="radio-1">
-                          <label>
-                            <span class="checkBox checkBox--round">
-                            </span>
-                            <span class="text">
-                              Vertrag an den Kunden senden und in die Datenbank laden
-                            </span>
-                          </label>
+          </section>
+          <!-- data end-->
+        </div>
+        <!-- tab__content end-->
+        <!-- tab__content start-->
+        <div class="tab__content" data-page="vorschau">
+          <!-- preview start-->
+          <section class="preview" id="preview">
+            <div class="autoContainer _sm">
+              <div class="preview__inner">
+                <div class="preview__inner-header">
+                  <h2>
+                    Vorschau
+                  </h2>
+                  <p class="text--primary">
+                    Bitte fügen Sie die Url von dem Inserat ein
+                  </p>
+                </div>
+                <div class="preview__inner-content">
+                  <div class="preview__inner-items">
+                    <div class="preview__item active" data-content="email">
+                      <div class="preview__item-content">
+                        <div class="preview__item-info">
+                          <p class="text--secondary">
+                            Bitte auf „Vertrag senden“, klicken!
+                          </p>
+                          <strong>
+                            Kundennummer: 4402
+                          </strong>
                         </div>
-                        <div class="input input--checkBox">
-                          <input type="checkbox">
-                          <label>
-                            <span class="checkBox">
-                            </span>
-                            <span class="text">
-                              Fahrzeugbilder hochladen
-                            </span>
-                          </label>
+                        <div class="preview__item-box">
+                          <div class="input input--checkBox">
+                            <input type="radio" name="radio-1">
+                            <label>
+                              <span class="checkBox checkBox--round">
+                              </span>
+                              <span class="text">
+                                Vertrag an den Kunden senden
+                              </span>
+                            </label>
+                          </div>
+                          <div class="preview__item-row">
+                            <div class="input input--checkBox">
+                              <input type="radio" name="radio-1">
+                              <label>
+                                <span class="checkBox checkBox--round">
+                                </span>
+                                <span class="text">
+                                  Vertrag an den Kunden senden und in die Datenbank laden
+                                </span>
+                              </label>
+                            </div>
+                            <div class="input input--checkBox">
+                              <input type="checkbox">
+                              <label>
+                                <span class="checkBox">
+                                </span>
+                                <span class="text">
+                                  Fahrzeugbilder hochladen
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="preview__item" data-content="online">
+                      <div class="preview__item-content">
+                        <div class="preview__item-info">
+                          <p class="text--secondary">
+                            Bitte auf „Vertrag hochladen“, klicken!
+                          </p>
+                          <strong>
+                            Kundennummer: 4404
+                          </strong>
+                        </div>
+                        <div class="preview__item-box">
+                          <div class="input input--checkBox">
+                            <input type="radio" name="radio-2">
+                            <label>
+                              <span class="checkBox checkBox--round">
+                              </span>
+                              <span class="text">
+                                Vertrag an den Kunden senden
+                              </span>
+                            </label>
+                          </div>
+                          <div class="preview__item-row">
+                            <div class="input input--checkBox">
+                              <input type="radio" name="radio-2">
+                              <label>
+                                <span class="checkBox checkBox--round">
+                                </span>
+                                <span class="text">
+                                  Vertrag an den Kunden senden und in die Datenbank laden
+                                </span>
+                              </label>
+                            </div>
+                            <div class="input input--checkBox">
+                              <input type="checkbox">
+                              <label>
+                                <span class="checkBox">
+                                </span>
+                                <span class="text">
+                                  Fahrzeugbilder hochladen
+                                </span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="preview__item" data-content="whatsapp">
+                      <div class="preview__item-content">
+                        <div class="preview__item-info">
+                          <p class="text--secondary">
+                            Bitte auf „Vertrag hochladen“, klicken!
+                          </p>
+                          <strong>
+                            Kundennummer: 4408
+                          </strong>
+                        </div>
+                        <div class="preview__item-box">
+                          <div class="input input--checkBox">
+                            <input type="radio" name="radio-3">
+                            <label>
+                              <span class="checkBox checkBox--round">
+                              </span>
+                              <span class="text">
+                                Vertrag an den Kunden senden
+                              </span>
+                            </label>
+                          </div>
+                          <div class="preview__item-row">
+                            <div class="input input--checkBox">
+                              <input type="radio" name="radio-3">
+                              <label>
+                                <span class="checkBox checkBox--round">
+                                </span>
+                                <span class="text">
+                                  Vertrag an den Kunden senden und in die Datenbank laden
+                                </span>
+                              </label>
+                            </div>
+                            <div class="input input--checkBox">
+                              <input type="checkbox">
+                              <label>
+                                <span class="checkBox">
+                                </span>
+                                <span class="text">
+                                  Fahrzeugbilder hochladen
+                                </span>
+                              </label>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="preview__inner-box">
                     <div class="button__group">
-                      <button class="button button--tab">
+                      <button class="button button--tab active" data-button="email">
                         Email
                       </button>
-                      <button class="button button--tab">
+                      <button class="button button--tab" data-button="whatsapp">
                         Whatsapp
                       </button>
-                      <button class="button button--tab">
+                      <button class="button button--tab" data-button="online">
                         Online
                       </button>
                     </div>
-                    <button class="button button--secondary _round">
-                      <span class="ico">
-                        <svg class="fill" width="28" height="33" viewBox="0 0 28 33">
-                          <defs>
-                            <clipPath id="clip-path">
-                              <rect width="28" height="33" fill="none"></rect>
-                            </clipPath>
-                          </defs>
-                          <g id="Repeat_Grid_38" data-name="Repeat Grid 38" clip-path="url(#clip-path)">
-                            <g transform="translate(-22.685 -18.585)">
-                              <g id="vuesax_outline_export" data-name="vuesax/outline/export"
-                                transform="translate(22.685 18.585)">
-                                <rect id="vuesax_outline_export-2" data-name="vuesax/outline/export" width="28"
-                                  height="33" fill="none"></rect>
-                                <g id="vuesax_outline_export-3" data-name="vuesax/outline/export">
-                                  <g id="export">
-                                    <path id="Vector"
-                                      d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
-                                      transform="translate(18.21 1.71)"></path>
-                                    <path id="Vector-2" data-name="Vector"
-                                      d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
-                                      transform="translate(21.708 1.042)"></path>
-                                    <path id="Vector-3" data-name="Vector"
-                                      d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
-                                      transform="translate(1.042 1.042)"></path>
-                                    <path id="Vector-4" data-name="Vector" d="M0,0H28V33H0Z" fill="none" opacity="0">
-                                    </path>
+                    <div class="preview__inner-buttons">
+                      <button class="button button--secondary _round active" data-send="email">
+                        <span class="ico">
+                          <svg class="fill" width="28" height="33" viewBox="0 0 28 33">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect width="28" height="33" fill="none"></rect>
+                              </clipPath>
+                            </defs>
+                            <g id="Repeat_Grid_38" data-name="Repeat Grid 38" clip-path="url(#clip-path)">
+                              <g transform="translate(-22.685 -18.585)">
+                                <g id="vuesax_outline_export" data-name="vuesax/outline/export"
+                                  transform="translate(22.685 18.585)">
+                                  <rect id="vuesax_outline_export-2" data-name="vuesax/outline/export" width="28"
+                                    height="33" fill="none"></rect>
+                                  <g id="vuesax_outline_export-3" data-name="vuesax/outline/export">
+                                    <g id="export">
+                                      <path id="Vector"
+                                        d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
+                                        transform="translate(18.21 1.71)"></path>
+                                      <path id="Vector-2" data-name="Vector"
+                                        d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
+                                        transform="translate(21.708 1.042)"></path>
+                                      <path id="Vector-3" data-name="Vector"
+                                        d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
+                                        transform="translate(1.042 1.042)"></path>
+                                      <path id="Vector-4" data-name="Vector" d="M0,0H28V33H0Z" fill="none" opacity="0">
+                                      </path>
+                                    </g>
                                   </g>
                                 </g>
                               </g>
                             </g>
-                          </g>
-                        </svg>
-                      </span>
-                      Vertrag erstellen
-                    </button>
+                          </svg>
+                        </span>
+                        Vertrag Senden
+                      </button>
+                      <button class="button button--secondary _round" data-send="online">
+                        <span class="ico">
+                          <svg class="fill" width="28" height="33" viewBox="0 0 28 33">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect width="28" height="33" fill="none"></rect>
+                              </clipPath>
+                            </defs>
+                            <g id="Repeat_Grid_38" data-name="Repeat Grid 38" clip-path="url(#clip-path)">
+                              <g transform="translate(-22.685 -18.585)">
+                                <g id="vuesax_outline_export" data-name="vuesax/outline/export"
+                                  transform="translate(22.685 18.585)">
+                                  <rect id="vuesax_outline_export-2" data-name="vuesax/outline/export" width="28"
+                                    height="33" fill="none"></rect>
+                                  <g id="vuesax_outline_export-3" data-name="vuesax/outline/export">
+                                    <g id="export">
+                                      <path id="Vector"
+                                        d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
+                                        transform="translate(18.21 1.71)"></path>
+                                      <path id="Vector-2" data-name="Vector"
+                                        d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
+                                        transform="translate(21.708 1.042)"></path>
+                                      <path id="Vector-3" data-name="Vector"
+                                        d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
+                                        transform="translate(1.042 1.042)"></path>
+                                      <path id="Vector-4" data-name="Vector" d="M0,0H28V33H0Z" fill="none" opacity="0">
+                                      </path>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                        Vertrag Hochladen
+                      </button>
+                      <button class="button button--secondary _round" data-send="whatsapp">
+                        <span class="ico">
+                          <svg class="fill" width="28" height="33" viewBox="0 0 28 33">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect width="28" height="33" fill="none"></rect>
+                              </clipPath>
+                            </defs>
+                            <g id="Repeat_Grid_38" data-name="Repeat Grid 38" clip-path="url(#clip-path)">
+                              <g transform="translate(-22.685 -18.585)">
+                                <g id="vuesax_outline_export" data-name="vuesax/outline/export"
+                                  transform="translate(22.685 18.585)">
+                                  <rect id="vuesax_outline_export-2" data-name="vuesax/outline/export" width="28"
+                                    height="33" fill="none"></rect>
+                                  <g id="vuesax_outline_export-3" data-name="vuesax/outline/export">
+                                    <g id="export">
+                                      <path id="Vector"
+                                        d="M.623,8.081A.618.618,0,0,1,.181,7.9a.629.629,0,0,1,0-.883L7.015.181a.625.625,0,0,1,.883.883L1.065,7.9a.618.618,0,0,1-.442.183Z"
+                                        transform="translate(18.21 1.71)"></path>
+                                      <path id="Vector-2" data-name="Vector"
+                                        d="M4.625,5.25A.63.63,0,0,1,4,4.625V1.25H.625A.63.63,0,0,1,0,.625.63.63,0,0,1,.625,0h4A.63.63,0,0,1,5.25.625v4A.63.63,0,0,1,4.625,5.25Z"
+                                        transform="translate(21.708 1.042)"></path>
+                                      <path id="Vector-3" data-name="Vector"
+                                        d="M16.575,30.917H9.342C2.8,30.917,0,27.581,0,19.772V11.144C0,3.336,2.8,0,9.342,0h2.411a1.01,1.01,0,0,1,.9,1.078,1.01,1.01,0,0,1-.9,1.078H9.342c-5.557,0-7.534,2.358-7.534,8.987v8.628c0,6.629,1.977,8.987,7.534,8.987h7.233c5.557,0,7.534-2.358,7.534-8.987V16.9a.918.918,0,1,1,1.808,0v2.876C25.917,27.581,23.12,30.917,16.575,30.917Z"
+                                        transform="translate(1.042 1.042)"></path>
+                                      <path id="Vector-4" data-name="Vector" d="M0,0H28V33H0Z" fill="none" opacity="0">
+                                      </path>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                        Weiter
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section> -->
-        <!-- preview end-->
+          </section>
+          <!-- preview end-->
+        </div>
+        <!-- tab__content end-->
       </div>
     </div>
     <!-- wrapper end-->
@@ -1032,6 +1211,73 @@
   </div>
   <script src="js/customSelect.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    const preview = document.getElementById("preview");
+    if (preview) {
+      const tabButton = preview.querySelectorAll("[data-button]");
+      const tabContent = preview.querySelectorAll("[data-content]");
+      const tabSend = preview.querySelectorAll("[data-send]");
+      tabButton.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const buttonVal8ue = button.getAttribute("data-button");
+          tabButton.forEach((button) => {
+            button.classList.remove("active")
+          })
+          if (e.target === button) {
+            button.classList.add("active")
+          }
+          tabContent.forEach((item) => {
+            const itemValue = item.getAttribute("data-content")
+            if (itemValue != buttonVal8ue) {
+              item.classList.remove("active")
+            } else {
+              item.classList.add("active")
+            }
+          })
+          tabSend.forEach((item) => {
+            const itemValue = item.getAttribute("data-send")
+            if (itemValue != buttonVal8ue) {
+              item.classList.remove("active")
+            } else {
+              item.classList.add("active")
+            }
+          })
+        })
+      })
+    }
+
+    const pagesButton = document.querySelectorAll("[data-page-button]");
+    if (pagesButton) {
+      const pages = document.querySelectorAll("[data-page]");
+      const links = document.querySelector(".tabs__inner-row._links");
+      pagesButton.forEach((button) => {
+        const buttonVal8ue = button.getAttribute("data-page-button");
+        button.addEventListener("click", (e) => {
+          pagesButton.forEach((button) => {
+            button.classList.remove("active")
+          })
+          if (e.target === button) {
+            button.classList.add("active")
+            if (buttonVal8ue === "vorschau") {
+              links.classList.add("hide")
+            } else {
+              links.classList.remove("hide")
+            }
+          }
+          pages.forEach((page) => {
+            const pageValue = page.getAttribute("data-page")
+            if (pageValue != buttonVal8ue) {
+              page.classList.remove("active")
+            } else {
+              page.classList.add("active")
+            }
+          })
+        })
+      }
+      )
+    }
+
+  </script>
 </body>
 
 </html>

@@ -254,6 +254,4 @@ const rectTable = table.getBoundingClientRect();
 
 tableLine.style.left = rect.left - rectTable.left + 44 + "px";
 
-console.log(rect);
-console.log(rectTable);
 
