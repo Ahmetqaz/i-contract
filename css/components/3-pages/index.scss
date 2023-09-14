@@ -647,11 +647,12 @@ section {
     flex-direction: column;
     gap: 20px;
     &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background: $white;
       padding: 26px 24px;
       border-radius: 6px;
-      display: flex;
-      flex-direction: column;
       gap: 20px;
       h2 {
         color: $primary;
@@ -661,6 +662,11 @@ section {
         color: $primary;
         line-height: 1.6;
       }
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
     &-content {
       background: $white;
@@ -688,11 +694,18 @@ section {
         }
       }
     }
+    &-items {
+      width: 100%;
+    }
   }
   &__item {
     flex: 1;
     transition: 0.3s ease-in;
     display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
     &-content {
       display: flex;
       flex-direction: column;
@@ -1169,7 +1182,6 @@ section {
     }
   }
 }
-
 @mixin index-880 {
   .contact {
     &__inner {
@@ -1275,6 +1287,28 @@ section {
       &__wrapper {
         h4 {
           font-size: 14px;
+        }
+      }
+    }
+  }
+  .preview {
+    &__inner {
+      &-header {
+        flex-direction: column;
+        align-items: flex-start;
+        .button {
+          &__group {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      .button {
+        &--secondary {
+          margin-left: auto;
         }
       }
     }
