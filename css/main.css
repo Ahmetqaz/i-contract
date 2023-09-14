@@ -3549,6 +3549,7 @@ section {
 .contactContent__header h4 {
   color: #185f76;
   padding: 6px 20px 6px;
+  width: 100%;
 }
 .contactContent__header-wrapper {
   width: 340px;
@@ -3938,10 +3939,10 @@ section {
   padding: 12px 30px;
 }
 
-.info {
+.contract {
   width: 100%;
 }
-.info__inner {
+.contract__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3951,7 +3952,7 @@ section {
           flex-direction: column;
   gap: 24px;
 }
-.info__inner-row {
+.contract__inner-row {
   background: #fff;
   padding: 18px 32px 25px;
   display: -webkit-box;
@@ -3964,10 +3965,10 @@ section {
           justify-content: space-between;
   gap: 18px;
 }
-.info h2 {
+.contract h2 {
   color: #185f76;
 }
-.infoColumn {
+.contractColumn {
   width: calc(50% - 16px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3978,15 +3979,15 @@ section {
           flex-direction: column;
   gap: 20px;
 }
-.infoColumn._footer {
+.contractColumn._footer {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
 }
-.info .input--select {
+.contract .input--select {
   max-width: 340px;
 }
-.info .input__wrapper {
+.contract .input__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3996,14 +3997,20 @@ section {
           flex-direction: column;
   gap: 10px;
 }
-.info .input__wrapper h4 {
+.contract .input__wrapper h4 {
   font-size: 15px;
 }
-.info .input--file {
+.contract .input--file {
   max-width: 340px;
 }
-.info .button--file {
-  margin-top: auto;
+.contract .input._sm {
+  width: calc(50% - 12px);
+}
+.contract .input._sm._wide {
+  width: 100%;
+}
+.contract .button--file {
+  margin: auto auto 0 0;
 }
 
 .sideSpace {
@@ -4631,6 +4638,13 @@ section {
           animation-name: fadeIn;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
+}
+
+.help__inner-body-search {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .help {
@@ -8430,8 +8444,14 @@ section {
     padding-left: 0;
   }
 
-  .info .input__wrapper h4 {
+  .contract .input__wrapper h4 {
     font-size: 14px;
+  }
+  .contract .input._sm {
+    width: 100%;
+  }
+  .contract .button--file {
+    margin: unset;
   }
 
   .preview__inner-header {
@@ -8468,21 +8488,21 @@ section {
   }
 }
 @media (max-width: 750px) {
-  .info__inner-row {
+  .contract__inner-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 40px;
   }
-  .infoColumn {
+  .contractColumn {
     width: 100%;
     max-width: unset;
   }
-  .info .input--select {
+  .contract .input--select {
     max-width: unset;
   }
-  .info .button--file {
+  .contract .button--file {
     max-width: unset;
   }
 
@@ -9142,18 +9162,18 @@ section {
     font-size: 14px;
   }
 
-  .info__inner-row {
+  .contract__inner-row {
     padding: 20px 15px;
   }
-  .infoColumn {
+  .contractColumn {
     width: 100%;
     max-width: unset;
   }
-  .info .dropdown {
+  .contract .dropdown {
     width: 100%;
     max-width: unset;
   }
-  .info .input--file {
+  .contract .input--file {
     width: 100%;
     max-width: unset;
   }

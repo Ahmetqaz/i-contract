@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="./css/main.css" />
   <title>Generate Contract</title>
 </head>
 
@@ -99,7 +99,7 @@
           <div class="sidebar__inner-switch">
             <span class="custIcon custIcon--right"></span>
           </div>
-          <a href="#" class="sidebar__inner-link active">
+          <a href="#" class="sidebar__inner-link">
             <span class="ico">
               <svg width="24" height="24" viewBox="0 0 24 24">
                 <g>
@@ -115,7 +115,7 @@
             </span>
             <div class="text">Kontaktcontactrmationen</div>
           </a>
-          <a href="#" class="sidebar__inner-link">
+          <a href="#" class="sidebar__inner-link active">
             <span class="ico">
               <svg class="fill" width="24" height="24" viewBox="0 0 24 24">
                 <g>
@@ -245,7 +245,7 @@
             </span>
             <span class="text"> Einstellungen </span>
           </a>
-          <div class="input input--select">
+            <div class="input input--select">
             <input type="hidden">
             <div class="input__selected">
             </div>
@@ -280,29 +280,34 @@
         </div>
       </nav> -->
       <div class="wrapper__body">
-        <div class="tabs tabs--top">
+        <div class="tabs  tabs--top">
           <div class="autoContainer _sm">
             <div class="tabs__inner">
               <div class="tabs__inner-row">
-                <button class="button button--primary _header active"
-                  data-page-button="vertragsdaten">Vertragsdaten</button>
-                <button class="button button--primary  _header" data-page-button="vorschau">Vorschau</button>
+                <button class="button button--primary _header active">Vertragsdaten</button>
+                <button class="button button--primary  _header">Vorschau</button>
               </div>
               <div class="tabs__inner-row _links">
-                <a href="#contact" class="tabsLink active"> Kontaktdaten </a>
-                <a href="#info" class="tabsLink"> Fahrzeugdaten </a>
-                <a href="#condition" class="tabsLink"> Fahrzeugzustand </a>
-                <a href="#details" class="tabsLink"> Fahrzeugdetails </a>
-                <a href="#data" class="tabsLink">
+                <a class="tabsLink anchor-link active" href="#contact">
+                  Kontaktdaten
+                </a>
+                <a class="tabsLink anchor-link" href="#info">
+                  Fahrzeugdaten
+                </a>
+                <a class="tabsLink anchor-link" href="#condition">
+                  Fahrzeugzustand
+                </a>
+                <a class="tabsLink anchor-link" href="#details">
+                  Fahrzeugdetails
+                </a>
+                <a class="tabsLink anchor-link" href="#data">
                   Besondere Vereinbarungen
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <!-- tab__content start-->
         <div class="tab__content active">
-          <!-- contact start-->
           <div class="anchor" id="contact"></div>
           <section class="contact">
             <div class="autoContainer _sm">
@@ -310,38 +315,62 @@
                 <div class="contact__inner-row">
                   <div class="contactContent">
                     <div class="contactContent__header">
-                      <div class="input input--search">
-                        <input type="text" placeholder="Suche" id="car_url" />
-                        <span class="ico">
-                          <svg class="fill" width="17" height="17" viewBox="0 0 17 17">
-                            <path id="color"
-                              d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
-                              fill="#7e84a3" />
-                          </svg>
-                        </span>
+                      <div class="help__inner-body-search">
+                        <div class="input input--border input--button-left input--button-right">
+                          <button class="button button--ico _btnLeft">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-link-45deg" viewBox="0 0 16 16">
+                              <path
+                                d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                              <path
+                                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
+                            </svg>
+                          </button>
+                          <input type="text" placeholder="https://example.com/" id="car_url" />
+                          <button class="buttonText buttonText--primary _btnRight" id="clearBtn"
+                            onclick="onClearBtnClick()">
+                            Löschen
+                          </button>
+                        </div>
                       </div>
-                      <!-- <div class="input input--select input--primary">
-                       <input type="hidden">
-                       <div class="input__selected">
-                       </div>
-                       <ul class="input__dropdown">
-                         <li class="input__dropdown-item" data-default>
-                           Weitere Funktionen
-                         </li>
-                         <li class="input__dropdown-item">
-                           Inserat öffnen
-                         </li>
-                         <li class="input__dropdown-item">
-                           Vergleichen
-                         </li>
-                         <li class="input__dropdown-item">
-                           Kontakt finden
-                         </li>
-                         <li class="input__dropdown-item">
-                           Auto Message
-                         </li>
-                       </ul>
-                     </div> -->
+                      <!-- <div class="input input--search">
+                      <input type="text" placeholder="Suche" id="car_url" />
+                      <span class="ico">
+                        <svg
+                          class="fill"
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                        >
+                          <path
+                            id="color"
+                            d="M16,17a1,1,0,0,1-.613-.21l-.095-.084-3.245-3.243A7.432,7.432,0,0,1,7.5,15,7.5,7.5,0,1,1,15,7.5a7.431,7.431,0,0,1-1.536,4.549l3.243,3.244A1,1,0,0,1,16,17ZM7.5,2a5.5,5.5,0,1,0,3.546,9.7,1,1,0,0,1,.659-.66A5.5,5.5,0,0,0,7.5,2Z"
+                            fill="#7e84a3"
+                          />
+                        </svg>
+                      </span>
+                    </div> -->
+                      <!-- <div class="input input--select input--primary" id="more-function">
+                        <input type="hidden" id="more-function-input" />
+                        <div class="input__selected"></div>
+                        <ul class="input__dropdown" id="more-function-list">
+                          <li class="input__dropdown-item" data-value="0" data-default>
+                            Weitere Funktionen
+                          </li>
+                          <li class="input__dropdown-item" data-value="1">
+                            Inserat öffnen
+                          </li>
+                          <li class="input__dropdown-item" data-value="2">
+                            Vergleichen
+                          </li>
+                          <li class="input__dropdown-item" data-value="3">
+                            Kontakt finden
+                          </li>
+                          <li class="input__dropdown-item" data-value="4">
+                            Auto Message
+                          </li>
+                        </ul>
+                      </div> -->
                       <div class="contactContent__header-wrapper">
                         <button class="contactContent__header-button">
                           <span class="ico">
@@ -424,9 +453,9 @@
                               viewBox="0 0 395.71 395.71" xml:space="preserve">
                               <g>
                                 <path d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738
-     c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
-     C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
-     c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
+  c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388
+  C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191
+  c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z" />
                               </g>
                             </svg>
                           </span>
@@ -445,19 +474,23 @@
                         </div>
                       </div>
                       <div class="contactContent__currency-item">
-                        <div class="contactContent__currency-item-wrapper">
+                        <div class="contactContent__currency-item-wrapper" id="currencyCheck__body">
                           <div class="input input--currencySm">
-                            <label for="cur-2"> Nettobetrag </label>
-                            <input type="text" placeholder="XXX" id="cur-2" />
+                            <label for="contract-purchase-taxfree-value">
+                              Nettobetrag
+                            </label>
+                            <input type="text" placeholder="XXX" id="contract-purchase-taxfree-value" />
                           </div>
                           <div class="input input--currencySm">
-                            <label for="cur-3"> 19% MwSt. </label>
-                            <input type="text" placeholder="XXX" id="cur-3" />
+                            <label for="contract-purchase-tax-value">
+                              19% MwSt.
+                            </label>
+                            <input type="text" placeholder="XXX" id="contract-purchase-tax-value" />
                           </div>
                         </div>
                         <div class="input input--checkBox">
-                          <input type="checkbox" id="check" />
-                          <label for="check">
+                          <input type="checkbox" id="currencyCheck" />
+                          <label for="currencyCheck">
                             MwSt. hinzufügen
                             <span class="checkBox"> </span>
                           </label>
@@ -468,7 +501,8 @@
                   <form class="contactForm">
                     <div class="contactForm__header">
                       <h2>Verkäufer</h2>
-                      <button class="button button--rounded" type="button">
+                      <button class="button button--circle  button--rounded" type="button" data-event="togglePopup"
+                        data-popup="#buyerInfo">
                         <span class="ico">
                           <svg class="fill" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -477,18 +511,10 @@
                           </svg>
                         </span>
                       </button>
-                      <div class="input input--select input--primary">
-                        <input type="hidden">
-                        <div class="input__selected">
-                        </div>
-                        <ul class="input__dropdown">
-                          <li class="input__dropdown-item" data-default>
-                            I-Contract GmbH
-                          </li>
-                          <li class="input__dropdown-item">
-                            Auto 24
-                          </li>
-                        </ul>
+                      <div class="input input--select input--primary" id="buyers-select">
+                        <input type="hidden" id="buyers-select-input" />
+                        <div class="input__selected">---</div>
+                        <ul class="input__dropdown" id="buyers-select-list"></ul>
                       </div>
                     </div>
                     <div class="contactForm__body">
@@ -537,9 +563,7 @@
               </div>
             </div>
           </section>
-          <!-- contact end-->
-          <!-- info start-->
-          <div class="anchor" id="contract"></div>
+          <div class="anchor" id="info"></div>
           <section class="contract">
             <div class="autoContainer _sm">
               <div class="contract__inner">
@@ -674,8 +698,6 @@
               </div>
             </div>
           </section>
-          <!-- contract end-->
-          <!-- condition start-->
           <div class="anchor" id="condition"></div>
           <section class="condition">
             <div class="autoContainer _sm">
@@ -707,7 +729,8 @@
                           <label for="contract-vehicle-accident-free-value">
                             Unfallfrei
                           </label>
-                          <textarea id="contract-vehicle-accident-free-value">Ja</textarea>
+                          <textarea id="contract-vehicle-accident-free-value"
+                            data-inspect-field="unfallfrei"></textarea>
                         </div>
                       </div>
                       <div class="conditionBody__row-item">
@@ -715,7 +738,8 @@
                           <label for="contract-vehicle-repainting-value">
                             Nachlackierung
                           </label>
-                          <textarea id="contract-vehicle-repainting-value">Nein</textarea>
+                          <textarea id="contract-vehicle-repainting-value"
+                            data-inspect-field="nachlackierung"></textarea>
                         </div>
                       </div>
                       <div class="conditionBody__row-item">
@@ -723,7 +747,7 @@
                           <label for="contract-vehicle-damages-key">
                             Sonstige Schäden
                           </label>
-                          <textarea id="contract-vehicle-damages-key"></textarea>
+                          <textarea id="contract-vehicle-damages-key" data-inspect-field="sonstiges"></textarea>
                         </div>
                       </div>
                       <div class="conditionBody__row-item _lg">
@@ -737,18 +761,15 @@
                     </div>
                     <div class="conditionBody__info">
                       <h4>Uneingeschränkt Fahrbereit</h4>
-                      <div class="input input--select input--primary  input--arrow"
+                      <div class="input input--select input--primary input--arrow"
                         id="contract-vehicle-ready-to-drive-value">
-                        <input type="hidden">
-                        <div class="input__selected">
-                        </div>
+                        <input type="hidden" />
+                        <div class="input__selected"></div>
                         <ul class="input__dropdown">
                           <li class="input__dropdown-item" data-default>
                             Nein
                           </li>
-                          <li class="input__dropdown-item">
-                            Ja
-                          </li>
+                          <li class="input__dropdown-item">Ja</li>
                         </ul>
                       </div>
                     </div>
@@ -757,8 +778,6 @@
               </div>
             </div>
           </section>
-          <!-- condition end-->
-          <!-- details start-->
           <div class="anchor" id="details"></div>
           <section class="details">
             <div class="autoContainer _sm">
@@ -769,20 +788,18 @@
                     <label for="contract-vehicle-details-options">
                       Ausstattung
                     </label>
-                    <textarea id="contract-vehicle-details-options-value"></textarea>
+                    <textarea id="contract-vehicle-details-options-value" class="js-resize-onupdate"></textarea>
                   </div>
                   <div class="input input--textarea" id="contract-special-terms-value2">
                     <label for="contract-vehicle-details-description">
                       Beschreibung
                     </label>
-                    <textarea id="contract-vehicle-details-description-value"></textarea>
+                    <textarea id="contract-vehicle-details-description-value" class="js-resize-onupdate"></textarea>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <!-- details end-->
-          <!-- data start-->
           <div class="anchor" id="data"></div>
           <section class="data">
             <div class="autoContainer _sm">
@@ -791,19 +808,17 @@
                 <div class="data__inner-box">
                   <div class="input__wrapper">
                     <h4>Zahlungsart</h4>
-                    <div class="input input--select input--primary  input--arrow"
-                      id="contract-vehicle-payment-method-value">
-                      <input type="hidden">
-                      <div class="input__selected">
-                      </div>
+                    <div class="input input--select input--primary input--arrow">
+                      <input type="hidden" id="contract-vehicle-payment-method-value" />
+                      <div class="input__selected"></div>
                       <ul class="input__dropdown">
-                        <li class="input__dropdown-item" data-default>
+                        <li class="input__dropdown-item" data-value="Bargeld" data-default>
                           Bargeld
                         </li>
-                        <li class="input__dropdown-item">
+                        <li class="input__dropdown-item" data-value="Überweisung">
                           Überweisung
                         </li>
-                        <li class="input__dropdown-item">
+                        <li class="input__dropdown-item" data-value="Echtzeitüberweisung">
                           Echtzeitüberweisung
                         </li>
                       </ul>
@@ -811,16 +826,14 @@
                   </div>
                   <div class="input__wrapper">
                     <h4>Zugelassen</h4>
-                    <div class="input input--select input--primary  input--arrow"
-                      id="contract-vehicle-pickup-date-value">
-                      <input type="hidden">
-                      <div class="input__selected">
-                      </div>
+                    <div class="input input--select input--primary input--arrow" id="contract-vehicle-registered-value">
+                      <input type="hidden" />
+                      <div class="input__selected"></div>
                       <ul class="input__dropdown">
-                        <li class="input__dropdown-item" data-default>
+                        <li class="input__dropdown-item" data-value="yes" data-default>
                           Ja
                         </li>
-                        <li class="input__dropdown-item">
+                        <li class="input__dropdown-item" data-value="no">
                           Nein
                         </li>
                       </ul>
@@ -829,17 +842,17 @@
                   <div class="input__wrapper">
                     <h4>Abholdatum *</h4>
                     <div class="input input--date">
-                      <input type="date" />
+                      <input type="date" value="08-08-2022" id="contract-vehicle-pickup-date-value" />
                     </div>
                   </div>
                 </div>
                 <div class="data__inner-body">
                   <div class="data__inner-list" id="contract-special-terms-value">
                     <h4>Besondere Vereinbarung (nicht editierbar)</h4>
-                    <ul>
+                    <ul id="special-agreement-list">
                       <li>
                         Die Fahrzeugübergabe findet bis/am {Datum} in {Ort}
-                        gegen Bargeld statt.
+                        gegen {Zahlungsart} statt.
                       </li>
                       <li>
                         Das Fahrzeug wird nur unter der Vorlage der
@@ -895,10 +908,7 @@
               </div>
             </div>
           </section>
-          <!-- data end-->
         </div>
-        <!-- tab__content end-->
-        <!-- tab__content start-->
         <div class="tab__content">
           <!-- preview start-->
           <section class="preview" id="preview">
@@ -1338,7 +1348,6 @@
           </section>
           <!-- preview end-->
         </div>
-        <!-- tab__content end-->
       </div>
     </div>
     <!-- wrapper end-->
@@ -1349,75 +1358,87 @@
       <div class="close" data-event="togglePopup" data-popup="#carInspector"></div>
     </div>
   </div>
-  <script src="js/customSelect.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    const preview = document.getElementById("preview");
-    if (preview) {
-      const tabButton = preview.querySelectorAll("[data-button]");
-      const tabContent = preview.querySelectorAll("[data-content]");
-      const tabSend = preview.querySelectorAll("[data-send]");
-      tabButton.forEach((button) => {
-        button.addEventListener("click", (e) => {
-          const buttonVal8ue = button.getAttribute("data-button");
-          tabButton.forEach((button) => {
-            button.classList.remove("active")
-          })
-          if (e.target === button) {
-            button.classList.add("active")
-          }
-          tabContent.forEach((item) => {
-            const itemValue = item.getAttribute("data-content")
-            if (itemValue != buttonVal8ue) {
-              item.classList.remove("active")
-            } else {
-              item.classList.add("active")
-            }
-          })
-          tabSend.forEach((item) => {
-            const itemValue = item.getAttribute("data-send")
-            if (itemValue != buttonVal8ue) {
-              item.classList.remove("active")
-            } else {
-              item.classList.add("active")
-            }
-          })
-        })
-      })
-    }
-
-    const pagesButton = document.querySelectorAll("[data-page-button]");
-    if (pagesButton) {
-      const pages = document.querySelectorAll("[data-page]");
-      const links = document.querySelector(".tabs__inner-row._links");
-      pagesButton.forEach((button) => {
-        const buttonVal8ue = button.getAttribute("data-page-button");
-        button.addEventListener("click", (e) => {
-          pagesButton.forEach((button) => {
-            button.classList.remove("active")
-          })
-          if (e.target === button) {
-            button.classList.add("active")
-            if (buttonVal8ue === "vorschau") {
-              links.classList.add("hide")
-            } else {
-              links.classList.remove("hide")
-            }
-          }
-          pages.forEach((page) => {
-            const pageValue = page.getAttribute("data-page")
-            if (pageValue != buttonVal8ue) {
-              page.classList.remove("active")
-            } else {
-              page.classList.add("active")
-            }
-          })
-        })
-      }
-      )
-    }
-
-  </script>
+  <div class="popUp _small" id="buyerInfo">
+    <div class="popUp__inner">
+      <div class="popUp__inner-title">Käufer</div>
+      <div class="popUp__inner-close" data-event="togglePopup" data-popup="#buyerInfo">
+        <span class="custIcon custIcon--cross"></span>
+      </div>
+      <div class="contactForm__body">
+        <div class="input input--text">
+          <label for="contract-buyer-name-value"> Name/Firma </label>
+          <input type="text" id="contract-buyer-name-value" disabled />
+        </div>
+        <div class="input input--text">
+          <label for="contract-buyer-address-value">
+            Straße, Hausnummer
+          </label>
+          <input type="text" id="contract-buyer-address-value" disabled />
+        </div>
+        <div class="input input--text">
+          <label for="contract-buyer-location-value">
+            PLZ, Ort
+            <span> * </span>
+          </label>
+          <input type="text" id="contract-buyer-location-value" disabled />
+        </div>
+        <div class="input input--text">
+          <label for="contract-buyer-phone-value"> Telefonnummer </label>
+          <input type="text" id="contract-buyer-phone-value" disabled />
+        </div>
+        <div class="input input--text">
+          <label for="contract-buyer-mail-value">
+            E-Mail
+            <span> * </span>
+          </label>
+          <input type="email" id="contract-buyer-mail-value" disabled />
+        </div>
+        <div class="input input--text">
+          <label for="contract-buyer-tax-number-value"> Steuernummer </label>
+          <input type="text" id="contract-buyer-tax-number-value" disabled />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popUp _small" id="confirmPopup">
+    <div class="popUp__inner">
+      <div class="popUp__inner-title">
+        <h3>Create new field</h3>
+      </div>
+      <div class="popUp__inner-content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at
+          sunt repudiandae eligendi.
+        </p>
+        <div class="input input--text">
+          <input type="text" id="confirm-input" placeholder="Type filter name" />
+        </div>
+      </div>
+      <div class="popUp__inner-footer">
+        <button class="button button--text button--rounded" data-event="cancel-prompt">
+          Cancel
+        </button>
+        <button class="button button--secondary button--rounded _shadow" data-event="save-prompt">
+          Save
+        </button>
+      </div>
+      <button class="popUp__inner-close">
+        <span class="custIcon custIcon--cross"></span>
+      </button>
+    </div>
+  </div>
+  <script src="/js/customSelect.js"></script>
+  <script src="./js/contract-gen.js" type="module" async></script>
+  <script src="../../js/popup.js"></script>
+  <script src="../../js/highlight-nav.js"></script>
+  <!-- 
+    <script>
+      window.testFunct = () => alert("test");
+      var testParent = () => {
+        alert("test");
+        console.log("hi there");
+      };
+    </script> -->
 </body>
 
 </html>
