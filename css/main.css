@@ -4156,6 +4156,12 @@ section {
 .tabs__progres-button.active h4 {
   color: #185f76;
 }
+.tabs__progres-button:hover .text {
+  color: #e96d24;
+}
+.tabs__progres-button:hover h4 {
+  color: #e96d24;
+}
 .tabs__progres-circle {
   width: 2.5em;
   height: 2.5em;

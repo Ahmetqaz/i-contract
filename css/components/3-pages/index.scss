@@ -477,6 +477,18 @@ section {
           color: $primary;
         }
       }
+      &:hover {
+        .tabs {
+          &__progres {
+          }
+        }
+        .text {
+          color: $orange;
+        }
+        h4 {
+          color: $orange;
+        }
+      }
     }
     &-circle {
       width: 2.5em;
