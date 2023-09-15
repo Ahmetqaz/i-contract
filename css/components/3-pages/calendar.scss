@@ -774,6 +774,9 @@
   &--notifications {
     width: calc(100% - 430px);
   }
+  &--lg {
+    width: calc(100% - 74px);
+  }
   .button {
     &--drag {
       position: absolute;
@@ -910,6 +913,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    background: $white-2;
   }
   &__drivers {
     padding: 12px 10px 12px 30px;
@@ -926,27 +930,43 @@
       h5 {
         color: $black;
         font-weight: 400;
+        font-size: 22px;
       }
     }
     &-item {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 50px;
+      padding: 5px 0;
       .avatar {
         font-size: 19px;
+        &--text {
+          background: #384455;
+          span {
+            font-size: 18px;
+            font-weight: 400;
+            color: $white;
+          }
+        }
+      }
+      &._bg {
+        background: rgba(#e5e5e6, 0.3);
+        padding: 14px 20px 14px 15px;
+      }
+      .text {
+        font-size: 18px;
+        color: #06152b;
+        font-weight: 400;
+        &--primary {
+          color: $blue-11;
+        }
       }
     }
     &-box {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 5px;
-      .text {
-        font-size: 12px;
-        color: #06152b;
-        &--primary {
-          color: $blue-11;
-        }
-      }
     }
     &-group {
       display: flex;
@@ -954,6 +974,7 @@
       margin-left: auto;
       .button {
         color: $blue-11;
+        font-size: 14px;
         .ico {
           transition: unset;
         }
@@ -966,9 +987,32 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      max-height: 168px;
+      max-height: 200px;
       overflow: auto;
       padding-right: 20px;
+      &._lg {
+        max-height: 220px;
+      }
+    }
+    &-info {
+      display: flex;
+      gap: 50px;
+      margin-left: auto;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-align: center;
+      .text {
+        font-size: 16px;
+        color: #676e89;
+        font-weight: 400;
+        &-primary {
+          color: $primary;
+          font-size: 18px;
+        }
+      }
     }
     &._distance {
       .notifications {
@@ -976,10 +1020,6 @@
           &-header {
             justify-content: flex-start;
             gap: 20px;
-            h5 {
-              font-weight: 400;
-              color: #575757;
-            }
             .date {
               max-width: unset;
               gap: 14px;
@@ -1034,6 +1074,11 @@
       .buttonText {
         font-weight: 400;
       }
+      h5 {
+        color: $black;
+        font-weight: 400;
+        font-size: 22px;
+      }
     }
     &-body {
       display: flex;
@@ -1051,6 +1096,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      margin: 5px 0;
       h5 {
         color: $primary;
       }
@@ -1102,9 +1148,9 @@
             align-items: center;
             flex-direction: row;
             .text {
-              font-size: 12px;
+              font-size: 16px;
               color: #575757;
-              font-weight: 700;
+              font-weight: 400;
               &--primary {
                 color: $primary;
               }
@@ -1249,16 +1295,62 @@
       }
     }
   }
+  &._noheader {
+    top: 20px;
+    height: calc(100% - 20px);
+  }
+  &--lg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba($black, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 5;
+    transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
+    transform: translate(100%);
+    opacity: 0;
+    .notifications {
+      &__inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - 105px);
+        height: 100%;
+        max-width: 720px;
+        padding: 15px;
+        transition: 0.15s ease-in-out 0s;
+        transform: translate(100%);
+        opacity: 0;
+        overflow: auto;
+      }
+    }
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
+      .notifications {
+        &__inner {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 .button {
   &._hide {
-    display: none;
+    // display: none;
   }
 }
 
 @mixin calendar-1830 {
   .notifications {
     width: 370px;
+    &--lg {
+      width: 100%;
+    }
   }
   .calendar {
     &--notifications {
@@ -1280,14 +1372,13 @@
       }
     }
     &--notifications {
-      width: 100%;
+      width: calc(100% - 74px);
     }
   }
   .notifications {
     top: 93px;
     width: 100%;
     height: calc(100% - 93px);
-    z-index: 8;
     background: rgba($black, 0.3);
     backdrop-filter: blur(4px);
     transition: all 0s ease 0.25s, opacity 0.2s ease-in-out 0s;
@@ -1315,6 +1406,16 @@
           opacity: 1;
         }
       }
+    }
+    &--lg {
+      width: 100%;
+      height: 100%;
+      top: 0;
+    }
+  }
+  .button {
+    &._hide {
+      display: flex;
     }
   }
 }
@@ -1349,6 +1450,10 @@
   .notifications {
     top: 77px;
     height: calc(100% - 77px);
+    &--lg {
+      top: 0;
+      height: 100%;
+    }
   }
 }
 @mixin calendar-1025 {
@@ -1376,12 +1481,17 @@
 @mixin calendar-880 {
   .calendar {
     &--notifications {
+      width: calc(100% - 50px);
+    }
+    &--lg {
+      order: 1;
       width: 100%;
     }
   }
   .button {
-    &._hide {
-      display: none !important;
+    &--notification {
+      margin-left: auto;
+      margin: 0 15px 15px auto;
     }
   }
 }
@@ -1489,11 +1599,99 @@
       }
     }
   }
+  .notifications {
+    &__drivers {
+      &-header {
+        h5 {
+          font-size: 18px;
+        }
+      }
+    }
+    &__events {
+      &-header {
+        h5 {
+          font-size: 18px;
+        }
+      }
+    }
+    &--lg {
+      .notifications {
+        &__inner {
+          width: calc(100% - 80px);
+          padding: 10px;
+        }
+        &__drivers {
+          &-item {
+            flex-wrap: wrap;
+            gap: 10px 50px;
+            .text {
+              font-size: 16px;
+            }
+          }
+          &-info {
+            width: 100%;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+  .button {
+    &--notification {
+      width: 50px;
+      height: 40px;
+      border-radius: 5px;
+      .button {
+        &__burger {
+          span,
+          &:after,
+          &::before {
+            height: 1.6px;
+          }
+        }
+      }
+    }
+  }
 }
 @mixin calendar-480 {
   .notifications {
     top: 61px;
     height: calc(100% - 61px);
+    &__events {
+      &._price {
+        .notifications {
+          &__events {
+            &-item {
+              flex-direction: column;
+              gap: 20px;
+              .text {
+                &.noBreak {
+                  margin: 0 0 0 auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &--lg {
+      top: 0;
+      height: 100%;
+      .notifications {
+        &__drivers {
+          &-item {
+            gap: 16px 30px;
+          }
+          &-info {
+            gap: 20px;
+          }
+          &-group {
+            width: 100%;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
   }
   .button {
     &._hide {

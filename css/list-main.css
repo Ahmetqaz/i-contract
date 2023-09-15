@@ -1133,6 +1133,31 @@ svg {
   -webkit-box-shadow: 0px 3px 10px rgba(233, 109, 36, 0.3);
           box-shadow: 0px 3px 10px rgba(233, 109, 36, 0.3);
 }
+.button--rounded._secondary {
+  color: #fff;
+  background: #e96d24;
+  padding: 16px 20px;
+  min-width: 160px;
+  border-radius: 100px;
+}
+.button--rounded._secondary:hover {
+  color: #e96d24;
+  background: transparent;
+}
+.button--rounded._primary {
+  color: #fff;
+  background: #185f76;
+  padding: 16px 20px;
+  min-width: 160px;
+  border-radius: 100px;
+}
+.button--rounded._primary:hover {
+  border-color: #185f76;
+  color: #185f76;
+  background: transparent;
+  -webkit-box-shadow: 0px 3px 10px rgba(24, 95, 118, 0.3);
+          box-shadow: 0px 3px 10px rgba(24, 95, 118, 0.3);
+}
 .button--ico {
   width: 1.75em;
   height: 1.75em;
@@ -1353,7 +1378,7 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  z-index: 9;
+  z-index: 6;
 }
 .button--notification .button__burger {
   width: 22px;
@@ -1384,7 +1409,8 @@ svg {
   width: 15px;
 }
 .button--notification.active {
-  border-color: #e96d24;
+  border-color: #185f76;
+  background: #185f76;
 }
 .button--notification.active .button__burger::before {
   width: 100%;
@@ -1393,7 +1419,7 @@ svg {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
-  background: #e96d24;
+  background: #fff;
 }
 .button--notification.active .button__burger::after {
   top: 50%;
@@ -1401,10 +1427,13 @@ svg {
   width: 100%;
   -webkit-transform: translate(0, -50%) rotate(45deg);
           transform: translate(0, -50%) rotate(45deg);
-  background: #e96d24;
+  background: #fff;
 }
 .button--notification.active .button__burger span {
   opacity: 0;
+}
+.button--notification:hover .button__burger span, .button--notification:hover .button__burger::after, .button--notification:hover .button__burger::before {
+  background: #e96d24;
 }
 .button--tab {
   border: 1px solid #d7dbec;
@@ -2572,6 +2601,10 @@ svg {
 }
 .popUp--stock .button--text:hover {
   opacity: 0.7;
+}
+.popUp._window {
+  max-width: calc(100% - 30px);
+  max-height: calc(100% - 30px);
 }
 
 .filterBox__row {

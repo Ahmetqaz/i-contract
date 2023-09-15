@@ -655,7 +655,7 @@ section {
     gap: 20px;
     &-header {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
       background: $white;
       padding: 26px 24px;
@@ -714,9 +714,14 @@ section {
     width: 100%;
     gap: 20px;
     &-content {
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 20px;
+      &.active {
+        display: flex;
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
+      }
     }
     &-info {
       display: flex;
@@ -756,7 +761,7 @@ section {
       }
     }
     &-report {
-      display: flex;
+      display: none;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -1310,8 +1315,8 @@ section {
         width: 100%;
       }
     }
-    .button{
-      &--file{
+    .button {
+      &--file {
         margin: unset;
       }
     }

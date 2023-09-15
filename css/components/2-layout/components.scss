@@ -773,6 +773,30 @@
       border-color: $orange;
       box-shadow: 0px 3px 10px rgba($orange, 0.3);
     }
+    &._secondary {
+      color: $white;
+      background: $orange;
+      padding: 16px 20px;
+      min-width: 160px;
+      border-radius: 100px;
+      &:hover {
+        color: $orange;
+        background: transparent;
+      }
+    }
+    &._primary {
+      color: $white;
+      background: $primary;
+      padding: 16px 20px;
+      min-width: 160px;
+      border-radius: 100px;
+      &:hover {
+        border-color: $primary;
+        color: $primary;
+        background: transparent;
+        box-shadow: 0px 3px 10px rgba($primary, 0.3);
+      }
+    }
   }
   &--ico {
     width: 1.75em;
@@ -969,7 +993,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 9;
+    z-index: 6;
     .button__burger {
       width: 22px;
       height: 18px;
@@ -998,7 +1022,8 @@
       }
     }
     &.active {
-      border-color: $orange;
+      border-color: $primary;
+      background: $primary;
       .button {
         &__burger {
           &::before {
@@ -1007,18 +1032,27 @@
             right: unset;
             left: 50%;
             transform: translate(-50%, -50%) rotate(-45deg);
-            background: $orange;
+            background: $white;
           }
           &::after {
             top: 50%;
             bottom: unset;
             width: 100%;
             transform: translate(0, -50%) rotate(45deg);
-            background: $orange;
+            background: $white;
           }
           span {
             opacity: 0;
           }
+        }
+      }
+    }
+    &:hover {
+      .button__burger {
+        span,
+        &::after,
+        &::before {
+          background: $orange;
         }
       }
     }
@@ -1766,11 +1800,6 @@
       font-size: 13px;
     }
   }
-  .button {
-    &--notification {
-      width: 66px;
-    }
-  }
 }
 @mixin components-1100 {
   .wrapper {
@@ -1786,6 +1815,13 @@
     }
     &._sm {
       font-size: 14px;
+    }
+  }
+  .wrapper {
+    &__body {
+      &._row {
+        flex-direction: column;
+      }
     }
   }
 }
@@ -1811,6 +1847,20 @@
 @mixin components-580 {
   .input {
     font-size: 13px;
+  }
+  .button {
+    &--rounded {
+      &._secondary {
+        min-width: 120px;
+        font-size: 16px;
+        border-radius: 70px;
+      }
+      &._primary {
+        min-width: 120px;
+        font-size: 16px;
+        border-radius: 70px;
+      }
+    }
   }
 }
 @mixin components-480 {
