@@ -4384,8 +4384,8 @@ section {
   display: flex;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
 }
 .preview__inner-box {
   display: -webkit-box;
@@ -4513,8 +4513,8 @@ section {
   display: flex;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
 }
 .preview__item-report .ico {
   font-size: 20px;
