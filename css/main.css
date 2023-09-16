@@ -4118,7 +4118,19 @@ section {
 .tabs--top {
   top: 0 !important;
 }
-.tabs__progres {
+
+.tab__content {
+  display: none;
+}
+.tab__content.active {
+  display: block;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+
+.stepper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4126,8 +4138,31 @@ section {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 70px;
+  position: relative;
 }
-.tabs__progres-button {
+.stepper__progress {
+  width: calc(100% - 172px);
+  height: 2px;
+  position: absolute;
+  top: 21px;
+  background: #e6e9f4;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -2;
+}
+.stepper__progress-line {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #185f76;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.stepper__progress.fill .stepper__progress-line {
+  width: 100%;
+}
+.stepper__button {
   font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4143,26 +4178,29 @@ section {
   width: 120px;
   cursor: pointer;
 }
-.tabs__progres-button.active .tabs__progres-circle {
+.stepper__button.active .stepper__circle {
   background: #185f76;
 }
-.tabs__progres-button.active .tabs__progres-line {
+.stepper__button.active .stepper__line {
   background: #185f76;
   z-index: 2;
 }
-.tabs__progres-button.active .text {
+.stepper__button.active .text {
   color: #fff;
 }
-.tabs__progres-button.active h4 {
+.stepper__button.active h4 {
   color: #185f76;
 }
-.tabs__progres-button:hover .text {
+.stepper__button.done .stepper__circle {
+  border-color: #185f76;
+}
+.stepper__button:hover .text {
   color: #e96d24;
 }
-.tabs__progres-button:hover h4 {
+.stepper__button:hover h4 {
   color: #e96d24;
 }
-.tabs__progres-circle {
+.stepper__circle {
   width: 2.5em;
   height: 2.5em;
   border-radius: 50%;
@@ -4181,8 +4219,9 @@ section {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
   padding: 10px;
+  border: 1px solid #f7f7f7;
 }
-.tabs__progres .text {
+.stepper .text {
   font-size: 0.9em;
   color: #1e1f24;
   font-weight: 400;
@@ -4190,7 +4229,7 @@ section {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
 }
-.tabs__progres-line {
+.stepper-line {
   width: 70px;
   height: 1px;
   background: #185f76;
@@ -4204,27 +4243,16 @@ section {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
 }
-.tabs__progres-line._left {
+.stepper-line._left {
   left: unset;
   right: calc(100% + 4px);
 }
-.tabs__progres h4 {
+.stepper h4 {
   font-weight: 400;
   color: #1e1f24;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-}
-
-.tab__content {
-  display: none;
-}
-.tab__content.active {
-  display: block;
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
 }
 
 .data__inner {
@@ -8659,12 +8687,6 @@ section {
   .tabsLink {
     width: calc(33.3% - 10px);
   }
-  .tabs__progres-button {
-    font-size: 16px;
-  }
-  .tabs__progres-button h4 {
-    font-size: 14px;
-  }
 
   .data__inner {
     gap: 35px;
@@ -8735,6 +8757,16 @@ section {
   }
   .preview__item .button--secondary {
     margin-left: auto;
+  }
+
+  .stepper__button {
+    font-size: 16px;
+  }
+  .stepper__button h4 {
+    font-size: 14px;
+  }
+  .stepper__progress {
+    width: calc(100% - 170px);
   }
 
   .calendar--notifications {
