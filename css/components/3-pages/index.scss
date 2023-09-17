@@ -438,6 +438,10 @@ section {
         border-color: $blue-4;
       }
     }
+    &-stepper {
+      display: flex;
+      justify-content: center;
+    }
   }
   &Link {
     color: $primary;
@@ -463,109 +467,6 @@ section {
       animation-name: fadeIn;
       animation-duration: 0.4s;
     }
-  }
-}
-.stepper {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  position: relative;
-  &__progress {
-    width: 96px;
-    height: 45px;
-    position: absolute;
-    top: 0;
-    left: 88px;
-    &-bg {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      background: $white-4;
-      width: 100%;
-      height: 2px;
-      z-index: -1;
-    }
-    &-line {
-      position: absolute;
-      top: 50%;
-      width: 0;
-      height: 2px;
-      background: $primary;
-      transition: 0.3s ease;
-      transform: translateY(-50%);
-    }
-  }
-  &__button {
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    width: 120px;
-    cursor: pointer;
-    position: relative;
-    &.active {
-      .stepper {
-        &__circle {
-          background: $primary;
-        }
-        &__line {
-          background: $primary;
-          z-index: 2;
-        }
-      }
-      .text {
-        color: $white;
-      }
-      h4 {
-        color: $primary;
-      }
-    }
-    &.done {
-      .stepper {
-        &__circle {
-          border-color: $primary;
-        }
-        &__progress {
-          &-line {
-            width: 100%;
-          }
-        }
-      }
-    }
-    &:hover {
-      .text {
-        color: $orange;
-      }
-      h4 {
-        color: $orange;
-      }
-    }
-  }
-  &__circle {
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $white-4;
-    position: relative;
-    @include transition;
-    padding: 10px;
-    border: 1px solid $white-2;
-  }
-  .text {
-    font-size: 0.9em;
-    color: $black;
-    font-weight: 400;
-    @include transition;
-  }
-  h4 {
-    font-weight: 400;
-    color: $black;
-    @include transition;
   }
 }
 .data {
@@ -1033,6 +934,7 @@ section {
     }
   }
 }
+
 @mixin index-1900 {
   .contact {
     &Content {
@@ -1457,21 +1359,6 @@ section {
       }
     }
   }
-  .stepper {
-    gap: 20px;
-    &__button {
-      font-size: 16px;
-      width: 100px;
-      h4 {
-        font-size: 14px;
-      }
-    }
-    &__progress {
-      width: 74px;
-      left: 73px;
-      height: 40px;
-    }
-  }
 }
 @mixin index-750 {
   .contract {
@@ -1640,21 +1527,6 @@ section {
       }
     }
   }
-  .stepper {
-    gap: 10px;
-    &__button {
-      font-size: 14px;
-      width: 80px;
-      h4 {
-        font-size: 12px;
-      }
-    }
-    &__progress {
-      width: 48px;
-      left: 62px;
-      height: 35px;
-    }
-  }
 }
 @mixin index-480 {
   .contact {
@@ -1818,21 +1690,6 @@ section {
           width: 100%;
         }
       }
-    }
-  }
-  .stepper {
-    gap: 10px;
-    &__button {
-      font-size: 13px;
-      width: 70px;
-      h4 {
-        font-size: 11px;
-      }
-    }
-    &__progress {
-      width: 44px;
-      left: 53px;
-      height: 32px;
     }
   }
 }
