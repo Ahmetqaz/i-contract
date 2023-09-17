@@ -4176,30 +4176,37 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 70px;
+  gap: 30px;
   position: relative;
 }
 .stepper__progress {
-  width: calc(100% - 172px);
-  height: 2px;
+  width: 96px;
+  height: 45px;
   position: absolute;
-  top: 21px;
+  top: 0;
+  left: 88px;
+}
+.stepper__progress-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   background: #e6e9f4;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: -2;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
 }
 .stepper__progress-line {
   position: absolute;
+  top: 50%;
   width: 0;
-  height: 100%;
+  height: 2px;
   background: #185f76;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-}
-.stepper__progress.fill .stepper__progress-line {
-  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .stepper__button {
   font-size: 18px;
@@ -4216,6 +4223,7 @@ section {
           align-items: center;
   width: 120px;
   cursor: pointer;
+  position: relative;
 }
 .stepper__button.active .stepper__circle {
   background: #185f76;
@@ -4232,6 +4240,9 @@ section {
 }
 .stepper__button.done .stepper__circle {
   border-color: #185f76;
+}
+.stepper__button.done .stepper__progress-line {
+  width: 100%;
 }
 .stepper__button:hover .text {
   color: #e96d24;
@@ -4267,24 +4278,6 @@ section {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-}
-.stepper-line {
-  width: 70px;
-  height: 1px;
-  background: #185f76;
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 4px);
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background: #e6e9f4;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-}
-.stepper-line._left {
-  left: unset;
-  right: calc(100% + 4px);
 }
 .stepper h4 {
   font-weight: 400;
@@ -8801,14 +8794,20 @@ section {
     margin-left: auto;
   }
 
+  .stepper {
+    gap: 20px;
+  }
   .stepper__button {
     font-size: 16px;
+    width: 100px;
   }
   .stepper__button h4 {
     font-size: 14px;
   }
   .stepper__progress {
-    width: calc(100% - 170px);
+    width: 74px;
+    left: 73px;
+    height: 40px;
   }
 
   .calendar--notifications {
@@ -9352,6 +9351,22 @@ section {
     font-size: 12px;
   }
 
+  .stepper {
+    gap: 10px;
+  }
+  .stepper__button {
+    font-size: 14px;
+    width: 80px;
+  }
+  .stepper__button h4 {
+    font-size: 12px;
+  }
+  .stepper__progress {
+    width: 48px;
+    left: 62px;
+    height: 35px;
+  }
+
   .stock__inner-tabs-button {
     font-size: 16px;
   }
@@ -9704,6 +9719,22 @@ section {
   }
   .detailsRadio .input__wrapper {
     width: 100%;
+  }
+
+  .stepper {
+    gap: 10px;
+  }
+  .stepper__button {
+    font-size: 13px;
+    width: 70px;
+  }
+  .stepper__button h4 {
+    font-size: 11px;
+  }
+  .stepper__progress {
+    width: 44px;
+    left: 53px;
+    height: 32px;
   }
 
   .stockPagination__box {
