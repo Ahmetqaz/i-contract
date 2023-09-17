@@ -3793,7 +3793,7 @@ section {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.contactContent__currency-item.active .contactContent__currency-item-wrapper {
+.contactContent__currency-item-wrapper.active {
   max-height: 200px;
   opacity: 1;
 }
@@ -7760,8 +7760,8 @@ section {
   .contactContent__currency-item-wrapper {
     gap: 20px 10px;
   }
-  .contactContent__currency-item.active {
-    gap: 20px 10px;
+  .contactContent__currency-item-wrapper.active {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 1830px) {

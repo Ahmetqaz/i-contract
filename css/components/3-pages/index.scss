@@ -173,19 +173,9 @@ section {
           opacity: 0;
           max-height: 0;
           transition: 0.3s ease;
-        }
-        &.active {
-          .contact {
-            &Content {
-              &__currency {
-                &-item {
-                  &-wrapper {
-                    max-height: 200px;
-                    opacity: 1;
-                  }
-                }
-              }
-            }
+          &.active {
+            max-height: 200px;
+            opacity: 1;
           }
         }
       }
@@ -1089,9 +1079,9 @@ section {
           }
           &-wrapper {
             gap: 20px 10px;
-          }
-          &.active {
-            gap: 20px 10px;
+            &.active {
+              margin-bottom: 20px;
+            }
           }
         }
       }
