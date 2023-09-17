@@ -4041,7 +4041,7 @@ section {
   color: #185f76;
 }
 .contractColumn {
-  width: calc(50% - 16px);
+  width: calc(50% - 9px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
