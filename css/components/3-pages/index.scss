@@ -135,6 +135,7 @@ section {
         gap: 5px;
         display: flex;
         flex-direction: column;
+        transition: 0.3s ease;
         .input {
           input {
             width: 160px;
@@ -169,6 +170,23 @@ section {
           display: flex;
           flex-direction: column;
           gap: 10px;
+          opacity: 0;
+          max-height: 0;
+          transition: 0.3s ease;
+        }
+        &.active {
+          .contact {
+            &Content {
+              &__currency {
+                &-item {
+                  &-wrapper {
+                    max-height: 200px;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -381,7 +399,7 @@ section {
       max-width: 340px;
     }
     &._sm {
-      width: calc(50% - 12px);
+      width: calc(50% - 9px);
       &._wide {
         width: 100%;
       }
@@ -1043,7 +1061,7 @@ section {
         &-item {
           width: 100%;
           justify-content: space-between;
-          gap: 20px 10px;
+          gap: 0 10px;
           .input {
             font-size: 23px;
             justify-content: space-between;
@@ -1070,6 +1088,9 @@ section {
             }
           }
           &-wrapper {
+            gap: 20px 10px;
+          }
+          &.active {
             gap: 20px 10px;
           }
         }

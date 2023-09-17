@@ -2277,13 +2277,13 @@ svg {
 
 .popUp {
   position: fixed;
-  width: 100%;
-  height: 100%;
   padding: 12px 18px 28px;
   background-color: rgba(30, 31, 36, 0.3);
   z-index: 14;
-  top: 0;
-  left: 0;
+  top: -100px;
+  left: -100px;
+  width: 1px;
+  height: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2297,15 +2297,30 @@ svg {
   pointer-events: none;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-  overflow: auto;
   padding: 20px;
+  overflow: hidden;
+  -webkit-transition: all 0s linear 0.3s, opacity 0.3s ease-out;
+  transition: all 0s linear 0.3s, opacity 0.3s ease-out;
 }
 .popUp.active {
+  top: 0;
+  left: 0;
   opacity: 1;
   pointer-events: all;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.popUp.active .popUp__inner {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.2s ease-out 0.1s;
+  transition: 0.2s ease-out 0.1s;
 }
 .popUp._wide .popUp__inner {
   max-width: 1200px;
@@ -2326,6 +2341,11 @@ svg {
   -webkit-box-shadow: 0 5px 20px 5px rgba(24, 95, 118, 0.2), 0 15px 30px 10px rgba(30, 31, 36, 0.1);
           box-shadow: 0 5px 20px 5px rgba(24, 95, 118, 0.2), 0 15px 30px 10px rgba(30, 31, 36, 0.1);
   border-radius: 0.5em;
+  opacity: 0;
+  -webkit-transform: translateY(30px) scale(0.98);
+          transform: translateY(30px) scale(0.98);
+  -webkit-transition: 0.2s ease-out 0s;
+  transition: 0.2s ease-out 0s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2602,9 +2622,18 @@ svg {
 .popUp--stock .button--text:hover {
   opacity: 0.7;
 }
-.popUp._window {
+.popUp._window .popUp__inner {
   max-width: calc(100% - 30px);
-  max-height: calc(100% - 30px);
+  height: calc(100% - 30px);
+  padding: 50px 20px 15px 20px;
+}
+.popUp._window .popUp__inner iframe {
+  width: 100%;
+  height: 100%;
+}
+.popUp._window .popUp__inner .close {
+  top: 15px;
+  right: 15px;
 }
 
 .filterBox__row {
